@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#080c10]/90 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)]"
+          ? "bg-[var(--c-bg)]/90 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)]"
           : "bg-transparent"
       }`}
     >
@@ -40,7 +41,7 @@ export default function Header() {
           >
             &gt;
           </span>
-          <span className="font-bold text-[#e6edf3] text-sm tracking-wide">
+          <span className="font-bold text-[var(--c-text)] text-sm tracking-wide">
             backend
             <span className="text-[#7000ff]">to</span>
             the
@@ -55,20 +56,21 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors duration-200 font-mono"
+              className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors duration-200 font-mono"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* CTA + Social */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Right side: theme toggle + links + CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <a
             href="https://diegobarrioh.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[#8b949e] hover:text-[#e6edf3] transition-colors duration-200"
+            className="text-sm text-[var(--c-muted)] hover:text-[var(--c-text)] transition-colors duration-200"
           >
             Portfolio ↗
           </a>
@@ -80,32 +82,35 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile menu toggle */}
-        <button
-          className="md:hidden text-[#8b949e] hover:text-[#7000ff] transition-colors"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {menuOpen ? (
-              <path d="M18 6L6 18M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="text-[var(--c-muted)] hover:text-[#7000ff] transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {menuOpen ? (
+                <path d="M18 6L6 18M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0d1117]/95 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)] px-6 py-4">
+        <div className="md:hidden bg-[var(--c-surface)]/95 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)] px-6 py-4">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors font-mono"
+                className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono"
               >
                 {link.label}
               </a>

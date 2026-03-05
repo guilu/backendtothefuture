@@ -41,12 +41,12 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
             <span className="tag mb-4 inline-block">Projects</span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3] leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-[var(--c-text)] leading-tight">
               Things I built<br />
               <span className="text-[#7000ff]">for real</span>
             </h2>
           </div>
-          <p className="text-[#8b949e] max-w-xs text-sm leading-relaxed md:text-right">
+          <p className="text-[var(--c-muted)] max-w-xs text-sm leading-relaxed md:text-right">
             Production-grade apps. Not side projects gathering dust — things you can open right now.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Projects() {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block mb-8 p-8 rounded-2xl border border-[rgba(112,0,255,0.15)] bg-[#0d1117] hover:border-[rgba(112,0,255,0.35)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(112,0,255,0.06)]"
+            className="group block mb-8 p-8 rounded-2xl border border-[rgba(112,0,255,0.15)] bg-[var(--c-surface)] hover:border-[rgba(112,0,255,0.35)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(112,0,255,0.06)]"
           >
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Left: content */}
@@ -74,13 +74,13 @@ export default function Projects() {
                   </span>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-black text-[#e6edf3] mb-2 group-hover:text-[#7000ff] transition-colors">
+                <h3 className="text-3xl md:text-4xl font-black text-[var(--c-text)] mb-2 group-hover:text-[#7000ff] transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-[#8b949e] font-mono text-sm mb-4">
+                <p className="text-[var(--c-muted)] font-mono text-sm mb-4">
                   {project.tagline}
                 </p>
-                <p className="text-[#8b949e] leading-relaxed mb-6 max-w-xl">
+                <p className="text-[var(--c-muted)] leading-relaxed mb-6 max-w-xl">
                   {project.description}
                 </p>
 
@@ -88,7 +88,7 @@ export default function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs font-mono text-[#8b949e] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-full"
+                      className="px-3 py-1 text-xs font-mono text-[var(--c-muted)] bg-[var(--c-chip-bg)] border border-[var(--c-chip-border)] rounded-full"
                     >
                       {tag}
                     </span>
@@ -110,10 +110,10 @@ export default function Projects() {
                     key={m.label}
                     className="flex-1 lg:flex-none p-4 rounded-xl bg-[rgba(112,0,255,0.04)] border border-[rgba(112,0,255,0.08)] text-center lg:text-left"
                   >
-                    <div className="text-xs text-[#8b949e] font-mono mb-1 uppercase tracking-wider">
+                    <div className="text-xs text-[var(--c-muted)] font-mono mb-1 uppercase tracking-wider">
                       {m.label}
                     </div>
-                    <div className="text-sm font-semibold text-[#e6edf3]">
+                    <div className="text-sm font-semibold text-[var(--c-text)]">
                       {m.value}
                     </div>
                   </div>
@@ -131,12 +131,12 @@ export default function Projects() {
               className="p-6 rounded-xl border border-dashed border-[rgba(112,0,255,0.1)] bg-[rgba(112,0,255,0.02)] flex flex-col gap-2"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[#e6edf3] font-semibold">{p.name}</span>
-                <span className="text-xs font-mono text-[#8b949e] border border-[rgba(255,255,255,0.08)] px-2 py-0.5 rounded">
+                <span className="text-[var(--c-text)] font-semibold">{p.name}</span>
+                <span className="text-xs font-mono text-[var(--c-muted)] border border-[var(--c-chip-border)] px-2 py-0.5 rounded">
                   {p.eta}
                 </span>
               </div>
-              <p className="text-sm text-[#8b949e] font-mono">{p.hint}</p>
+              <p className="text-sm text-[var(--c-muted)] font-mono">{p.hint}</p>
             </div>
           ))}
         </div>

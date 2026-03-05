@@ -29,11 +29,11 @@ export default function TechStack() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="tag mb-4 inline-block">Stack</span>
-          <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3]">
+          <h2 className="text-4xl md:text-5xl font-black text-[var(--c-text)]">
             The tools that{" "}
             <span className="text-[#7000ff]">ship things</span>
           </h2>
-          <p className="mt-4 text-[#8b949e] max-w-md mx-auto">
+          <p className="mt-4 text-[var(--c-muted)] max-w-md mx-auto">
             15 years of production scars — these are the technologies I trust.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function TechStack() {
           {categories.map((cat) => (
             <div
               key={cat.label}
-              className="p-6 rounded-xl border border-[rgba(112,0,255,0.08)] bg-[#0d1117] hover:border-[rgba(112,0,255,0.18)] transition-all duration-300"
+              className="p-6 rounded-xl border border-[rgba(112,0,255,0.08)] bg-[var(--c-surface)] hover:border-[rgba(112,0,255,0.18)] transition-all duration-300"
             >
               <h3 className="text-xs font-mono font-semibold text-[#7000ff] uppercase tracking-widest mb-4">
                 {cat.label}
@@ -51,7 +51,7 @@ export default function TechStack() {
                 {cat.items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1.5 text-sm text-[#e6edf3] bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] rounded-lg hover:border-[rgba(112,0,255,0.2)] hover:text-[#7000ff] transition-all duration-200 cursor-default"
+                    className="px-3 py-1.5 text-sm text-[var(--c-text)] bg-[var(--c-chip-bg)] border border-[var(--c-chip-border)] rounded-lg hover:border-[rgba(112,0,255,0.2)] hover:text-[#7000ff] transition-all duration-200 cursor-default"
                   >
                     {item}
                   </span>
@@ -63,7 +63,7 @@ export default function TechStack() {
           {/* CTA card */}
           <div className="p-6 rounded-xl border border-dashed border-[rgba(112,0,255,0.15)] bg-[rgba(112,0,255,0.02)] flex flex-col items-center justify-center text-center gap-3">
             <span className="text-3xl" aria-hidden>🛰</span>
-            <p className="text-sm text-[#8b949e] leading-relaxed">
+            <p className="text-sm text-[var(--c-muted)] leading-relaxed">
               Always learning. Always shipping.
             </p>
             <a

@@ -24,22 +24,22 @@ export default function About() {
           {/* Text side */}
           <div>
             <span className="tag mb-6 inline-block">About</span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3] leading-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-black text-[var(--c-text)] leading-tight mb-6">
               Senior Backend
               <br />
               <span className="text-[#7000ff]">Engineer</span>
               <br />
               based in Alicante
             </h2>
-            <p className="text-[#8b949e] text-lg leading-relaxed mb-6">
+            <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-6">
               I&apos;m{" "}
-              <span className="text-[#e6edf3] font-semibold">Diego Barrio</span> — a backend
+              <span className="text-[var(--c-text)] font-semibold">Diego Barrio</span> — a backend
               engineer with 15+ years building platforms that don&apos;t break under pressure.
               My career spans{" "}
-              <span className="text-[#e6edf3]">fintech, banking, and mobility</span>, always
+              <span className="text-[var(--c-text)]">fintech, banking, and mobility</span>, always
               chasing the same goal: resilient systems that scale.
             </p>
-            <p className="text-[#8b949e] text-lg leading-relaxed mb-8">
+            <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-8">
               This site is where I ship my own ideas. No clients, no sprints — just
               clean engineering and things I wanted to exist.
             </p>
@@ -56,7 +56,7 @@ export default function About() {
               </a>
               <a
                 href="mailto:diegobarrioh@gmail.com"
-                className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors font-mono"
+                className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono"
               >
                 diegobarrioh@gmail.com →
               </a>
@@ -68,17 +68,17 @@ export default function About() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="group p-6 rounded-xl border border-[rgba(112,0,255,0.08)] bg-[#0d1117] hover:border-[rgba(112,0,255,0.2)] hover:bg-[#0d1117] transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.05)]"
+                className="group p-6 rounded-xl border border-[rgba(112,0,255,0.08)] bg-[var(--c-surface)] hover:border-[rgba(112,0,255,0.2)] hover:bg-[var(--c-surface)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.05)]"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-2xl mt-0.5" aria-hidden>
                     {item.icon}
                   </span>
                   <div>
-                    <h3 className="font-semibold text-[#e6edf3] mb-1 group-hover:text-[#7000ff] transition-colors">
+                    <h3 className="font-semibold text-[var(--c-text)] mb-1 group-hover:text-[#7000ff] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-[#8b949e] text-sm leading-relaxed">
+                    <p className="text-[var(--c-muted)] text-sm leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

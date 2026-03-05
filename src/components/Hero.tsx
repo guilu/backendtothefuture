@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
 
         {/* Main headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#e6edf3] leading-none mb-6">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[var(--c-text)] leading-none mb-6">
           <span className="block">Building the</span>
           <span className="block text-[#7000ff] relative">
             Backend
@@ -32,7 +32,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded font-mono text-sm text-[#7000ff] bg-[rgba(112,0,255,0.06)] border border-[rgba(112,0,255,0.15)]"
             style={{ boxShadow: "0 0 20px rgba(112,0,255,0.05)" }}
           >
-            <span className="text-[#8b949e]">~$</span>
+            <span className="text-[var(--c-muted)]">~$</span>
             <span className="cursor-blink">
               java · spring · microservices · kafka · k8s
             </span>
@@ -40,13 +40,13 @@ export default function Hero() {
         </div>
 
         {/* Description */}
-        <p className="max-w-2xl mx-auto text-lg text-[#8b949e] leading-relaxed mb-12">
+        <p className="max-w-2xl mx-auto text-lg text-[var(--c-muted)] leading-relaxed mb-12">
           I design and build{" "}
-          <span className="text-[#e6edf3]">scalable backend platforms</span> with Java &amp;
+          <span className="text-[var(--c-text)]">scalable backend platforms</span> with Java &amp;
           Spring. Focused on microservices, clean architecture, observability, and
           rigorous engineering — from{" "}
-          <span className="text-[#e6edf3]">fintech</span> to{" "}
-          <span className="text-[#e6edf3]">mobility</span>.
+          <span className="text-[var(--c-text)]">fintech</span> to{" "}
+          <span className="text-[var(--c-text)]">mobility</span>.
         </p>
 
         {/* CTAs */}
@@ -79,7 +79,7 @@ export default function Hero() {
               <div className="text-2xl font-black text-[#7000ff] font-mono">
                 {stat.value}
               </div>
-              <div className="text-xs text-[#8b949e] mt-1 leading-tight">
+              <div className="text-xs text-[var(--c-muted)] mt-1 leading-tight">
                 {stat.label}
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#8b949e]">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--c-muted)]">
         <span className="text-xs font-mono tracking-widest uppercase opacity-50">scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-[rgba(112,0,255,0.4)] to-transparent" />
       </div>

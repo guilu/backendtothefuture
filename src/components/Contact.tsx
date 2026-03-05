@@ -9,12 +9,12 @@ export default function Contact() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <span className="tag mb-6 inline-block">Contact</span>
 
-        <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3] mb-6 leading-tight">
+        <h2 className="text-4xl md:text-5xl font-black text-[var(--c-text)] mb-6 leading-tight">
           Let&apos;s build something{" "}
           <span className="text-[#7000ff]">worth shipping</span>
         </h2>
 
-        <p className="text-[#8b949e] text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-10 max-w-xl mx-auto">
           Open to collaborations, interesting backend challenges, and conversations
           about architecture. Drop me a line.
         </p>
@@ -41,31 +41,31 @@ export default function Contact() {
 
         {/* Terminal block */}
         <div className="inline-block text-left">
-          <div className="px-6 py-5 rounded-xl border border-[rgba(112,0,255,0.1)] bg-[#0d1117] font-mono text-sm">
+          <div className="px-6 py-5 rounded-xl border border-[rgba(112,0,255,0.1)] bg-[var(--c-surface)] font-mono text-sm">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
               <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
               <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
             </div>
-            <div className="text-[#8b949e] space-y-1">
+            <div className="text-[var(--c-muted)] space-y-1">
               <div>
                 <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[#e6edf3]">whoami</span>
+                <span className="text-[var(--c-text)]">whoami</span>
               </div>
-              <div className="pl-4 text-[#8b949e]">diego barrio · senior backend engineer</div>
+              <div className="pl-4 text-[var(--c-muted)]">diego barrio · senior backend engineer</div>
               <div>
                 <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[#e6edf3]">location</span>
+                <span className="text-[var(--c-text)]">location</span>
               </div>
               <div className="pl-4">alicante, spain 🇪🇸</div>
               <div>
                 <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[#e6edf3]">languages</span>
+                <span className="text-[var(--c-text)]">languages</span>
               </div>
               <div className="pl-4">spanish (native) · english (C1)</div>
               <div>
                 <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[#e6edf3]">status</span>
+                <span className="text-[var(--c-text)]">status</span>
               </div>
               <div className="pl-4 flex items-center gap-2">
                 <span
