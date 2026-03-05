@@ -37,8 +37,8 @@ export default function About() {
                 <LinkedInIcon />
                 LinkedIn
               </a>
-              <a href="mailto:diegobarrioh@gmail.com" className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono">
-                diegobarrioh@gmail.com →
+              <a href="https://diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono">
+                diegobarrioh.dev →
               </a>
             </div>
           </div>
