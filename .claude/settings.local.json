@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:diegobarrioh.dev)",
+      "WebFetch(domain:akademia.diegobarrioh.dev)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
