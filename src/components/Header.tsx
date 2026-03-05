@@ -23,7 +23,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#080c10]/90 backdrop-blur-md border-b border-[rgba(0,229,160,0.1)]"
+          ? "bg-[#080c10]/90 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)]"
           : "bg-transparent"
       }`}
     >
@@ -35,17 +35,17 @@ export default function Header() {
           aria-label="Backend to the Future"
         >
           <span
-            className="font-mono text-xs text-[#00e5a0] opacity-60 group-hover:opacity-100 transition-opacity"
+            className="font-mono text-xs text-[#7000ff] opacity-60 group-hover:opacity-100 transition-opacity"
             aria-hidden
           >
             &gt;
           </span>
           <span className="font-bold text-[#e6edf3] text-sm tracking-wide">
             backend
-            <span className="text-[#00e5a0]">to</span>
+            <span className="text-[#7000ff]">to</span>
             the
-            <span className="text-[#00e5a0]">future</span>
-            <span className="text-[#00e5a0] opacity-60">.com</span>
+            <span className="text-[#7000ff]">future</span>
+            <span className="text-[#7000ff] opacity-60">.com</span>
           </span>
         </a>
 
@@ -55,7 +55,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[#8b949e] hover:text-[#00e5a0] transition-colors duration-200 font-mono"
+              className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors duration-200 font-mono"
             >
               {link.label}
             </a>
@@ -74,7 +74,7 @@ export default function Header() {
           </a>
           <a
             href="#contact"
-            className="px-4 py-2 text-sm font-mono font-semibold text-[#080c10] bg-[#00e5a0] rounded hover:bg-[#00c98a] transition-colors duration-200"
+            className="px-4 py-2 text-sm font-mono font-semibold text-white bg-[#7000ff] rounded hover:bg-[#5c00d6] transition-colors duration-200"
           >
             Let&apos;s talk
           </a>
@@ -82,7 +82,7 @@ export default function Header() {
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden text-[#8b949e] hover:text-[#00e5a0] transition-colors"
+          className="md:hidden text-[#8b949e] hover:text-[#7000ff] transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -98,14 +98,14 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0d1117]/95 backdrop-blur-md border-b border-[rgba(0,229,160,0.1)] px-6 py-4">
+        <div className="md:hidden bg-[#0d1117]/95 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)] px-6 py-4">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm text-[#8b949e] hover:text-[#00e5a0] transition-colors font-mono"
+                className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors font-mono"
               >
                 {link.label}
               </a>
@@ -113,7 +113,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 px-4 py-2 text-sm font-mono font-semibold text-[#080c10] bg-[#00e5a0] rounded text-center hover:bg-[#00c98a] transition-colors"
+              className="mt-2 px-4 py-2 text-sm font-mono font-semibold text-white bg-[#7000ff] rounded text-center hover:bg-[#5c00d6] transition-colors"
             >
               Let&apos;s talk
             </a>

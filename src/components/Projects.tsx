@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-28 relative">
       {/* Subtle separator line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(0,229,160,0.15)] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(112,0,255,0.15)] to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
@@ -43,7 +43,7 @@ export default function Projects() {
             <span className="tag mb-4 inline-block">Projects</span>
             <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3] leading-tight">
               Things I built<br />
-              <span className="text-[#00e5a0]">for real</span>
+              <span className="text-[#7000ff]">for real</span>
             </h2>
           </div>
           <p className="text-[#8b949e] max-w-xs text-sm leading-relaxed md:text-right">
@@ -58,23 +58,23 @@ export default function Projects() {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block mb-8 p-8 rounded-2xl border border-[rgba(0,229,160,0.15)] bg-[#0d1117] hover:border-[rgba(0,229,160,0.35)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(0,229,160,0.06)]"
+            className="group block mb-8 p-8 rounded-2xl border border-[rgba(112,0,255,0.15)] bg-[#0d1117] hover:border-[rgba(112,0,255,0.35)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(112,0,255,0.06)]"
           >
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Left: content */}
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="tag">{project.label}</span>
-                  <span className="flex items-center gap-1.5 text-xs font-mono text-[#00e5a0]">
+                  <span className="flex items-center gap-1.5 text-xs font-mono text-[#7000ff]">
                     <span
-                      className="w-2 h-2 rounded-full bg-[#00e5a0]"
-                      style={{ boxShadow: "0 0 6px #00e5a0" }}
+                      className="w-2 h-2 rounded-full bg-[#7000ff]"
+                      style={{ boxShadow: "0 0 6px #7000ff" }}
                     />
                     {project.status}
                   </span>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-black text-[#e6edf3] mb-2 group-hover:text-[#00e5a0] transition-colors">
+                <h3 className="text-3xl md:text-4xl font-black text-[#e6edf3] mb-2 group-hover:text-[#7000ff] transition-colors">
                   {project.name}
                 </h3>
                 <p className="text-[#8b949e] font-mono text-sm mb-4">
@@ -95,7 +95,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <span className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-[#00e5a0] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-mono font-semibold text-[#7000ff] group-hover:gap-3 transition-all">
                   Open app
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M7 17L17 7M17 7H7M17 7v10" />
@@ -108,7 +108,7 @@ export default function Projects() {
                 {project.metrics.map((m) => (
                   <div
                     key={m.label}
-                    className="flex-1 lg:flex-none p-4 rounded-xl bg-[rgba(0,229,160,0.04)] border border-[rgba(0,229,160,0.08)] text-center lg:text-left"
+                    className="flex-1 lg:flex-none p-4 rounded-xl bg-[rgba(112,0,255,0.04)] border border-[rgba(112,0,255,0.08)] text-center lg:text-left"
                   >
                     <div className="text-xs text-[#8b949e] font-mono mb-1 uppercase tracking-wider">
                       {m.label}
@@ -128,7 +128,7 @@ export default function Projects() {
           {upcoming.map((p) => (
             <div
               key={p.name}
-              className="p-6 rounded-xl border border-dashed border-[rgba(0,229,160,0.1)] bg-[rgba(0,229,160,0.02)] flex flex-col gap-2"
+              className="p-6 rounded-xl border border-dashed border-[rgba(112,0,255,0.1)] bg-[rgba(112,0,255,0.02)] flex flex-col gap-2"
             >
               <div className="flex items-center justify-between">
                 <span className="text-[#e6edf3] font-semibold">{p.name}</span>

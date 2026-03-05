@@ -27,7 +27,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-black text-[#e6edf3] leading-tight mb-6">
               Senior Backend
               <br />
-              <span className="text-[#00e5a0]">Engineer</span>
+              <span className="text-[#7000ff]">Engineer</span>
               <br />
               based in Alicante
             </h2>
@@ -49,14 +49,14 @@ export default function About() {
                 href="https://www.linkedin.com/in/diegobarrioh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 font-mono text-sm font-semibold text-[#00e5a0] border border-[rgba(0,229,160,0.3)] rounded hover:border-[rgba(0,229,160,0.6)] hover:bg-[rgba(0,229,160,0.05)] transition-all duration-200"
+                className="flex items-center gap-2 px-5 py-2.5 font-mono text-sm font-semibold text-[#7000ff] border border-[rgba(112,0,255,0.3)] rounded hover:border-[rgba(112,0,255,0.6)] hover:bg-[rgba(112,0,255,0.05)] transition-all duration-200"
               >
                 <LinkedInIcon />
                 LinkedIn
               </a>
               <a
                 href="mailto:diegobarrioh@gmail.com"
-                className="text-sm text-[#8b949e] hover:text-[#00e5a0] transition-colors font-mono"
+                className="text-sm text-[#8b949e] hover:text-[#7000ff] transition-colors font-mono"
               >
                 diegobarrioh@gmail.com →
               </a>
@@ -68,14 +68,14 @@ export default function About() {
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="group p-6 rounded-xl border border-[rgba(0,229,160,0.08)] bg-[#0d1117] hover:border-[rgba(0,229,160,0.2)] hover:bg-[#0d1117] transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,160,0.05)]"
+                className="group p-6 rounded-xl border border-[rgba(112,0,255,0.08)] bg-[#0d1117] hover:border-[rgba(112,0,255,0.2)] hover:bg-[#0d1117] transition-all duration-300 hover:shadow-[0_0_20px_rgba(112,0,255,0.05)]"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-2xl mt-0.5" aria-hidden>
                     {item.icon}
                   </span>
                   <div>
-                    <h3 className="font-semibold text-[#e6edf3] mb-1 group-hover:text-[#00e5a0] transition-colors">
+                    <h3 className="font-semibold text-[#e6edf3] mb-1 group-hover:text-[#7000ff] transition-colors">
                       {item.title}
                     </h3>
                     <p className="text-[#8b949e] text-sm leading-relaxed">
