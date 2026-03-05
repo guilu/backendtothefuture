@@ -1,4 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY <= 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Grid background */}
@@ -86,12 +98,41 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--c-muted)]">
-        <span className="text-xs font-mono tracking-widest uppercase opacity-50">scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-[rgba(112,0,255,0.4)] to-transparent" />
+      {/* Mouse scroll indicator */}
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+        <svg
+          width="26" height="40" viewBox="0 0 26 40"
+          fill="none"
+          className="opacity-40"
+        >
+          {/* Mouse body */}
+          <rect
+            x="1" y="1" width="24" height="38" rx="12"
+            stroke="#7000ff" strokeWidth="1.5"
+          />
+          {/* Scroll wheel dot */}
+          <rect
+            x="11.5" y="8" width="3" height="7" rx="1.5"
+            fill="#7000ff"
+            className="scroll-wheel"
+          />
+        </svg>
       </div>
+
+      <style>{`
+        @keyframes scrollWheel {
+          0%   { transform: translateY(0);   opacity: 1; }
+          60%  { transform: translateY(8px); opacity: 0.2; }
+          61%  { transform: translateY(0);   opacity: 0; }
+          80%  { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        .scroll-wheel {
+          animation: scrollWheel 2s ease-in-out infinite;
+          transform-box: fill-box;
+          transform-origin: top center;
+        }
+      `}</style>
     </section>
   );
 }
