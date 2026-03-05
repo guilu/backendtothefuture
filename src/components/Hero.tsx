@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
 
         {/* Main headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-[var(--c-text)] leading-none mb-6" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[var(--c-text)] leading-none mb-6">
           <span className="block">Building the</span>
           <span className="block text-[#7000ff] relative">
             Backend
