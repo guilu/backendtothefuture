@@ -2,7 +2,7 @@
 set -e
 
 # ─── Config ───────────────────────────────────────────────────
-PI_HOST="pi@raspberrypi.local"       # cambia por IP o hostname de tu Pi
+PI_HOST="pi@red.local"       # cambia por IP o hostname de tu Pi
 PI_PATH="/var/www/backendtothefuture.com/html"
 # ──────────────────────────────────────────────────────────────
 

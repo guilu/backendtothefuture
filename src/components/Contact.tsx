@@ -1,45 +1,36 @@
+"use client";
+
+import { useLang } from "@/context/LangContext";
+import { t } from "@/lib/translations";
+
 export default function Contact() {
+  const { lang } = useLang();
+  const tx = t[lang].contact;
+
   return (
     <section id="contact" className="py-28 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(112,0,255,0.15)] to-transparent" />
-
-      {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[rgba(112,0,255,0.04)] blur-3xl rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <span className="tag mb-6 inline-block">Contact</span>
-
+        <span className="tag mb-6 inline-block">{tx.tag}</span>
         <h2 className="text-4xl md:text-5xl font-black text-[var(--c-text)] mb-6 leading-tight">
-          Let&apos;s build something{" "}
-          <span className="text-[#7000ff]">worth shipping</span>
+          {tx.h2[0]}{" "}<span className="text-[#7000ff]">{tx.h2[1]}</span>
         </h2>
-
-        <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-          Open to collaborations, interesting backend challenges, and conversations
-          about architecture. Drop me a line.
-        </p>
+        <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-10 max-w-xl mx-auto">{tx.subtitle}</p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a
-            href="mailto:diegobarrioh@gmail.com"
-            className="group flex items-center gap-3 px-8 py-4 font-mono font-semibold text-white bg-[#7000ff] rounded-lg hover:bg-[#5c00d6] transition-all duration-200 shadow-lg hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]"
-          >
+          <a href="mailto:diegobarrioh@gmail.com" className="group flex items-center gap-3 px-8 py-4 font-mono font-semibold text-white bg-[#7000ff] rounded-lg hover:bg-[#5c00d6] transition-all duration-200 shadow-lg hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]">
             <EmailIcon />
             diegobarrioh@gmail.com
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
-          <a
-            href="https://www.linkedin.com/in/diegobarrioh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-4 font-mono font-semibold text-[#7000ff] border border-[rgba(112,0,255,0.3)] rounded-lg hover:border-[rgba(112,0,255,0.6)] hover:bg-[rgba(112,0,255,0.05)] transition-all duration-200"
-          >
+          <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 font-mono font-semibold text-[#7000ff] border border-[rgba(112,0,255,0.3)] rounded-lg hover:border-[rgba(112,0,255,0.6)] hover:bg-[rgba(112,0,255,0.05)] transition-all duration-200">
             <LinkedInIcon />
             LinkedIn
           </a>
         </div>
 
-        {/* Terminal block */}
         <div className="inline-block text-left">
           <div className="px-6 py-5 rounded-xl border border-[rgba(112,0,255,0.1)] bg-[var(--c-surface)] font-mono text-sm">
             <div className="flex items-center gap-2 mb-3">
@@ -48,31 +39,16 @@ export default function Contact() {
               <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
             </div>
             <div className="text-[var(--c-muted)] space-y-1">
-              <div>
-                <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[var(--c-text)]">whoami</span>
-              </div>
-              <div className="pl-4 text-[var(--c-muted)]">diego barrio · senior backend engineer</div>
-              <div>
-                <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[var(--c-text)]">location</span>
-              </div>
-              <div className="pl-4">alicante, spain 🇪🇸</div>
-              <div>
-                <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[var(--c-text)]">languages</span>
-              </div>
-              <div className="pl-4">spanish (native) · english (C1)</div>
-              <div>
-                <span className="text-[#7000ff]">~$</span>{" "}
-                <span className="text-[var(--c-text)]">status</span>
-              </div>
+              <div><span className="text-[#7000ff]">~$</span> <span className="text-[var(--c-text)]">whoami</span></div>
+              <div className="pl-4">{tx.terminal.whoami}</div>
+              <div><span className="text-[#7000ff]">~$</span> <span className="text-[var(--c-text)]">location</span></div>
+              <div className="pl-4">{tx.terminal.location}</div>
+              <div><span className="text-[#7000ff]">~$</span> <span className="text-[var(--c-text)]">languages</span></div>
+              <div className="pl-4">{tx.terminal.languages}</div>
+              <div><span className="text-[#7000ff]">~$</span> <span className="text-[var(--c-text)]">status</span></div>
               <div className="pl-4 flex items-center gap-2">
-                <span
-                  className="w-2 h-2 rounded-full bg-[#7000ff] inline-block"
-                  style={{ boxShadow: "0 0 6px #7000ff" }}
-                />
-                <span className="text-[#7000ff]">open to opportunities</span>
+                <span className="w-2 h-2 rounded-full bg-[#7000ff] inline-block" style={{ boxShadow: "0 0 6px #7000ff" }} />
+                <span className="text-[#7000ff]">{tx.terminal.status}</span>
               </div>
             </div>
           </div>
