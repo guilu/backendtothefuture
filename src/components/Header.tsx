@@ -35,7 +35,7 @@ export default function Header() {
             &gt;
           </span>
           <span className="font-bold text-[var(--c-text)] text-sm tracking-wide">
-            backend<span className="text-[#7000ff]">to</span>the<span className="text-[#7000ff]">future</span><span className="text-[#7000ff] opacity-60">.com</span>
+            backend<span className="text-[#7000ff]">to</span>the<span className="text-[#7000ff]">future</span>
           </span>
         </a>
 
