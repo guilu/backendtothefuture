@@ -62,9 +62,6 @@ export default function Hero() {
             {tx.cta1}
             <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
           </a>
-          <a href="https://diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="px-8 py-3 font-mono font-semibold text-[#7000ff] border border-[rgba(112,0,255,0.3)] rounded hover:border-[rgba(112,0,255,0.6)] hover:bg-[rgba(112,0,255,0.05)] transition-all duration-200">
-            {tx.cta2}
-          </a>
         </div>
 
         <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto border-t border-[rgba(112,0,255,0.1)] pt-10">

@@ -20,9 +20,8 @@ export default function Contact() {
         <p className="text-[var(--c-muted)] text-lg leading-relaxed mb-10 max-w-xl mx-auto">{tx.subtitle}</p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a href="mailto:diegobarrioh@gmail.com" className="group flex items-center gap-3 px-8 py-4 font-mono font-semibold text-white bg-[#7000ff] rounded-lg hover:bg-[#5c00d6] transition-all duration-200 shadow-lg hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]">
-            <EmailIcon />
-            diegobarrioh@gmail.com
+          <a href="https://diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 px-8 py-4 font-mono font-semibold text-white bg-[#7000ff] rounded-lg hover:bg-[#5c00d6] transition-all duration-200 shadow-lg hover:shadow-[0_0_40px_rgba(112,0,255,0.35)]">
+            diegobarrioh.dev
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 font-mono font-semibold text-[#7000ff] border border-[rgba(112,0,255,0.3)] rounded-lg hover:border-[rgba(112,0,255,0.6)] hover:bg-[rgba(112,0,255,0.05)] transition-all duration-200">
@@ -55,15 +54,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
-}
-
-function EmailIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-      <polyline points="22,6 12,13 2,6" />
-    </svg>
   );
 }
 

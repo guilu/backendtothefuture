@@ -9,7 +9,7 @@ import { t } from "@/lib/translations";
 export default function Header() {
   const { lang } = useLang();
   const tx = t[lang].header;
-  const navHrefs = ["#about", "#projects", "#stack", "#contact"];
+  const navHrefs = ["#projects", "#stack", "#contact"];
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
