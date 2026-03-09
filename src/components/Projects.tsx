@@ -8,6 +8,9 @@ const AKADEMIA_SCREENSHOTS = [
   "/screenshots/akademia/1.png",
   "/screenshots/akademia/2.png",
   "/screenshots/akademia/3.png",
+  "/screenshots/akademia/4.png",
+  "/screenshots/akademia/5.png",
+  "/screenshots/akademia/6.png",
 ];
 
 export default function Projects() {
