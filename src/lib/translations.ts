@@ -3,7 +3,7 @@ export type Lang = "en" | "es";
 export const t = {
   en: {
     header: {
-      nav: ["Projects", "Stack", "Contact"],
+      nav: ["Projects", "Stack", "Contact", "Blog"],
       portfolio: "Portfolio ↗",
       cta: "Let's talk",
     },
@@ -110,7 +110,7 @@ export const t = {
 
   es: {
     header: {
-      nav: ["Proyectos", "Stack", "Contacto"],
+      nav: ["Proyectos", "Stack", "Contacto", "Blog"],
       portfolio: "Portfolio ↗",
       cta: "Hablemos",
     },

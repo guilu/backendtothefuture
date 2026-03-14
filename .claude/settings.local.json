@@ -4,7 +4,12 @@
       "WebFetch(domain:diegobarrioh.dev)",
       "WebFetch(domain:akademia.diegobarrioh.dev)",
       "Bash(npm run:*)",
-      "Bash(fc-list)"
+      "Bash(fc-list)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(npm install:*)",
+      "Bash(npm audit:*)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
