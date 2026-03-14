@@ -8,7 +8,8 @@ export const t = {
       cta: "Let's talk",
     },
     hero: {
-      badge: "Sr Backend Engineer · 15 years+ shipping",
+      badge: "Senior Backend Engineer • 15 years shipping production systems",
+      badgeMobile: "Senior Backend Engineer · 15 years +",
       h1: ["Backend **engineering**", "meets **AI**", "execution"],
       description: {
         pre: "Senior backend engineer crafting",
@@ -115,7 +116,8 @@ export const t = {
       cta: "Hablemos",
     },
     hero: {
-      badge: "Sr Backend Engineer · 15 años+ en producción",
+      badge: "Senior Backend Engineer • 15 años en producción",
+      badgeMobile: "Senior Backend Engineer · 15 años +",
       h1: ["Ingeniería **backend**", "y ejecución", "con **IA**"],
       description: {
         pre: "Senior backend engineer creando",

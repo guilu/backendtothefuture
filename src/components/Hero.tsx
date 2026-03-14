@@ -92,7 +92,8 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <span className="tag">
             <span className="w-2 h-2 rounded-full bg-[#7000ff] mr-2 inline-block" style={{ boxShadow: "0 0 6px #7000ff" }} />
-            {tx.badge}
+            <span className="hidden sm:inline">{tx.badge}</span>
+            <span className="sm:hidden">{tx.badgeMobile}</span>
           </span>
         </div>
 
