@@ -108,7 +108,7 @@ export default function Hero() {
                 {/* Prompt symbol on first line */}
                 {lineIdx === 0 && (
                   <span className="font-mono text-[#7000ff] opacity-50 mr-3 text-4xl sm:text-5xl md:text-6xl lg:text-7xl align-baseline">
-                    ~$
+                    ~/
                   </span>
                 )}
                 {segs.map((seg, j) => {
