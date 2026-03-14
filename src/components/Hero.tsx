@@ -89,7 +89,7 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[rgba(112,0,255,0.04)] blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 sm:pt-0">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-4">
           <span className="tag">
             <span className="w-2 h-2 rounded-full bg-[#7000ff] mr-2 inline-block" style={{ boxShadow: "0 0 6px #7000ff" }} />
             <span className="hidden sm:inline">{tx.badge}</span>
