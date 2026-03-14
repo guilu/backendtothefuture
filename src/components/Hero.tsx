@@ -29,12 +29,15 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[var(--c-text)] leading-none mb-6">
-          <span className="block">{tx.h1[0]}</span>
-          <span className="block text-[#7000ff] relative">
-            {tx.h1[1]}
-            <span className="absolute -right-4 top-0 text-[#7000ff] opacity-30 font-mono text-2xl">_</span>
-          </span>
-          <span className="block">{tx.h1[2]}</span>
+          {tx.h1.map((line, i) => (
+            <span key={i} className="block">
+              {line.split(/(\*\*[^*]+\*\*)/).map((part, j) =>
+                part.startsWith("**") ? (
+                  <span key={j} className="text-[#7000ff]">{part.slice(2, -2)}</span>
+                ) : part
+              )}
+            </span>
+          ))}
         </h1>
 
         <div className="flex justify-center mb-10">
