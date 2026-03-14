@@ -2,35 +2,16 @@
 
 import { useState } from "react";
 import type { Post } from "@/lib/blog";
-import ThemeToggle from "./ThemeToggle";
-import LangToggle from "./LangToggle";
 
 export default function BlogLayout({ posts }: { posts: Post[] }) {
   const [selected, setSelected] = useState<Post | null>(posts[0] ?? null);
 
   return (
     <div className="min-h-screen bg-[var(--c-bg)] text-[var(--c-text)]">
-      {/* Minimal header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--c-bg)]/90 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <a href="/" className="font-bold text-sm tracking-wide text-[var(--c-text)] hover:text-[#7000ff] transition-colors">
-              backend<span className="text-[#7000ff]">to</span>the<span className="text-[#7000ff]">future</span>
-            </a>
-            <span className="text-[var(--c-muted)] opacity-30 font-mono">/</span>
-            <span className="font-mono text-xs text-[#7000ff] uppercase tracking-widest">blog</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <LangToggle />
-            <ThemeToggle />
-          </div>
-        </div>
-      </header>
-
-      {/* Split layout */}
-      <div className="flex pt-[57px] min-h-screen">
+      {/* Split layout — pt accounts for the fixed Header (≈73px) */}
+      <div className="flex pt-[73px] min-h-screen">
         {/* Sidebar */}
-        <aside className="w-72 shrink-0 border-r border-[rgba(112,0,255,0.1)] overflow-y-auto sticky top-[57px] h-[calc(100vh-57px)]">
+        <aside className="w-72 shrink-0 border-r border-[rgba(112,0,255,0.1)] overflow-y-auto sticky top-[73px] h-[calc(100vh-73px)]">
           <div className="p-5">
             <p className="font-mono text-[10px] uppercase tracking-widest text-[#7000ff] mb-4 px-3">
               {posts.length} post{posts.length !== 1 ? "s" : ""}

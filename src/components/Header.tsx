@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import LangToggle from "./LangToggle";
 import { useLang } from "@/context/LangContext";
@@ -30,20 +31,20 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group" aria-label="Backend to the Future">
+        <Link href="/" className="flex items-center gap-2 group" aria-label="Backend to the Future">
           <img src="/img/dbh-light.svg" alt="" className="h-7 w-auto block dark:hidden" aria-hidden />
           <img src="/img/dbh-dark.svg" alt="" className="h-7 w-auto hidden dark:block" aria-hidden />
           <span className="font-bold text-[var(--c-text)] text-sm tracking-wide">
             backend<span className="text-[#7000ff]">to</span>the<span className="text-[#7000ff]">future</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {tx.nav.map((label, i) => (
-            <a key={navHrefs[i]} href={navHrefs[i]} className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors duration-200 font-mono">
+            <Link key={navHrefs[i]} href={navHrefs[i]} className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors duration-200 font-mono">
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -75,9 +76,9 @@ export default function Header() {
         <div className="md:hidden bg-[var(--c-surface)]/95 backdrop-blur-md border-b border-[rgba(112,0,255,0.1)] px-6 py-4">
           <nav className="flex flex-col gap-4">
             {tx.nav.map((label, i) => (
-              <a key={navHrefs[i]} href={navHrefs[i]} onClick={() => setMenuOpen(false)} className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono">
+              <Link key={navHrefs[i]} href={navHrefs[i]} onClick={() => setMenuOpen(false)} className="text-sm text-[var(--c-muted)] hover:text-[#7000ff] transition-colors font-mono">
                 {label}
-              </a>
+              </Link>
             ))}
             <a href="#contact" onClick={() => setMenuOpen(false)} className="mt-2 px-4 py-2 text-sm font-mono font-semibold text-white bg-[#7000ff] rounded text-center hover:bg-[#5c00d6] transition-colors">
               {tx.cta}
