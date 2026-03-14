@@ -1,19 +1,87 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/context/LangContext";
 import { t } from "@/lib/translations";
+
+type Segment = { text: string; purple: boolean };
+
+function parseSegments(line: string): Segment[] {
+  return line.split(/(\*\*[^*]+\*\*)/).map((part) =>
+    part.startsWith("**")
+      ? { text: part.slice(2, -2), purple: true }
+      : { text: part, purple: false }
+  );
+}
+
+function lineDisplayLength(line: string) {
+  return line.replace(/\*\*/g, "").length;
+}
 
 export default function Hero() {
   const { lang } = useLang();
   const tx = t[lang].hero;
-  const [visible, setVisible] = useState(true);
 
+  const [scrolled, setScrolled] = useState(true);
+  const [started, setStarted] = useState(false);
+  const [revealedCount, setRevealedCount] = useState(0);
+  const [typingDone, setTypingDone] = useState(false);
+
+  const lines = tx.h1 as readonly string[];
+  const lineLengths = useMemo(() => lines.map(lineDisplayLength), [lines]);
+  const totalChars = useMemo(() => lineLengths.reduce((a, b) => a + b, 0), [lineLengths]);
+
+  // Reset on language change
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY <= 40);
+    setStarted(false);
+    setRevealedCount(0);
+    setTypingDone(false);
+    const t = setTimeout(() => setStarted(true), 500);
+    return () => clearTimeout(t);
+  }, [lang]);
+
+  // Start after mount
+  useEffect(() => {
+    const t = setTimeout(() => setStarted(true), 500);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Typewriter
+  useEffect(() => {
+    if (!started) return;
+    if (revealedCount >= totalChars) {
+      setTypingDone(true);
+      return;
+    }
+    const delay = 48 + Math.random() * 28;
+    const id = setTimeout(() => setRevealedCount((c) => c + 1), delay);
+    return () => clearTimeout(id);
+  }, [started, revealedCount, totalChars]);
+
+  // Scroll visibility for arrow
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY <= 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Chars revealed per line
+  const charsPerLine = useMemo(() => {
+    let rem = revealedCount;
+    return lineLengths.map((len) => {
+      const v = Math.min(len, rem);
+      rem = Math.max(0, rem - len);
+      return v;
+    });
+  }, [revealedCount, lineLengths]);
+
+  // Which line shows the cursor
+  const cursorLine = useMemo(() => {
+    let last = 0;
+    charsPerLine.forEach((n, i) => { if (n > 0 || i === 0) last = i; });
+    if (typingDone) return lines.length - 1;
+    return charsPerLine.findIndex((n, i) => n < lineLengths[i]) ?? last;
+  }, [charsPerLine, lineLengths, typingDone, lines.length]);
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -29,15 +97,42 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[var(--c-text)] leading-none mb-6">
-          {tx.h1.map((line, i) => (
-            <span key={i} className="block">
-              {line.split(/(\*\*[^*]+\*\*)/).map((part, j) =>
-                part.startsWith("**") ? (
-                  <span key={j} className="text-[#7000ff]">{part.slice(2, -2)}</span>
-                ) : part
-              )}
-            </span>
-          ))}
+          {lines.map((line, lineIdx) => {
+            const segs = parseSegments(line);
+            const charsToShow = charsPerLine[lineIdx];
+            const isActiveLine = lineIdx === cursorLine;
+
+            let rem = charsToShow;
+            return (
+              <span key={lineIdx} className="block">
+                {/* Prompt symbol on first line */}
+                {lineIdx === 0 && (
+                  <span className="font-mono text-[#7000ff] opacity-50 mr-3 text-4xl sm:text-5xl md:text-6xl lg:text-7xl align-baseline">
+                    &gt;
+                  </span>
+                )}
+                {segs.map((seg, j) => {
+                  if (rem <= 0) return null;
+                  const visible = seg.text.slice(0, rem);
+                  rem -= seg.text.length;
+                  return visible ? (
+                    <span key={j} className={seg.purple ? "text-[#7000ff]" : ""}>{visible}</span>
+                  ) : null;
+                })}
+                {isActiveLine && (
+                  <span
+                    className="inline-block align-middle ml-1"
+                    style={{
+                      width: "0.12em",
+                      height: "0.85em",
+                      background: "#7000ff",
+                      animation: "blink 1.1s step-end infinite",
+                    }}
+                  />
+                )}
+              </span>
+            );
+          })}
         </h1>
 
         <div className="flex justify-center mb-10">
@@ -77,7 +172,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
         <svg width="26" height="40" viewBox="0 0 26 40" fill="none" className="opacity-40">
           <rect x="1" y="1" width="24" height="38" rx="12" stroke="#7000ff" strokeWidth="1.5" />
           <rect x="11.5" y="8" width="3" height="7" rx="1.5" fill="#7000ff" className="scroll-wheel" />
