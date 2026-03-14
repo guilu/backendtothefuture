@@ -31,9 +31,8 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group" aria-label="Backend to the Future">
-          <span className="font-mono text-xs text-[#7000ff] opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden>
-            &gt;
-          </span>
+          <img src="/img/dbh-light.svg" alt="" className="h-7 w-auto block dark:hidden" aria-hidden />
+          <img src="/img/dbh-dark.svg" alt="" className="h-7 w-auto hidden dark:block" aria-hidden />
           <span className="font-bold text-[var(--c-text)] text-sm tracking-wide">
             backend<span className="text-[#7000ff]">to</span>the<span className="text-[#7000ff]">future</span>
           </span>

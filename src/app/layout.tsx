@@ -46,6 +46,8 @@ export default function RootLayout({
       <head>
         {/* Anti-FOUC: apply theme class before first paint */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="icon" href="/img/dbh-light.svg" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/img/dbh-dark.svg" media="(prefers-color-scheme: dark)" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
