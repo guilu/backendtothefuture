@@ -61,23 +61,45 @@ export const t = {
       tag: "Projects",
       h2: ["Things I built", "for real"],
       subtitle: "Production-grade apps. Not side projects gathering dust — things you can open right now.",
-      featured: {
-        label: "First release",
-        status: "live",
-        tagline: "Your AI-powered learning companion",
-        description:
-          "A platform that transforms how you learn. Built with a clean backend architecture and AI integration to deliver personalized educational experiences. The first project shipped under the backendtothefuture.com umbrella.",
-        metrics: [
-          { label: "Type",  value: "Web App" },
-          { label: "Stack", value: "Java + Spring" },
-          { label: "Status", value: "Live" },
-        ],
-        openApp: "Open app",
-      },
-      upcoming: [
-        { name: "Project #2", hint: "Something in fintech...",      eta: "Coming soon" },
-        { name: "Project #3", hint: "Observability tooling...",      eta: "In progress" },
+      featured: [
+        {
+          id: "akademia",
+          name: "akadem.ia",
+          label: "First release",
+          status: "live",
+          tagline: "Your AI-powered learning companion",
+          description:
+            "A platform that transforms how you learn. Built with a clean backend architecture and AI integration to deliver personalized educational experiences. The first project shipped under the backendtothefuture.com umbrella.",
+          tags: ["AI", "Spring Boot", "Java", "Backend", "Education"],
+          metrics: [
+            { label: "Type",  value: "Web App" },
+            { label: "Stack", value: "Java + Spring" },
+            { label: "Status", value: "Live" },
+          ],
+          openApp: "Open app",
+          url: "https://akademia.diegobarrioh.dev",
+          browserUrl: "akademia.diegobarrioh.dev",
+        },
+        {
+          id: "tokenmeter",
+          name: "TokenMeter",
+          label: "New release",
+          status: "live",
+          tagline: "AI repository cost intelligence",
+          description:
+            "Estimate what it would cost to regenerate any public GitHub repository with modern AI models. TokenMeter scans the codebase, measures its token footprint, and benchmarks raw, assisted, and agentic generation workflows across providers.",
+          tags: ["AI", "Next.js", "TypeScript", "Tokenizer", "Cost Analysis"],
+          metrics: [
+            { label: "Type",  value: "Web App" },
+            { label: "Stack", value: "Next.js + TS" },
+            { label: "Status", value: "Live" },
+          ],
+          openApp: "Open app",
+          url: "https://tokenmeter.backendtothefuture.com",
+          browserUrl: "tokenmeter.backendtothefuture.com",
+        },
       ],
+      upcoming: [],
     },
     stack: {
       tag: "Stack",
@@ -169,23 +191,45 @@ export const t = {
       tag: "Proyectos",
       h2: ["Lo que he", "construido de verdad"],
       subtitle: "Apps de calidad productiva. No proyectos acumulando polvo — cosas que puedes abrir ahora mismo.",
-      featured: {
-        label: "Primera release",
-        status: "en vivo",
-        tagline: "Tu compañero de aprendizaje con IA",
-        description:
-          "Una plataforma que transforma cómo aprendes. Construida con arquitectura backend limpia e integración de IA para ofrecer experiencias educativas personalizadas. El primer proyecto publicado bajo el paraguas de backendtothefuture.com.",
-        metrics: [
-          { label: "Tipo",   value: "Web App" },
-          { label: "Stack",  value: "Java + Spring" },
-          { label: "Estado", value: "En vivo" },
-        ],
-        openApp: "Abrir app",
-      },
-      upcoming: [
-        { name: "Proyecto #2", hint: "Algo en fintech...",            eta: "Próximamente" },
-        { name: "Proyecto #3", hint: "Herramientas de observabilidad...", eta: "En progreso" },
+      featured: [
+        {
+          id: "akademia",
+          name: "akadem.ia",
+          label: "Primera release",
+          status: "en vivo",
+          tagline: "Tu compañero de aprendizaje con IA",
+          description:
+            "Una plataforma que transforma cómo aprendes. Construida con arquitectura backend limpia e integración de IA para ofrecer experiencias educativas personalizadas. El primer proyecto publicado bajo el paraguas de backendtothefuture.com.",
+          tags: ["IA", "Spring Boot", "Java", "Backend", "Educación"],
+          metrics: [
+            { label: "Tipo",   value: "Web App" },
+            { label: "Stack",  value: "Java + Spring" },
+            { label: "Estado", value: "En vivo" },
+          ],
+          openApp: "Abrir app",
+          url: "https://akademia.diegobarrioh.dev",
+          browserUrl: "akademia.diegobarrioh.dev",
+        },
+        {
+          id: "tokenmeter",
+          name: "TokenMeter",
+          label: "Nueva release",
+          status: "en vivo",
+          tagline: "Inteligencia de coste para repos con IA",
+          description:
+            "Estima cuánto costaría regenerar cualquier repositorio público de GitHub con los modelos de IA actuales. TokenMeter escanea el código, mide su huella en tokens y compara flujos de generación raw, assisted y agentic entre proveedores.",
+          tags: ["IA", "Next.js", "TypeScript", "Tokenizer", "Análisis de coste"],
+          metrics: [
+            { label: "Tipo",   value: "Web App" },
+            { label: "Stack",  value: "Next.js + TS" },
+            { label: "Estado", value: "En vivo" },
+          ],
+          openApp: "Abrir app",
+          url: "https://tokenmeter.backendtothefuture.com",
+          browserUrl: "tokenmeter.backendtothefuture.com",
+        },
       ],
+      upcoming: [],
     },
     stack: {
       tag: "Stack",

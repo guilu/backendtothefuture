@@ -16,7 +16,8 @@ export default function Footer() {
         </a>
         <div className="flex items-center gap-6 text-xs font-mono text-[var(--c-muted)]">
           <a href="https://diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="hover:text-[#7000ff] transition-colors">Portfolio</a>
-          <a href="https://akademia.diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="hover:text-[#7000ff] transition-colors">Akademia</a>
+          <a href="https://akademia.diegobarrioh.dev" target="_blank" rel="noopener noreferrer" className="hover:text-[#7000ff] transition-colors">akadem.ia</a>
+          <a href="https://tokenmeter.backendtothefuture.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#7000ff] transition-colors">TokenMeter</a>
           <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="hover:text-[#7000ff] transition-colors">LinkedIn</a>
           <a href="mailto:diegobarrioh@gmail.com" className="hover:text-[#7000ff] transition-colors">Email</a>
         </div>
