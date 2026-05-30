@@ -14,11 +14,11 @@ const SCREENSHOTS: Record<string, string[]> = {
     "/screenshots/akademia/6.png",
   ],
   tokenmeter: [
-    "/screenshots/tokenmeter/tokenmeter-1.png",
-    "/screenshots/tokenmeter/tokenmeter-2.png",
-    "/screenshots/tokenmeter/tokenmeter-3.png",
-    "/screenshots/tokenmeter/tokenmeter-4.png",
-    "/screenshots/tokenmeter/tokenmeter-5.png",
+    "/screenshots/tokenmeter/tokenmeter-1.png?v=2",
+    "/screenshots/tokenmeter/tokenmeter-2.png?v=2",
+    "/screenshots/tokenmeter/tokenmeter-3.png?v=2",
+    "/screenshots/tokenmeter/tokenmeter-4.png?v=2",
+    "/screenshots/tokenmeter/tokenmeter-5.png?v=2",
   ],
 };
 
