@@ -1,6 +1,6 @@
 ---
 title: "Hexagonal Architecture in practice"
-date: "2026-03-14"
+date: "2024-03-14"
 description: "How I apply ports & adapters in real Spring Boot services — without the ceremony."
 tags: ["architecture", "spring", "java"]
 ---

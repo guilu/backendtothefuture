@@ -1,0 +1,19 @@
+<svg viewBox="0 0 1020 1020" xmlns="http://www.w3.org/2000/svg" fill="#fff" style="fill-rule:evenodd;clip-rule:evenodd;">
+  <g id="h">
+    <rect x="780" y="660" width="120" height="240"/>
+    <path d="M240,840l0,-120l540,0l0,120l-540,0Z"/>
+    <rect x="120" y="660" width="120" height="180"/>
+  </g>
+  <g id="D">
+    <rect x="120" y="240" width="120" height="360"/>
+    <path d="M480,600l-240,0l0,-120l240,0l0,120Z"/>
+    <path d="M480,480l-120,0l0,-60l120,0l0,60Z"/>
+    <path d="M480,360l-240,0l0,-120l240,-0l0,120Z"/>
+    <path d="M480,240l-120,0l-0,-120l120,0l0,120Z"/>
+    <rect x="780" y="240" width="120" height="360"/>
+    <path d="M660,480l-120,0l0,-60l120,0l0,60Z"/>
+    <path d="M780,600l-240,0l0,-120l240,0l0,120Z"/>
+    <path d="M780,360l-240,0l0,-120l240,0l0,120Z"/>
+    <path d="M660,240l-120,0l-0,-120l120,0l0,120Z"/>
+  </g>
+</svg>

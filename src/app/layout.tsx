@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { BrandDefs } from "@/components/design-system/BrandMark";
 
 export const metadata: Metadata = {
   title: "Backend to the Future — Diego Barrio",
@@ -46,8 +47,6 @@ export default function RootLayout({
       <head>
         {/* Anti-FOUC: apply theme class before first paint */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <link rel="icon" href="/img/dbh-light.svg" media="(prefers-color-scheme: light)" />
-        <link rel="icon" href="/img/dbh-dark.svg" media="(prefers-color-scheme: dark)" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -59,7 +58,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="relative min-h-screen">{children}</body>
+      <body className="relative min-h-screen"><BrandDefs />{children}</body>
     </html>
   );
 }

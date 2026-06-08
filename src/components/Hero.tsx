@@ -1,199 +1,64 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { ArrowIcon } from "./design-system/Icons";
 import { useLang } from "@/context/LangContext";
-import { t } from "@/lib/translations";
 
-type Segment = { text: string; purple: boolean };
-
-function parseSegments(line: string): Segment[] {
-  return line.split(/(\*\*[^*]+\*\*)/).map((part) =>
-    part.startsWith("**")
-      ? { text: part.slice(2, -2), purple: true }
-      : { text: part, purple: false }
-  );
-}
-
-function lineDisplayLength(line: string) {
-  return line.replace(/\*\*/g, "").length;
-}
+const copy = {
+  en: {
+    eyebrow: "Backend Engineering for the AI era",
+    title: <>Building reliable systems that power <span className="grad-word">the future.</span></>,
+    lede: "I design and build scalable backend systems, cloud-native applications and AI-powered tools with a focus on clean architecture, observability and developer experience.",
+    projects: "View Projects",
+    blog: "Read the Blog",
+    placeholder: "Hero illustration",
+  },
+  es: {
+    eyebrow: "Backend Engineering para la era de la IA",
+    title: <>Construyendo sistemas fiables que impulsan <span className="grad-word">el futuro.</span></>,
+    lede: "Diseño y construyo sistemas backend escalables, aplicaciones cloud-native y herramientas con IA con foco en arquitectura limpia, observabilidad y experiencia de desarrollo.",
+    projects: "Ver proyectos",
+    blog: "Leer el blog",
+    placeholder: "Ilustración hero",
+  },
+} as const;
 
 export default function Hero() {
   const { lang } = useLang();
-  const tx = t[lang].hero;
-
-  const [scrolled, setScrolled] = useState(true);
-  const [started, setStarted] = useState(false);
-  const [revealedCount, setRevealedCount] = useState(0);
-  const [typingDone, setTypingDone] = useState(false);
-
-  const lines = tx.h1 as readonly string[];
-  const lineLengths = useMemo(() => lines.map(lineDisplayLength), [lines]);
-  const totalChars = useMemo(() => lineLengths.reduce((a, b) => a + b, 0), [lineLengths]);
-
-  // Reset on language change
-  useEffect(() => {
-    setStarted(false);
-    setRevealedCount(0);
-    setTypingDone(false);
-    const t = setTimeout(() => setStarted(true), 500);
-    return () => clearTimeout(t);
-  }, [lang]);
-
-  // Start after mount
-  useEffect(() => {
-    const t = setTimeout(() => setStarted(true), 500);
-    return () => clearTimeout(t);
-  }, []);
-
-  // Typewriter
-  useEffect(() => {
-    if (!started) return;
-    if (revealedCount >= totalChars) {
-      setTypingDone(true);
-      return;
-    }
-    const delay = 48 + Math.random() * 28;
-    const id = setTimeout(() => setRevealedCount((c) => c + 1), delay);
-    return () => clearTimeout(id);
-  }, [started, revealedCount, totalChars]);
-
-  // Scroll visibility for arrow
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY <= 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Chars revealed per line
-  const charsPerLine = useMemo(() => {
-    let rem = revealedCount;
-    return lineLengths.map((len) => {
-      const v = Math.min(len, rem);
-      rem = Math.max(0, rem - len);
-      return v;
-    });
-  }, [revealedCount, lineLengths]);
-
-  // Which line shows the cursor
-  const cursorLine = useMemo(() => {
-    let last = 0;
-    charsPerLine.forEach((n, i) => { if (n > 0 || i === 0) last = i; });
-    if (typingDone) return lines.length - 1;
-    return charsPerLine.findIndex((n, i) => n < lineLengths[i]) ?? last;
-  }, [charsPerLine, lineLengths, typingDone, lines.length]);
+  const tx = copy[lang];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 grid-bg grid-fade" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[rgba(112,0,255,0.04)] blur-3xl pointer-events-none" />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 sm:pt-0">
-        <div className="flex justify-center mb-4">
-          <span className="tag">
-            <span className="w-2 h-2 rounded-full bg-[#7000ff] mr-2 inline-block" style={{ boxShadow: "0 0 6px #7000ff" }} />
-            <span className="hidden sm:inline">{tx.badge}</span>
-            <span className="sm:hidden">{tx.badgeMobile}</span>
-          </span>
-        </div>
-
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[var(--c-text)] leading-none mb-6">
-          {lines.map((line, lineIdx) => {
-            const segs = parseSegments(line);
-            const charsToShow = charsPerLine[lineIdx];
-            const isActiveLine = lineIdx === cursorLine;
-
-            let rem = charsToShow;
-            return (
-              <span key={lineIdx} className="block">
-                {/* Prompt symbol on first line */}
-                {lineIdx === 0 && (
-                  <span className="font-mono text-[#7000ff] opacity-50 mr-3 text-4xl sm:text-5xl md:text-6xl lg:text-7xl align-baseline">
-                    ~/
-                  </span>
-                )}
-                {segs.map((seg, j) => {
-                  if (rem <= 0) return null;
-                  const visible = seg.text.slice(0, rem);
-                  rem -= seg.text.length;
-                  return visible ? (
-                    <span key={j} className={seg.purple ? "text-[#7000ff]" : ""}>{visible}</span>
-                  ) : null;
-                })}
-                {isActiveLine && (
-                  <span
-                    className="inline-block align-middle ml-1"
-                    style={{
-                      width: "0.12em",
-                      height: "0.85em",
-                      background: "#7000ff",
-                      animation: "blink 1.1s step-end infinite",
-                    }}
-                  />
-                )}
-              </span>
-            );
-          })}
+    <section className="bttf-container grid items-center gap-4 py-6 lg:grid-cols-[1.35fr_0.85fr] lg:gap-4 lg:py-7">
+      <div>
+        <span className="eyebrow">
+          <span className="eyebrow-dot" />
+          {tx.eyebrow}
+        </span>
+        <h1 className="mt-5 max-w-[16ch] text-[length:var(--t-hero)] leading-[1.03] tracking-[-0.03em] text-[var(--ink)]">
+          {tx.title}
         </h1>
-
-        <div className="flex justify-center mb-10">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded font-mono text-sm text-[#7000ff] bg-[rgba(112,0,255,0.06)] border border-[rgba(112,0,255,0.15)]"
-            style={{ boxShadow: "0 0 20px rgba(112,0,255,0.05)" }}
-          >
-            <span className="text-[var(--c-muted)]">~$</span>
-            <span className="cursor-blink">java · spring · microservices · kafka · k8s</span>
-          </div>
-        </div>
-
-        <p className="max-w-2xl mx-auto text-lg text-[var(--c-muted)] leading-relaxed mb-12">
-          {tx.description.pre}{" "}
-          <span className="text-[var(--c-text)]">{tx.description.highlight1}</span>{" "}
-          {tx.description.mid}{" "}
-          <span className="text-[var(--c-text)]">{tx.description.highlight2}</span>{" "}
-          {tx.description.to}{" "}
-          <span className="text-[var(--c-text)]">{tx.description.highlight3}</span>
-          {tx.description.end}
+        <p className="mt-6 max-w-[440px] text-[length:var(--t-lg)] font-medium leading-[1.7] text-[var(--body)]">
+          {tx.lede}
         </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#projects" className="group px-8 py-3 font-mono font-semibold text-white bg-[#7000ff] rounded hover:bg-[#5c00d6] transition-all duration-200 shadow-lg hover:shadow-[0_0_30px_rgba(112,0,255,0.35)]">
-            {tx.cta1}
-            <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+        <div className="mt-8 flex flex-wrap gap-3.5">
+          <a href="#projects" className="btn btn-primary btn-lg">
+            {tx.projects}
+            <ArrowIcon />
+          </a>
+          <a href="/blog" className="btn btn-outline btn-lg">
+            {tx.blog}
+            <ArrowIcon />
           </a>
         </div>
-
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto border-t border-[rgba(112,0,255,0.1)] pt-10">
-          {tx.stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl font-black text-[#7000ff] font-mono">{stat.value}</div>
-              <div className="text-xs text-[var(--c-muted)] mt-1 leading-tight">{stat.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
 
-      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-500 ${scrolled ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-        <svg width="26" height="40" viewBox="0 0 26 40" fill="none" className="opacity-40">
-          <rect x="1" y="1" width="24" height="38" rx="12" stroke="#7000ff" strokeWidth="1.5" />
-          <rect x="11.5" y="8" width="3" height="7" rx="1.5" fill="#7000ff" className="scroll-wheel" />
-        </svg>
+      <div className="relative hidden min-h-[380px] place-items-center lg:grid lg:min-h-[460px]">
+        <div className="absolute inset-[6%_2%_12%_4%] -z-10 bg-[radial-gradient(40%_38%_at_64%_36%,rgba(251,138,46,0.16),transparent_70%),radial-gradient(42%_40%_at_30%_62%,rgba(80,140,210,0.12),transparent_70%)] blur-[18px]" />
+        <img
+          src="/img/hero-light.png"
+          alt={tx.placeholder}
+          className="h-auto w-full max-w-[560px] object-contain drop-shadow-[0_18px_40px_rgba(244,96,42,0.18)]"
+        />
       </div>
-
-      <style>{`
-        @keyframes scrollWheel {
-          0%   { transform: translateY(0);   opacity: 1; }
-          60%  { transform: translateY(8px); opacity: 0.2; }
-          61%  { transform: translateY(0);   opacity: 0; }
-          80%  { opacity: 0; }
-          100% { opacity: 1; }
-        }
-        .scroll-wheel {
-          animation: scrollWheel 2s ease-in-out infinite;
-          transform-box: fill-box;
-          transform-origin: top center;
-        }
-      `}</style>
     </section>
   );
 }

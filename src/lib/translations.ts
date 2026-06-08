@@ -3,9 +3,9 @@ export type Lang = "en" | "es";
 export const t = {
   en: {
     header: {
-      nav: ["Projects", "Contact", "Blog"],
+      nav: ["Projects", "Blog", "Stack", "About", "Contact"],
       portfolio: "Portfolio ↗",
-      cta: "Let's talk",
+      cta: "Let's connect",
     },
     hero: {
       badge: "Senior Backend Engineer • 15 years shipping production systems",
@@ -133,9 +133,9 @@ export const t = {
 
   es: {
     header: {
-      nav: ["Proyectos", "Contacto", "Blog"],
+      nav: ["Proyectos", "Blog", "Stack", "Sobre mí", "Contacto"],
       portfolio: "Portfolio ↗",
-      cta: "Hablemos",
+      cta: "Conectemos",
     },
     hero: {
       badge: "Senior Backend Engineer • 15 años en producción",
