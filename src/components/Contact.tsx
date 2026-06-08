@@ -39,7 +39,7 @@ export default function Contact() {
         </div>
 
         <img
-          src="/img/hero-light.png"
+          src="/img/contact-light.png"
           alt=""
           className="pointer-events-none absolute right-0 top-1/2 hidden w-[680px] max-w-[56%] -translate-y-1/2 object-contain md:block lg:right-4"
         />

@@ -58,7 +58,7 @@ export default function Projects() {
                 <span key={tag} className="rounded-full border border-[var(--hairline)] bg-[var(--surface-2)] px-3 py-1 text-xs font-semibold text-[var(--body)]">{tag}</span>
               ))}
             </div>
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-bold text-[var(--orange)]">
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center gap-2 self-end pt-6 font-bold text-[var(--orange)]">
               {project.openApp}
               <ArrowIcon className="h-4 w-4" />
             </a>
