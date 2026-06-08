@@ -41,7 +41,7 @@ export default function Contact() {
         <img
           src="/img/contact-light.png"
           alt=""
-          className="pointer-events-none absolute right-0 top-1/2 hidden w-[680px] max-w-[56%] -translate-y-1/2 object-contain md:block lg:right-4"
+          className="pointer-events-none absolute right-0 top-1/2 hidden w-[680px] max-w-[56%] -translate-y-1/2 object-contain md:block lg:right-4 dark:md:hidden"
         />
       </div>
     </section>
