@@ -23,6 +23,21 @@ const SCREENSHOTS: Record<string, string[]> = {
   ],
 };
 
+function ProjectIcon({ id }: { id: string }) {
+  if (id === "tokenmeter") {
+    return (
+      <>
+        <img src="/img/tokenmeter-light.png" alt="" className="h-9 w-9 shrink-0 object-contain dark:hidden" />
+        <img src="/img/tokenmeter-dark.png" alt="" className="hidden h-9 w-9 shrink-0 object-contain dark:block" />
+      </>
+    );
+  }
+  if (id === "akademia") {
+    return <img src="/img/akademia.png" alt="" className="h-9 w-9 shrink-0 object-contain" />;
+  }
+  return null;
+}
+
 export default function Projects() {
   const { lang } = useLang();
   const tx = t[lang].projects;
@@ -50,7 +65,10 @@ export default function Projects() {
               <span className="rounded-full border border-[var(--hairline)] bg-[var(--brand-12)] px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[var(--orange)]">{project.label}</span>
               <span className="flex items-center gap-1.5 text-xs font-semibold text-[var(--orange)]"><span className="h-2 w-2 rounded-full bg-[var(--orange)] shadow-[0_0_0_3px_var(--brand-12)]" />{project.status}</span>
             </div>
-            <h3 className="text-3xl font-extrabold text-[var(--ink)]">{project.name}</h3>
+            <h3 className="flex items-center gap-3 text-3xl font-extrabold text-[var(--ink)]">
+              <ProjectIcon id={project.id} />
+              {project.name}
+            </h3>
             <p className="mt-2 font-mono text-sm text-[var(--muted)]">{project.tagline}</p>
             <p className="mt-4 leading-7 text-[var(--body)]">{project.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">

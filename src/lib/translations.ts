@@ -82,12 +82,12 @@ export const t = {
         },
         {
           id: "tokenmeter",
-          name: "TokenMeter",
+          name: "tokenmeter",
           label: "New release",
           status: "live",
           tagline: "AI repository cost intelligence",
           description:
-            "Estimate what it would cost to regenerate any public GitHub repository with modern AI models. TokenMeter scans the codebase, measures its token footprint, and benchmarks raw, assisted, and agentic generation workflows across providers.",
+            "Estimate what it would cost to regenerate any public GitHub repository with modern AI models. tokenmeter scans the codebase, measures its token footprint, and benchmarks raw, assisted, and agentic generation workflows across providers.",
           tags: ["AI", "Next.js", "TypeScript", "Tokenizer", "Cost Analysis"],
           metrics: [
             { label: "Type",  value: "Web App" },
@@ -212,12 +212,12 @@ export const t = {
         },
         {
           id: "tokenmeter",
-          name: "TokenMeter",
+          name: "tokenmeter",
           label: "Nueva release",
           status: "en vivo",
           tagline: "Inteligencia de coste para repos con IA",
           description:
-            "Estima cuánto costaría regenerar cualquier repositorio público de GitHub con los modelos de IA actuales. TokenMeter escanea el código, mide su huella en tokens y compara flujos de generación raw, assisted y agentic entre proveedores.",
+            "Estima cuánto costaría regenerar cualquier repositorio público de GitHub con los modelos de IA actuales. tokenmeter escanea el código, mide su huella en tokens y compara flujos de generación raw, assisted y agentic entre proveedores.",
           tags: ["IA", "Next.js", "TypeScript", "Tokenizer", "Análisis de coste"],
           metrics: [
             { label: "Tipo",   value: "Web App" },
