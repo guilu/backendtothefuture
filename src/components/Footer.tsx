@@ -38,7 +38,7 @@ export default function Footer() {
         </nav>
 
         <div className="flex gap-2">
-          <a href="https://github.com/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub"><GitHubIcon /></a>
+          <a href="https://github.com/guilu" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub"><GitHubIcon /></a>
           <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn"><LinkedInIcon /></a>
         </div>
       </div>

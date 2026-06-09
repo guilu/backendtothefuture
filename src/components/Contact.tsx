@@ -30,7 +30,7 @@ export default function Contact() {
               LinkedIn
               <ArrowIcon />
             </a>
-            <a href="https://github.com/diegobarrioh" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
+            <a href="https://github.com/guilu" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
               <GitHubIcon className="h-4 w-4" />
               GitHub
               <ArrowIcon />

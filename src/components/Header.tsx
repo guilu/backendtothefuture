@@ -47,7 +47,7 @@ export default function Header() {
 
           <div className="ml-auto flex shrink-0 items-center gap-2">
             <div className="hidden items-center gap-2 lg:flex">
-              <a href="https://github.com/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
+              <a href="https://github.com/guilu" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
                 <GitHubIcon />
               </a>
               <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn">
@@ -59,7 +59,7 @@ export default function Header() {
             </div>
             <button
               onClick={() => setOpen((o) => !o)}
-              className="icon-btn lg:hidden"
+              className="icon-btn lg:hidden!"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
@@ -86,7 +86,7 @@ export default function Header() {
             ))}
             <a href="#contact" onClick={() => setOpen(false)} className="btn btn-primary mt-2 w-full justify-center">{tx.cta}</a>
             <div className="mt-2 flex items-center gap-2 px-1">
-              <a href="https://github.com/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub"><GitHubIcon /></a>
+              <a href="https://github.com/guilu" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub"><GitHubIcon /></a>
               <a href="https://www.linkedin.com/in/diegobarrioh" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn"><LinkedInIcon /></a>
               <LangToggle />
               <ThemeToggle />
