@@ -1,0 +1,90 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PostArticle from "@/components/PostArticle";
+import JsonLd from "@/components/JsonLd";
+import { LangProvider } from "@/context/LangContext";
+import { getAllPosts, getPostBySlug, type PostContent } from "@/lib/blog";
+
+const BASE = "https://backendtothefuture.com";
+
+export function generateStaticParams() {
+  return getAllPosts().map((post) => ({ slug: post.slug }));
+}
+
+/** SEO metadata uses the Spanish copy as the primary locale, falling back to EN. */
+function primary(slug: string): PostContent | null {
+  const post = getPostBySlug(slug);
+  if (!post) return null;
+  return post.translations.es ?? post.translations.en ?? null;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const p = primary(slug);
+  if (!p) return {};
+  const url = `${BASE}/blog/${slug}/`;
+  return {
+    title: `${p.title} — Backend to the Future`,
+    description: p.description,
+    keywords: p.tags,
+    alternates: { canonical: `/blog/${slug}/` },
+    openGraph: {
+      type: "article",
+      title: p.title,
+      description: p.description,
+      url,
+      siteName: "Backend to the Future",
+      publishedTime: p.date,
+      tags: p.tags,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: p.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: p.title,
+      description: p.description,
+      images: ["/og.png"],
+    },
+    robots: { index: true, follow: true },
+  };
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+  if (!post) notFound();
+
+  const p = post.translations.es ?? post.translations.en!;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: p.title,
+    description: p.description,
+    datePublished: p.date,
+    dateModified: p.date,
+    keywords: p.tags.join(", "),
+    url: `${BASE}/blog/${slug}/`,
+    inLanguage: ["es", "en"],
+    author: { "@type": "Person", name: "Diego Barrio", url: "https://diegobarrioh.dev" },
+    publisher: { "@type": "Person", name: "Diego Barrio" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${BASE}/blog/${slug}/` },
+  };
+
+  return (
+    <LangProvider>
+      <JsonLd data={jsonLd} />
+      <Header />
+      <PostArticle post={post} />
+      <Footer />
+    </LangProvider>
+  );
+}
