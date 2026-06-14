@@ -129,6 +129,13 @@ export const t = {
     footer: {
       copyright: "built with Next.js",
     },
+    consent: {
+      message:
+        "I use cookies to measure anonymous traffic with Google Analytics. No tracking runs until you accept.",
+      accept: "Accept",
+      reject: "Reject",
+      ariaLabel: "Cookie consent",
+    },
   },
 
   es: {
@@ -258,6 +265,13 @@ export const t = {
     },
     footer: {
       copyright: "hecho con Next.js",
+    },
+    consent: {
+      message:
+        "Uso cookies para medir el tráfico de forma anónima con Google Analytics. No se activa ningún seguimiento hasta que aceptes.",
+      accept: "Aceptar",
+      reject: "Rechazar",
+      ariaLabel: "Consentimiento de cookies",
     },
   },
 } as const;
