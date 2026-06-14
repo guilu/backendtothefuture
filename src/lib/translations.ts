@@ -128,13 +128,42 @@ export const t = {
     },
     footer: {
       copyright: "built with Next.js",
+      cookies: "Cookies",
     },
     consent: {
       message:
-        "I use cookies to measure anonymous traffic with Google Analytics. No tracking runs until you accept.",
+        "I use Google Analytics cookies to measure aggregated traffic. Nothing loads until you choose — you can change your mind anytime.",
       accept: "Accept",
       reject: "Reject",
+      learnMore: "Learn more",
       ariaLabel: "Cookie consent",
+    },
+    cookies: {
+      title: "Cookie Policy",
+      updated: "Last updated",
+      sections: [
+        {
+          h: "What this site uses",
+          p: "Backend to the Future is a static site. It does not use cookies or any tracking technology by default. The only non-essential technology is Google Analytics 4, and it loads exclusively after you accept it in the cookie banner.",
+        },
+        {
+          h: "Your consent decision",
+          p: "Your choice (accept or reject) is stored locally in your browser under the key 'ga-consent'. This is not a cookie sent to any server — it never leaves your device, and it only records whether you agreed to analytics. No analytics runs unless you explicitly accept.",
+        },
+        {
+          h: "Google Analytics cookies",
+          p: "If — and only if — you accept, Google Analytics 4 sets cookies (_ga and _ga_*) used to distinguish visitors and measure aggregated, pseudonymous traffic (page views, sessions, approximate geography). GA4 does not store full IP addresses. The data processor is Google, which may process data in the United States; this constitutes an international transfer covered by Google's data-processing terms.",
+        },
+        {
+          h: "Withdraw or change your consent",
+          p: "You can change your decision at any time using the “Cookies” link in the footer, which reopens this banner. Rejecting after having accepted removes the analytics cookies and stops further tracking. Withdrawing is exactly as easy as giving consent.",
+        },
+        {
+          h: "Contact",
+          p: "Questions about data handling: diegobarrioh@gmail.com.",
+        },
+      ],
+      manage: "Review my cookie choice",
     },
   },
 
@@ -265,13 +294,42 @@ export const t = {
     },
     footer: {
       copyright: "hecho con Next.js",
+      cookies: "Cookies",
     },
     consent: {
       message:
-        "Uso cookies para medir el tráfico de forma anónima con Google Analytics. No se activa ningún seguimiento hasta que aceptes.",
+        "Uso cookies de Google Analytics para medir el tráfico de forma agregada. No se carga nada hasta que elijas — puedes cambiar de opinión cuando quieras.",
       accept: "Aceptar",
       reject: "Rechazar",
+      learnMore: "Más información",
       ariaLabel: "Consentimiento de cookies",
+    },
+    cookies: {
+      title: "Política de cookies",
+      updated: "Última actualización",
+      sections: [
+        {
+          h: "Qué usa este sitio",
+          p: "Backend to the Future es un sitio estático. Por defecto no usa cookies ni ninguna tecnología de seguimiento. La única tecnología no esencial es Google Analytics 4, y se carga exclusivamente después de que la aceptes en el banner de cookies.",
+        },
+        {
+          h: "Tu decisión de consentimiento",
+          p: "Tu elección (aceptar o rechazar) se guarda localmente en tu navegador bajo la clave 'ga-consent'. No es una cookie que se envíe a ningún servidor — nunca sale de tu dispositivo y solo registra si aceptaste la analítica. No se ejecuta ninguna analítica salvo que aceptes de forma explícita.",
+        },
+        {
+          h: "Cookies de Google Analytics",
+          p: "Si — y solo si — aceptas, Google Analytics 4 instala cookies (_ga y _ga_*) que sirven para distinguir visitantes y medir tráfico agregado y seudónimo (páginas vistas, sesiones, geografía aproximada). GA4 no almacena direcciones IP completas. El encargado del tratamiento es Google, que puede procesar datos en Estados Unidos; esto constituye una transferencia internacional cubierta por las condiciones de tratamiento de datos de Google.",
+        },
+        {
+          h: "Retirar o cambiar tu consentimiento",
+          p: "Puedes cambiar tu decisión en cualquier momento con el enlace «Cookies» del pie de página, que reabre este banner. Rechazar después de haber aceptado elimina las cookies de analítica y detiene el seguimiento. Retirar el consentimiento es exactamente tan fácil como darlo.",
+        },
+        {
+          h: "Contacto",
+          p: "Dudas sobre el tratamiento de datos: diegobarrioh@gmail.com.",
+        },
+      ],
+      manage: "Revisar mi elección de cookies",
     },
   },
 } as const;
