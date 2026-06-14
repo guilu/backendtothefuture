@@ -46,7 +46,7 @@ export default function BlogLayout({ posts }: { posts: LocalizedPost[] }) {
   }[lang];
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-7 pt-28 pb-20 max-[720px]:px-[18px]">
+    <main className="mx-auto w-full max-w-5xl px-7 pt-12 pb-20 max-[720px]:px-[18px]">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-[var(--ink)]">{ui.title}</h1>
         <p className="mt-3 max-w-2xl text-[var(--body)]">{ui.subtitle}</p>
