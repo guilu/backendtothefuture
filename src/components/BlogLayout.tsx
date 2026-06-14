@@ -18,13 +18,13 @@ function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex gap-4 rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] p-4 shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)] sm:gap-5 sm:p-5">
+      className="group flex overflow-hidden rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)]">
       <img
         src={thumb}
         alt=""
-        className="h-24 w-24 shrink-0 rounded-xl object-cover sm:h-28 sm:w-28"
+        className="w-28 shrink-0 self-stretch object-cover sm:w-36"
       />
-      <div className="flex min-w-0 flex-col">
+      <div className="flex min-w-0 flex-col p-4 sm:p-5">
         <span className="font-mono text-[11px] text-[var(--orange)]">{meta.date}</span>
         <h2 className="mt-1.5 text-lg font-bold leading-snug text-[var(--ink)] transition-colors group-hover:text-[var(--orange)]">
           {meta.title}
@@ -56,7 +56,7 @@ export default function BlogLayout({ posts }: { posts: LocalizedPost[] }) {
   }[lang];
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-7 pt-12 pb-20 max-[720px]:px-[18px]">
+    <main className="mx-auto w-full max-w-5xl px-7 pt-8 pb-20 max-[720px]:px-[18px]">
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-[var(--ink)]">{ui.title}</h1>
         <p className="mt-3 max-w-2xl text-[var(--body)]">{ui.subtitle}</p>

@@ -9,7 +9,7 @@ export default function CookiesPolicy() {
   const c = t[lang].cookies;
 
   return (
-    <main className="mx-auto w-full max-w-[760px] px-7 pt-12 pb-20 max-[720px]:px-[18px]">
+    <main className="mx-auto w-full max-w-[760px] px-7 pt-8 pb-20 max-[720px]:px-[18px]">
       <p className="mb-3 font-mono text-[12px] font-semibold uppercase tracking-wider text-[var(--orange)]">
         {c.updated}: 2026-06-14
       </p>
