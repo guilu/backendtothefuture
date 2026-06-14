@@ -15,7 +15,7 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
   const back = lang === "es" ? "← Blog" : "← Blog";
 
   return (
-    <article className="mx-auto max-w-3xl px-5 pt-28 pb-20 lg:px-8">
+    <article className="mx-auto max-w-3xl px-5 pt-12 pb-20 lg:px-8">
       <Link
         href="/blog"
         className="mb-8 inline-block font-mono text-xs font-semibold text-[var(--muted)] transition-colors hover:text-[var(--orange)]">
