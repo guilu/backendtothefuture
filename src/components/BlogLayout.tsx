@@ -18,11 +18,11 @@ function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex overflow-hidden rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)]">
+      className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)] sm:flex-row">
       <img
         src={thumb}
         alt=""
-        className="w-28 shrink-0 self-stretch object-cover sm:w-36"
+        className="h-44 w-full shrink-0 object-cover sm:h-auto sm:w-36 sm:self-stretch"
       />
       <div className="flex min-w-0 flex-col p-4 sm:p-5">
         <span className="font-mono text-[11px] text-[var(--orange)]">{meta.date}</span>
