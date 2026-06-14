@@ -9,10 +9,13 @@ function pick(post: LocalizedPost, lang: Lang): PostContent {
   return post.translations[lang] ?? post.translations.es ?? post.translations.en!;
 }
 
+const COVER_PLACEHOLDER = "/blog/placeholder-cover.png";
+
 export default function PostArticle({ post }: { post: LocalizedPost }) {
   const { lang } = useLang();
   const view = pick(post, lang);
   const back = lang === "es" ? "← Blog" : "← Blog";
+  const cover = view.cover ?? COVER_PLACEHOLDER;
 
   return (
     <article className="mx-auto max-w-3xl px-5 pt-12 pb-20 lg:px-8">
@@ -21,6 +24,12 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
         className="mb-8 inline-block font-mono text-xs font-semibold text-[var(--muted)] transition-colors hover:text-[var(--orange)]">
         {back}
       </Link>
+
+      <img
+        src={cover}
+        alt=""
+        className="mb-8 aspect-[1200/630] w-full rounded-2xl object-cover"
+      />
 
       <header className="mb-10">
         <h1 className="mb-3 text-3xl font-bold leading-tight text-[var(--ink)]">{view.title}</h1>

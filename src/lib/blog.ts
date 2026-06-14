@@ -12,6 +12,10 @@ export interface PostContent {
   description: string;
   tags: string[];
   contentHtml: string;
+  /** Optional square thumbnail (~800×800) shown in the blog index card. */
+  thumb?: string;
+  /** Optional wide header image (~1200×630) shown atop the post. */
+  cover?: string;
 }
 
 export interface LocalizedPost {
@@ -35,6 +39,8 @@ function parseFile(filename: string): { slug: string; lang: Lang; content: PostC
       description: data.description ?? "",
       tags: data.tags ?? [],
       contentHtml: marked(content) as string,
+      thumb: data.thumb ?? undefined,
+      cover: data.cover ?? undefined,
     },
   };
 }

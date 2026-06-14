@@ -10,30 +10,40 @@ function pick(post: LocalizedPost, lang: Lang): PostContent {
   return post.translations[lang] ?? post.translations.es ?? post.translations.en!;
 }
 
+const THUMB_PLACEHOLDER = "/blog/placeholder-thumb.png";
+
 function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
   const meta = pick(post, lang);
+  const thumb = meta.thumb ?? THUMB_PLACEHOLDER;
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex flex-col rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] p-6 shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)]">
-      <span className="font-mono text-[11px] text-[var(--orange)]">{meta.date}</span>
-      <h2 className="mt-2 text-lg font-bold leading-snug text-[var(--ink)] transition-colors group-hover:text-[var(--orange)]">
-        {meta.title}
-      </h2>
-      {meta.description && (
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--body)]">{meta.description}</p>
-      )}
-      {meta.tags.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {meta.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded border border-[var(--hairline)] bg-[var(--brand-12)] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[var(--orange)]">
-              {tag}
-            </span>
-          ))}
-        </div>
-      )}
+      className="group flex gap-4 rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] p-4 shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)] sm:gap-5 sm:p-5">
+      <img
+        src={thumb}
+        alt=""
+        className="h-24 w-24 shrink-0 rounded-xl object-cover sm:h-28 sm:w-28"
+      />
+      <div className="flex min-w-0 flex-col">
+        <span className="font-mono text-[11px] text-[var(--orange)]">{meta.date}</span>
+        <h2 className="mt-1.5 text-lg font-bold leading-snug text-[var(--ink)] transition-colors group-hover:text-[var(--orange)]">
+          {meta.title}
+        </h2>
+        {meta.description && (
+          <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-[var(--body)]">{meta.description}</p>
+        )}
+        {meta.tags.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {meta.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded border border-[var(--hairline)] bg-[var(--brand-12)] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[var(--orange)]">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
     </Link>
   );
 }
