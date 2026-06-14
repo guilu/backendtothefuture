@@ -4,6 +4,7 @@ import Link from "next/link";
 import { GitHubIcon, LinkedInIcon } from "./design-system/Icons";
 import { useLang } from "@/context/LangContext";
 import { t } from "@/lib/translations";
+import { OPEN_CONSENT_EVENT } from "./CookieConsent";
 
 export default function Footer() {
   const { lang } = useLang();
@@ -35,6 +36,12 @@ export default function Footer() {
               {link.label}
             </Link>
           ))}
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
+            className="text-sm font-semibold text-[var(--body)] transition-colors hover:text-[var(--orange)]">
+            {t[lang].footer.cookies}
+          </button>
         </nav>
 
         <div className="flex gap-2">

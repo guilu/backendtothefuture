@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { BrandDefs } from "@/components/design-system/BrandMark";
 import CookieConsent from "@/components/CookieConsent";
+
+// Self-hosted at build time (no runtime request to Google) — loading fonts from
+// Google's CDN would leak the visitor's IP to Google before any consent, which
+// is exactly what the cookie banner is meant to prevent.
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Backend to the Future — Diego Barrio",
@@ -44,20 +55,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={jetbrainsMono.variable} suppressHydrationWarning>
       <head>
         {/* Anti-FOUC: apply theme class before first paint */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body className="relative min-h-screen"><BrandDefs />{children}<CookieConsent /></body>
     </html>
