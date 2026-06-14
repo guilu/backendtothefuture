@@ -3,6 +3,8 @@ title: "Arquitectura Hexagonal en la práctica"
 date: "2024-03-14"
 description: "Cómo aplico puertos y adaptadores en servicios Spring Boot reales — sin la ceremonia."
 tags: ["arquitectura", "spring", "java"]
+thumb: "/blog/hexagonal-architecture-in-practice-thumb.webp"
+cover: "/blog/hexagonal-architecture-in-practice-cover.webp"
 ---
 
 ## El problema de la arquitectura en capas

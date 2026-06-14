@@ -42,3 +42,6 @@ out/
 /blog/chatgpt-*.md
 /blog/gemini-*.md
 /blog/claude-*.md
+
+# blog source images (originals; served webp live in public/blog)
+/blog/*.png
