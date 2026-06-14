@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import Link from "next/link";
 import type { LocalizedPost, PostContent } from "@/lib/blog";
 import { useLang } from "@/context/LangContext";
 import type { Lang } from "@/lib/translations";
@@ -10,170 +10,53 @@ function pick(post: LocalizedPost, lang: Lang): PostContent {
   return post.translations[lang] ?? post.translations.es ?? post.translations.en!;
 }
 
-function PostCard({
-  post,
-  lang,
-  selected,
-  onClick,
-}: {
-  post: LocalizedPost;
-  lang: Lang;
-  selected: boolean;
-  onClick: () => void;
-}) {
+function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
   const meta = pick(post, lang);
   return (
-    <button
-      onClick={onClick}
-      className={`w-full rounded-[var(--r-sm)] px-3 py-3 text-left transition-all duration-150 ${
-        selected
-          ? "border border-[var(--brand-18)] bg-[var(--brand-08)]"
-          : "border border-transparent hover:bg-[var(--brand-08)]"
-      }`}
-    >
-      <div className={`text-sm font-medium leading-snug ${selected ? "text-[var(--ink)]" : "text-[var(--body)]"}`}>
+    <Link
+      href={`/blog/${post.slug}`}
+      className="group flex flex-col rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] p-6 shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)]">
+      <span className="font-mono text-[11px] text-[var(--orange)]">{meta.date}</span>
+      <h2 className="mt-2 text-lg font-bold leading-snug text-[var(--ink)] transition-colors group-hover:text-[var(--orange)]">
         {meta.title}
-      </div>
-      <div className="mt-1 font-mono text-[10px] text-[var(--muted)]">{meta.date}</div>
+      </h2>
+      {meta.description && (
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--body)]">{meta.description}</p>
+      )}
       {meta.tags.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-1">
+        <div className="mt-4 flex flex-wrap gap-1.5">
           {meta.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded border border-[var(--hairline)] bg-[var(--brand-12)] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[var(--orange)]"
-            >
+              className="rounded border border-[var(--hairline)] bg-[var(--brand-12)] px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[var(--orange)]">
               {tag}
             </span>
           ))}
         </div>
       )}
-    </button>
+    </Link>
   );
 }
 
 export default function BlogLayout({ posts }: { posts: LocalizedPost[] }) {
   const { lang } = useLang();
-  const [selectedSlug, setSelectedSlug] = useState<string | null>(posts[0]?.slug ?? null);
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const selected = posts.find((p) => p.slug === selectedSlug) ?? null;
-  const view = selected ? pick(selected, lang) : null;
-
   const ui = {
-    es: { count: (n: number) => `${n} ${n === 1 ? "entrada" : "entradas"}`, empty: "Selecciona una entrada" },
-    en: { count: (n: number) => `${n} ${n === 1 ? "post" : "posts"}`, empty: "Select a post" },
+    es: { title: "Blog", subtitle: "Notas sobre ingeniería backend, arquitectura y los proyectos que construyo." },
+    en: { title: "Blog", subtitle: "Notes on backend engineering, architecture, and the projects I build." },
   }[lang];
 
-  const handleScroll = () => {
-    const el = trackRef.current;
-    if (!el) return;
-    const i = Math.round(el.scrollLeft / el.clientWidth);
-    if (i !== carouselIndex) {
-      setCarouselIndex(i);
-      const slug = posts[i]?.slug;
-      if (slug) setSelectedSlug(slug);
-    }
-  };
-
-  const goTo = (i: number) => {
-    const el = trackRef.current;
-    if (!el) return;
-    el.scrollTo({ left: i * el.clientWidth, behavior: "smooth" });
-  };
-
   return (
-    <div className="min-h-screen text-[var(--ink)]">
-      <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col pt-4 lg:flex-row lg:pt-[73px]">
-        {/* Sidebar */}
-        <aside className="w-full shrink-0 border-b border-[var(--hairline)] lg:sticky lg:top-[73px] lg:h-[calc(100vh-73px)] lg:w-60 lg:overflow-y-auto lg:border-b-0 lg:border-r">
-          <p className="mb-4 px-8 pb-5 font-mono text-[10px] uppercase tracking-widest text-[var(--orange)] lg:px-8">
-            {ui.count(posts.length)}
-          </p>
+    <main className="mx-auto w-full max-w-5xl px-7 pt-28 pb-20 max-[720px]:px-[18px]">
+      <header className="mb-12">
+        <h1 className="text-4xl font-bold text-[var(--ink)]">{ui.title}</h1>
+        <p className="mt-3 max-w-2xl text-[var(--body)]">{ui.subtitle}</p>
+      </header>
 
-          {/* Desktop: vertical list */}
-          <ul className="hidden flex-col gap-2.5 px-5 pb-5 lg:flex">
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <PostCard
-                  post={post}
-                  lang={lang}
-                  selected={selectedSlug === post.slug}
-                  onClick={() => setSelectedSlug(post.slug)}
-                />
-              </li>
-            ))}
-          </ul>
-
-          {/* Mobile: swipe carousel */}
-          <div className="pb-4 lg:hidden">
-            <div
-              ref={trackRef}
-              onScroll={handleScroll}
-              className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
-              {posts.map((post) => (
-                <div key={post.slug} className="w-full shrink-0 snap-center px-5">
-                  <PostCard
-                    post={post}
-                    lang={lang}
-                    selected={selectedSlug === post.slug}
-                    onClick={() => setSelectedSlug(post.slug)}
-                  />
-                </div>
-              ))}
-            </div>
-
-            {posts.length > 1 && (
-              <div className="mt-3 flex items-center justify-center gap-2">
-                {posts.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => goTo(i)}
-                    aria-label={`Post ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      i === carouselIndex ? "w-5 bg-[var(--orange)]" : "w-1.5 bg-[var(--muted)] opacity-30"
-                    }`}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        </aside>
-
-        {/* Content */}
-        <main className="flex-1 overflow-y-auto">
-          {view ? (
-            <article className="mx-auto max-w-3xl px-5 py-8 lg:px-10 lg:py-12">
-              <header className="mb-10">
-                <h1 className="mb-2 text-2xl font-bold leading-tight text-[var(--ink)]">{view.title}</h1>
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="font-mono text-xs text-[var(--orange)]">{view.date}</span>
-                  {view.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded border border-[var(--hairline)] bg-[var(--brand-12)] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[var(--orange)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                {view.description && (
-                  <p className="mt-4 border-l-2 border-[var(--brand-glow)] pl-4 text-sm leading-relaxed text-[var(--body)]">
-                    {view.description}
-                  </p>
-                )}
-              </header>
-
-              <div className="blog-prose" dangerouslySetInnerHTML={{ __html: view.contentHtml }} />
-            </article>
-          ) : (
-            <div className="flex h-full items-center justify-center font-mono text-sm text-[var(--muted)]">
-              {ui.empty}
-            </div>
-          )}
-        </main>
+      <div className="grid gap-6 sm:grid-cols-2">
+        {posts.map((post) => (
+          <PostCard key={post.slug} post={post} lang={lang} />
+        ))}
       </div>
-    </div>
+    </main>
   );
 }

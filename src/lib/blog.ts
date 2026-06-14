@@ -60,3 +60,7 @@ export function getAllPosts(): LocalizedPost[] {
     }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
+
+export function getPostBySlug(slug: string): LocalizedPost | null {
+  return getAllPosts().find((post) => post.slug === slug) ?? null;
+}
