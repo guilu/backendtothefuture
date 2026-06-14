@@ -37,3 +37,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 out/
+
+# weekly recap raw sources (inputs for /recap; published post lives in content/blog/)
+/blog/chatgpt-*.md
+/blog/gemini-*.md
+/blog/claude-*.md
