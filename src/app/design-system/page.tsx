@@ -33,6 +33,8 @@ const darkNeutrals = [
 export const metadata = {
   title: "Backend to the Future — Design System",
   description: "Design system tokens, components and visual language for Backend to the Future.",
+  // Internal design reference — keep it out of search results.
+  robots: { index: false, follow: false },
 };
 
 export default function DesignSystemPage() {

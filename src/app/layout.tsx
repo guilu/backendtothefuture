@@ -15,6 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://backendtothefuture.com"),
+  alternates: { canonical: "/" },
   title: "Backend to the Future — Diego Barrio",
   description:
     "Senior Backend Engineer crafting scalable platforms with Java & Spring. Microservices, clean architecture, and battle-tested engineering from Alicante, Spain.",
