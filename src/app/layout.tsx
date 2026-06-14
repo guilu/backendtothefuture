@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { BrandDefs } from "@/components/design-system/BrandMark";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Backend to the Future — Diego Barrio",
@@ -58,7 +59,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="relative min-h-screen"><BrandDefs />{children}</body>
+      <body className="relative min-h-screen"><BrandDefs />{children}<CookieConsent /></body>
     </html>
   );
 }
