@@ -1,5 +1,5 @@
 ---
-title: "Multi-agent workflow: ChatGPT, Claude and a custom operator"
+title: "Multi-agent workflow: ChatGPT, Claude and Hermes Agent"
 date: "2026-07-05"
 description: "A week using ChatGPT, Claude, and Hermes to turn Forma, TokenMeter, Backend to the Future, and the homelab into a more repeatable software assembly line."
 tags: ["weekly", "ai-agents", "multi-agent", "devops", "product"]
