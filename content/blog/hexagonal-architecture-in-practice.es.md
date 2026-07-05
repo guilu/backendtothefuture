@@ -1,5 +1,5 @@
 ---
-title: "Arquitectura Hexagonal en la práctica"
+title: "Arquitectura Hexagonal en Spring Boot: puertos y adaptadores"
 date: "2024-03-14"
 description: "Cómo aplico puertos y adaptadores en servicios Spring Boot reales — sin la ceremonia."
 tags: ["arquitectura", "spring", "java"]

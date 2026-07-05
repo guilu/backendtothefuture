@@ -1,5 +1,5 @@
 ---
-title: "Testing local LLMs"
+title: "Local LLMs on an RTX 3060: what fits in 12 GB of VRAM"
 date: "2026-06-08"
 description: "Running Gemma 4 and Qwen 3.5 Coder locally on an NVIDIA RTX 3060 with 12 GB — what fits in that VRAM and what actually performs."
 tags: ["llm", "local-ai", "gpu"]
