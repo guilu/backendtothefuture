@@ -6,6 +6,7 @@ import PostArticle from "@/components/PostArticle";
 import JsonLd from "@/components/JsonLd";
 import { LangProvider } from "@/context/LangContext";
 import { getAllPosts, getPostBySlug, type PostContent } from "@/lib/blog";
+import { AUTHOR } from "@/lib/site";
 
 const BASE = "https://backendtothefuture.com";
 
@@ -74,8 +75,13 @@ export default async function BlogPostPage({
     keywords: p.tags.join(", "),
     url: `${BASE}/blog/${slug}/`,
     inLanguage: ["es", "en"],
-    author: { "@type": "Person", name: "Diego Barrio", url: "https://diegobarrioh.dev" },
-    publisher: { "@type": "Person", name: "Diego Barrio" },
+    author: {
+      "@type": "Person",
+      name: AUTHOR.name,
+      url: AUTHOR.url,
+      sameAs: AUTHOR.sameAs,
+    },
+    publisher: { "@type": "Person", name: AUTHOR.name },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${BASE}/blog/${slug}/` },
   };
 
