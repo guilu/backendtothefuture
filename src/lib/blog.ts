@@ -16,6 +16,12 @@ export interface PostContent {
   thumb?: string;
   /** Optional wide header image (~1200×630) shown atop the post. */
   cover?: string;
+  /**
+   * Optional social-share image (1200×630). Must be JPG/PNG/GIF — LinkedIn,
+   * Facebook and Twitter do NOT render WebP for og:image, so this is separate
+   * from `cover` (which may be WebP for on-page use).
+   */
+  ogImage?: string;
 }
 
 export interface LocalizedPost {
@@ -41,6 +47,7 @@ function parseFile(filename: string): { slug: string; lang: Lang; content: PostC
       contentHtml: marked(content) as string,
       thumb: data.thumb ?? undefined,
       cover: data.cover ?? undefined,
+      ogImage: data.ogImage ?? undefined,
     },
   };
 }

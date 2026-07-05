@@ -5,6 +5,7 @@ description: "How I apply ports & adapters in real Spring Boot services — with
 tags: ["architecture", "spring", "java"]
 thumb: "/blog/hexagonal-architecture-in-practice-thumb.webp"
 cover: "/blog/hexagonal-architecture-in-practice-cover.webp"
+ogImage: "/blog/hexagonal-architecture-in-practice-og.jpg"
 ---
 
 ## The problem with layered architecture

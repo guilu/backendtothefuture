@@ -5,6 +5,7 @@ description: "Cómo aplico puertos y adaptadores en servicios Spring Boot reales
 tags: ["arquitectura", "spring", "java"]
 thumb: "/blog/hexagonal-architecture-in-practice-thumb.webp"
 cover: "/blog/hexagonal-architecture-in-practice-cover.webp"
+ogImage: "/blog/hexagonal-architecture-in-practice-og.jpg"
 ---
 
 ## El problema de la arquitectura en capas

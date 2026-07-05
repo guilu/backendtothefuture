@@ -5,6 +5,7 @@ description: "A week using Hermes as a home operator: Home Assistant on armv7, b
 tags: ["ai-agents", "home-assistant", "homelab"]
 thumb: "/blog/ai-agent-as-home-lab-operator-thumb.webp"
 cover: "/blog/ai-agent-as-home-lab-operator-cover.webp"
+ogImage: "/blog/ai-agent-as-home-lab-operator-og.jpg"
 ---
 
 ## The week in one sentence

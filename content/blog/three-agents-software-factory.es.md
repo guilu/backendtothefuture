@@ -5,6 +5,7 @@ description: "Una semana usando ChatGPT, Claude y Hermes para convertir Forma, T
 tags: ["weekly", "ai-agents", "multi-agent", "devops", "product"]
 thumb: "/blog/three-agents-software-factory-thumb.webp"
 cover: "/blog/three-agents-software-factory-cover.webp"
+ogImage: "/blog/three-agents-software-factory-og.jpg"
 ---
 
 ## La semana en una frase

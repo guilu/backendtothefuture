@@ -30,6 +30,9 @@ export async function generateMetadata({
   const p = primary(slug);
   if (!p) return {};
   const url = `${BASE}/blog/${slug}/`;
+  // og:image must be a raster (JPG/PNG) — social scrapers don't render WebP.
+  // Falls back to the site-wide og.png when a post has no dedicated ogImage.
+  const ogImage = p.ogImage ?? "/og.png";
   return {
     title: `${p.title} — Backend to the Future`,
     description: p.description,
@@ -43,13 +46,13 @@ export async function generateMetadata({
       siteName: "Backend to the Future",
       publishedTime: p.date,
       tags: p.tags,
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: p.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: p.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: p.title,
       description: p.description,
-      images: ["/og.png"],
+      images: [ogImage],
     },
     robots: { index: true, follow: true },
   };

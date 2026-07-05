@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     siteName: "Backend to the Future",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Backend to the Future" }],
+    images: [{ url: "/home-og.jpg", width: 1200, height: 630, alt: "Backend to the Future" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Backend to the Future — Diego Barrio",
     description:
       "Senior Backend Engineer crafting scalable platforms with Java & Spring.",
-    images: ["/og.png"],
+    images: ["/home-og.jpg"],
   },
   robots: { index: true, follow: true },
 };

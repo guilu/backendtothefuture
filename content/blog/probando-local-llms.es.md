@@ -5,6 +5,7 @@ description: "Corriendo Gemma 4 y Qwen 3.5 Coder en local sobre una NVIDIA RTX 3
 tags: ["llm", "local-ai", "gpu"]
 thumb: "/blog/probando-local-llms-thumb.webp"
 cover: "/blog/probando-local-llms-cover.webp"
+ogImage: "/blog/probando-local-llms-og.jpg"
 ---
 
 ## Por qué local

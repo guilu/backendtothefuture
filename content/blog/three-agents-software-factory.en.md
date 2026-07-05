@@ -5,6 +5,7 @@ description: "A week using ChatGPT, Claude, and Hermes to turn Forma, TokenMeter
 tags: ["weekly", "ai-agents", "multi-agent", "devops", "product"]
 thumb: "/blog/three-agents-software-factory-thumb.webp"
 cover: "/blog/three-agents-software-factory-cover.webp"
+ogImage: "/blog/three-agents-software-factory-og.jpg"
 ---
 
 ## The week in one sentence

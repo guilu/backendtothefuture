@@ -5,6 +5,7 @@ description: "Una semana usando Hermes como operador de casa: Home Assistant en 
 tags: ["ai-agents", "home-assistant", "homelab"]
 thumb: "/blog/ai-agent-as-home-lab-operator-thumb.webp"
 cover: "/blog/ai-agent-as-home-lab-operator-cover.webp"
+ogImage: "/blog/ai-agent-as-home-lab-operator-og.jpg"
 ---
 
 ## La semana en una frase
