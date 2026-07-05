@@ -1,5 +1,5 @@
 ---
-title: "Tres agentes, una fábrica de software"
+title: "Flujo multi-agente: ChatGPT, Claude y un operador propio"
 date: "2026-07-05"
 description: "Una semana usando ChatGPT, Claude y Hermes para convertir Forma, TokenMeter, Backend to the Future y el homelab en una línea de montaje más repetible."
 tags: ["weekly", "ai-agents", "multi-agent", "devops", "product"]

@@ -1,5 +1,5 @@
 ---
-title: "Un agente de IA como operador del homelab"
+title: "Un agente de IA operando mi homelab con Home Assistant"
 date: "2026-06-28"
 description: "Una semana usando Hermes como operador de casa: Home Assistant en armv7, integraciones rotas, Plex, Blink, estadísticas corruptas y pequeñas automatizaciones que ahorran sustos."
 tags: ["ai-agents", "home-assistant", "homelab"]

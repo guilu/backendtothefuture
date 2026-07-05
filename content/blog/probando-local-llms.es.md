@@ -1,5 +1,5 @@
 ---
-title: "Probando local LLMs"
+title: "LLMs locales en una RTX 3060: qué cabe en 12 GB de VRAM"
 date: "2026-06-08"
 description: "Corriendo Gemma 4 y Qwen 3.5 Coder en local sobre una NVIDIA RTX 3060 de 12 GB — qué entra en esa VRAM y qué rinde de verdad."
 tags: ["llm", "local-ai", "gpu"]

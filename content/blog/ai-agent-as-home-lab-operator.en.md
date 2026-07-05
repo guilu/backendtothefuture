@@ -1,5 +1,5 @@
 ---
-title: "An AI agent as a homelab operator"
+title: "An AI agent running my homelab with Home Assistant"
 date: "2026-06-28"
 description: "A week using Hermes as a home operator: Home Assistant on armv7, broken integrations, Plex, Blink, corrupted statistics, and small automations that prevent future surprises."
 tags: ["ai-agents", "home-assistant", "homelab"]
