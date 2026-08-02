@@ -93,6 +93,16 @@ can't read status is worse than an absent one.
 The first half of the week was polishing what was already shipped, and all of it
 came out of using the app on a real phone.
 
+![Forma's public landing page: top bar with Training, Nutrition and Plans, the headline "Entrena. Nutre. Evoluciona." with the last word in green, a descriptive paragraph, "Get started" and "See demo" buttons, and on the right the sign-in card with email, password and a link to create an account](/img/forma-2026-08-02-landing.webp)
+
+That's the public landing, the front door for anyone who has never been in. The
+hero CTAs stopped spanning the full width on mobile, which was this week's small
+fix on this screen.
+
+And this is the dashboard you land on afterwards:
+
+![Forma's dashboard: side navigation with Dashboard, Measurements, Training, Nutrition, Shopping list and Progress; weight, body fat, muscle and BMI cards with sparklines; a calories-today card with a progress donut at 92%; a water card; and below them next workout, today's menu and macronutrients with protein, carb and fat bars](/img/forma-2026-08-02-dashboard.webp)
+
 Two vertical scrollbars. Cards spilling out of their column. A breakpoint that
 held two columns all the way to 574 px when it should have collapsed long
 before. The "More" menu in the bottom bar missing the glass effect every other
@@ -148,9 +158,23 @@ The widths aren't round numbers by accident either: 574 px is exactly where the
 grid was still two columns when it should have collapsed. The check is anchored
 to the bug, not to a pretty number.
 
+<img src="/img/forma-2026-08-02-mobile.webp" alt="Forma on mobile at 390 px: a two-column grid with the weight, body fat, muscle and BMI cards aligned, a full-width calories-today card, and at the bottom the translucent floating navigation bar with Dashboard, Measurements, Training and More" width="390">
+
+That floating bottom bar is the one that spent half a week with no glass effect
+on its "More" menu. Now there's a check standing in front of anyone who moves
+the `@supports` block again.
+
 ## The catalogs: the real work
 
 Which brings us to the second half — seven PRs and seven migrations.
+
+![Forma's Admin screen, Macros tab: the food catalog table with Food, Category with its glyph, kcal, protein, carbs, fat, serving and per-row edit and delete actions; a "+ Food" button top right and pagination below](/img/forma-2026-08-02-admin-macros.webp)
+
+That screen is the week's output: the food catalog, editable without a deploy,
+with macros per 100 g and the suggested serving as its own column. Note where
+the glyph sits — in the Category column, not in front of the name. In front of
+the name it read as *that row's* icon, and every carbohydrate carried the same
+ear of wheat.
 
 ### The model, which is the whole decision
 
@@ -235,6 +259,13 @@ label carries (`de`, `con`, `sin`…) and keep whatever shares a meaningful word
 Without the stop-word filter, "Olive **oil**" matches half the store. It's a
 filter over thousands of SKUs, not a decision: a wrong suggestion costs a
 glance, and a missing one costs the manual entry you were going to do anyway.
+
+![Forma's Admin screen, Compra tab: a store filter, an "Import from store" button and the product catalog table with a thumbnail and name, a Store column showing Mercadona, category with its glyph, package format, price in euros, and refresh, edit and delete actions](/img/forma-2026-08-02-admin-compra.webp)
+
+There's the store as a **column**, which was the underlying decision: Carrefour
+will be new rows, not a new tab. And the thumbnail takes the slot the glyph
+occupies in Macros, because here it really is that product's photo rather than a
+second reading of its category.
 
 Of the 23 seeded products, **21 matched by hand** against the real catalog — the
 oats cost €1.30 and the spreadsheet said €1.55. The two left loose, whey protein

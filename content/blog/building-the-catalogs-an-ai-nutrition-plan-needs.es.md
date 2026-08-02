@@ -94,6 +94,16 @@ estado que no puede leer el estado es peor que ausente.
 La primera mitad de la semana fue pulir lo que ya estaba entregado, y todo
 salió de usar la app en el móvil de verdad.
 
+![Landing pública de Forma: barra superior con Entrenamiento, Nutrición y Planes, titular "Entrena. Nutre. Evoluciona." con la última palabra en verde, párrafo descriptivo, botones "Empezar ahora" y "Ver Demo", y a la derecha la tarjeta de inicio de sesión con correo, contraseña y enlace para crear cuenta](/img/forma-2026-08-02-landing.webp)
+
+Esa es la landing pública, la puerta de entrada para quien no ha entrado nunca.
+Los CTA del hero dejaron de ocupar todo el ancho en móvil, que era el arreglo
+pequeño de la semana en esta pantalla.
+
+Y este es el dashboard al que se llega después:
+
+![Dashboard de Forma: navegación lateral con Dashboard, Mediciones, Entrenamiento, Nutrición, Lista de compra y Progreso; tarjetas de peso, grasa, músculo e IMC con minigráficas; tarjeta de calorías de hoy con un donut de progreso al 92 %; tarjeta de agua; y abajo próximo entrenamiento, menú de hoy y macronutrientes con barras de proteínas, carbohidratos y grasas](/img/forma-2026-08-02-dashboard.webp)
+
 Dos barras de scroll verticales. Tarjetas saliéndose de su columna. Un
 breakpoint que aguantaba dos columnas hasta los 574 px cuando ya debía haber
 colapsado. El menú "Más" de la barra inferior sin el efecto glass que sí tenían
@@ -150,9 +160,23 @@ Los anchos tampoco son redondos por capricho: 574 px es exactamente donde la
 rejilla seguía a dos columnas cuando ya debía haber colapsado. El check está
 anclado al bug, no a un número bonito.
 
+<img src="/img/forma-2026-08-02-mobile.webp" alt="Forma en móvil a 390 px: rejilla de dos columnas con las tarjetas de peso, grasa, músculo e IMC alineadas, tarjeta de calorías de hoy a ancho completo y, abajo, la barra de navegación flotante translúcida con Dashboard, Mediciones, Entrenamiento y Más" width="390">
+
+Esa barra inferior flotante es la que se pasó media semana sin efecto glass en
+el menú "Más". Ahora hay un check que se planta delante de cualquiera que vuelva
+a moverle el bloque `@supports`.
+
 ## Los catálogos: el trabajo de verdad
 
 Y llegamos a la segunda mitad, que es siete PRs y siete migraciones.
+
+![Pantalla Administrar de Forma, pestaña Macros: tabla del catálogo de alimentos con columnas Alimento, Categoría con su glifo, kcal, proteínas, hidratos, grasa, ración y acciones de editar y eliminar por fila; botón "+ Alimento" arriba a la derecha y paginación abajo](/img/forma-2026-08-02-admin-macros.webp)
+
+Esa pantalla es el resultado de la semana: el catálogo de alimentos, editable
+sin desplegar, con los macros por 100 g y la ración sugerida como columna
+aparte. Fíjate en dónde está el glifo — en la columna Categoría, no delante del
+nombre. Delante del nombre se leía como el icono *de esa fila*, y todos los
+carbohidratos llevaban la misma espiga.
 
 ### El modelo, que es toda la decisión
 
@@ -239,6 +263,13 @@ comparte alguna palabra con sentido. Sin el filtro de palabras vacías, "Aceite
 **de** oliva" casa con media tienda. Es un filtro sobre miles de referencias, no
 una decisión: una sugerencia equivocada cuesta un vistazo, y una que falta
 cuesta el alta manual que ibas a hacer igualmente.
+
+![Pantalla Administrar de Forma, pestaña Compra: filtro de tienda, botón "Importar desde tienda" y tabla del catálogo de productos con miniatura y nombre, columna Tienda con Mercadona, categoría con glifo, formato del envase, precio en euros y acciones de refrescar, editar y eliminar](/img/forma-2026-08-02-admin-compra.webp)
+
+Ahí está la tienda como **columna**, que era la decisión de fondo: Carrefour
+serán filas nuevas, no una pestaña nueva. Y la miniatura ocupa el hueco que en
+Macros ocupaba el glifo, porque aquí sí es la foto de ese producto y no una
+segunda lectura de su categoría.
 
 De los 23 productos sembrados, **21 emparejados a mano** contra el catálogo real
 —los copos de avena costaban 1,30 € y la hoja decía 1,55 €—. Los dos que
