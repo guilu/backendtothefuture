@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
 import { BrandDefs } from "@/components/design-system/BrandMark";
 import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME, AUTHOR } from "@/lib/site";
+import type { Lang } from "@/lib/translations";
 
 // Self-hosted at build time (no runtime request to Google) — loading fonts from
 // Google's CDN would leak the visitor's IP to Google before any consent, which
@@ -15,45 +14,6 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains",
   display: "swap",
 });
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://backendtothefuture.com"),
-  alternates: {
-    canonical: "/",
-    types: { "application/rss+xml": "/feed.xml" },
-  },
-  title: "Backend to the Future — Diego Barrio",
-  description:
-    "Senior Backend Engineer crafting scalable platforms with Java & Spring. Microservices, clean architecture, and battle-tested engineering from Alicante, Spain.",
-  keywords: [
-    "backend engineer",
-    "Java",
-    "Spring Boot",
-    "microservices",
-    "clean architecture",
-    "fullstack",
-    "Diego Barrio",
-  ],
-  authors: [{ name: "Diego Barrio", url: "https://diegobarrioh.dev" }],
-  openGraph: {
-    title: "Backend to the Future — Diego Barrio",
-    description:
-      "Senior Backend Engineer crafting scalable platforms with Java & Spring.",
-    url: "https://backendtothefuture.com",
-    siteName: "Backend to the Future",
-    locale: "en_US",
-    type: "website",
-    images: [{ url: "/home-og.jpg", width: 1200, height: 630, alt: "Backend to the Future" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Backend to the Future — Diego Barrio",
-    description:
-      "Senior Backend Engineer crafting scalable platforms with Java & Spring.",
-    images: ["/home-og.jpg"],
-  },
-  robots: { index: true, follow: true },
-};
 
 // Inline script executed before paint to prevent flash of wrong theme
 const themeScript = `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&d))document.documentElement.classList.add('dark');}catch(e){}})();`;
@@ -81,19 +41,33 @@ const siteJsonLd = {
   ],
 };
 
-export default function RootLayout({
+/**
+ * The `<html>` document, shared by both locales' root layouts.
+ *
+ * <p>It takes `lang` rather than hardcoding one because the attribute has to
+ * match the words actually on the page: the document used to declare `en` while
+ * rendering Spanish, which is a claim about the content that was simply false —
+ * and the thing a screen reader picks its voice from.
+ */
+export default function RootShell({
+  lang,
   children,
 }: {
+  lang: Lang;
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jetbrainsMono.variable} suppressHydrationWarning>
+    <html lang={lang} className={jetbrainsMono.variable} suppressHydrationWarning>
       <head>
         {/* Anti-FOUC: apply theme class before first paint */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <JsonLd data={siteJsonLd} />
       </head>
-      <body className="relative min-h-screen"><BrandDefs />{children}<CookieConsent /></body>
+      <body className="relative min-h-screen">
+        <BrandDefs />
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

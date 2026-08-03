@@ -6,6 +6,7 @@ import PostArticle from "@/components/PostArticle";
 import JsonLd from "@/components/JsonLd";
 import { LangProvider } from "@/context/LangContext";
 import { getAllPosts, getPostBySlug, type PostContent } from "@/lib/blog";
+import { languageAlternates } from "@/lib/i18n";
 import { AUTHOR } from "@/lib/site";
 
 const BASE = "https://backendtothefuture.com";
@@ -37,7 +38,10 @@ export async function generateMetadata({
     title: `${p.title} — Backend to the Future`,
     description: p.description,
     keywords: p.tags,
-    alternates: { canonical: `/blog/${slug}/` },
+    alternates: {
+      canonical: `/blog/${slug}/`,
+      languages: languageAlternates(`/blog/${slug}/`),
+    },
     openGraph: {
       type: "article",
       title: p.title,
@@ -89,7 +93,7 @@ export default async function BlogPostPage({
   };
 
   return (
-    <LangProvider>
+    <LangProvider lang="es">
       <JsonLd data={jsonLd} />
       <Header />
       <PostArticle post={post} />

@@ -105,7 +105,7 @@ export default function CookieConsent() {
           <p className="font-mono text-[12px] leading-relaxed text-[var(--body)] sm:text-[13px]">
             {copy.message}{" "}
             <a
-              href="/cookies"
+              href="/cookies/"
               className="font-semibold text-[var(--orange)] underline underline-offset-2 hover:opacity-80">
               {copy.learnMore}
             </a>

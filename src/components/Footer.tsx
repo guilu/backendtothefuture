@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { GitHubIcon, LinkedInIcon } from "./design-system/Icons";
 import { useLang } from "@/context/LangContext";
+import { localizePath } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 import { OPEN_CONSENT_EVENT } from "./CookieConsent";
 
@@ -12,17 +13,17 @@ export default function Footer() {
   const tx = t[lang].header;
 
   const links = [
-    { label: "Home", href: "/" },
-    { label: tx.nav[0], href: "/#projects" },
-    { label: tx.nav[1], href: "/blog" },
-    { label: tx.nav[2], href: "/#stack" },
-    { label: tx.nav[4], href: "/#contact" },
+    { label: "Home", href: localizePath("/", lang) },
+    { label: tx.nav[0], href: localizePath("/#projects", lang) },
+    { label: tx.nav[1], href: localizePath("/blog/", lang) },
+    { label: tx.nav[2], href: localizePath("/#stack", lang) },
+    { label: tx.nav[4], href: localizePath("/#contact", lang) },
   ];
 
   return (
     <footer className="mx-auto w-full max-w-[1216px] px-7 pt-12 pb-20 max-[720px]:px-[18px]">
       <div className="flex flex-col items-center gap-7 md:flex-row">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href={localizePath("/", lang)} className="flex items-center gap-3">
           <img src="/img/logo.png" alt="Backend to the Future" className="h-[52px] w-auto" />
           <span className="brand-word">
             <span className="brand-word-primary">BACKEND</span>
