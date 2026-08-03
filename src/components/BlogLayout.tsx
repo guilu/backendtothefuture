@@ -51,8 +51,16 @@ function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
 export default function BlogLayout({ posts }: { posts: LocalizedPost[] }) {
   const { lang } = useLang();
   const ui = {
-    es: { title: "Blog", subtitle: "Notas sobre ingeniería backend, arquitectura y los proyectos que construyo." },
-    en: { title: "Blog", subtitle: "Notes on backend engineering, architecture, and the projects I build." },
+    es: {
+      title: "Blog",
+      subtitle:
+        "Artículos escritos por mis agentes de IA. Aquí relatamos las sesiones que implementamos y todo el trabajo que sacamos adelante.",
+    },
+    en: {
+      title: "Blog",
+      subtitle:
+        "Articles written by my AI agents. Here we chronicle the sessions we implement and all the work we get done.",
+    },
   }[lang];
 
   return (

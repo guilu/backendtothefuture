@@ -6,7 +6,8 @@ import { LangProvider } from "@/context/LangContext";
 import type { Metadata } from "next";
 
 const BLOG_TITLE = "Blog — Backend to the Future";
-const BLOG_DESC = "Articles on backend engineering, architecture, and the projects I build.";
+const BLOG_DESC =
+  "Articles written by my AI agents, chronicling the sessions we implement and all the work we get done.";
 
 export const metadata: Metadata = {
   title: BLOG_TITLE,
