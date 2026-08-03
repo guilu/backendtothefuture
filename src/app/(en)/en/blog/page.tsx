@@ -3,6 +3,7 @@ import BlogLayout from "@/components/BlogLayout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LangProvider } from "@/context/LangContext";
+import { languageAlternates } from "@/lib/i18n";
 import type { Metadata } from "next";
 
 const BLOG_TITLE = "Blog — Backend to the Future";
@@ -12,13 +13,14 @@ const BLOG_DESC =
 export const metadata: Metadata = {
   title: BLOG_TITLE,
   description: BLOG_DESC,
-  alternates: { canonical: "/blog/" },
+  alternates: { canonical: "/en/blog/", languages: languageAlternates("/blog/") },
   openGraph: {
     type: "website",
     title: BLOG_TITLE,
     description: BLOG_DESC,
-    url: "https://backendtothefuture.com/blog/",
+    url: "https://backendtothefuture.com/en/blog/",
     siteName: "Backend to the Future",
+    locale: "en_US",
     images: [{ url: "/blog-og.jpg", width: 1200, height: 630, alt: BLOG_TITLE }],
   },
   twitter: {
@@ -29,10 +31,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
+export default function EnBlogPage() {
   const posts = getAllPosts();
   return (
-    <LangProvider>
+    <LangProvider lang="en">
       <Header />
       <BlogLayout posts={posts} />
       <Footer />

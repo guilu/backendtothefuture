@@ -6,6 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 import LangToggle from "./LangToggle";
 import { GitHubIcon, LinkedInIcon } from "./design-system/Icons";
 import { useLang } from "@/context/LangContext";
+import { localizePath } from "@/lib/i18n";
 import { t } from "@/lib/translations";
 
 export default function Header() {
@@ -13,18 +14,21 @@ export default function Header() {
   const tx = t[lang].header;
   const [open, setOpen] = useState(false);
 
+  // Every in-site link is localised, so navigating never silently drops the
+  // visitor back into the other language's copy of the site.
   const nav = [
-    { label: tx.nav[0], href: "/#projects" },
-    { label: tx.nav[1], href: "/blog" },
-    { label: tx.nav[2], href: "/#stack" },
-    { label: tx.nav[4], href: "/#contact" },
+    { label: tx.nav[0], href: localizePath("/#projects", lang) },
+    { label: tx.nav[1], href: localizePath("/blog/", lang) },
+    { label: tx.nav[2], href: localizePath("/#stack", lang) },
+    { label: tx.nav[4], href: localizePath("/#contact", lang) },
   ];
+  const home = localizePath("/", lang);
 
   return (
     <header className="sticky top-0 z-50 py-[22px] pb-1.5">
       <div className="bttf-container">
         <nav className="flex items-center gap-5 rounded-[18px] border border-[var(--hairline)] bg-[var(--nav-bg)] py-[11px] pl-5 pr-3.5 shadow-[var(--shadow-md)] backdrop-blur-[14px]">
-          <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Backend to the Future home" onClick={() => setOpen(false)}>
+          <Link href={home} className="flex shrink-0 items-center gap-3" aria-label="Backend to the Future home" onClick={() => setOpen(false)}>
             <img src="/img/logo.png" alt="Backend to the Future" className="h-10 w-auto sm:h-[52px]" />
             <span className="brand-word">
               <span className="brand-word-primary">BACKEND</span>

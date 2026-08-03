@@ -20,3 +20,34 @@ export const AUTHOR = {
     "https://diegobarrioh.dev",
   ],
 } as const;
+
+/**
+ * Home-page structured data, shared by both locales' home pages.
+ *
+ * <p>`inLanguage` names both because the site publishes the same content in
+ * two languages; the `url` differs per locale, so it is passed in rather than
+ * baked in.
+ */
+export function homeJsonLd(homeUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        name: AUTHOR.name,
+        url: AUTHOR.url,
+        jobTitle: "Senior Backend Engineer",
+        description: "Senior Backend Engineer crafting scalable platforms with Java & Spring.",
+        address: { "@type": "PostalAddress", addressLocality: "Alicante", addressCountry: "ES" },
+        sameAs: AUTHOR.sameAs,
+      },
+      {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: homeUrl,
+        author: { "@type": "Person", name: AUTHOR.name },
+        inLanguage: ["es", "en"],
+      },
+    ],
+  };
+}

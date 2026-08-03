@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { LocalizedPost, PostContent } from "@/lib/blog";
 import { useLang } from "@/context/LangContext";
+import { localizePath } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
 
 /** Pick the post content for the active language, falling back to the other locale. */
@@ -17,7 +18,7 @@ function PostCard({ post, lang }: { post: LocalizedPost; lang: Lang }) {
   const thumb = meta.thumb ?? THUMB_PLACEHOLDER;
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={localizePath(`/blog/${post.slug}/`, lang)}
       className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--hairline)] bg-[var(--surface)] shadow-[var(--shadow-sm)] transition-all duration-200 hover:-translate-y-1 hover:border-[var(--brand-18)] hover:shadow-[var(--shadow-card)] sm:flex-row">
       <img
         src={thumb}

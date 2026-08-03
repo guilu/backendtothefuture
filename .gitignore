@@ -39,9 +39,9 @@ next-env.d.ts
 out/
 
 # weekly recap raw sources (inputs for /recap; published post lives in content/blog/)
-/blog/chatgpt-*.md
-/blog/gemini-*.md
-/blog/claude-*.md
+# Every note in blog/ is an input, one per AI perspective, and the set grows —
+# listing them one by one meant a new source (hermes) got committed by accident.
+/blog/*.md
 
 # blog source images (originals; served webp live in public/blog)
 /blog/*.png

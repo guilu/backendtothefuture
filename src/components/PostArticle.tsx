@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { LocalizedPost, PostContent } from "@/lib/blog";
 import { useLang } from "@/context/LangContext";
+import { localizePath } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
 
 function pick(post: LocalizedPost, lang: Lang): PostContent {
@@ -20,7 +21,7 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
   return (
     <article className="mx-auto max-w-3xl px-5 pt-8 pb-20 lg:px-8">
       <Link
-        href="/blog"
+        href={localizePath("/blog/", lang)}
         className="mb-8 inline-block font-mono text-xs font-semibold text-[var(--muted)] transition-colors hover:text-[var(--orange)]">
         {back}
       </Link>
