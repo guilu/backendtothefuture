@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LangProvider } from "@/context/LangContext";
-import { languageAlternates } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/metadata";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -13,7 +13,7 @@ import { homeJsonLd, SITE_URL } from "@/lib/site";
 const structuredData = homeJsonLd(`${SITE_URL}/en/`);
 
 export const metadata: Metadata = {
-  alternates: { canonical: "/en/", languages: languageAlternates("/") },
+  alternates: alternatesFor("/", "en"),
 };
 
 export default function EnHome() {
