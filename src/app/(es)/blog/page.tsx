@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LangProvider } from "@/context/LangContext";
 import type { Metadata } from "next";
-import { languageAlternates } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/metadata";
 
 const BLOG_TITLE = "Blog — Backend to the Future";
 const BLOG_DESC =
@@ -13,7 +13,7 @@ const BLOG_DESC =
 export const metadata: Metadata = {
   title: BLOG_TITLE,
   description: BLOG_DESC,
-  alternates: { canonical: "/blog/", languages: languageAlternates("/blog/") },
+  alternates: alternatesFor("/blog/", "es"),
   openGraph: {
     type: "website",
     title: BLOG_TITLE,

@@ -37,7 +37,9 @@ export function rootMetadata(lang: Lang): Metadata {
     alternates: {
       canonical: home,
       languages: languageAlternates("/"),
-      types: { "application/rss+xml": "/feed.xml" },
+      // Each locale advertises its own feed; pointing both at /feed.xml gave
+      // English readers a Spanish one.
+      types: { "application/rss+xml": lang === "es" ? "/feed.xml" : "/en/feed.xml" },
     },
     title: copy.title,
     description: copy.description,
@@ -67,5 +69,22 @@ export function rootMetadata(lang: Lang): Metadata {
       images: ["/home-og.jpg"],
     },
     robots: { index: true, follow: true },
+  };
+}
+
+/**
+ * The `alternates` block for one page, in one locale.
+ *
+ * <p>Centralised because page-level `alternates` **replaces** the layout's
+ * rather than merging into it: every page that declared its own canonical
+ * silently dropped the feed-discovery link inherited from the root layout.
+ *
+ * @param barePath the Spanish (unprefixed) path, e.g. `/blog/some-slug/`
+ */
+export function alternatesFor(barePath: string, lang: Lang) {
+  return {
+    canonical: localizePath(barePath, lang),
+    languages: languageAlternates(barePath),
+    types: { "application/rss+xml": lang === "es" ? "/feed.xml" : "/en/feed.xml" },
   };
 }
