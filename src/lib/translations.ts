@@ -69,9 +69,9 @@ export const t = {
           name: "FORMA",
           label: "WIP",
           status: "live",
-          tagline: "Training, nutrition and biometrics in one place",
+          tagline: "Training and nutrition, with Mercadona and Withings",
           description:
-            "A fitness platform that turns a plan into something you can actually follow: meals for today with their macros, the week's shopping list, and body measurements syncing straight from a Withings scale. Its plan generator is public — four steps, no account, and the calorie maths comes back from the server.",
+            "A fitness platform with a training plan and a nutrition plan. Measurements arrive on their own from a Withings scale and the shopping list comes out every week with Mercadona products and their prices, which is what makes it easy to follow.",
           tags: ["AI", "Spring Boot", "React", "PostgreSQL", "Nutrition"],
           metrics: [
             { label: "Type",  value: "Web App" },
@@ -255,9 +255,9 @@ export const t = {
           name: "FORMA",
           label: "WIP",
           status: "en vivo",
-          tagline: "Entrenamiento, nutrición y biometría en un solo sitio",
+          tagline: "Entrenamiento y nutrición con Mercadona y Withings",
           description:
-            "Una plataforma de fitness que convierte un plan en algo que de verdad se puede seguir: las comidas de hoy con sus macros, la lista de la compra de la semana y las mediciones corporales sincronizadas desde una báscula Withings. Su generador de plan es público — cuatro pasos, sin cuenta, y las calorías las calcula el servidor.",
+            "Plataforma de fitness con plan de entrenamiento y de nutrición. Las mediciones entran solas desde una báscula Withings y la lista de la compra sale cada semana con productos de Mercadona y sus precios, que es lo que lo hace fácil de seguir.",
           tags: ["IA", "Spring Boot", "React", "PostgreSQL", "Nutrición"],
           metrics: [
             { label: "Tipo",   value: "Web App" },

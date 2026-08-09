@@ -79,8 +79,12 @@ export default function Projects() {
               <ProjectIcon id={project.id} />
               {project.name}
             </h3>
-            <p className="mt-2 font-mono text-sm text-[var(--muted)]">{project.tagline}</p>
-            <p className="mt-4 leading-7 text-[var(--body)]">{project.description}</p>
+            {/* 13px rather than 14 so the longest tagline holds one line on a
+                normal desktop, and two lines' worth of height reserved either
+                way: a tagline that wraps on a narrow card would otherwise push
+                only that card's description down and leave the row ragged. */}
+            <p className="mt-3 min-h-12 font-mono text-[13px] leading-6 text-[var(--muted)]">{project.tagline}</p>
+            <p className="mt-5 leading-7 text-[var(--body)]">{project.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-[var(--hairline)] bg-[var(--surface-2)] px-3 py-1 text-xs font-semibold text-[var(--body)]">{tag}</span>
