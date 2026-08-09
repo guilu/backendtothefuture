@@ -109,13 +109,62 @@ because LinkedIn, Facebook and X do not render WebP for `og:image`.
 
 Wire all three into the frontmatter (`thumb` / `cover` / `ogImage`).
 
-Build them the same way as the screenshots: an HTML file rendered with
-Playwright at `deviceScaleFactor: 2`, then `cwebp`. Keep the series visually
-consistent — dark ground, faint grid, `Plus Jakarta Sans` from
-`public/fonts/`, the brand orange gradient (`--grad-word`) on the second half of
-the headline, a row of stat chips, and one schematic of the thing the week
-built. Read the previous posts' images in `public/blog/` before designing a new
-one; they are the reference.
+#### Art direction — editorial illustration, not a banner
+
+The brief is: **a hero illustration for the week's story**. Think of the opening
+artwork of a Wired, Stripe, Linear or Apple engineering article — the image that
+sets the tone before a single word is read.
+
+**Do not make:**
+
+- a marketing banner
+- a product mockup or dashboard schematic
+- a poster with the headline set in type
+- a stat sheet with chips and numbers
+
+**Do make:** an image that carries the week's central idea through **symbolism,
+metaphor and composition**. The concept, not the interface.
+
+Hard constraints:
+
+- **No text of any kind.** No title, no labels, no stat chips, no URL. The
+  article already carries all of that, and an image that needs a caption to work
+  hasn't done its job. It also means one piece of art serves both languages.
+- **If the app appears at all, it is a supporting element under 20% of the
+  frame** — a suggested surface at the edge, out of focus, a fragment. Never the
+  subject.
+- **Atmosphere and impact beat interface accuracy.** Nobody is going to check
+  whether the rendered card matches the real one; they are going to decide in
+  half a second whether the article looks worth reading.
+- The thumbnail is not a crop of the cover. Compose it for portrait — the
+  metaphor restaged vertically, not squeezed.
+
+Finding the image: take the week's throughline and ask what it *looks* like. A
+week about filler numbers being replaced by real ones is a field of identical
+hollow shapes with one solid form emerging among them; a week about catalogues
+is order forming out of scattered mass; a week about a funnel is convergence.
+Reach for the metaphor, then build the simplest composition that carries it.
+
+Consistency across the series comes from **palette and mood, not layout**: deep
+near-black ground, the brand's amber-to-ember gradient (`#f9b22b → #fb7a1e →
+#ee4136`, in `globals.css` as `--grad-word`) as the warm accent, a cool
+counterweight, generous negative space, one clear focal point. Look at the
+previous posts' covers in `public/blog/` for the temperature, not for the
+structure — the structure should change every week, because the idea does.
+
+Producing it:
+
+- If an image-generation tool is available, use it, and write the prompt from
+  the constraints above — concept first, then medium and palette, and an
+  explicit "no text, no UI, no logos".
+- Otherwise compose it as **abstract SVG/CSS** rendered with Playwright at
+  `deviceScaleFactor: 2` — gradient meshes, depth-of-field blur, repeated
+  geometry with one break in the pattern, light falling across a form. This
+  route can produce genuinely good editorial abstraction; what it cannot do is
+  illustration with figures, so pick a metaphor that is geometric.
+- Either way, **look at the result before shipping it** and ask the honest
+  question: would this make me stop scrolling? If the answer is no, redo it —
+  do not ship art that is merely inoffensive.
 
 ## Step 6 — Fuse into the bilingual post
 
