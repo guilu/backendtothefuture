@@ -185,11 +185,22 @@ button {
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-glow); }
 
 .bttf-container {
+  --gutter: 28px;
   width: 100%;
   max-width: 1216px;
   margin: 0 auto;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* A horizontal rail scrolls under its own steam; the bar would sit across the
+   cards and say nothing the cut-off card and the dots don't already say. */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .grad-word {
@@ -365,7 +376,6 @@ button {
 
 @media (max-width: 720px) {
   .bttf-container {
-    padding-left: 18px;
-    padding-right: 18px;
+    --gutter: 18px;
   }
 }

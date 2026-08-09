@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowIcon } from "./design-system/Icons";
 import { useLang } from "@/context/LangContext";
 import { t } from "@/lib/translations";
 
 const SCREENSHOTS: Record<string, string[]> = {
+  forma: [
+    "/screenshots/forma/forma-1.png",
+    "/screenshots/forma/forma-2.png",
+    "/screenshots/forma/forma-3.png",
+    "/screenshots/forma/forma-4.png",
+    "/screenshots/forma/forma-5.png",
+  ],
   akademia: [
     "/screenshots/akademia/1.png",
     "/screenshots/akademia/2.png",
@@ -35,6 +42,9 @@ function ProjectIcon({ id }: { id: string }) {
   if (id === "akademia") {
     return <img src="/img/akademia.png" alt="" className="h-9 w-9 shrink-0 object-contain" />;
   }
+  if (id === "forma") {
+    return <img src="/img/forma.svg" alt="" className="h-9 w-9 shrink-0 object-contain" />;
+  }
   return null;
 }
 
@@ -52,9 +62,9 @@ export default function Projects() {
         <p className="mt-4 max-w-xl text-[var(--body)]">{tx.subtitle}</p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <ProjectRail count={tx.featured.length}>
         {tx.featured.map((project) => (
-          <article key={project.id} className="flex min-w-0 flex-col rounded-[var(--r-lg)] border border-[var(--hairline)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--brand-glow)] hover:shadow-[var(--shadow-glow)]">
+          <article key={project.id} className="flex w-[86vw] shrink-0 snap-start flex-col rounded-[var(--r-lg)] border border-[var(--hairline)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--brand-glow)] hover:shadow-[var(--shadow-glow)] sm:w-[62vw] md:w-[min(38vw,29rem)]">
             <ScreenshotCarousel
               screenshots={SCREENSHOTS[project.id] ?? []}
               browserUrl={project.browserUrl}
@@ -69,8 +79,12 @@ export default function Projects() {
               <ProjectIcon id={project.id} />
               {project.name}
             </h3>
-            <p className="mt-2 font-mono text-sm text-[var(--muted)]">{project.tagline}</p>
-            <p className="mt-4 leading-7 text-[var(--body)]">{project.description}</p>
+            {/* 13px rather than 14 so the longest tagline holds one line on a
+                normal desktop, and two lines' worth of height reserved either
+                way: a tagline that wraps on a narrow card would otherwise push
+                only that card's description down and leave the row ragged. */}
+            <p className="mt-3 min-h-12 font-mono text-[13px] leading-6 text-[var(--muted)]">{project.tagline}</p>
+            <p className="mt-5 leading-7 text-[var(--body)]">{project.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-[var(--hairline)] bg-[var(--surface-2)] px-3 py-1 text-xs font-semibold text-[var(--body)]">{tag}</span>
@@ -82,8 +96,95 @@ export default function Projects() {
             </a>
           </article>
         ))}
-      </div>
+      </ProjectRail>
     </section>
+  );
+}
+
+/**
+ * The projects rail: cards scroll horizontally instead of wrapping into a grid.
+ *
+ * <p>Cards are sized so the next one is always cut off at the right edge. That
+ * crop is the affordance — it says "there is more" without a label, which
+ * matters because the arrows only appear from `md` up and the count of projects
+ * keeps growing.
+ *
+ * <p>Native scrolling with snap points does the work: trackpad, shift-wheel,
+ * touch drag and keyboard all behave the way the platform already does them.
+ * The buttons page by one card for anyone using a mouse with no horizontal
+ * axis.
+ */
+function ProjectRail({ count, children }: { count: number; children: React.ReactNode }) {
+  const rail = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(0);
+
+  // Derived from scroll position rather than tracked on click, so dragging and
+  // wheel-scrolling keep the dots honest.
+  const sync = useCallback(() => {
+    const node = rail.current;
+    if (!node) return;
+    const card = node.firstElementChild as HTMLElement | null;
+    if (!card) return;
+    const stride = card.offsetWidth + 20; // card + gap-5
+    setIndex(Math.min(count - 1, Math.max(0, Math.round(node.scrollLeft / stride))));
+  }, [count]);
+
+  useEffect(() => {
+    const node = rail.current;
+    if (!node) return;
+    node.addEventListener("scroll", sync, { passive: true });
+    return () => node.removeEventListener("scroll", sync);
+  }, [sync]);
+
+  const goTo = (target: number) => {
+    const node = rail.current;
+    const card = node?.firstElementChild as HTMLElement | null;
+    if (!node || !card) return;
+    node.scrollTo({ left: target * (card.offsetWidth + 20), behavior: "smooth" });
+  };
+
+  return (
+    <div className="relative">
+      <div
+        ref={rail}
+        className="hide-scrollbar -mx-[var(--gutter)] flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[var(--gutter)] pb-2"
+      >
+        {children}
+      </div>
+
+      <div className="mt-6 flex items-center justify-center gap-4">
+        <button
+          onClick={() => goTo(Math.max(0, index - 1))}
+          disabled={index === 0}
+          className="cursor-pointer p-1.5 text-[var(--muted)] transition-colors hover:text-[var(--orange)] disabled:cursor-default disabled:opacity-25"
+          aria-label="Previous project"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+
+        <div className="flex items-center gap-2">
+          {Array.from({ length: count }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`h-1.5 cursor-pointer rounded-full transition-all duration-300 ${
+                i === index ? "w-6 bg-[var(--orange)]" : "w-1.5 bg-[var(--muted)] opacity-30 hover:opacity-60"
+              }`}
+              aria-label={`Project ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={() => goTo(Math.min(count - 1, index + 1))}
+          disabled={index === count - 1}
+          className="cursor-pointer p-1.5 text-[var(--muted)] transition-colors hover:text-[var(--orange)] disabled:cursor-default disabled:opacity-25"
+          aria-label="Next project"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
+        </button>
+      </div>
+    </div>
   );
 }
 
