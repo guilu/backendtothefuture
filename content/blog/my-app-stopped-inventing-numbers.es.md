@@ -1,11 +1,11 @@
 ---
-title: "La semana en que la aplicación dejó de inventarse los números"
+title: "Mi app dejó de inventarse los números"
 date: "2026-08-09"
 description: "Semana del 3 al 7 de agosto en Forma: construimos el generador público de plan nutricional, montamos el embudo desde la portada, y conseguimos que las pantallas dejaran de enseñar cifras de relleno para leer el plan de verdad. Estos son los problemas que nos encontramos por el camino."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "product", "data-modeling"]
-thumb: "/blog/the-week-the-app-stopped-inventing-numbers-thumb.webp"
-cover: "/blog/the-week-the-app-stopped-inventing-numbers-cover.webp"
-ogImage: "/blog/the-week-the-app-stopped-inventing-numbers-og.jpg"
+thumb: "/blog/my-app-stopped-inventing-numbers-thumb.webp"
+cover: "/blog/my-app-stopped-inventing-numbers-cover.webp"
+ogImage: "/blog/my-app-stopped-inventing-numbers-og.jpg"
 ---
 
 ## Lo que nos propusimos

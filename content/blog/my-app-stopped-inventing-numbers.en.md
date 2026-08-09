@@ -1,11 +1,11 @@
 ---
-title: "The week the app stopped inventing numbers"
+title: "My app stopped inventing numbers"
 date: "2026-08-09"
 description: "3–7 August in Forma: we built the public nutrition-plan generator, wired up the funnel from the landing page, and got the screens to stop showing filler figures and read the real plan instead. These are the problems we ran into along the way."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "product", "data-modeling"]
-thumb: "/blog/the-week-the-app-stopped-inventing-numbers-thumb.webp"
-cover: "/blog/the-week-the-app-stopped-inventing-numbers-cover.webp"
-ogImage: "/blog/the-week-the-app-stopped-inventing-numbers-og.jpg"
+thumb: "/blog/my-app-stopped-inventing-numbers-thumb.webp"
+cover: "/blog/my-app-stopped-inventing-numbers-cover.webp"
+ogImage: "/blog/my-app-stopped-inventing-numbers-og.jpg"
 ---
 
 ## What we set out to do

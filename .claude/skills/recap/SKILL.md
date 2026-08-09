@@ -180,13 +180,66 @@ URL will say forever, and it should describe the week's story
 (`building-the-catalogs-an-ai-nutrition-plan-needs`, not `recap-20260803`).
 
 Frontmatter:
-- `title` — thematic, not "Weekly recap N". Find the week's real throughline.
+- `title` — see **Writing the title** below. It carries more weight than any
+  other single decision in the post.
 - `date` — the **publish date** (the Sunday, `YYYY-MM-DD`), so it sorts to the
   top of the feed above the source week.
 - `description` — one honest sentence on what the week was about.
 - `tags` — e.g. `["weekly", ...]` plus the week's actual topics.
 - `thumb` / `cover` / `ogImage` — always set, pointing at the three assets from
   step 5.
+
+### Writing the title
+
+Write it as if the post were going out on Stripe Engineering, Vercel, Linear,
+Cloudflare or the Netflix TechBlog. **The title is one of the most important
+parts of the article** — it decides whether anything else gets read.
+
+Requirements:
+
+- **Create curiosity without being clickbait.**
+- Communicate the **key technical lesson**, not a description of what happened.
+- Favour what other engineers, AI builders and developers can learn from.
+- **Active voice.**
+- **Under 60 characters** whenever possible.
+- No generic shells: *Weekly recap*, *What I worked on*, *The week when…*.
+- No implementation details. Name the engineering insight, the architectural
+  decision, or the unexpected problem that got solved.
+
+Good:
+
+- *My app stopped making up data*
+- *The biggest bug wasn't in the code*
+- *Why our AI finally started using real data*
+- *The day placeholders disappeared*
+- *The architecture behind reliable AI*
+- *When fake data becomes technical debt*
+- *How we stopped lying to our own UI*
+
+Bad:
+
+- *Weekly recap #32*
+- *Nutrition improvements*
+- *The week we connected the backend*
+- *New features in Forma*
+- *Building the nutrition generator*
+
+**The procedure — do not skip it and do not shortcut it to one candidate:**
+
+1. Identify the single most interesting engineering insight of the week.
+2. Generate **10** different titles for it.
+3. Score each from 1–10 on **curiosity**, **clarity** and **technical
+   relevance**.
+4. Ship the highest scorer.
+
+Ten candidates exist so the obvious first phrasing has to beat nine
+alternatives. Show the user the shortlist and the scores — the title is theirs
+to overrule.
+
+The **slug** follows the chosen title, in English, and inherits the same rules:
+`my-app-stopped-inventing-numbers`, never `the-week-…` or `recap-YYYYMMDD`. Pick
+it before publishing; once a post is live the URL is load-bearing and renaming
+it costs a redirect.
 
 ### The post is a story, not a changelog
 
