@@ -44,12 +44,13 @@ servers). Claude **can** read its own transcripts and Engram. Gather both:
    ```bash
    python3 .claude/skills/recap/scripts/mine_week.py YYYYMMDD
    ```
-   It prints, per project, the user's own prompts from sessions touched that
-   week — the highest-signal, cheapest trace of what was worked on.
+   It prints, per project and in chronological order, the user's own prompts
+   from that week — the highest-signal, cheapest trace of what was worked on.
+   Each message is filtered by its own timestamp, so a session left open across
+   weeks does not leak the previous week's prompts into this digest.
 
-   **Caveat**: it selects sessions by the `.jsonl` file's mtime, so a long
-   session that started earlier drags in prompts from previous weeks. Filter by
-   each message's own `timestamp` field before trusting the boundaries.
+   Its `## Summary` block gives prompts, sessions and 5-hour windows, which is
+   most of what the post's closing stats section needs.
 
 2. Pull Engram for distilled decisions/bugs/summaries. Engram is scoped per
    project and the project keys use dots, not dashes. Search each project that
