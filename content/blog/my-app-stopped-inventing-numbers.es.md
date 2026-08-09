@@ -219,6 +219,27 @@ dejan de hacer falta en su forma actual.
 Después, expandir las recetas en la lista de la compra y darle a esa lista
 preferencia de tienda y aviso de presupuesto incompleto.
 
+## Y el límite que cortó la semana
+
+Hay una razón por la que este relato termina el viernes y no el domingo: **el
+viernes a primera hora agoté la ventana semanal de Claude Code**.
+
+Se nota en los datos sin necesidad de que lo cuente. El lunes y el martes son
+jornadas enteras, de la mañana a la madrugada. El viernes se desmenuza en
+fragmentos —media hora aquí, diez minutos allá— y el sábado no hay ni una
+sesión. Estuve viernes y sábado esperando al reset, que me cae los sábados
+sobre las diez de la noche.
+
+Lo que pasó el sábado merece mencionarse: **el trabajo siguió sin mí**. Otro
+agente retomó el WIP de la lista de la compra y sacó tres PRs más. Eso no entra
+en este recap a propósito —es de otra mano y toca contarlo aparte—, pero dice
+algo sobre cómo está montado esto: el cuello de botella dejó de ser el tiempo
+disponible y pasó a ser la cuota.
+
+Es una restricción nueva y bastante concreta a la hora de planificar. Meter el
+trabajo pesado al principio de la semana ya no es una preferencia de estilo: es
+lo que decide si el viernes existe.
+
 ## La semana en cifras
 
 | | |
@@ -229,7 +250,8 @@ preferencia de tienda y aviso de presupuesto incompleto.
 | Migraciones de base de datos | 17 (Flyway V42 → V58) |
 | PRs en este blog | 2 |
 | Sesiones de trabajo con Claude Code | 7 |
-| Ventanas de 5 h consumidas | 13 (lunes a viernes) |
+| Ventanas de 5 h consumidas | 14 (lunes a viernes) |
+| Ventana semanal | agotada el viernes por la mañana |
 | Prompts míos | 103 |
 | Mensajes totales en las sesiones | ~8.300 |
 | Skills usadas | `branch-pr`, `chained-pr` |

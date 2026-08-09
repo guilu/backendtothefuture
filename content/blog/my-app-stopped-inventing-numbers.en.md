@@ -213,6 +213,27 @@ stop being needed in their current shape.
 After that, expanding recipes into the shopping list, and giving that list store
 preference and an incomplete-budget warning.
 
+## And the limit that cut the week short
+
+There's a reason this story ends on Friday and not on Sunday: **first thing
+Friday morning I ran out of my Claude Code weekly window.**
+
+You can see it in the data without me saying so. Monday and Tuesday are full
+days, morning through to the small hours. Friday crumbles into fragments — half
+an hour here, ten minutes there — and Saturday has no session at all. I spent
+Friday and Saturday waiting for the reset, which lands for me on Saturdays
+around ten at night.
+
+What happened on Saturday is worth a mention: **the work carried on without
+me.** Another agent picked up the shopping-list WIP and shipped three more PRs.
+That's deliberately out of this recap — it's another hand's work and deserves
+telling separately — but it says something about how this is set up: the
+bottleneck stopped being the hours available and became the quota.
+
+It's a new and fairly concrete constraint when planning. Front-loading the heavy
+work into the start of the week is no longer a matter of taste: it's what
+decides whether Friday exists.
+
 ## The week in numbers
 
 | | |
@@ -223,7 +244,8 @@ preference and an incomplete-budget warning.
 | Database migrations | 17 (Flyway V42 → V58) |
 | PRs on this blog | 2 |
 | Claude Code working sessions | 7 |
-| 5-hour windows consumed | 13 (Monday to Friday) |
+| 5-hour windows consumed | 14 (Monday to Friday) |
+| Weekly window | exhausted Friday morning |
 | My own prompts | 103 |
 | Total messages across sessions | ~8,300 |
 | Skills used | `branch-pr`, `chained-pr` |

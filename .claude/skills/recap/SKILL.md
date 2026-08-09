@@ -287,7 +287,11 @@ A compact table or list, no prose:
 - Deploys to production
 - Flyway migrations (range, e.g. `V42 → V58`)
 - Number of 5-hour working sessions
-- Claude Code usage: 5-hour windows and weekly windows consumed
+- Claude Code usage: 5-hour windows, and whether the **weekly** window ran out.
+  The user's weekly quota resets **Saturdays around 22:00**. If it was exhausted
+  before then, say so and say when — it explains the shape of the week better
+  than any other single number, and the miner's window list shows it plainly:
+  full days early on, fragments once the quota bites, silence after.
 - Skills used during the week (`branch-pr`, `chained-pr`, `work-unit-commits`, …)
 - Anything else countable and genuinely interesting
 
