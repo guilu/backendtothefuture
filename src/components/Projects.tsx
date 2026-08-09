@@ -32,11 +32,15 @@ const SCREENSHOTS: Record<string, string[]> = {
 
 function ProjectIcon({ id }: { id: string }) {
   if (id === "tokenmeter") {
+    // One colour mark for both themes, on a white plate. The logo's dial face
+    // and speech bubble are transparent, not white, so on the dark surface the
+    // navy needle and outline vanished into the card and left only the arc and
+    // the coin floating. The plate is invisible on the light card, where the
+    // surface is already white.
     return (
-      <>
-        <img src="/img/tokenmeter-light.png" alt="" className="h-9 w-9 shrink-0 object-contain dark:hidden" />
-        <img src="/img/tokenmeter-dark.png" alt="" className="hidden h-9 w-9 shrink-0 object-contain dark:block" />
-      </>
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-white">
+        <img src="/img/tokenmeter.webp" alt="" className="h-[31px] w-[31px] object-contain" />
+      </span>
     );
   }
   if (id === "akademia") {
