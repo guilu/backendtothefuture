@@ -146,12 +146,32 @@ hollow shapes with one solid form emerging among them; a week about catalogues
 is order forming out of scattered mass; a week about a funnel is convergence.
 Reach for the metaphor, then build the simplest composition that carries it.
 
-Consistency across the series comes from **palette and mood, not layout**: deep
-near-black ground, the brand's amber-to-ember gradient (`#f9b22b → #fb7a1e →
-#ee4136`, in `globals.css` as `--grad-word`) as the warm accent, a cool
-counterweight, generous negative space, one clear focal point. Look at the
-previous posts' covers in `public/blog/` for the temperature, not for the
-structure — the structure should change every week, because the idea does.
+#### What stays fixed, and what the subject decides
+
+Consistency across the series comes from **ground and composition, not colour
+and not layout**. Fixed every week:
+
+- deep near-black ground
+- one clear focal point, generous negative space
+- a warm mass and a cool mass holding opposite sides of the frame
+- a strong vignette; light is the subject, the form is scenery
+
+**The accent palette follows the post's subject.** A week about Forma is lit in
+Forma's green; a week about the blog or the toolchain falls back to the house
+amber-to-ember. This is what stops ten covers in a row from being the same
+orange, while the ground and the composition language keep the index reading as
+one series.
+
+| Subject | Accent source | Values |
+|---|---|---|
+| Forma | `forma/frontend/src/styles/theme.css` | `--color-accent #63e662`, ramp `#0b755f → #85f55c` |
+| akadem.ia / TokenMeter | that project's own accent tokens | read them from the repo, never guess |
+| This blog, tooling, process, cross-project | house brand | `--grad-word` `#f9b22b → #fb7a1e → #ee4136` |
+
+Whichever accent leads, keep **a trace of the other temperature** at the edge —
+a low-opacity haze in a corner — so the frame has two masses and the series
+still rhymes. Read the tokens from the source file; do not copy the values in
+this table if the repo disagrees with them.
 
 Producing it:
 
@@ -161,8 +181,20 @@ Producing it:
 - Otherwise compose it as **abstract SVG/CSS** rendered with Playwright at
   `deviceScaleFactor: 2` — gradient meshes, depth-of-field blur, repeated
   geometry with one break in the pattern, light falling across a form. This
-  route can produce genuinely good editorial abstraction; what it cannot do is
-  illustration with figures, so pick a metaphor that is geometric.
+  route produces genuinely good editorial abstraction; what it cannot draw from
+  nothing is a figure, so a purely generated metaphor has to be geometric.
+- **Better than either, when the week produced illustration assets of its own:
+  build the art out of them.** If the week shipped silhouettes, icons, plates or
+  masks, the cover made with those assets is both on-topic and made with the
+  technique the post explains. Load them as `mask-image` over colour blocks —
+  the asset supplies the shape, the theme token supplies the colour — so the
+  same source file gives you the dark form and the lit accent. See
+  `references/subject-art.md` for the recipe.
+- Whatever the source, the figure is **scenery and the light is the subject**:
+  hold it small in a large dark field, let it fall out of frame rather than
+  centring it like a diagram, and keep the lit area to the few shapes that
+  carry the idea. An asset scaled up until it fills the frame stops being
+  editorial art and becomes a product splash screen.
 - Either way, **look at the result before shipping it** and ask the honest
   question: would this make me stop scrolling? If the answer is no, redo it —
   do not ship art that is merely inoffensive.

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #04060a; }
+  .stage { position: relative; overflow: hidden;
+    background: radial-gradient(135% 118% at 62% 24%, #0d131a 0%, #080b11 45%, #04060a 100%); }
+  svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage"></div>
+<script>
+const P = new URLSearchParams(location.search);
+const W = +P.get('w'), H = +P.get('h');
+const MODE = P.get('mode');
+
+const stage = document.getElementById('stage');
+stage.style.width = W + 'px';
+stage.style.height = H + 'px';
+
+const NS = 'http://www.w3.org/2000/svg';
+const svg = document.createElementNS(NS, 'svg');
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+const el = (n, a = {}) => {
+  const e = document.createElementNS(NS, n);
+  for (const k in a) e.setAttribute(k, a[k]);
+  return e;
+};
+const defs = svg.appendChild(el('defs'));
+
+/* Forma's own accent ramp — the post's subject decides the palette. */
+const ACCENT = '#63e662', RAMP_FROM = '#0b755f', RAMP_TO = '#85f55c';
+const DARK = '#26332c', DARKER = '#1a231e';
+
+defs.innerHTML = `
+  <radialGradient id="cool" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="#0b755f" stop-opacity=".34"/>
+    <stop offset="45%"  stop-color="#0b5a63" stop-opacity=".10"/>
+    <stop offset="100%" stop-color="#0b5a63" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="warm" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="#fb7a1e" stop-opacity=".26"/>
+    <stop offset="45%"  stop-color="#ee4136" stop-opacity=".08"/>
+    <stop offset="100%" stop-color="#ee4136" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="belly" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="${ACCENT}" stop-opacity=".34"/>
+    <stop offset="45%"  stop-color="${ACCENT}" stop-opacity=".09"/>
+    <stop offset="100%" stop-color="${ACCENT}" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow" x="-90%" y="-90%" width="280%" height="280%">
+    <feGaussianBlur stdDeviation="${MODE === 'thumb' ? 15 : 13}"/>
+  </filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="${MODE === 'thumb' ? 1.8 : 1.5}"/>
+  </filter>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+`;
+
+/* ---------------------------------------------------------------------------
+ * A sheet of muscle, with one fascicle under load.
+ *
+ * Repetition with a single break in it: a field of identical dark bundles, and
+ * one contracted and lit. That is what a training day is — the same body, one
+ * group doing the work — and it is the composition the whole post is about,
+ * since the app's job that week was lighting exactly the right group and
+ * leaving the rest alone.
+ * ------------------------------------------------------------------------ */
+
+const rnd = (() => {
+  let s = 20260816;
+  return () => (s = (s * 1103515245 + 12345) % 2147483648) / 2147483648;
+})();
+const lerp = (a, b, t) => a + (b - a) * t;
+
+const CFG = MODE === 'thumb'
+  ? { bundles: 7, lit: 4, axisY: H * 0.50, x0: W * -0.06, x1: W * 1.06,
+      len: H * 0.62, tilt: -8, strands: 9 }
+  : { bundles: 9, lit: 5, axisY: H * 0.50, x0: W * -0.02, x1: W * 1.10,
+      len: H * 1.02, tilt: -13, strands: 9 };
+
+/* Ambient masses: cool depth on the empty side, a warm trace at the far corner
+   so the series still rhymes when the accent is not the house orange. */
+const blob = (cx, cy, r, id) => svg.appendChild(el('circle', { cx, cy, r, fill: `url(#${id})` }));
+blob(W * 0.14, H * (MODE === 'thumb' ? 0.20 : 0.24), (MODE === 'thumb' ? W : H) * 0.95, 'cool');
+blob(W * 0.95, H * 0.92, (MODE === 'thumb' ? W : H) * 0.62, 'warm');
+
+const glowLayer = svg.appendChild(el('g', { filter: 'url(#glow)' }));
+const softLayer = svg.appendChild(el('g', { filter: 'url(#soft)' }));
+const sharpLayer = svg.appendChild(el('g'));
+
+for (let j = 0; j < CFG.bundles; j++) {
+  const p = CFG.bundles === 1 ? 0.5 : j / (CFG.bundles - 1);
+  const isLit = j === CFG.lit;
+  const isNear = Math.abs(j - CFG.lit) === 1;
+
+  const cx = lerp(CFG.x0, CFG.x1, p);
+  const cy = CFG.axisY + (rnd() - 0.5) * H * 0.10;
+  /* The lit fascicle is contracted: shorter and fatter than its neighbours. */
+  const len = CFG.len * (isLit ? 0.82 : lerp(0.94, 1.10, rnd()));
+  const wide = (MODE === 'thumb' ? W : H) * (isLit ? 0.115 : 0.082) * lerp(0.9, 1.1, rnd());
+  const tilt = CFG.tilt + (rnd() - 0.5) * 9;
+
+  const g = svg.appendChild(el('g', { transform: `rotate(${tilt} ${cx} ${cy})` }));
+  const gGlow = el('g', { transform: `rotate(${tilt} ${cx} ${cy})` });
+  if (isLit) glowLayer.appendChild(gGlow);
+  const target = isLit ? sharpLayer : softLayer;
+  const gg = el('g', { transform: `rotate(${tilt} ${cx} ${cy})` });
+  target.appendChild(gg);
+  g.remove();
+
+  if (isLit) {
+    gGlow.appendChild(el('ellipse', {
+      cx, cy, rx: wide * 1.5, ry: len * 0.34, fill: 'url(#belly)',
+    }));
+  }
+
+  const yTop = cy - len / 2, yBot = cy + len / 2;
+
+  for (let i = 0; i < CFG.strands; i++) {
+    const u = i / (CFG.strands - 1) - 0.5;
+    const k = Math.abs(u) * 2;
+    const wob = rnd() - 0.5;
+
+    const xEnd = cx + u * wide * 0.22;
+    const xMid = cx + u * wide * 2 * (1 + wob * 0.12);
+    const t0 = yTop + wob * len * 0.05;
+    const t1 = yBot + (rnd() - 0.5) * len * 0.05;
+
+    const d = `M ${xEnd} ${t0} C ${xMid} ${lerp(t0, t1, 0.28)}` +
+              ` ${xMid} ${lerp(t0, t1, 0.72)} ${xEnd} ${t1}`;
+
+    if (isLit) {
+      /* Light in the belly, nothing at the tendons. */
+      const hue = k < 0.25 ? RAMP_TO : k < 0.7 ? ACCENT : RAMP_FROM;
+      const lit = Math.pow(1 - k * 0.55, 2);
+      const id = `L${j}_${i}`;
+      const grad = el('linearGradient', {
+        id, gradientUnits: 'userSpaceOnUse', x1: 0, y1: t0, x2: 0, y2: t1,
+      });
+      grad.innerHTML = `
+        <stop offset="0%"   stop-color="${hue}" stop-opacity="0"/>
+        <stop offset="24%"  stop-color="${hue}" stop-opacity="${(0.30 * lit).toFixed(3)}"/>
+        <stop offset="50%"  stop-color="${hue}" stop-opacity="${(0.95 * lit).toFixed(3)}"/>
+        <stop offset="76%"  stop-color="${hue}" stop-opacity="${(0.30 * lit).toFixed(3)}"/>
+        <stop offset="100%" stop-color="${hue}" stop-opacity="0"/>`;
+      defs.appendChild(grad);
+
+      const w = (MODE === 'thumb' ? W : H) * 0.0075 * (0.6 + 0.6 * (1 - k));
+      const common = { d, fill: 'none', stroke: `url(#${id})`, 'stroke-linecap': 'round' };
+      gGlow.appendChild(el('path', { ...common, 'stroke-width': w * 2.4, opacity: 0.6 }));
+      gg.appendChild(el('path', { ...common, 'stroke-width': w }));
+    } else {
+      const w = (MODE === 'thumb' ? W : H) * 0.0062 * (0.55 + 0.5 * (1 - k));
+      gg.appendChild(el('path', {
+        d, fill: 'none', 'stroke-linecap': 'round', 'stroke-width': w,
+        stroke: isNear ? DARK : DARKER,
+        /* Falls away from the lit fascicle so the eye does not wander. */
+        opacity: (isNear ? 0.95 : Math.max(0.34, 0.9 - Math.abs(j - CFG.lit) * 0.14))
+                 * (0.6 + 0.4 * (1 - k)),
+      }));
+    }
+  }
+}
+
+svg.appendChild(el('rect', { x: 0, y: 0, width: W, height: H,
+  filter: 'url(#grain)', opacity: 0.05 }));
+
+stage.appendChild(svg);
+
+const v = document.createElement('div');
+const litX = ((CFG.lit / (CFG.bundles - 1)) * 100).toFixed(0);
+v.style.cssText = `position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(${MODE === 'thumb' ? '72% 48%' : '56% 62%'} at ${litX}% 50%,
+  rgba(0,0,0,0) 20%, rgba(0,0,0,.44) 62%, rgba(0,0,0,.90) 100%)`;
+stage.appendChild(v);
+</script>
+</body>
+</html>
