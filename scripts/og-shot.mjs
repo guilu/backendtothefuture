@@ -28,8 +28,6 @@ const OUT_DIR = path.join(ROOT, "out");
 const PUBLIC_OG = path.join(ROOT, "public", "og");
 const OUT_OG = path.join(OUT_DIR, "og");
 
-const OG_WIDTH = 1200;
-const OG_HEIGHT = 630;
 const JPEG_QUALITY = 90;
 
 /** How many past images survive per locale. Five deploys of LinkedIn cache. */
@@ -96,12 +94,52 @@ function serveStatic(dir) {
   });
 }
 
-/** Pulls the filename the build committed to, out of the page's own metadata. */
-async function ogFilenameFor(route) {
-  const html = await fs.readFile(path.join(OUT_DIR, route, "index.html"), "utf8");
-  const match = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/);
-  if (!match) throw new Error(`No og:image meta tag in out${route}index.html — did the build run?`);
-  return path.basename(match[1]);
+/**
+ * Pixels per CSS pixel, read out of src/lib/og.ts rather than restated here.
+ *
+ * <p>Keeping a copy in this file looked harmless and was not: the published
+ * size is divisible by more than one scale, so a stale copy would quietly
+ * capture a different viewport — a narrower page, a different layout — and
+ * still emit an image of exactly the declared dimensions. One definition is
+ * the only way that cannot happen.
+ */
+async function deviceScale() {
+  const src = await fs.readFile(path.join(ROOT, "src", "lib", "og.ts"), "utf8");
+  const match = src.match(/export const OG_SCALE = (\d+);/);
+  if (!match) throw new Error("Could not read OG_SCALE from src/lib/og.ts.");
+  return Number(match[1]);
+}
+
+function metaContent(html, property) {
+  const match = html.match(new RegExp(`<meta\\s+property="${property}"\\s+content="([^"]+)"`));
+  return match?.[1];
+}
+
+/**
+ * Reads back what the build already promised about this page's OG image: the
+ * filename and the dimensions it advertises. Both come from the HTML rather
+ * than being restated here, so the metadata can never disagree with the file.
+ */
+async function ogTargetFor(route, scale) {
+  const file = path.join(OUT_DIR, route, "index.html");
+  const html = await fs.readFile(file, "utf8");
+
+  const image = metaContent(html, "og:image");
+  if (!image) throw new Error(`No og:image meta tag in out${route}index.html — did the build run?`);
+
+  const width = Number(metaContent(html, "og:image:width"));
+  const height = Number(metaContent(html, "og:image:height"));
+  if (!width || !height) throw new Error(`out${route}index.html declares no og:image dimensions.`);
+
+  const viewport = { width: width / scale, height: height / scale };
+  if (!Number.isInteger(viewport.width) || !Number.isInteger(viewport.height)) {
+    throw new Error(
+      `Declared ${width}×${height} is not divisible by OG_SCALE ${scale} — ` +
+        `check OG_WIDTH/OG_HEIGHT/OG_SCALE in src/lib/og.ts.`
+    );
+  }
+
+  return { filename: path.basename(image), viewport };
 }
 
 async function capture(page, url, dest) {
@@ -133,11 +171,14 @@ async function main() {
   if (!existsSync(OUT_DIR)) throw new Error("out/ not found — run `npm run build` first.");
   await fs.mkdir(PUBLIC_OG, { recursive: true });
 
+  const scale = await deviceScale();
+
   const { server, port } = await serveStatic(OUT_DIR);
   const browser = await chromium.launch();
+  // The viewport is set per route from what that page declares; only the pixel
+  // density is fixed here, and it is a context-level setting in Playwright.
   const context = await browser.newContext({
-    viewport: { width: OG_WIDTH, height: OG_HEIGHT },
-    deviceScaleFactor: 1,
+    deviceScaleFactor: scale,
     colorScheme: COLOR_SCHEME,
   });
 
@@ -155,10 +196,12 @@ async function main() {
 
   try {
     for (const { lang, route } of ROUTES) {
-      const filename = await ogFilenameFor(route);
+      const { filename, viewport } = await ogTargetFor(route, scale);
+      await page.setViewportSize(viewport);
       const dest = path.join(PUBLIC_OG, filename);
       await capture(page, `http://127.0.0.1:${port}${route}`, dest);
-      console.log(`  ✓ ${route} → public/og/${filename}`);
+      const size = `${viewport.width * scale}×${viewport.height * scale}`;
+      console.log(`  ✓ ${route} → public/og/${filename} (${size})`);
       await prune(lang);
     }
   } finally {
