@@ -4,7 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LangProvider } from "@/context/LangContext";
 import { alternatesFor } from "@/lib/metadata";
+import { blogOgPath, OG_WIDTH, OG_HEIGHT } from "@/lib/og";
 import type { Metadata } from "next";
+
+// Regenerated on every deploy from a screenshot of this page — see src/lib/og.ts.
+const OG_IMAGE = blogOgPath("en");
 
 const BLOG_TITLE = "Blog — Backend to the Future";
 const BLOG_DESC =
@@ -21,13 +25,13 @@ export const metadata: Metadata = {
     url: "https://backendtothefuture.com/en/blog/",
     siteName: "Backend to the Future",
     locale: "en_US",
-    images: [{ url: "/blog-og.jpg", width: 1200, height: 630, alt: BLOG_TITLE }],
+    images: [{ url: OG_IMAGE, width: OG_WIDTH, height: OG_HEIGHT, alt: BLOG_TITLE }],
   },
   twitter: {
     card: "summary_large_image",
     title: BLOG_TITLE,
     description: BLOG_DESC,
-    images: ["/blog-og.jpg"],
+    images: [OG_IMAGE],
   },
 };
 
