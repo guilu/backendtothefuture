@@ -8,6 +8,7 @@ import { LangProvider } from "@/context/LangContext";
 import { getAllPosts, getPostBySlug, type PostContent } from "@/lib/blog";
 import { alternatesFor } from "@/lib/metadata";
 import { AUTHOR } from "@/lib/site";
+import { imageSize } from "@/lib/imageSize";
 
 const BASE = "https://backendtothefuture.com";
 
@@ -53,7 +54,7 @@ export async function generateMetadata({
       locale: "en_US",
       publishedTime: p.date,
       tags: p.tags,
-      images: [{ url: ogImage, width: 1200, height: 630, alt: p.title }],
+      images: [{ url: ogImage, ...imageSize(ogImage), alt: p.title }],
     },
     twitter: {
       card: "summary_large_image",
