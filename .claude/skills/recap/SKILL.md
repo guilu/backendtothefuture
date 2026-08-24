@@ -339,3 +339,35 @@ renders smaller and set apart from the table.
 
 Report the files written, the screenshots captured, and the sources used. Do
 **not** commit, push, or run the build unless the user asks — they review first.
+
+## Step 8 — Share on Mastodon (only when the user asks)
+
+Not part of the default run. Step 7 still stops. Do this only when the user
+asks to publish the post to their social accounts, and only **after the post is
+live** — the toot links to the published URL, and a toot cannot be edited once
+it has federated, so a link to a 404 stays broken forever.
+
+Order matters: `./deploy.sh` first, then confirm the URL loads, then toot.
+
+1. Dry run, always first — it writes nothing and prints both toots with their
+   character counts:
+   ```bash
+   npm run social:mastodon -- <slug> --dry-run
+   ```
+2. **Show the user both toots and wait for approval.** Publishing is
+   irreversible and it goes out under their name. Never skip this.
+3. On approval, publish:
+   ```bash
+   npm run social:mastodon -- <slug>
+   ```
+
+The script sends one toot per locale, each tagged with its own `language` so
+Mastodon's per-language timeline filter shows each reader only their version.
+Text comes from the post's own frontmatter — `title`, `description` and the
+first four `tags` as hashtags — so a bad toot means bad frontmatter, and the fix
+belongs in the post, not in the script. Re-running for the same slug is a
+retry, not a second toot: the request carries an `Idempotency-Key`.
+
+Requires `MASTODON_ACCESS_TOKEN` in `.env.local` (scope `write:statuses`);
+`MASTODON_INSTANCE` defaults to `https://mastodon.social`. See
+`scripts/social-mastodon.mjs`.

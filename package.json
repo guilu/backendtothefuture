@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "og:shot": "node scripts/og-shot.mjs"
+    "og:shot": "node scripts/og-shot.mjs",
+    "social:mastodon": "node scripts/social-mastodon.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.19",
