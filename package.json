@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "og:shot": "node scripts/og-shot.mjs",
-    "social:mastodon": "node scripts/social-mastodon.mjs"
+    "social:mastodon": "node scripts/social-mastodon.mjs",
+    "social:linkedin": "node scripts/social-linkedin.mjs",
+    "linkedin:auth": "node scripts/linkedin-auth.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.19",

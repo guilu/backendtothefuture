@@ -371,3 +371,37 @@ retry, not a second toot: the request carries an `Idempotency-Key`.
 Requires `MASTODON_ACCESS_TOKEN` in `.env.local` (scope `write:statuses`);
 `MASTODON_INSTANCE` defaults to `https://mastodon.social`. See
 `scripts/social-mastodon.mjs`.
+
+## Step 9 — Share on LinkedIn (only when the user asks)
+
+Same rules as Step 8: not part of the default run, only after the post is live,
+and only with explicit approval of the text.
+
+**Spanish only.** LinkedIn has no per-language feed filter, so every contact
+would see both copies; posting the same content twice in a row reads as spam
+and splits the engagement. The English post still exists for search traffic.
+
+1. Dry run — uploads nothing:
+   ```bash
+   npm run social:linkedin -- <slug> --dry-run
+   ```
+2. **Show the user the text and the card, and wait for approval.**
+3. On approval:
+   ```bash
+   npm run social:linkedin -- <slug>
+   ```
+
+The post is an *article* post: commentary, then a card built from the post's
+`title`, a fixed site subtitle and the `ogImage` uploaded through the Images
+API. This is not gold-plating — the Posts API does not scrape URLs, so without
+the upload the link would publish as a bare string with no preview.
+
+### When it fails
+
+- **401** — the access token expired. They last ~60 days and LinkedIn does not
+  issue refresh tokens to self-serve apps, so this is routine, not a bug. Run
+  `npm run linkedin:auth` and paste the two new lines into `.env.local`.
+- **426 / version errors** — `LINKEDIN_VERSION` in the script has been sunset.
+  LinkedIn retires dated versions on a schedule. Bump it to a live one.
+- **403 on the image** — `w_member_social` is write-only on `/rest/images`, so a
+  GET will always fail. Only the upload itself needs to succeed.
