@@ -66,7 +66,7 @@ export default function RootShell({
       <body className="relative min-h-screen">
         <BrandDefs />
         {children}
-        <CookieConsent />
+        <CookieConsent lang={lang} />
       </body>
     </html>
   );
