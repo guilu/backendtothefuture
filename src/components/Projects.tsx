@@ -7,11 +7,12 @@ import { t } from "@/lib/translations";
 
 const SCREENSHOTS: Record<string, string[]> = {
   forma: [
-    "/screenshots/forma/forma-1.png",
-    "/screenshots/forma/forma-2.png",
-    "/screenshots/forma/forma-3.png",
-    "/screenshots/forma/forma-4.png",
-    "/screenshots/forma/forma-5.png",
+    "/screenshots/forma/forma-1.png?v=2",
+    "/screenshots/forma/forma-2.png?v=2",
+    "/screenshots/forma/forma-3.png?v=2",
+    "/screenshots/forma/forma-4.png?v=2",
+    "/screenshots/forma/forma-5.png?v=2",
+    "/screenshots/forma/forma-6.png?v=2",
   ],
   akademia: [
     "/screenshots/akademia/1.png",
