@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { t, type Lang } from "@/lib/translations";
+import { localizePath } from "@/lib/i18n";
 
 const STORAGE_KEY = "ga-consent";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-XXXXXXXX";
@@ -49,12 +50,17 @@ function clearGaCookies() {
  * visitor explicitly accepts — rendering <GoogleAnalytics> is what injects
  * gtag, so not rendering it means zero tracking until consent is given. The
  * choice can be withdrawn at any time, and withdrawing clears the cookies.
+ *
+ * <p>`lang` llega por prop desde `RootShell` y no de un contexto: el banner
+ * cuelga del `<body>`, fuera del `LangProvider` que cada página monta. Antes
+ * salía de `localStorage.lang`, una clave que ya no escribe nadie desde que la
+ * ruta es la única fuente del idioma (ver `lib/i18n.ts`), así que el aviso
+ * legal se leía en español también en `/en/`.
  */
-export default function CookieConsent() {
+export default function CookieConsent({ lang }: { lang: Lang }) {
   const [consent, setConsent] = useState<Consent | null>(null);
   const [forced, setForced] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [lang, setLang] = useState<Lang>("es");
 
   useEffect(() => {
     setMounted(true);
@@ -62,8 +68,6 @@ export default function CookieConsent() {
     if (storedConsent === "granted" || storedConsent === "denied") {
       setConsent(storedConsent);
     }
-    const storedLang = localStorage.getItem("lang");
-    if (storedLang === "en" || storedLang === "es") setLang(storedLang);
 
     const reopen = () => setForced(true);
     window.addEventListener(OPEN_CONSENT_EVENT, reopen);
@@ -105,7 +109,7 @@ export default function CookieConsent() {
           <p className="font-mono text-[12px] leading-relaxed text-[var(--body)] sm:text-[13px]">
             {copy.message}{" "}
             <a
-              href="/cookies/"
+              href={localizePath("/cookies/", lang)}
               className="font-semibold text-[var(--orange)] underline underline-offset-2 hover:opacity-80">
               {copy.learnMore}
             </a>
