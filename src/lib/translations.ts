@@ -80,7 +80,7 @@ export const t = {
           ],
           openApp: "Open app",
           url: "https://forma.diegobarrioh.dev/plan",
-          browserUrl: "forma.diegobarrioh.dev/plan",
+          browserUrl: "forma.diegobarrioh.dev",
         },
         {
           id: "akademia",
@@ -266,7 +266,7 @@ export const t = {
           ],
           openApp: "Abrir app",
           url: "https://forma.diegobarrioh.dev/plan",
-          browserUrl: "forma.diegobarrioh.dev/plan",
+          browserUrl: "forma.diegobarrioh.dev",
         },
         {
           id: "akademia",
