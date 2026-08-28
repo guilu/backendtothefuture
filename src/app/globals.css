@@ -184,10 +184,15 @@ button {
 ::-webkit-scrollbar-thumb { background: var(--brand-18); border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-glow); }
 
+/* 1440 y no 1216: en un monitor ancho el contenedor viejo dejaba la mitad de
+   la pantalla vacía. Las columnas de texto están topadas por su cuenta
+   (`max-w-[16ch]` en el h1, 440px en la lede, `max-w-3xl` en el artículo del
+   blog), así que este ancho extra va al arte del hero y al carrusel de
+   proyectos, nunca a la longitud de línea. */
 .bttf-container {
   --gutter: 28px;
   width: 100%;
-  max-width: 1216px;
+  max-width: 1440px;
   margin: 0 auto;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
