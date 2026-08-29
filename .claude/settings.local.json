@@ -11,5 +11,6 @@
       "Bash(npm audit:*)",
       "Bash(npx tsc:*)"
     ]
-  }
+  },
+  "outputStyle": "Concise"
 }
