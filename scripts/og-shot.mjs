@@ -30,8 +30,19 @@ const OUT_OG = path.join(OUT_DIR, "og");
 
 const JPEG_QUALITY = 90;
 
-/** How many past images survive per locale. Five deploys of LinkedIn cache. */
-const OG_RETENTION = 5;
+/**
+ * How many past images survive per locale.
+ *
+ * Was 5, from when the URL only moved on a redesign or a new post — a handful
+ * of deploys covered months. Since `thumbDigest` (src/lib/og.ts) folded the
+ * thumbnail's bytes into the hash, the name moves on every post AND on every
+ * re-cut of a cover, so a slot now burns roughly once a week. At 5 that is a
+ * month of history before a link somebody shared in the past starts answering
+ * 404 with a broken preview — which already happened on 2026-08-30.
+ *
+ * 20 is about five months at one post a week, and costs ~250 KB per file.
+ */
+const OG_RETENTION = 20;
 
 /**
  * The thumbnail is a brand asset, so it is pinned to one theme rather than
