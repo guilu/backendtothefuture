@@ -56,6 +56,22 @@ const MAX_HASHTAGS = 3;
 const CARD_SUBTITLE =
   "Notas semanales sobre ingeniería backend, clean code, arquitectura de software y trabajo con IA.";
 
+/**
+ * What the series IS, above the description of this week's entry.
+ *
+ * A reader who lands on one of these cold sees an article about a bug in a
+ * chart component; what makes it worth following is that there is one every
+ * Sunday and that it comes out of real sessions. The card cannot say that —
+ * `CARD_SUBTITLE` describes the blog, not the cadence — so it goes here.
+ *
+ * The trade-off, taken on purpose: LinkedIn collapses the commentary after the
+ * first couple of lines, so this intro spends the visible part on the series
+ * instead of on the week's hook. That is the right call while the series is
+ * still unknown; it stops being the right call once people recognise it.
+ */
+const INTRO =
+  "Cada domingo Claude escribe el recap de la semana a partir de nuestras sesiones y lo publica en mi blog.\n\nEl de esta semana:";
+
 const ACRONYMS = new Set([
   "ai", "api", "cd", "ci", "cli", "css", "db", "html", "http", "jvm", "llm",
   "orm", "pr", "rag", "seo", "sql", "ssr", "tdd", "ui", "ux",
@@ -178,7 +194,7 @@ async function main() {
 
   const url = `${SITE_URL}/blog/${slug}/`;
   const hashtags = (data.tags ?? []).slice(0, MAX_HASHTAGS).map(toHashtag).join(" ");
-  const commentary = [data.description, hashtags].filter(Boolean).join("\n\n");
+  const commentary = [INTRO, data.description, hashtags].filter(Boolean).join("\n\n");
 
   if (commentary.length > MAX_COMMENTARY) {
     console.error(`✗ el texto ocupa ${commentary.length} caracteres, el máximo es ${MAX_COMMENTARY}`);
