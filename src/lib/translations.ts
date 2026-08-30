@@ -79,7 +79,7 @@ export const t = {
             { label: "Status", value: "WIP" },
           ],
           openApp: "Open app",
-          url: "https://forma.diegobarrioh.dev/plan",
+          url: "https://forma.diegobarrioh.dev",
           browserUrl: "forma.diegobarrioh.dev",
         },
         {
@@ -265,7 +265,7 @@ export const t = {
             { label: "Estado", value: "WIP" },
           ],
           openApp: "Abrir app",
-          url: "https://forma.diegobarrioh.dev/plan",
+          url: "https://forma.diegobarrioh.dev",
           browserUrl: "forma.diegobarrioh.dev",
         },
         {
