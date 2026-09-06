@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import { BrandDefs } from "@/components/design-system/BrandMark";
 import CookieConsent from "@/components/CookieConsent";
+import IntentAnalytics from "@/components/IntentAnalytics";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, SITE_NAME, AUTHOR } from "@/lib/site";
 import type { Lang } from "@/lib/translations";
@@ -66,6 +67,7 @@ export default function RootShell({
       <body className="relative min-h-screen">
         <BrandDefs />
         {children}
+        <IntentAnalytics />
         <CookieConsent lang={lang} />
       </body>
     </html>
