@@ -43,11 +43,11 @@ type ChipProps = {
 
 function Chip({ label, icon, className }: ChipProps) {
   return (
-    <div className={`absolute flex items-center gap-2.5 rounded-full border border-[var(--hairline)] bg-[var(--surface)] px-3.5 py-2 shadow-[var(--shadow-sm)] ${className}`}>
-      <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 shrink-0">
+    <div className={`absolute flex items-center gap-[2cqw] rounded-full border border-[var(--hairline)] bg-[var(--surface)] px-[2.8cqw] py-[1.6cqw] shadow-[var(--shadow-sm)] ${className}`}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-[3.2cqw] w-[3.2cqw] shrink-0">
         {icon}
       </svg>
-      <span className="font-mono text-[13px] font-medium text-[var(--ink)]">{label}</span>
+      <span className="font-mono text-[2.6cqw] font-medium text-[var(--ink)]">{label}</span>
     </div>
   );
 }
@@ -57,7 +57,7 @@ export default function HeroArt() {
   const tx = copy[lang];
 
   return (
-    <div className="relative aspect-square w-full max-w-[500px]" aria-hidden>
+    <div className="relative aspect-square w-full [container-type:inline-size]" aria-hidden>
       <svg viewBox="0 0 470 470" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="hero-hex" x1="0" y1="0" x2="1" y2="1">
@@ -90,10 +90,10 @@ export default function HeroArt() {
         </g>
       </svg>
 
-      <div className="absolute left-1/2 top-1/2 w-[150px] -translate-x-1/2 -translate-y-1/2 text-center">
-        <div className="text-[11.5px] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">{tx.core}</div>
-        <div className="mt-1.5 text-2xl font-extrabold tracking-[var(--tracking-tight)] text-[var(--ink)]">{tx.domain}</div>
-        <div className="mt-2 font-mono text-xs text-[var(--body)]">{tx.noDeps}</div>
+      <div className="absolute left-1/2 top-1/2 w-[30cqw] -translate-x-1/2 -translate-y-1/2 text-center">
+        <div className="text-[2.3cqw] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">{tx.core}</div>
+        <div className="mt-[1.2cqw] text-[4.8cqw] font-extrabold tracking-[var(--tracking-tight)] text-[var(--ink)]">{tx.domain}</div>
+        <div className="mt-[1.6cqw] font-mono text-[2.4cqw] text-[var(--body)]">{tx.noDeps}</div>
       </div>
 
       <Chip
@@ -122,7 +122,7 @@ export default function HeroArt() {
         icon={<><path d="M4 7h7M4 12h5M4 17h7" /><path d="M15 5l5 7-5 7" /></>}
       />
 
-      <p className="absolute inset-x-0 bottom-0 text-center font-mono text-[12.5px] text-[var(--muted)]">
+      <p className="absolute inset-x-0 bottom-0 text-center font-mono text-[2.5cqw] text-[var(--muted)]">
         {tx.caption}
       </p>
     </div>
