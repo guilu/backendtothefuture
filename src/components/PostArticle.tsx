@@ -48,7 +48,7 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
           ))}
         </div>
         {view.description && (
-          <p className="mt-4 border-l-2 border-[var(--brand-glow)] pl-4 text-sm leading-relaxed text-[var(--body)]">
+          <p className="mt-7 border-l-2 border-[var(--brand-glow)] py-1 pl-5 text-sm leading-relaxed text-[var(--body)]">
             {view.description}
           </p>
         )}

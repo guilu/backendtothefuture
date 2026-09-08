@@ -386,7 +386,7 @@ button {
 .blog-prose code { font-family: var(--font-mono); font-size: 0.82em; background: var(--brand-08); color: var(--orange); padding: 0.15em 0.45em; border-radius: 4px; border: 1px solid var(--brand-18); }
 .blog-prose pre { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 1.25rem 1.5rem; overflow-x: auto; margin: 0 0 1.5rem; }
 .blog-prose pre code { background: none; border: none; padding: 0; color: var(--ink); font-size: 0.85em; }
-.blog-prose blockquote { border-left: 2px solid var(--brand-glow); margin: 0 0 1.25rem; padding-left: 1rem; color: var(--muted); }
+.blog-prose blockquote { border-left: 2px solid var(--brand-glow); margin: 2rem 0 1.75rem; padding: 0.25rem 0 0.25rem 1.25rem; color: var(--muted); }
 .blog-prose hr { border: none; border-top: 1px solid var(--hairline); margin: 2.5rem 0; }
 
 @media (max-width: 720px) {
