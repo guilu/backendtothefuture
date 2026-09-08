@@ -146,9 +146,13 @@ function ProjectRail({ count, children }: { count: number; children: React.React
 
   return (
     <div className="relative">
+      {/* The bleed (-mx + px) lets cards run under the gutter, but snapping
+          aligns a card's edge with the scrollport's edge, which ignores that
+          padding. Without a matching scroll-px the browser scrolls one whole
+          gutter on load and the first card lands left of the rest of the page. */}
       <div
         ref={rail}
-        className="hide-scrollbar -mx-[var(--gutter)] flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[var(--gutter)] pb-2"
+        className="hide-scrollbar -mx-[var(--gutter)] flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-px-[var(--gutter)] px-[var(--gutter)] pb-2"
       >
         {children}
       </div>
