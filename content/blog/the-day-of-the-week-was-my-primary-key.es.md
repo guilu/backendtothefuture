@@ -3,6 +3,7 @@ title: "El día de la semana era mi clave primaria"
 date: "2026-08-23"
 description: "Semana del 17 al 23 de agosto en Forma. Un lunes por la mañana la app decía que ya había entrenado dos sesiones. La tarjeta sumaba bien: el error estaba en una cadena de texto que fundía qué era una sesión con cuándo tocaba hacerla. De ahí salió el resto de la semana."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "data-modeling", "design", "rgpd"]
+projects: ["forma"]
 thumb: "/blog/the-day-of-the-week-was-my-primary-key-thumb.webp"
 cover: "/blog/the-day-of-the-week-was-my-primary-key-cover.webp"
 ogImage: "/blog/the-day-of-the-week-was-my-primary-key-og.jpg"

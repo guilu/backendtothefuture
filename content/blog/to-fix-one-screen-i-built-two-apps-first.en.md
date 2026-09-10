@@ -3,6 +3,7 @@ title: "To fix one screen, I built two other apps first"
 date: "2026-08-16"
 description: "10–16 August in Forma: to work on the interface with AI we ended up building two helper apps — a muscle-overlay lab and a backend-less playground — and with them the training cards went from a generic silhouette to a body with the day's muscles lit up."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "design-system", "accessibility", "svg", "tooling"]
+projects: ["forma"]
 thumb: "/blog/to-fix-one-screen-i-built-two-apps-first-thumb.webp"
 cover: "/blog/to-fix-one-screen-i-built-two-apps-first-cover.webp"
 ogImage: "/blog/to-fix-one-screen-i-built-two-apps-first-og.jpg"

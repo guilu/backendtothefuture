@@ -3,6 +3,7 @@ title: "My test measured the box, not the letters"
 date: "2026-09-06"
 description: "Week of 31 August to 6 September: a holiday week with only enough time to look. Looking turned up three bugs that had CI green — a clipped headline, a consent banner that didn't consent, and a button sitting on top of three others."
 tags: ["weekly", "forma", "testing", "playwright", "css", "analytics", "claude-code", "ai-agents"]
+projects: ["forma", "tokenmeter"]
 thumb: "/blog/my-test-measured-the-box-not-the-letters-thumb.webp"
 cover: "/blog/my-test-measured-the-box-not-the-letters-cover.webp"
 ogImage: "/blog/my-test-measured-the-box-not-the-letters-og.jpg"

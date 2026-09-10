@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { LocalizedPost, PostContent } from "@/lib/blog";
 import { useLang } from "@/context/LangContext";
 import { localizePath } from "@/lib/i18n";
+import { projectLinks } from "@/lib/projectLinks";
 import type { Lang } from "@/lib/translations";
 
 function pick(post: LocalizedPost, lang: Lang): PostContent {
@@ -17,6 +18,8 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
   const view = pick(post, lang);
   const back = lang === "es" ? "← Blog" : "← Blog";
   const cover = view.cover ?? COVER_PLACEHOLDER;
+  const projects = projectLinks(view.projects, lang);
+  const projectsHeading = lang === "es" ? "El proyecto del que habla" : "The project behind this";
 
   return (
     <article
@@ -55,6 +58,28 @@ export default function PostArticle({ post }: { post: LocalizedPost }) {
       </header>
 
       <div className="blog-prose" dangerouslySetInnerHTML={{ __html: view.contentHtml }} />
+
+      {projects.length > 0 && (
+        <aside className="mt-14 border-t border-[var(--hairline)] pt-8">
+          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+            {projectsHeading}
+          </h2>
+          <ul className="grid gap-3">
+            {projects.map((project) => (
+              <li key={project.slug}>
+                <a
+                  href={project.href}
+                  className="group block rounded-xl border border-[var(--hairline)] px-4 py-3 transition-colors hover:border-[var(--orange)]">
+                  <span className="font-semibold text-[var(--ink)] transition-colors group-hover:text-[var(--orange)]">
+                    {project.name}
+                  </span>
+                  <span className="mt-0.5 block text-sm text-[var(--body)]">{project.blurb}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
     </article>
   );
 }

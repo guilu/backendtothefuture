@@ -3,6 +3,7 @@ title: "Forma matures: the week I standardized the software factory"
 date: "2026-07-12"
 description: "Recap for July 6-12: Forma, the fitness-tracking app I kicked off last week, gains muscle screen by screen, and with it a standardized factory: two skills (jira-sdd-ai and jira-sdd-specs) to manage and implement the project, and an operations agent (Hermes) that spins up the nginx sites, publishes them, and verifies everything with a single command: for up."
 tags: ["weekly", "ai-engineering", "spec-driven-development", "ai-agents", "spring-boot"]
+projects: ["forma"]
 thumb: "/blog/standardizing-the-software-factory-with-ai-agents-thumb.webp"
 cover: "/blog/standardizing-the-software-factory-with-ai-agents-cover.webp"
 ---

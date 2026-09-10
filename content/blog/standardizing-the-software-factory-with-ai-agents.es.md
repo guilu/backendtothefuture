@@ -3,6 +3,7 @@ title: "Forma madura: la semana en que estandaricé la fábrica de software"
 date: "2026-07-12"
 description: "Resumen del 6 al 12 de julio: Forma, la app de seguimiento físico que arranqué la semana pasada, gana músculo pantalla a pantalla, y con ella una fábrica estandarizada - dos skills (jira-sdd-ai y jira-sdd-specs) para gestionar e implementar el proyecto, y un agente de operaciones (Hermes) que levanta los sites en nginx, los publica y verifica con un solo comando: for up."
 tags: ["weekly", "ai-engineering", "spec-driven-development", "ai-agents", "spring-boot"]
+projects: ["forma"]
 thumb: "/blog/standardizing-the-software-factory-with-ai-agents-thumb.webp"
 cover: "/blog/standardizing-the-software-factory-with-ai-agents-cover.webp"
 ---

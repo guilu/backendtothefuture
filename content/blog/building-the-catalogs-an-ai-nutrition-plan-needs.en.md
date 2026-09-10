@@ -3,6 +3,7 @@ title: "The Catalogs an AI Nutrition Plan Needs: The Plumbing Week Before the Ma
 date: "2026-08-02"
 description: "Week of July 27 – August 2: 19 PRs on Forma. I closed out the Withings integration, polished the cards and data tables, and built the global catalogs of macros and store products. None of it is visible. All of it is what makes generating a plan possible next week."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "withings", "data-modeling", "playwright"]
+projects: ["forma"]
 thumb: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-thumb.webp"
 cover: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-cover.webp"
 ogImage: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-og.jpg"
