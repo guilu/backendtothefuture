@@ -11,6 +11,8 @@ export interface PostContent {
   date: string;
   description: string;
   tags: string[];
+  /** Slugs of the diegobarrioh.dev project pages this post covers. */
+  projects?: string[];
   contentHtml: string;
   /** Optional square thumbnail (~800×800) shown in the blog index card. */
   thumb?: string;
@@ -44,6 +46,7 @@ function parseFile(filename: string): { slug: string; lang: Lang; content: PostC
       date: data.date ? String(data.date) : "",
       description: data.description ?? "",
       tags: data.tags ?? [],
+      projects: data.projects ?? undefined,
       contentHtml: marked(content) as string,
       thumb: data.thumb ?? undefined,
       cover: data.cover ?? undefined,

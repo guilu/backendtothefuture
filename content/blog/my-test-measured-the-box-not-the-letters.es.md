@@ -3,6 +3,7 @@ title: "Mi test medía la caja, no las letras"
 date: "2026-09-06"
 description: "Semana del 31 de agosto al 6 de septiembre: una semana de vacaciones en la que sólo hubo tiempo de mirar. Y mirando aparecieron tres bugs que tenían el CI en verde: un titular recortado, un consentimiento que no consentía y un botón encima de otros tres."
 tags: ["weekly", "forma", "testing", "playwright", "css", "analytics", "claude-code", "ai-agents"]
+projects: ["forma", "tokenmeter"]
 thumb: "/blog/my-test-measured-the-box-not-the-letters-thumb.webp"
 cover: "/blog/my-test-measured-the-box-not-the-letters-cover.webp"
 ogImage: "/blog/my-test-measured-the-box-not-the-letters-og.jpg"

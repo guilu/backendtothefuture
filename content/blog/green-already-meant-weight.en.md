@@ -3,6 +3,7 @@ title: "Green already meant weight"
 date: "2026-08-30"
 description: "Week of 24–30 August: I finished Forma's dashboard, and when I went to align the colours of its charts I found that one component's default value had been asserting something false across four different screens for months."
 tags: ["weekly", "forma", "claude-code", "design-systems", "data-viz", "accessibility", "react"]
+projects: ["forma"]
 thumb: "/blog/green-already-meant-weight-thumb.webp"
 cover: "/blog/green-already-meant-weight-cover.webp"
 ogImage: "/blog/green-already-meant-weight-og.jpg"

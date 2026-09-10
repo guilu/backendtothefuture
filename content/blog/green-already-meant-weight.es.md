@@ -3,6 +3,7 @@ title: "El verde ya significaba peso"
 date: "2026-08-30"
 description: "Semana del 24 al 30 de agosto: terminé el panel de Forma y, al ir a homologar los colores de sus gráficas, descubrí que el valor por defecto de un componente llevaba meses afirmando algo falso en cuatro pantallas distintas."
 tags: ["weekly", "forma", "claude-code", "design-systems", "data-viz", "accesibilidad", "react"]
+projects: ["forma"]
 thumb: "/blog/green-already-meant-weight-thumb.webp"
 cover: "/blog/green-already-meant-weight-cover.webp"
 ogImage: "/blog/green-already-meant-weight-og.jpg"

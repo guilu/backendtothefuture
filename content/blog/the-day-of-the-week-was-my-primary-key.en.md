@@ -3,6 +3,7 @@ title: "The day of the week was my primary key"
 date: "2026-08-23"
 description: "17–23 August in Forma. On a Monday morning the app claimed I'd already done two training sessions. The card was adding up correctly: the bug was a text string that fused what a session is with when it was due. The rest of the week came out of that."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "data-modeling", "design", "gdpr"]
+projects: ["forma"]
 thumb: "/blog/the-day-of-the-week-was-my-primary-key-thumb.webp"
 cover: "/blog/the-day-of-the-week-was-my-primary-key-cover.webp"
 ogImage: "/blog/the-day-of-the-week-was-my-primary-key-og.jpg"

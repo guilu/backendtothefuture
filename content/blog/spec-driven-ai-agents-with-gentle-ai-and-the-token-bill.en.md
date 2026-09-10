@@ -3,6 +3,7 @@ title: "Spec-Driven Development with Gentle AI: Flawless Process, Brutal Token B
 date: "2026-07-26"
 description: "Week of July 20–26: I swapped my home-grown Jira skills for Gentle AI's SDD cycle on Forma — 20 PRs, real multi-user auth and a public landing. The process is excellent. Every single story ate a 5-hour window, and I burned through the weekly quota on Friday."
 tags: ["weekly", "spec-driven-development", "ai-agents", "gentle-ai", "claude-code", "nginx", "seo"]
+projects: ["forma"]
 thumb: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-thumb.webp"
 cover: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-cover.webp"
 ogImage: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-og.jpg"
