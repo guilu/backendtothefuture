@@ -7,10 +7,11 @@
  *   npm run build && npm run og:shot && rsync ... out/
  *
  * For each locale it reads the `og:image` URL that the build already baked into
- * the page (see src/lib/og.ts for how that name is derived), screenshots the
- * page, and writes the JPG under exactly that name. The built HTML is the
- * single source of truth for the filename, so the hash logic lives in one place
- * and the image can never end up named something the metadata does not point at.
+ * the blog index (see src/lib/og.ts for how that name is derived), screenshots
+ * the card at /og-card/<lang>/, and writes the JPG under exactly that name. The
+ * built HTML is the single source of truth for the filename, so the hash logic
+ * lives in one place and the image can never end up named something the
+ * metadata does not point at.
  *
  * Old images are kept — LinkedIn keeps requesting the URL it cached when a post
  * was first shared, and deleting it turns every past share into a broken
@@ -45,16 +46,30 @@ const JPEG_QUALITY = 90;
 const OG_RETENTION = 20;
 
 /**
- * The thumbnail is a brand asset, so it is pinned to one theme rather than
- * following whatever `prefers-color-scheme` the deploying machine happens to
- * report — otherwise the same commit produces a different image on a laptop in
- * light mode.
+ * The image is a brand asset, so the browser is pinned to one theme rather than
+ * following whatever the deploying machine happens to report — otherwise the
+ * same commit could produce a different image on a laptop in light mode.
+ *
+ * <p>Belt and braces: the card writes `dark` into its own markup, and the
+ * stylesheet keys off that class rather than `prefers-color-scheme`. This is
+ * here so a future card that *does* read the media query still renders the way
+ * the brand expects.
  */
 const COLOR_SCHEME = "dark";
 
+/**
+ * Two routes per locale, because the page that *advertises* the image is not
+ * the page that *is* the image.
+ *
+ * <p>`metaRoute` is the blog index: it carries the `og:image` name and the
+ * dimensions the build committed to. `shotRoute` is the card built for the size
+ * a feed actually paints it at (see src/components/BlogOgCard.tsx). They were
+ * the same route until the thumbnail was a screenshot of the index, which is
+ * exactly why it read as a blur.
+ */
 const ROUTES = [
-  { lang: "es", route: "/blog/" },
-  { lang: "en", route: "/en/blog/" },
+  { lang: "es", metaRoute: "/blog/", shotRoute: "/og-card/es/" },
+  { lang: "en", metaRoute: "/en/blog/", shotRoute: "/og-card/en/" },
 ];
 
 const MIME = {
@@ -130,6 +145,9 @@ function metaContent(html, property) {
  * Reads back what the build already promised about this page's OG image: the
  * filename and the dimensions it advertises. Both come from the HTML rather
  * than being restated here, so the metadata can never disagree with the file.
+ *
+ * @param route the page carrying the `og:image` tag — the blog index, not the
+ *   card that gets photographed under the name it yields.
  */
 async function ogTargetFor(route, scale) {
   const file = path.join(OUT_DIR, route, "index.html");
@@ -193,26 +211,22 @@ async function main() {
     colorScheme: COLOR_SCHEME,
   });
 
-  // Seeded before any page script runs: the cookie banner and the theme are
-  // both decided from localStorage on load, and a consent banner across the
-  // bottom third of every social preview is not the picture we want to ship.
-  await context.addInitScript(`
-    try {
-      localStorage.setItem("ga-consent", "denied");
-      localStorage.setItem("theme", "${COLOR_SCHEME}");
-    } catch (e) {}
-  `);
-
+  // No localStorage seeding here any more. It used to exist because the shot
+  // was of the real blog index, which decides its theme from storage and paints
+  // a consent banner across the bottom third of the viewport — straight through
+  // the middle of every social preview. The card renders neither: it declares
+  // `dark` in its own markup and has no banner, so there is nothing left to
+  // suppress. See src/app/(og)/og-card/[lang]/layout.tsx.
   const page = await context.newPage();
 
   try {
-    for (const { lang, route } of ROUTES) {
-      const { filename, viewport } = await ogTargetFor(route, scale);
+    for (const { lang, metaRoute, shotRoute } of ROUTES) {
+      const { filename, viewport } = await ogTargetFor(metaRoute, scale);
       await page.setViewportSize(viewport);
       const dest = path.join(PUBLIC_OG, filename);
-      await capture(page, `http://127.0.0.1:${port}${route}`, dest);
+      await capture(page, `http://127.0.0.1:${port}${shotRoute}`, dest);
       const size = `${viewport.width * scale}×${viewport.height * scale}`;
-      console.log(`  ✓ ${route} → public/og/${filename} (${size})`);
+      console.log(`  ✓ ${shotRoute} → public/og/${filename} (${size}, for ${metaRoute})`);
       await prune(lang);
     }
   } finally {
