@@ -3,6 +3,7 @@ title: "62 Pull Requests in One Week: Spec-Driven Development with AI Agents"
 date: "2026-07-19"
 description: "Week of July 13–19: 62 PRs merged into Forma with a specs-and-agents loop, encrypted Withings OAuth, my real training plan turned into software — and an entire afternoon lost debugging a Google Analytics setup that was working perfectly."
 tags: ["weekly", "spec-driven-development", "ai-agents", "ai-engineering", "spring-boot", "oauth"]
+projects: ["forma"]
 thumb: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-thumb.webp"
 cover: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-cover.webp"
 ogImage: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-og.jpg"

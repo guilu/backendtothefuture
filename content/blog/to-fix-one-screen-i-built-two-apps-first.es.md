@@ -3,6 +3,7 @@ title: "Para arreglar una pantalla, primero construí otras dos apps"
 date: "2026-08-16"
 description: "Semana del 10 al 16 de agosto en Forma: para poder trabajar la interfaz con IA acabamos construyendo dos aplicaciones auxiliares —un laboratorio de overlays musculares y un playground sin backend—, y con ellas las tarjetas de entrenamiento pasaron de una silueta genérica a un cuerpo con los músculos del día encendidos."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "design-system", "accessibility", "svg", "tooling"]
+projects: ["forma"]
 thumb: "/blog/to-fix-one-screen-i-built-two-apps-first-thumb.webp"
 cover: "/blog/to-fix-one-screen-i-built-two-apps-first-cover.webp"
 ogImage: "/blog/to-fix-one-screen-i-built-two-apps-first-og.jpg"

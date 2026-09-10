@@ -3,6 +3,7 @@ title: "Desarrollo dirigido por specs con Gentle AI: proceso impecable, factura 
 date: "2026-07-26"
 description: "Semana del 20 al 26 de julio: cambié mis skills caseras de Jira por el ciclo SDD de Gentle AI en Forma — 20 PRs, autenticación multi-usuario real y landing pública. El proceso es excelente. Cada historia se comía una ventana de 5 horas y el viernes agoté la cuota semanal."
 tags: ["weekly", "spec-driven-development", "ai-agents", "gentle-ai", "claude-code", "nginx", "seo"]
+projects: ["forma"]
 thumb: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-thumb.webp"
 cover: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-cover.webp"
 ogImage: "/blog/spec-driven-ai-agents-with-gentle-ai-and-the-token-bill-og.jpg"

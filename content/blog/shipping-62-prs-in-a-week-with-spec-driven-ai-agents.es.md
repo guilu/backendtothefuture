@@ -3,6 +3,7 @@ title: "62 pull requests en una semana: desarrollo dirigido por especificaciones
 date: "2026-07-19"
 description: "Semana del 13 al 19 de julio: 62 PRs mergeadas en Forma con un bucle de specs y agentes, OAuth cifrado de Withings, mi plan real de entrenamiento convertido en software — y una tarde entera perdida depurando un Google Analytics que funcionaba perfectamente."
 tags: ["weekly", "spec-driven-development", "ai-agents", "ai-engineering", "spring-boot", "oauth"]
+projects: ["forma"]
 thumb: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-thumb.webp"
 cover: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-cover.webp"
 ogImage: "/blog/shipping-62-prs-in-a-week-with-spec-driven-ai-agents-og.jpg"

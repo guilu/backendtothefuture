@@ -3,6 +3,7 @@ title: "Los catálogos que necesita un plan de nutrición con IA: la semana de f
 date: "2026-08-02"
 description: "Semana del 27 de julio al 2 de agosto: 19 PRs en Forma. Cerré la integración con Withings, pulí tarjetas y tablas de datos, y construí los catálogos globales de macros y de productos de tienda. Nada de eso se ve. Todo eso es lo que hace posible generar un plan la semana que viene."
 tags: ["weekly", "forma", "claude-code", "ai-agents", "withings", "data-modeling", "playwright"]
+projects: ["forma"]
 thumb: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-thumb.webp"
 cover: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-cover.webp"
 ogImage: "/blog/building-the-catalogs-an-ai-nutrition-plan-needs-og.jpg"

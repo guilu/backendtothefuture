@@ -3,6 +3,7 @@ title: "Un agente de IA operando mi homelab con Home Assistant"
 date: "2026-06-28"
 description: "Una semana usando Hermes como operador de casa: Home Assistant en armv7, integraciones rotas, Plex, Blink, estadísticas corruptas y pequeñas automatizaciones que ahorran sustos."
 tags: ["ai-agents", "home-assistant", "homelab"]
+projects: ["local-ai-lab"]
 thumb: "/blog/ai-agent-as-home-lab-operator-thumb.webp"
 cover: "/blog/ai-agent-as-home-lab-operator-cover.webp"
 ogImage: "/blog/ai-agent-as-home-lab-operator-og.jpg"
