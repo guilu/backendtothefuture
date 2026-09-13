@@ -400,9 +400,27 @@ API. This is not gold-plating — the Posts API does not scrape URLs, so without
 the upload the link would publish as a bare string with no preview.
 
 The card links the UTM-tagged URL (`utm_source=linkedin`), and the dry run also
-prints the **X link**, tagged `utm_source=x`. X is posted by hand: hand the user
-that exact URL to paste, never the bare one, or X traffic lands back in the
-untagged referrer bucket.
+prints the **X post**.
+
+### The X post
+
+X is posted by hand, and the user always posts the link **with the series
+intro**, never the bare link. Whenever the post is shared (and whenever the user
+asks for the X post), hand over this block, ready to copy as is — the text first,
+then the link tagged `utm_source=x` on the next line:
+
+```
+Cada domingo Claude escribe el recap de la semana a partir de nuestras sesiones y lo publica en mi blog. El de esta semana:
+https://backendtothefuture.com/blog/<slug>/?utm_source=x&utm_medium=organic_social&utm_campaign=blog_<year>&utm_content=<slug>-es
+```
+
+- Take it from the dry run's «Para X» section, which builds it from the same
+  `INTRO` as LinkedIn and the helper's tagged link — do not retype either.
+- Spanish only, same reason as LinkedIn.
+- Never hand over the untagged URL as the one to post, or X traffic lands back
+  in the untagged referrer bucket.
+- Change the wording in `INTRO` (`scripts/social-linkedin.mjs`), not in the
+  message: LinkedIn and X share it on purpose.
 
 ### When it fails
 
@@ -441,4 +459,5 @@ Rules:
 - A new channel (Bluesky, a newsletter) goes into `SOURCES` in the helper
   first, with its test, and only then gets shared.
 - When reporting a publication back to the user, give the tagged URL that went
-  out, so Hermes can match it against the reports.
+  out, so Hermes can match it against the reports — and close with the X post
+  block from Step 9 (text, then tagged link).

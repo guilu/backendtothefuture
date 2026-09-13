@@ -210,10 +210,12 @@ async function main() {
   console.log(`  enlace      ${url}`);
   console.log(`  miniatura   ${path.relative(ROOT, thumbPath)}`);
 
-  // X is posted by hand, so the tagged link is handed over ready to paste.
-  console.log(`\n─── Para X (a mano) ───`);
-  console.log(`  ${links.x}`);
-  console.log(`  sin UTM     ${postUrl(slug, "es")}`);
+  // X is posted by hand: the same series intro as LinkedIn, on one paragraph,
+  // then the tagged link on its own line, so the block can be pasted as is.
+  console.log(`\n─── Para X (a mano, copiar tal cual) ───`);
+  console.log(INTRO.replace(/\s*\n+\s*/g, " "));
+  console.log(links.x);
+  console.log(`\n  sin UTM     ${postUrl(slug, "es")}`);
 
   if (dryRun) {
     console.log("\n(dry run — no se ha subido ni publicado nada)");
