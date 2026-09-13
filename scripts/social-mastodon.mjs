@@ -22,10 +22,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { postUrl, withUtm } from "./lib/utm.mjs";
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "content", "blog");
-const SITE_URL = "https://backendtothefuture.com";
 
 /**
  * Fallbacks for instances that do not advertise their limits. mastodon.social
@@ -56,13 +56,6 @@ function loadEnvLocal() {
     if (process.env[key] !== undefined) continue; // a real env var wins
     process.env[key] = rawValue.replace(/^["']|["']$/g, "");
   }
-}
-
-/** `/blog/<slug>/` in Spanish, `/en/blog/<slug>/` in English. See src/lib/i18n.ts. */
-function postUrl(slug, lang) {
-  return lang === "es"
-    ? `${SITE_URL}/blog/${slug}/`
-    : `${SITE_URL}/en/blog/${slug}/`;
 }
 
 /**
@@ -196,7 +189,9 @@ async function main() {
     }
 
     const { data } = matter(fs.readFileSync(file, "utf8"));
-    const text = buildToot(data, postUrl(slug, lang), limits);
+    // Mastodon charges every URL a flat 23 characters, so the UTM tail is free.
+    const link = withUtm(postUrl(slug, lang), { slug, date: data.date, lang, source: "mastodon" });
+    const text = buildToot(data, link, limits);
 
     console.log(`\n─── ${lang.toUpperCase()} — ${weighedLength(text, limits.urlWeight)}/${limits.maxChars} chars ───`);
     console.log(text);

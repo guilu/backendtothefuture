@@ -25,11 +25,11 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { postUrl, socialLinks } from "./lib/utm.mjs";
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "content", "blog");
 const PUBLIC_DIR = path.join(ROOT, "public");
-const SITE_URL = "https://backendtothefuture.com";
 
 const API = "https://api.linkedin.com";
 
@@ -192,7 +192,8 @@ async function main() {
     process.exit(1);
   }
 
-  const url = `${SITE_URL}/blog/${slug}/`;
+  const links = socialLinks({ slug, date: data.date });
+  const url = links.linkedin;
   const hashtags = (data.tags ?? []).slice(0, MAX_HASHTAGS).map(toHashtag).join(" ");
   const commentary = [INTRO, data.description, hashtags].filter(Boolean).join("\n\n");
 
@@ -208,6 +209,11 @@ async function main() {
   console.log(`  subtítulo   ${CARD_SUBTITLE}`);
   console.log(`  enlace      ${url}`);
   console.log(`  miniatura   ${path.relative(ROOT, thumbPath)}`);
+
+  // X is posted by hand, so the tagged link is handed over ready to paste.
+  console.log(`\n─── Para X (a mano) ───`);
+  console.log(`  ${links.x}`);
+  console.log(`  sin UTM     ${postUrl(slug, "es")}`);
 
   if (dryRun) {
     console.log("\n(dry run — no se ha subido ni publicado nada)");
