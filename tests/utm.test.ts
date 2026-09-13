@@ -20,6 +20,12 @@ test("the campaign follows the post's own year, not the day the script runs", ()
   assert.equal(url.searchParams.get("utm_campaign"), "blog_2024");
 });
 
+test("an unquoted frontmatter date, which gray-matter parses as a Date, still gives the year", () => {
+  const url = new URL(withUtm("https://backendtothefuture.com/blog/old/", { slug: "old", date: new Date("2025-12-31"), source: "x", lang: "es" }));
+
+  assert.equal(url.searchParams.get("utm_campaign"), "blog_2025");
+});
+
 test("a variant is appended to the content so two posts of the same article stay apart", () => {
   const url = new URL(withUtm("https://backendtothefuture.com/blog/my-post/", { ...post, source: "x", lang: "es", variant: "thread" }));
 

@@ -34,7 +34,9 @@ export function postUrl(slug, lang) {
  * 2025 article in 2026 still belongs to the 2025 batch of posts.
  */
 function campaign(date) {
-  const year = String(date ?? "").slice(0, 4);
+  // Quoted dates arrive as strings; an unquoted `date: 2026-09-13` is parsed
+  // by gray-matter into a Date, whose String() starts with the weekday.
+  const year = date instanceof Date ? String(date.getUTCFullYear()) : String(date ?? "").slice(0, 4);
   if (!/^\d{4}$/.test(year)) throw new Error(`utm: the post has no usable date (${date})`);
   return `blog_${year}`;
 }
