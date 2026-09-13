@@ -368,6 +368,9 @@ first four `tags` as hashtags — so a bad toot means bad frontmatter, and the f
 belongs in the post, not in the script. Re-running for the same slug is a
 retry, not a second toot: the request carries an `Idempotency-Key`.
 
+The link in each toot carries UTMs (see **Tagging shared links** below). Mastodon
+charges every URL a flat 23 characters, so the tail costs nothing.
+
 Requires `MASTODON_ACCESS_TOKEN` in `.env.local` (scope `write:statuses`);
 `MASTODON_INSTANCE` defaults to `https://mastodon.social`. See
 `scripts/social-mastodon.mjs`.
@@ -396,6 +399,11 @@ The post is an *article* post: commentary, then a card built from the post's
 API. This is not gold-plating — the Posts API does not scrape URLs, so without
 the upload the link would publish as a bare string with no preview.
 
+The card links the UTM-tagged URL (`utm_source=linkedin`), and the dry run also
+prints the **X link**, tagged `utm_source=x`. X is posted by hand: hand the user
+that exact URL to paste, never the bare one, or X traffic lands back in the
+untagged referrer bucket.
+
 ### When it fails
 
 - **401** — the access token expired. They last ~60 days and LinkedIn does not
@@ -405,3 +413,32 @@ the upload the link would publish as a bare string with no preview.
   LinkedIn retires dated versions on a schedule. Bump it to a live one.
 - **403 on the image** — `w_member_social` is write-only on `/rest/images`, so a
   GET will always fail. Only the upload itself needs to succeed.
+
+## Tagging shared links
+
+Every link published by Steps 8 and 9, and the one handed over for X, carries
+UTMs. GA4 already shows LinkedIn and X as referrers of backendtothefuture, but a
+referrer cannot say which post, which article or which language produced a
+visit. The tags let `article_read` be broken down by the publication that
+brought the reader — the only way to know whether sharing is working.
+
+Convention, agreed with Hermes (who reads the GA4 reports) and implemented once
+in `scripts/lib/utm.mjs`, covered by `tests/utm.test.ts`:
+
+| Parameter | Value |
+|---|---|
+| `utm_source` | `linkedin` · `x` · `mastodon` — anything else throws |
+| `utm_medium` | `organic_social` |
+| `utm_campaign` | `blog_<year of the post's date>` |
+| `utm_content` | `<slug>-<lang>`, plus `-<variant>` for a second post of the same article |
+
+Rules:
+
+- **Never hand-build a tagged URL.** Use the helper; a typo in `utm_source`
+  fails nowhere, it just grows a new row in GA4 that splits the data.
+- Tagged URLs are safe for SEO: every post declares a canonical without query
+  string, so the parameters never become a second indexable page.
+- A new channel (Bluesky, a newsletter) goes into `SOURCES` in the helper
+  first, with its test, and only then gets shared.
+- When reporting a publication back to the user, give the tagged URL that went
+  out, so Hermes can match it against the reports.
