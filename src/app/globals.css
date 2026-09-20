@@ -389,6 +389,64 @@ button {
 .blog-prose blockquote { border-left: 2px solid var(--brand-glow); margin: 2rem 0 1.75rem; padding: 0.25rem 0 0.25rem 1.25rem; color: var(--muted); }
 .blog-prose hr { border: none; border-top: 1px solid var(--hairline); margin: 2.5rem 0; }
 
+/* Plain markdown tables in a post. Until now these rendered with the browser
+   default, which reads as raw data next to everything else on the page. */
+.blog-prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; font-size: 0.9em; }
+.blog-prose th, .blog-prose td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+.blog-prose th { color: var(--ink); font-weight: 700; }
+.blog-prose tbody tr:last-child th, .blog-prose tbody tr:last-child td { border-bottom: none; }
+
+/* "The week in numbers" — the closing stats block of a weekly recap.
+   Icon · label · value, with a meter only on the rows where a proportion is
+   real. A bar that encodes nothing is decoration, so those rows get none. */
+.week-stats {
+  --ws-pos: #16a34a;
+  --ws-neg: #dc2626;
+  margin: 1.5rem 0 1.75rem;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+html.dark .week-stats { --ws-pos: #4ade80; --ws-neg: #f87171; }
+
+/* Activity by weekday: the one genuinely graphic element, so it leads. */
+.ws-pulse { padding: 1.1rem 1.25rem 1rem; border-bottom: 1px solid var(--hairline); background: var(--surface-2); }
+.ws-pulse-title { display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--muted); }
+.ws-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; align-items: end; margin: 0.85rem 0 0.5rem; height: 68px; }
+.ws-day { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 0.35rem; }
+.ws-bar {
+  width: 100%;
+  max-width: 22px;
+  height: calc(5px + (100% - 24px) * var(--v) / var(--max));
+  border-radius: 5px 5px 2px 2px;
+  background: var(--grad-brand);
+  box-shadow: 0 6px 16px -8px rgba(244, 96, 42, 0.6);
+}
+.ws-bar[style*="--v:0"] { background: var(--hairline); box-shadow: none; }
+.ws-day b { font-size: 0.7rem; font-weight: 700; color: var(--muted); line-height: 1; }
+.ws-day[data-on="1"] b { color: var(--ink); }
+.ws-pulse-foot { display: block; font-size: 0.78rem; color: var(--muted); }
+
+.ws-row { display: grid; grid-template-columns: 1.9rem 1fr auto; gap: 0 0.7rem; align-items: baseline; padding: 0.8rem 1.25rem; border-bottom: 1px solid var(--hairline-2); }
+.ws-row:last-child { border-bottom: none; }
+.ws-i { font-size: 1rem; line-height: 1.4; }
+.ws-k { color: var(--ink); font-weight: 700; }
+.ws-v { color: var(--ink); font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ws-note { grid-column: 2 / -1; font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+.ws-meter { grid-column: 2 / -1; display: flex; height: 6px; border-radius: var(--r-full); overflow: hidden; background: var(--hairline); margin-top: 0.5rem; }
+.ws-meter i { display: block; height: 100%; }
+.ws-meter .ws-fill { background: var(--grad-brand); }
+.ws-meter .ws-add { background: var(--ws-pos); }
+.ws-meter .ws-del { background: var(--ws-neg); }
+
+@media (max-width: 480px) {
+  .ws-row { grid-template-columns: 1.6rem 1fr; }
+  .ws-v { grid-column: 2; justify-self: start; }
+}
+
 @media (max-width: 720px) {
   .bttf-container {
     --gutter: 18px;
