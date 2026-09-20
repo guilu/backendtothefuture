@@ -51,7 +51,7 @@ Y me paró de verdad: la PR-B de la landing pública se me fue a ~930 líneas. E
 
 El corte del cambio de proceso se ve limpio en el historial. El lunes 20 todavía cerré con el flujo viejo. El jueves 23 arranqué `FOR-171` con `/sdd-new` y no volví atrás.
 
-**La app dejó de ser mía.** `FOR-169` eliminó todos los datos personales y de demo sembrados. Suena a limpieza menor y es exactamente lo contrario: hasta esta semana [Forma](https://forma.diegobarrioh.dev) era *mi* app, con mis mediciones horneadas dentro. Ahora arranca vacía.
+**La app dejó de ser mía.** `FOR-169` eliminó todos los datos personales y de demo sembrados. Suena a limpieza menor y es exactamente lo contrario: hasta esta semana [Forma](https://forma.backendtothefuture.com) era *mi* app, con mis mediciones horneadas dentro. Ahora arranca vacía.
 
 **El dominio salió del código Java.** El primer cambio que pasó por el ciclo SDD completo produjo... documentación. `FOR-171`: 618 líneas de ADR, cero código. Porque el diagnóstico previo era duro: casi todo el dominio de planes estaba **estático en código**, no en base de datos — el catálogo de ejercicios, el generador de planes de running, el de nutrición, los 23 alimentos. Y todas las tablas persistidas usaban un `owner_id = "default-user"` fijo.
 

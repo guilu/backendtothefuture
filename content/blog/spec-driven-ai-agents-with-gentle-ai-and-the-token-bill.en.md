@@ -51,7 +51,7 @@ And it stopped me for real: the public landing's PR-B came in at ~930 lines. The
 
 The process switch shows up cleanly in the history. On Monday the 20th I was still closing work with the old flow. On Thursday the 23rd I kicked off `FOR-171` with `/sdd-new` and never went back.
 
-**The app stopped being mine.** `FOR-169` removed every seeded personal and demo record. It sounds like minor cleanup and it's the exact opposite: until this week [Forma](https://forma.diegobarrioh.dev) was *my* app, with my measurements baked into it. Now it starts empty.
+**The app stopped being mine.** `FOR-169` removed every seeded personal and demo record. It sounds like minor cleanup and it's the exact opposite: until this week [Forma](https://forma.backendtothefuture.com) was *my* app, with my measurements baked into it. Now it starts empty.
 
 **The domain moved out of the Java code.** The first change to go through the full SDD cycle produced… documentation. `FOR-171`: a 618-line ADR, zero code. Because the diagnosis was harsh: almost the entire plan domain lived **statically in code**, not in the database — the exercise catalog, the running plan generator, the nutrition one, all 23 foods. And every persisted table used a hardcoded `owner_id = "default-user"`.
 
