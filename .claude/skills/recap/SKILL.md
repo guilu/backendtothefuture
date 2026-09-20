@@ -413,9 +413,11 @@ Order matters: `./deploy.sh` first, then confirm the URL loads, then toot.
    ```bash
    npm run social:mastodon -- <slug> --dry-run
    ```
-2. **Show the user both toots and wait for approval.** Publishing is
+2. **Read the hashtag line before anything else** — see **Check the hashtags**
+   below. It is the one part of the toot nobody proofreads.
+3. **Show the user both toots and wait for approval.** Publishing is
    irreversible and it goes out under their name. Never skip this.
-3. On approval, publish:
+4. On approval, publish:
    ```bash
    npm run social:mastodon -- <slug>
    ```
@@ -423,12 +425,49 @@ Order matters: `./deploy.sh` first, then confirm the URL loads, then toot.
 The script sends one toot per locale, each tagged with its own `language` so
 Mastodon's per-language timeline filter shows each reader only their version.
 Text comes from the post's own frontmatter — `title`, `description` and the
-first four `tags` as hashtags — so a bad toot means bad frontmatter, and the fix
-belongs in the post, not in the script. Re-running for the same slug is a
-retry, not a second toot: the request carries an `Idempotency-Key`.
+leading `tags` as hashtags — so a bad toot usually means bad frontmatter.
+Re-running for the same slug is a retry, not a second toot: the request carries
+an `Idempotency-Key`.
 
 The link in each toot carries UTMs (see **Tagging shared links** below). Mastodon
 charges every URL a flat 23 characters, so the tail costs nothing.
+
+### Check the hashtags
+
+Both scripts build the hashtags by title-casing the leading `tags` of the post's
+frontmatter — the first **four** on Mastodon (`MAX_HASHTAGS` in
+`scripts/social-mastodon.mjs`), the first **three** on LinkedIn. Everything else
+in the message comes from `title` and `description`, which get proofread
+naturally because they are prose. The hashtags are generated, they sit at the
+bottom, and they are the easiest thing in the dry run to skim past.
+
+So read that line on purpose, every time, before showing anything to the user.
+
+Each script carries an `ACRONYMS` set (`ai`, `api`, `ci`, `cli`, `seo`, `sql`,
+`tdd`, `ui`, …) that upper-cases those words instead of title-casing them, which
+is why `ci` publishes as `#CI` and not `#Ci`. **Nothing handles proper nouns with
+internal capitals.** A tag like `postgresql`, `javascript`, `typescript`,
+`github`, `nginx`, `oauth` or `macos` will publish as `#Postgresql`,
+`#Javascript`, `#Github` — which reads as a typo to exactly the audience the tag
+is meant to reach. This shipped once, on 2026-09-20, and was caught in the dry
+run with minutes to spare.
+
+Two fixes, in order of preference:
+
+1. **Reorder the tags in the post** so the leading four title-case cleanly, and
+   push the awkward one further down. It costs one line, it cannot break
+   anything, and the tag still works for blog navigation, which does not
+   title-case. This is the right call when you are minutes from publishing.
+2. **Teach the scripts the name**, when the same tag will keep coming back. That
+   means a `NAMES` map (`postgresql` → `PostgreSQL`) next to `ACRONYMS`, and it
+   has to go in **both** scripts, which hold duplicate copies of that set —
+   `scripts/lib/utm.mjs` is the precedent for extracting the shared bit instead.
+   This is a code change with its own PR, not something to slip in on a Sunday
+   between the deploy and the toot.
+
+Either way the fix ships and the dry run gets re-run before publishing. Never
+publish a hashtag you noticed was wrong on the promise of fixing it afterwards:
+a toot cannot be edited once it has federated.
 
 Requires `MASTODON_ACCESS_TOKEN` in `.env.local` (scope `write:statuses`);
 `MASTODON_INSTANCE` defaults to `https://mastodon.social`. See
@@ -447,8 +486,10 @@ and splits the engagement. The English post still exists for search traffic.
    ```bash
    npm run social:linkedin -- <slug> --dry-run
    ```
-2. **Show the user the text and the card, and wait for approval.**
-3. On approval:
+2. **Read the hashtag line first** — same trap as Mastodon, three tags instead
+   of four. See **Check the hashtags** under Step 8.
+3. **Show the user the text and the card, and wait for approval.**
+4. On approval:
    ```bash
    npm run social:linkedin -- <slug>
    ```
