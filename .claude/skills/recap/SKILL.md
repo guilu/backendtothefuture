@@ -502,6 +502,36 @@ the upload the link would publish as a bare string with no preview.
 The card links the UTM-tagged URL (`utm_source=linkedin`), and the dry run also
 prints the **X post**.
 
+### Refresh LinkedIn's cache of the blog index
+
+The post's own link is scraped fresh the first time it is shared, so it needs
+nothing. The **blog index** is different: `https://backendtothefuture.com/blog/`
+has been shared before, LinkedIn holds a cached preview of it, and the featured
+tile on the user's profile points at exactly that URL. Its `og:image` is a
+screenshot of the index regenerated on every deploy, so the moment a new post
+ships, LinkedIn's copy is a picture of last week's blog.
+
+There is no API to purge it. The Post Inspector is a logged-in web page, and the
+undocumented `GET /post-inspector/inspect/<url>` returns a JavaScript shell that
+gives no way to tell whether a crawl happened — automating against it would be a
+step that can silently do nothing, which is the failure this repo keeps writing
+guards against. So the skill hands over the link and the user clicks it.
+
+After publishing, close with this, URL-encoded and ready to click:
+
+```
+https://www.linkedin.com/post-inspector/inspect/https%3A%2F%2Fbackendtothefuture.com%2Fblog%2F
+```
+
+Two things to say alongside it:
+
+- Inspecting refreshes LinkedIn's cache of the URL. The **featured tile does not
+  follow that cache** — it stores a snapshot from when the link was added. If
+  the tile still shows the old image, remove the link from Featured and add it
+  again, in that order: re-adding before inspecting just re-saves the stale one.
+- The Spanish index is the one to inspect. `/en/blog/` has its own card and its
+  own cache, but nothing links to it from the profile.
+
 ### The X post
 
 X is posted by hand, and the user always posts the link **with the series
