@@ -312,28 +312,87 @@ Constraints on the prose:
 
 Every post ends with a short technical-summary section (`## La semana en cifras`
 / `## The week in numbers`) holding everything the story deliberately left out.
-A compact table or list, no prose:
-
-- PRs merged (and cumulative project total)
-- Lines added / removed
-- Deploys to production
-- Flyway migrations (range, e.g. `V42 → V58`)
-- Number of 5-hour working sessions
-- Claude Code usage: 5-hour windows, and whether the **weekly** window ran out.
-  The user's weekly quota resets **Saturdays around 22:00**. If it was exhausted
-  before then, say so and say when — it explains the shape of the week better
-  than any other single number, and the miner's window list shows it plainly:
-  full days early on, fragments once the quota bites, silence after.
-- Skills used during the week (`branch-pr`, `chained-pr`, `work-unit-commits`, …)
-- Anything else countable and genuinely interesting
-
 This section is where stats are welcome and expected. Keeping them here is what
 lets the story above stay a story.
 
+Since 2026-09-20 it is **not a markdown table** — it is a `.week-stats` block:
+a weekday sparkline on top, then one row per stat with an icon, a label, the
+value and an optional meter. The CSS already lives in `src/app/globals.css`
+(`.week-stats`, `.ws-*`); the post only emits the markup, and `marked` passes
+raw HTML through untouched.
+
+#### The sparkline
+
+The 5-hour windows, broken down by day of the week. It leads the block because
+it is the one genuinely graphic thing the miner gives us, and the shape of the
+week is visible in half a second. `--v` is that day's window count, `--max` the
+week's highest; a day with `--v:0` renders as a flat grey dash, and `data-on`
+brightens the labels of the days that had activity.
+
+```html
+<div class="ws-pulse">
+  <span class="ws-pulse-title">Ventanas de 5 h por día</span>
+  <div class="ws-days">
+    <div class="ws-day" data-on="0"><span class="ws-bar" style="--v:0;--max:3"></span><b>L</b></div>
+    <div class="ws-day" data-on="1"><span class="ws-bar" style="--v:2;--max:3"></span><b>M</b></div>
+    <!-- … seven days, L M X J V S D in Spanish, M T W T F S S in English -->
+  </div>
+  <span class="ws-pulse-foot">9 ventanas en 5 sesiones · martes 08:12 → domingo 18:17 · el lunes no hubo actividad · la cuota semanal no se agotó</span>
+</div>
+```
+
+The foot line carries the session count, the first and last timestamp, any dead
+days, and **whether the weekly quota ran out**. That quota resets **Saturdays
+around 22:00**; if it was exhausted before then, say so and say when — it
+explains the shape of the week better than any other single number, and the
+miner's window list shows it plainly: full days early on, fragments once the
+quota bites, silence after.
+
+#### The rows
+
+```html
+<div class="ws-row">
+  <span class="ws-i">🔀</span>
+  <span class="ws-k">PRs mergeadas</span>
+  <span class="ws-v">23</span>
+  <span class="ws-meter"><i class="ws-fill" style="width:78%"></i></span>
+  <span class="ws-note">78 % en Forma (18) · Akademia 1 · este blog 2 — acumulado ≈273 PRs</span>
+</div>
+```
+
+`ws-meter` is **optional and it is the rule that matters**: a row gets one only
+when there is a real proportion to encode — the share of PRs in the main repo,
+the additions-vs-deletions split. A bar at 100 %, or a bar whose width was
+picked to look good, is decoration, and decoration is what this block exists to
+avoid. When there is no proportion, the row is icon + label + value + note.
+
+Two fills exist: `ws-fill` (brand gradient, for a share of a whole) and the
+pair `ws-add` / `ws-del` (green/red, for a diff split — put both `<i>` inside
+one `ws-meter`).
+
+#### What goes in it
+
+- PRs merged, split by repo, with the main project's cumulative total
+- Lines added / removed, as an `ws-add`/`ws-del` meter
+- Flyway migrations (range, e.g. `V62 → V65`) and anything newly verified
+- Deploys to production
+- Prompts, and prompts per 5-hour window
+- Skills used during the week (`branch-pr`, `chained-pr`, `work-unit-commits`, …)
+- Anything else countable and genuinely interesting — infrastructure counts
+  (domains migrated, certificates renewed) belong here too when Hermes's note
+  carried the week
+
+Aim for six to eight rows. Beyond that the block stops being scannable and
+becomes the log the story was trying not to be.
+
+Pick icons that are legible at 16px and mean something: 🔀 PRs · 📊 lines ·
+🐘 Postgres migrations · 🌐 domains · 🔒 certificates · 💬 prompts · 🧰 skills ·
+🚀 deploys. Reuse the same icon for the same metric week to week.
+
 Do **not** count the post's own screenshots as a stat — the reader can see them.
 Anything about how the screenshots were produced (sample data, no real backend,
-which commit) goes underneath as a footnote, in a `<blockquote><small>…` so it
-renders smaller and set apart from the table.
+which commit) goes underneath the closing `</div>` as a footnote, in a
+`<blockquote><small>…` so it renders smaller and set apart from the block.
 
 ## Step 7 — Stop
 
