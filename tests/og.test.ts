@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { blogOgCardModel } from "../src/lib/og.ts";
+import { blogOgShotModel } from "../src/lib/og.ts";
 import type { LocalizedPost } from "../src/lib/blog.ts";
 
 function post(slug: string, date: string, over: Record<string, unknown> = {}): LocalizedPost {
@@ -22,46 +22,66 @@ function post(slug: string, date: string, over: Record<string, unknown> = {}): L
 
 const posts = [post("newest", "2026-09-06"), post("older", "2026-08-30"), post("oldest", "2026-08-23")];
 
-test("the card model carries only the newest post, in the requested language", () => {
-  const model = blogOgCardModel("en", posts);
+test("the shot model carries every post, in order, in the requested language", () => {
+  const model = blogOgShotModel("en", posts);
 
-  assert.equal(model.postCount, 3);
-  assert.equal(model.latest?.slug, "newest");
-  assert.equal(model.latest?.title, "newest en");
-  assert.equal(model.latest?.thumb, "/blog/newest-thumb.webp");
+  assert.equal(model.posts.length, 3);
+  assert.deepEqual(
+    model.posts.map((p) => p.slug),
+    ["newest", "older", "oldest"],
+  );
+  assert.equal(model.posts[0].title, "newest en");
+  assert.equal(model.posts[0].thumb, "/blog/newest-thumb.webp");
 });
 
-test("editing an older post leaves the card model untouched", () => {
-  const before = blogOgCardModel("es", posts);
-  const edited = [posts[0], post("older", "2026-08-30", { title: "rewritten", tags: ["x"] }), posts[2]];
+// The inverse of this test used to hold, and its reversal is the whole point of
+// going back to a page shot: the index prints every card, so every card is part
+// of the picture the URL is supposed to name.
+test("editing an older post changes the shot model", () => {
+  const before = blogOgShotModel("es", posts);
+  const edited = [posts[0], post("older", "2026-08-30", { title: "rewritten" }), posts[2]];
 
-  assert.deepEqual(blogOgCardModel("es", edited), before);
+  assert.notDeepEqual(blogOgShotModel("es", edited), before);
 });
 
-test("editing the newest post changes the card model", () => {
-  const before = blogOgCardModel("es", posts);
+test("editing the newest post changes the shot model", () => {
+  const before = blogOgShotModel("es", posts);
   const edited = [post("newest", "2026-09-06", { title: "rewritten" }), posts[1], posts[2]];
 
-  assert.notDeepEqual(blogOgCardModel("es", edited), before);
+  assert.notDeepEqual(blogOgShotModel("es", edited), before);
 });
 
-test("a post count change alone changes the card model", () => {
-  assert.notDeepEqual(blogOgCardModel("es", posts.slice(0, 2)), blogOgCardModel("es", posts));
+// The cards print both, unlike the poster that replaced them for three weeks,
+// so neither may be silently dropped from the model again.
+test("description and tags are part of the shot model", () => {
+  const before = blogOgShotModel("es", posts);
+
+  assert.notDeepEqual(
+    blogOgShotModel("es", [post("newest", "2026-09-06", { description: "rewritten" }), posts[1], posts[2]]),
+    before,
+  );
+  assert.notDeepEqual(
+    blogOgShotModel("es", [post("newest", "2026-09-06", { tags: ["x"] }), posts[1], posts[2]]),
+    before,
+  );
 });
 
-test("the card model falls back to the other locale when a translation is missing", () => {
+test("a post count change alone changes the shot model", () => {
+  assert.notDeepEqual(blogOgShotModel("es", posts.slice(0, 2)), blogOgShotModel("es", posts));
+});
+
+test("the shot model falls back to the other locale when a translation is missing", () => {
   const esOnly: LocalizedPost = {
     slug: "solo-es",
     date: "2026-09-06",
     translations: { es: posts[0].translations.es },
   } as LocalizedPost;
 
-  assert.equal(blogOgCardModel("en", [esOnly]).latest?.title, "newest es");
+  assert.equal(blogOgShotModel("en", [esOnly]).posts[0].title, "newest es");
 });
 
-test("an empty blog yields a model with no latest post", () => {
-  const model = blogOgCardModel("es", []);
+test("an empty blog yields a model with no posts", () => {
+  const model = blogOgShotModel("es", []);
 
-  assert.equal(model.latest, null);
-  assert.equal(model.postCount, 0);
+  assert.deepEqual(model.posts, []);
 });

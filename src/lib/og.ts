@@ -26,12 +26,18 @@ import type { Lang } from "./translations.ts";
  * on the card actually changed — which is what makes LinkedIn and Twitter
  * refetch instead of serving their cached copy.
  *
- * <p>What gets photographed is `/og-card/<lang>/`, not the blog index itself.
- * The index is a page designed to be read at 1200 px with the eye a foot away;
- * LinkedIn paints its card about 550 px wide in a scrolling feed, so a picture
- * of the whole page arrives with 18 px titles shrunk to 8 px and reads as a
- * blur no matter how many pixels the file holds. The card is a poster with
- * three things on it, sized for the size it is actually seen at.
+ * <p>What gets photographed is the blog index itself. A dedicated poster at
+ * `/og-card/<lang>/` replaced it for three weeks, because a picture of a page
+ * laid out for 1200 px arrives in a ~550 px feed card with its 18 px titles
+ * shrunk to 8 px. That argument is sound and the owner overruled it anyway: the
+ * point of this thumbnail is to show the blog, with the new post on it, and a
+ * poster showing one headline is a different promise. The legibility cost is
+ * accepted knowingly — see the PR that restored this.
+ *
+ * <p>Consequence for the digest below: the shot now holds every card on the
+ * page, so the model has to hold every post, and every field those cards
+ * print. Re-cutting the art of a six-month-old post does move the URL again.
+ * That is the price of photographing a page that shows six-month-old posts.
  */
 
 const ROOT = process.cwd();
@@ -49,13 +55,15 @@ const ROOT = process.cwd();
  * and listing it would burn the cache for nothing.
  */
 const PRESENTATION_SOURCES = [
-  "src/components/BlogOgCard.tsx",
-  "src/app/(og)/og-card/[lang]/layout.tsx",
-  "src/app/(og)/og-card/[lang]/page.tsx",
+  "src/components/BlogLayout.tsx",
+  "src/components/Header.tsx",
+  "src/components/Footer.tsx",
+  "src/app/(es)/blog/page.tsx",
+  "src/app/(en)/en/blog/page.tsx",
   "src/app/globals.css",
-  // Painted by the card, so redrawing either has to move the URL. They are
-  // read as bytes like every other entry, which is why an image can sit in
-  // this list at all.
+  // On the page, so redrawing either has to move the URL. They are read as
+  // bytes like every other entry, which is why an image can sit in this list
+  // at all.
   "public/img/logo.png",
   "public/blog/placeholder-thumb.png",
 ];
@@ -100,63 +108,61 @@ function thumbDigest(thumb: string | undefined): string | undefined {
   return `${thumb}#${bytes.slice(0, 12)}`;
 }
 
-/** The one post the card puts a headline on. */
-export interface OgCardPost {
+/** One card on the blog index, reduced to what that card prints. */
+export interface OgShotPost {
   slug: string;
   date: string;
   title: string;
+  /** Printed under the title, clamped to two lines. */
+  description: string;
+  /** Printed as chips under the description. */
+  tags: string[];
   /** Site-absolute path of the post thumbnail, or `undefined` when it has none. */
   thumb?: string;
 }
 
 /**
- * Everything about the *posts* that `/og-card/<lang>/` paints.
+ * Everything about the *posts* that the blog index paints.
  *
- * <p>The card also paints things no post decides — its own copy, the logo, the
- * placeholder art. Those reach the digest through {@link PRESENTATION_SOURCES},
- * not through here.
+ * <p>The page also paints things no post decides — its own copy, the header,
+ * the logo, the placeholder art. Those reach the digest through
+ * {@link PRESENTATION_SOURCES}, not through here.
  */
-export interface OgCardModel {
+export interface OgShotModel {
   lang: Lang;
-  /** How many articles the blog holds — the card prints the number. */
-  postCount: number;
-  /** The newest post, or `null` on an empty blog. */
-  latest: OgCardPost | null;
+  /** Every card on the page, newest first — the order the page renders them. */
+  posts: OgShotPost[];
 }
 
 /**
- * What the card shows, derived from the posts alone.
+ * What the page shows, derived from the posts alone.
  *
- * <p>One model feeds both the component that renders the card and the digest
- * that names it. That is the whole point of the split: the hash cannot drift
- * from the picture, because there is no second description of the picture to
- * drift from. `blogOgCardModel` is pure so this property is testable without a
- * build; {@link blogOgHash} adds the parts that need the disk.
+ * <p>One model feeds the digest that names the screenshot. It is pure so the
+ * property that matters — the URL moves when and only when the picture changes
+ * — is testable without a build; {@link blogOgHash} adds the parts that need
+ * the disk.
  *
- * <p>Only the newest post is here because only the newest post is on the card.
- * The old full-page screenshot listed every article, so re-cutting the art of a
- * six-month-old post moved the URL and cost LinkedIn a refetch for a change no
- * reader could see.
+ * <p>Every post is here, and every field its card prints, because the shot is
+ * of the whole page. `description` and `tags` are in the model for exactly that
+ * reason: the cards print both, so editing either changes the picture and must
+ * move the URL. Anything the page does not print stays out.
  */
-export function blogOgCardModel(lang: Lang, posts: LocalizedPost[]): OgCardModel {
-  const newest = posts[0];
-  if (!newest) return { lang, postCount: 0, latest: null };
-
-  // A post published in one language only still has to headline the other
-  // locale's card; an empty card is worse than one in the wrong language.
-  const meta = newest.translations[lang] ?? newest.translations.es ?? newest.translations.en!;
-
+export function blogOgShotModel(lang: Lang, posts: LocalizedPost[]): OgShotModel {
   return {
     lang,
-    postCount: posts.length,
-    latest: {
-      slug: newest.slug,
-      date: meta.date,
-      title: meta.title,
-      // `description` and `tags` are deliberately absent: the card prints
-      // neither, so editing them must not invalidate the image.
-      thumb: meta.thumb,
-    },
+    posts: posts.map((post) => {
+      // A post published in one language only still appears on the other
+      // locale's index; a missing card is worse than one in the wrong language.
+      const meta = post.translations[lang] ?? post.translations.es ?? post.translations.en!;
+      return {
+        slug: post.slug,
+        date: meta.date,
+        title: meta.title,
+        description: meta.description,
+        tags: meta.tags,
+        thumb: meta.thumb,
+      };
+    }),
   };
 }
 
@@ -188,7 +194,7 @@ function presentationDigest(): string {
 
 /** Short, git-style digest of the OG card for one locale. */
 export function blogOgHash(lang: Lang): string {
-  const model = blogOgCardModel(lang, getAllPosts());
+  const model = blogOgShotModel(lang, getAllPosts());
 
   // The output size is part of the input on purpose: changing it produces a
   // different image, and re-cutting the same URL would leave LinkedIn serving
@@ -196,9 +202,10 @@ export function blogOgHash(lang: Lang): string {
   // which is the only thing that makes them refetch.
   const input = JSON.stringify({
     ...model,
-    // Swapped in only for the digest — the component wants the path, the hash
-    // wants the bytes behind it. See {@link thumbDigest}.
-    latest: model.latest && { ...model.latest, thumb: thumbDigest(model.latest.thumb) },
+    // Swapped in only for the digest — the page wants the path, the hash wants
+    // the bytes behind it, for every thumbnail the page paints. See
+    // {@link thumbDigest}.
+    posts: model.posts.map((post) => ({ ...post, thumb: thumbDigest(post.thumb) })),
     ui: presentationDigest(),
     render: { w: OG_WIDTH, h: OG_HEIGHT, scale: OG_SCALE },
   });

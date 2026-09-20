@@ -8,7 +8,7 @@
  *
  * For each locale it reads the `og:image` URL that the build already baked into
  * the blog index (see src/lib/og.ts for how that name is derived), screenshots
- * the card at /og-card/<lang>/, and writes the JPG under exactly that name. The
+ * the blog index, and writes the JPG under exactly that name. The
  * built HTML is the single source of truth for the filename, so the hash logic
  * lives in one place and the image can never end up named something the
  * metadata does not point at.
@@ -62,14 +62,17 @@ const COLOR_SCHEME = "dark";
  * the page that *is* the image.
  *
  * <p>`metaRoute` is the blog index: it carries the `og:image` name and the
- * dimensions the build committed to. `shotRoute` is the card built for the size
- * a feed actually paints it at (see src/components/BlogOgCard.tsx). They were
- * the same route until the thumbnail was a screenshot of the index, which is
- * exactly why it read as a blur.
+ * dimensions the build committed to. The page is both the source of the name
+ * and the thing photographed: the shot
+ * is of the blog index itself, so `metaRoute` and `shotRoute` are the same URL.
+ * They stay two fields because they were the same URL once before, the split is
+ * what let a dedicated poster be photographed under the index's name for three
+ * weeks, and collapsing them would make going back a refactor instead of an
+ * edit.
  */
 const ROUTES = [
-  { lang: "es", metaRoute: "/blog/", shotRoute: "/og-card/es/" },
-  { lang: "en", metaRoute: "/en/blog/", shotRoute: "/og-card/en/" },
+  { lang: "es", metaRoute: "/blog/", shotRoute: "/blog/" },
+  { lang: "en", metaRoute: "/en/blog/", shotRoute: "/en/blog/" },
 ];
 
 const MIME = {
@@ -211,12 +214,17 @@ async function main() {
     colorScheme: COLOR_SCHEME,
   });
 
-  // No localStorage seeding here any more. It used to exist because the shot
-  // was of the real blog index, which decides its theme from storage and paints
-  // a consent banner across the bottom third of the viewport — straight through
-  // the middle of every social preview. The card renders neither: it declares
-  // `dark` in its own markup and has no banner, so there is nothing left to
-  // suppress. See src/app/(og)/og-card/[lang]/layout.tsx.
+  // Seeded before any page script runs: the blog index decides its theme from
+  // localStorage and paints a consent banner across the bottom third of the
+  // viewport, and a cookie notice through the middle of every social preview is
+  // not the picture we want to ship. Removed while the shot was of a dedicated
+  // card, which had neither; restored with the page shot.
+  await context.addInitScript(`
+    try {
+      localStorage.setItem("ga-consent", "denied");
+      localStorage.setItem("theme", "${COLOR_SCHEME}");
+    } catch (e) {}
+  `);
   const page = await context.newPage();
 
   try {
