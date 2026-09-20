@@ -2,7 +2,7 @@
 title: "Mi CI se puso en verde sin ejecutar un test"
 date: "2026-09-20"
 description: "Semana del 14 al 20 de septiembre. Monté un job de CI para verificar las migraciones contra PostgreSQL de verdad. Pasó a la primera, en verde, sin ejecutar ni un solo test. Tirando de ese hilo apareció el patrón que ordenó la semana entera: el sistema estaba lleno de afirmaciones que nadie comprobaba."
-tags: ["weekly", "forma", "ci", "postgresql", "testing", "ai-agents", "claude-code"]
+tags: ["weekly", "forma", "ci", "testing", "postgresql", "ai-agents", "claude-code"]
 projects: ["forma"]
 thumb: "/blog/my-ci-turned-green-without-running-a-test-thumb.webp"
 cover: "/blog/my-ci-turned-green-without-running-a-test-cover.webp"

@@ -2,7 +2,7 @@
 title: "My CI turned green without running a test"
 date: "2026-09-20"
 description: "Week of 14–20 September. I built a CI job to verify database migrations against a real PostgreSQL. It passed first time, green, without running a single test. Pulling that thread surfaced the pattern that shaped the whole week: the system was full of claims nobody was checking."
-tags: ["weekly", "forma", "ci", "postgresql", "testing", "ai-agents", "claude-code"]
+tags: ["weekly", "forma", "ci", "testing", "postgresql", "ai-agents", "claude-code"]
 projects: ["forma"]
 thumb: "/blog/my-ci-turned-green-without-running-a-test-thumb.webp"
 cover: "/blog/my-ci-turned-green-without-running-a-test-cover.webp"
