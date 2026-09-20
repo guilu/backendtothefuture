@@ -79,8 +79,8 @@ export const t = {
             { label: "Status", value: "WIP" },
           ],
           openApp: "Open app",
-          url: "https://forma.diegobarrioh.dev",
-          browserUrl: "forma.diegobarrioh.dev",
+          url: "https://forma.backendtothefuture.com",
+          browserUrl: "forma.backendtothefuture.com",
         },
         {
           id: "akademia",
@@ -97,8 +97,8 @@ export const t = {
             { label: "Status", value: "WIP" },
           ],
           openApp: "Open app",
-          url: "https://akademia.diegobarrioh.dev",
-          browserUrl: "akademia.diegobarrioh.dev",
+          url: "https://akademia.backendtothefuture.com",
+          browserUrl: "akademia.backendtothefuture.com",
         },
         {
           id: "tokenmeter",
@@ -265,8 +265,8 @@ export const t = {
             { label: "Estado", value: "WIP" },
           ],
           openApp: "Abrir app",
-          url: "https://forma.diegobarrioh.dev",
-          browserUrl: "forma.diegobarrioh.dev",
+          url: "https://forma.backendtothefuture.com",
+          browserUrl: "forma.backendtothefuture.com",
         },
         {
           id: "akademia",
@@ -283,8 +283,8 @@ export const t = {
             { label: "Estado", value: "WIP" },
           ],
           openApp: "Abrir app",
-          url: "https://akademia.diegobarrioh.dev",
-          browserUrl: "akademia.diegobarrioh.dev",
+          url: "https://akademia.backendtothefuture.com",
+          browserUrl: "akademia.backendtothefuture.com",
         },
         {
           id: "tokenmeter",

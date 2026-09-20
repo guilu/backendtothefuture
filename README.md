@@ -49,7 +49,7 @@ Soporta tema claro y oscuro con transición suave. Detecta la preferencia del si
 
 ## Proyectos
 
-- **[Akademia](https://akademia.diegobarrioh.dev)** — plataforma de aprendizaje con IA
+- **[Akademia](https://akademia.backendtothefuture.com)** — plataforma de aprendizaje con IA
 
 ## Autor
 
