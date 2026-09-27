@@ -62,3 +62,15 @@ cwebp -q 82 -crop 0 0 <w> <h> -resize 1440 0 shot.png -o public/img/forma-YYYY-M
   with `page.route`.
 - The blog has no `.blog-prose img` CSS; images stay in bounds only because
   Tailwind preflight sets `img { max-width: 100% }`.
+- **Easier than a hand-written stub table: `FIXTURES=1 vite`** (`npm run
+  dev:fixtures`) serves `e2e/apiFixtures.ts` from the dev server itself. The
+  Playwright driver then only needs `page.route` for the handful of endpoints
+  the post wants richer (`route.fetch()` + edit for a tweaked fixture,
+  `route.continue()` for the rest). Meal types must be real enum values
+  (`MID_MORNING`, not `MORNING_SNACK`) or the card prints the raw key.
+- **The worktree's `node_modules` is a symlink, so its Vite cache is shared.**
+  If a Vite from the main checkout is already running (check `lsof -iTCP:5173`)
+  the worktree's server serves `504 Outdated Optimize Dep` and the page renders
+  blank. Don't kill the user's server: run the worktree on another port with a
+  wrapper config that sets its own `cacheDir` and adds the real
+  `node_modules` path to `server.fs.allow` (otherwise fonts 403 through `/@fs/`).
