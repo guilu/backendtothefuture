@@ -1,0 +1,3221 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-10-11T08:02:44Z",
+    "madrid": "2026-10-11T10:02:44+02:00"
+  },
+  "week": {
+    "monday": "2026-10-05",
+    "yyyymmdd": "20261005",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-10-04T22:00:00Z",
+      "madrid": "2026-10-05T00:00:00+02:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-10-11T22:00:00Z",
+      "madrid": "2026-10-12T00:00:00+02:00"
+    },
+    "covered_until": {
+      "utc": "2026-10-11T08:02:44Z",
+      "madrid": "2026-10-11T10:02:44+02:00"
+    },
+    "complete": false
+  },
+  "sources": {
+    "threads": "hilos y chat del proyecto (mensajes de Diego con su hora)",
+    "session_events": "rate_limit_event y result de cada sesión (list_events)",
+    "session_meta": "get_session (uso acumulado, modelo, fechas)",
+    "github": "API de GitHub para PRs, issues y milestones; git log de main para líneas por PR (squash)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Claude (proyecto «Skynet», sesiones en la nube)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-10-05T06:46:56Z",
+            "madrid": "2026-10-05T08:46:56+02:00"
+          },
+          "session_id": "session_014EYgYyJi2T5AtWKfUqqWG3",
+          "thread": "Planificar el siguiente hito (M2)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AL9d8cX5892iqUXmWQCu5P",
+          "text": "Hago la prueba en local y el prompt queda en cola... es esto correcto?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T06:59:35Z",
+            "madrid": "2026-10-05T08:59:35+02:00"
+          },
+          "session_id": "session_014EYgYyJi2T5AtWKfUqqWG3",
+          "thread": "Planificar el siguiente hito (M2)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UVLqZ65jXR2sAkdafCWAHj",
+          "text": "ya he probado en local, arrancando el runner. y los jobs finalizan correctamente."
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T07:00:04Z",
+            "madrid": "2026-10-05T09:00:04+02:00"
+          },
+          "session_id": "session_014EYgYyJi2T5AtWKfUqqWG3",
+          "thread": "Planificar el siguiente hito (M2)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69gqwdivTxjd4Txdprc4NMV",
+          "text": "si"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T07:01:55Z",
+            "madrid": "2026-10-05T09:01:55+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Ssz1RhzXzWLnrPCr7AoeZu",
+          "text": "Continua con siguiente hito M3"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T07:06:35Z",
+            "madrid": "2026-10-05T09:06:35+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DPF8MpGNygTWbF4QcqvXpC",
+          "text": "ok"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T08:09:58Z",
+            "madrid": "2026-10-05T10:09:58+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6CjtsEMPBk29aj2KJ3437uJ",
+          "text": "cuales son las 4 issues de quality gate?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T09:27:42Z",
+            "madrid": "2026-10-05T11:27:42+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TV5nfimAE4QLPCbMBujyAc",
+          "text": "No hace falta, vamos a mergear la PR, dime los pasos para probarla en local…"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T09:30:19Z",
+            "madrid": "2026-10-05T11:30:19+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MYakqegy6zEXLXKxY9payH",
+          "text": "Vale,todo ok Mergea y pasamos al siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T10:00:56Z",
+            "madrid": "2026-10-05T12:00:56+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63DmcbcyRHeB4pDPMujaQZG",
+          "text": "La pr tiene revisión en local?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T10:02:57Z",
+            "madrid": "2026-10-05T12:02:57+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69H8oLimFzHQsBW5ayx8fts",
+          "text": "Visto en local,todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T10:27:37Z",
+            "madrid": "2026-10-05T12:27:37+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6XThFPqeUJbpJYE5cPrkxTX",
+          "text": "Todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T11:25:58Z",
+            "madrid": "2026-10-05T13:25:58+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NXPgvLjkgPmK5bpFfnQEup",
+          "text": "Todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T13:52:18Z",
+            "madrid": "2026-10-05T15:52:18+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y643WBm4Vw494XWn2mhjEmiV",
+          "text": "Todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T15:25:18Z",
+            "madrid": "2026-10-05T17:25:18+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6C3ZrFpakfw4bW17BGno2k3",
+          "text": "Aprobado sigue con las recomendaciones"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T16:09:56Z",
+            "madrid": "2026-10-05T18:09:56+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UDq4UF7QeaAa2eoGXyDLtP",
+          "text": "me vale, fusiona y vamos con la siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T19:53:29Z",
+            "madrid": "2026-10-05T21:53:29+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BU8KYTaqDx5EcNQ9GNzLuR",
+          "text": "Revisa la PR"
+        },
+        {
+          "at": {
+            "utc": "2026-10-05T21:48:02Z",
+            "madrid": "2026-10-05T23:48:02+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TGRf967YzAeT6RuuUwC81n",
+          "text": "Mergea la 23 y vamos con lo siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T05:24:35Z",
+            "madrid": "2026-10-06T07:24:35+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6JUkDQhwe4Ebg3Z3Ktx6E7j",
+          "text": "por lo visto se ha quedado colgado Web y E2E, relanzalos para fusionar y completar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:00:54Z",
+            "madrid": "2026-10-06T08:00:54+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6J9HEsuSW9p3kAdThy61YP6",
+          "text": "para poder hacer la prueba en local necesito que la PR no esté en draft, tienes que abrir la PR normal"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:11:10Z",
+            "madrid": "2026-10-06T08:11:10+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Tjn36vKfLLwJeEMUxiAJd7",
+          "text": "la reaunudación se está quedando colgada, y la nueva respuesta no llega nunca"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:21:53Z",
+            "madrid": "2026-10-06T08:21:53+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AzFfFJz21GLCvR9QMtNSQ4",
+          "text": "vale, he detecatado porque pasaba, no había recompilado el runner y el que se estaba ejecutando era el viejo sin soporte para reanudar, una vez recompilador y levantado , una vez hecho la reanudación ha completado:"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:29:33Z",
+            "madrid": "2026-10-06T08:29:33+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67j2wWAJdQ5k3vSr5tWNZmf",
+          "text": "vale todo está probado y ok"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:31:44Z",
+            "madrid": "2026-10-06T08:31:44+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WuP45EtEHuqcn1V8Tf9zvG",
+          "text": "si cierrala que vamos a pasar al siguiente hito"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T06:59:19Z",
+            "madrid": "2026-10-06T08:59:19+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69ZwFgpNaARSMdZLpq6Dkcg",
+          "text": "adelante con las recomendaciones"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T09:18:49Z",
+            "madrid": "2026-10-06T11:18:49+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Hxwyd6pPiy83chUUrxt3L4",
+          "text": "Aquí tienes el sonarqube"
+        },
+        {
+          "at": {
+            "utc": "2026-10-06T10:14:15Z",
+            "madrid": "2026-10-06T12:14:15+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Xr6Rer1KowtkxgJ3z8mxFk",
+          "text": "",
+          "note": "mensaje sin texto, solo con adjunto (por el contexto del hilo, una captura de SonarCloud)"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T07:00:42Z",
+            "madrid": "2026-10-07T09:00:42+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66SqBVZsG9qpCFVnL91AZA2",
+          "text": "PR validada, fusiona y continua con siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T07:27:56Z",
+            "madrid": "2026-10-07T09:27:56+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Nusjn2XVzx2tS3sbEPip6z",
+          "text": "todo probado, fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T13:10:01Z",
+            "madrid": "2026-10-07T15:10:01+02:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto (coordinador)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QDFBjLMiFRmo6Mm6NioJzj",
+          "text": "Vamos con M6"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T14:27:11Z",
+            "madrid": "2026-10-07T16:27:11+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Ceopv8fQS2ELKSvsKNtvhp",
+          "text": "Adela te"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T14:27:21Z",
+            "madrid": "2026-10-07T16:27:21+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TFZaSo54mvHdL7xYyctzLh",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T15:45:18Z",
+            "madrid": "2026-10-07T17:45:18+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6F9WCCAamowgjfq58yPQbqS",
+          "text": "Cual es el password que hemos puesto por defecto"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T16:02:14Z",
+            "madrid": "2026-10-07T18:02:14+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65EVjHexv25jsHMvRAe7VKQ",
+          "text": "todo verificado, M6-a funciona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T16:15:24Z",
+            "madrid": "2026-10-07T18:15:24+02:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto (coordinador)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67BC2Nrz6DTXZ74JQZUXsp3",
+          "text": "de ahora en adelante la guia de pruebas además de escribirla aqui subela junto el codigo en ficheros docs/tests/probar-(milestone).md e indicamos en el nombre de la PR también el milestone para que Hermes ejecute la verificación automáticamente cuando despliegue.\nPor ejemplo si la siguiente PR es #29 es M6-B. En el nombre de la PR debe llevarlo (como lo hacemos hasta ahora) M6-B - Nombre de la PR y luego el documento de pruebas que generamos probar-m6b.md subirlo al repo en docs/tests/probar-m6b.md"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T16:35:18Z",
+            "madrid": "2026-10-07T18:35:18+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MTpw2kC33qYB3pvyT4vMoo",
+          "text": "Todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-07T19:52:23Z",
+            "madrid": "2026-10-07T21:52:23+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6A53RqGRVRqzn8f1A7Kwz5p",
+          "text": "Todo probado, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T04:48:07Z",
+            "madrid": "2026-10-08T06:48:07+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HfY6A851DCBkSEQKQWgcUz",
+          "text": "Todo ok fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T05:24:18Z",
+            "madrid": "2026-10-08T07:24:18+02:00"
+          },
+          "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+          "thread": "Planificar e implementar M3→M6 (Principal)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LQM3PYBUF6VGdG9zHHv25H",
+          "text": "todo probado, fusiona la PR"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T05:34:55Z",
+            "madrid": "2026-10-08T07:34:55+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68recZ1Mphav5qJHLqXM61f",
+          "text": "revisa el plan de implementación y tambien el [adr](https://github.com/guilu/skynet/tree/main/docs/adr)/0001-control-plane-user-interface.md y dime en que fase estamos y cual serían los proximos pasos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T05:54:40Z",
+            "madrid": "2026-10-08T07:54:40+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62nbUBt6n7ccyUrMVeLa9GE",
+          "text": "Prepara la PR de cierre.... pero antes de continuar con W1+W2, quiero cambiar todo el interfaz grafico, las vistas, paneles, etc.  Hare un estudio de las webs que implementan flujos agenticos para tomar inspiración de paneles, grafos, componentes css, etc. para replicar el estilo."
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T06:10:48Z",
+            "madrid": "2026-10-08T08:10:48+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VViijqfKoDt6MXx1CQiMcR",
+          "text": "todo probado, puedes fusionar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T06:18:45Z",
+            "madrid": "2026-10-08T08:18:45+02:00"
+          },
+          "session_id": "session_01MBT5hAryS31yS9LJ4S35hq",
+          "thread": "Chat del proyecto (coordinador)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Q7zW4uQUX2rwtTqk9RcNua",
+          "text": "Antes de continuar con más funcionalidades quiero hacer un rediseño del interfaz gráfico de akynet. Analiza las webs y aplicaciones  de flujos agenticos que sean como nuestro skynet, para tomar inspiración de los componentes de UI que utilizan, los estilos css, si usan tailwind, si usan graficos 2d o 3d, los componentes de frontend para los paneles, flujos, cajas, botones, acordeones, barras de navegación, etc.  Con este análisis vamos a crear un plan de rediseño para aplicarlo a skynet."
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T10:28:59Z",
+            "madrid": "2026-10-08T12:28:59+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65kCth2a5KPgi2qeDXX7d3e",
+          "text": "Me encaja el plan, apruebo las recomendaciones del 7 pero quiero hacer un apunte. Me gusta la idea de usar shadcn/ui pero es tan estandar que quería diferenciarme.\nQueremos diseñar los componentes de Skynet con un lenguaje visual inspirado en las aplicaciones educativas gamificadas modernas, especialmente en la claridad, tactilidad y expresividad asociadas a Duolingo, pero sin copiar su marca, mascota, ilustraciones, iconos propietarios ni composición exacta.\n\nSkynet debe sentirse:\n\n- moderno;\n- amable;\n- táctil;\n- dinámico;\n- accesible;\n- fácil de explorar;\n- profesional, pero no corporativo ni frío;\n- adecuado para una plataforma de agentes, workflows, ejecuciones y runners.\n\nLa interfaz debe convertir procesos técnicos complejos en estados visuales fáciles de comprender.\n\n1. Lenguaje visual general\n\nUsa una estética de formas redondeadas, superficies limpias y profundidad sutil.\n\nCaracterísticas principales:\n\n- esquinas muy redondeadas;\n- tarjetas con bordes visibles;\n- botones con volumen y sensación física;\n- sombras cortas y firmes, no sombras difusas;\n- colores vivos utilizados con moderación;\n- jerarquía visual muy clara;\n- iconos grandes y simples;\n- textos breves y directos;\n- estados acompañados por color, icono y etiqueta;\n- animaciones cortas que comuniquen una acción o cambio de estado."
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T10:52:25Z",
+            "madrid": "2026-10-08T12:52:25+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6G5obejp3kqrqzkz7bx5r4L",
+          "text": "El estilo está pefecto!, es exactamente lo que tenía en mente. Quizás cambiaría un poco los colores, sobre todo el color verde, pero podemos hacerlos personalizables en un panel de control para el administrador más adelante. Por ahora, la maqueta está perfecta y podemos pasar a la siguiente tarea"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T20:17:16Z",
+            "madrid": "2026-10-08T22:17:16+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62asPLSuUetUxWQME8LbKzz",
+          "text": "Todo revisado puedes fusionar y pasamos a lo siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T22:24:54Z",
+            "madrid": "2026-10-09T00:24:54+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69ZqD945UbH13wX4m6AD14x",
+          "text": "Todo probado, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T22:57:18Z",
+            "madrid": "2026-10-09T00:57:18+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y617AWgnqN8biXMz55iVjk4P",
+          "text": "Hecho en falta todas la milestones de UI (UI-A,UI-B, etc) creadas en github, y luego relacionar cada PR que abrimos con ella, para ir marcándola como completada"
+        },
+        {
+          "at": {
+            "utc": "2026-10-08T23:15:34Z",
+            "madrid": "2026-10-09T01:15:34+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6EcKEGNLLPSKdDbfTPKoQhc",
+          "text": "Ya la he probado, todo ok, seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T01:27:37Z",
+            "madrid": "2026-10-09T03:27:37+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QeV22sn9eWkGn2usqr5Aa6",
+          "text": "Todo revisado, continuamos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T08:37:08Z",
+            "madrid": "2026-10-09T10:37:08+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6En21Y3u4oLFYjwKWAeLNwS",
+          "text": "todo probado ok! seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T09:07:37Z",
+            "madrid": "2026-10-09T11:07:37+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63ZhZZvJnTqyXaqV1mjXM7v",
+          "text": "a PR 46 no tiene asignado el milestone UI-F"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T11:45:15Z",
+            "madrid": "2026-10-09T13:45:15+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LNLcjFZhwKtNEHX1uk4DjY",
+          "text": "todo ok, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T11:47:25Z",
+            "madrid": "2026-10-09T13:47:25+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6ACG4xA1MdW6bgT9XBWjRBa",
+          "text": "adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T12:08:46Z",
+            "madrid": "2026-10-09T14:08:46+02:00"
+          },
+          "session_id": "session_016eeTfx3DWv3xXk9uUnk75A",
+          "thread": "Chat del proyecto (coordinador)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64NsT3hjavKjmi8EmSh1q3U",
+          "text": "En mi configuración de claude code local, tengo una skill que hace el recap de la semana de las sesiones en las que trabajo y hace un resumen, y pasa estadísticas y luego escribe un articulo, etc.  \nEsta semana solo he trabajado en claude desktop en este proyecto que se llama \"Skynet\" y quiero utilizar todas esas sesiones y la información relativa a las PRs, los callejones sin salida, las estadísticas de cada sesión, las ventanas de 5h, etc. para pasarselas a claude code y que pueda realizar el recap de la semana. \nAntes de hacer nada, explicame como podemos hacerlo"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T12:49:05Z",
+            "madrid": "2026-10-09T14:49:05+02:00"
+          },
+          "session_id": "session_01ARfoyhxKU2EHprvUz1UuSA",
+          "thread": "Informe semanal para el recap",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63TB6NnjzFcE2Qsumoa1kiD",
+          "text": "esta es la skill del recap... gran parte de ella es sobre como escribir el articulo... básicamente necesitamos que el informe de las sesiones en lugar de hacerlo desde las de claude code las obtenga del informe este que dejemos recap/semana-YYYY-MM-DD.json"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T12:52:26Z",
+            "madrid": "2026-10-09T14:52:26+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6FSSXo3EtmfyQbvd4254HBb",
+          "text": "estoy viendo que en la web en formato grande el main tiene como un max-width de 1024px pero prefiero que se adapte al ancho del navegador para verlo ocupar todo el ancho disponible"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T15:20:09Z",
+            "madrid": "2026-10-09T17:20:09+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67W14fxUH5PKXkrbRHh2sry",
+          "text": "Todo ok, puedes fusionar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T15:33:45Z",
+            "madrid": "2026-10-09T17:33:45+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Uhm1qAXq7KQM7DzPjiLmWi",
+          "text": "Antes de seguir con la fase 2 hay algo que quiero atacar. No hay funcionalidad para eliminar o archivar proyectos,ejecuciones,etc. crea un plan para implementarlo en un milestone nuevo."
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T15:44:18Z",
+            "madrid": "2026-10-09T17:44:18+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Npx6YBv7ZXoDyvDnRFg6JP",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T16:51:39Z",
+            "madrid": "2026-10-09T18:51:39+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MmbnzLPLds4UDftLt31TAe",
+          "text": "todo probado en backend  fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T17:12:46Z",
+            "madrid": "2026-10-09T19:12:46+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Ktn2osSCga6pCZaXLN3aHH",
+          "text": "todo ok, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T17:47:23Z",
+            "madrid": "2026-10-09T19:47:23+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6A5NCYwH5uSmsnGQNpqFPQf",
+          "text": "todo probado, fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T20:06:35Z",
+            "madrid": "2026-10-09T22:06:35+02:00"
+          },
+          "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+          "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68woe6nWBuEG8rTM5NS4u3L",
+          "text": "Lo abriré yo que antes quiero hacer unos retoques gráficos, este hilo lo podemos cerrar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T20:08:44Z",
+            "madrid": "2026-10-09T22:08:44+02:00"
+          },
+          "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+          "thread": "Logotipo e imagen corporativa (UI-H)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68nKkZpyoWqMpBNSHUQN4Vv",
+          "text": "Este es el estudio que he hecho para el logotipo e imagen corporativa de skynet. Ayúdame a aplicarlo a nuestra app"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T20:13:35Z",
+            "madrid": "2026-10-09T22:13:35+02:00"
+          },
+          "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+          "thread": "Logotipo e imagen corporativa (UI-H)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6JsFampYHGdibwRxVMV1GJ1",
+          "text": "Adelante con todo"
+        },
+        {
+          "at": {
+            "utc": "2026-10-09T23:57:45Z",
+            "madrid": "2026-10-10T01:57:45+02:00"
+          },
+          "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+          "thread": "Logotipo e imagen corporativa (UI-H)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68hZD8cafNPsa7EMsvqdtuZ",
+          "text": "Probado, todo ok, fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T00:03:20Z",
+            "madrid": "2026-10-10T02:03:20+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65QiCs6viW9xKheit6HhGwf",
+          "text": "Planifica lo siguiente que creo que es W1 y W2"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T00:10:13Z",
+            "madrid": "2026-10-10T02:10:13+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HujN8Gz5yXUcAKnPoHwavZ",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T07:36:54Z",
+            "madrid": "2026-10-10T09:36:54+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6733aSdRaGCVE7NXhK9c3P7",
+          "text": "todo revisado, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T11:17:43Z",
+            "madrid": "2026-10-10T13:17:43+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Gqpv8qFaS4pbFoG4nBBKFi",
+          "text": "todo ok, fusiona que seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T12:48:29Z",
+            "madrid": "2026-10-10T14:48:29+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KLeMMq2ftgPr8pihjNFuCT",
+          "text": "Si, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T17:51:12Z",
+            "madrid": "2026-10-10T19:51:12+02:00"
+          },
+          "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+          "thread": "Planificar W1 y W2",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6G8WZ7cxHbK1MXoqWQwScJx",
+          "text": "Todo ok fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T19:02:12Z",
+            "madrid": "2026-10-10T21:02:12+02:00"
+          },
+          "session_id": "session_01VLmZLvqmpB5WVk8Vzg9sPD",
+          "thread": "Chat del proyecto (coordinador)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68EtQ64S9PnstXcxQzvpg9F",
+          "text": "Ya hemos terminado W1 y W2, que es lo siguiente?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T19:04:08Z",
+            "madrid": "2026-10-10T21:04:08+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6T6siVB3J5mMviPAyPdokiu",
+          "text": "Si"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T21:03:33Z",
+            "madrid": "2026-10-10T23:03:33+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PfiuZ5zRDWmqcFi3RMrtbH",
+          "text": "Antes de empezar con W3, quiero saber si en el plan o en el ADR hay alguna previsión de añadir en el futuro agentes códex o gemini, que se puedan llamar con headless igual que Claude -p, de tal manera que podamos asignar a los workflows o a los pasos de los workflows agentes diferentes incluso modelos diferentes dentro de esos agentes"
+        },
+        {
+          "at": {
+            "utc": "2026-10-10T21:12:18Z",
+            "madrid": "2026-10-10T23:12:18+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VP37nPWFRhUuekHTUJQaoH",
+          "text": "Adelante con recomendado"
+        },
+        {
+          "at": {
+            "utc": "2026-10-11T06:06:42Z",
+            "madrid": "2026-10-11T08:06:42+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UuqsqTVdMLvNS8QnQKCjMQ",
+          "text": "Antes de aprobar, algunos fixes…. En el editor de yaml de los workflows no se puede, seleccionar texto, copiar y pegar, por lo menos en el safari de móviles. Analiza y corrige"
+        },
+        {
+          "at": {
+            "utc": "2026-10-11T06:21:12Z",
+            "madrid": "2026-10-11T08:21:12+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65hDPE6XjyHhJ7Aqj2y5ASy",
+          "text": "Ahora si está bien, fusiona que vamos a la siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-11T06:56:42Z",
+            "madrid": "2026-10-11T08:56:42+02:00"
+          },
+          "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+          "thread": "Planificar W3 nodos",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PGvrjJEAXPhJZCgdwmRTbe",
+          "text": "Todo ok, fusiona y vamos a lo siguiente"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session_014EYgYyJi2T5AtWKfUqqWG3",
+      "kind": "hilo",
+      "title": "Planificar el siguiente hito",
+      "thread": "Planificar el siguiente hito (M2)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-04T08:54:55Z",
+        "madrid": "2026-10-04T10:54:55+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-05T07:00:41Z",
+        "madrid": "2026-10-05T09:00:41+02:00"
+      },
+      "status": "completada",
+      "prompts": 3,
+      "first_prompt": {
+        "utc": "2026-10-05T06:46:56Z",
+        "madrid": "2026-10-05T08:46:56+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-05T07:00:04Z",
+        "madrid": "2026-10-05T09:00:04+02:00"
+      },
+      "prs": [
+        16
+      ],
+      "agent_replies": 15,
+      "usage_session_total": {
+        "cost_usd": 28.44,
+        "input_tokens": 3960,
+        "output_tokens": 255143,
+        "cache_read_tokens": 60450781,
+        "cache_write_tokens": 1406509,
+        "note": "acumulado de toda la sesión, que empezó el domingo 4"
+      },
+      "usage_this_week": {
+        "cost_usd": 5.3281,
+        "input": 67,
+        "output": 12264,
+        "cache_read": 11210921,
+        "cache_write": 355042,
+        "thinking": 3298,
+        "models": [
+          "claude-haiku-4-5-20251001",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 9,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "task-notification": 5,
+          "human": 3
+        },
+        "turns_with_error": [],
+        "active_time_ms": 303423,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791169200,
+        1791200400,
+        1791201000
+      ],
+      "notes": [
+        "Arrastrada del domingo: esta semana solo cerró M2 (prueba manual de Diego, fusión de #16, cierre de la issue #5)."
+      ]
+    },
+    {
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "kind": "hilo",
+      "title": "Principal",
+      "thread": "Planificar e implementar M3→M6 (Principal)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-05T07:02:03Z",
+        "madrid": "2026-10-05T09:02:03+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-08T05:24:59Z",
+        "madrid": "2026-10-08T07:24:59+02:00"
+      },
+      "status": "completada",
+      "prompts": 33,
+      "first_prompt": {
+        "utc": "2026-10-05T07:01:55Z",
+        "madrid": "2026-10-05T09:01:55+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-08T05:24:18Z",
+        "madrid": "2026-10-08T07:24:18+02:00"
+      },
+      "prs": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "agent_replies": 73,
+      "usage_session_total": {
+        "cost_usd": 140.41,
+        "input_tokens": 59823,
+        "output_tokens": 1120378,
+        "cache_read_tokens": 370417913,
+        "cache_write_tokens": 5460857,
+        "note": "acumulado de la sesión; toda ella cae en esta semana"
+      },
+      "usage_this_week": {
+        "cost_usd": 140.4093,
+        "input": 59823,
+        "output": 1120378,
+        "cache_read": 370417913,
+        "cache_write": 5460857,
+        "thinking": 231112,
+        "models": [
+          "claude-haiku-4-5-20251001",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 101,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 35,
+          "task-notification": 64
+        },
+        "turns_with_error": [
+          {
+            "at": "2026-10-07T14:27:27.372122Z",
+            "subtype": "error_during_execution",
+            "api_error": null,
+            "terminal": "aborted_streaming",
+            "result_head": ""
+          }
+        ],
+        "active_time_ms": 22569973,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791201000,
+        1791226200,
+        1791247800,
+        1791282000,
+        1791300000,
+        1791368400,
+        1791396600,
+        1791420600,
+        1791452400
+      ],
+      "notes": [
+        "M3, M4, M5 y M6 completos (16 PRs). Cierra el MVP de la Fase 1."
+      ]
+    },
+    {
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "kind": "hilo",
+      "title": "Interfaz gráfico",
+      "thread": "Fase actual y próximos pasos / Interfaz gráfico",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-08T05:35:03Z",
+        "madrid": "2026-10-08T07:35:03+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-09T20:07:11Z",
+        "madrid": "2026-10-09T22:07:11+02:00"
+      },
+      "status": "completada",
+      "prompts": 22,
+      "first_prompt": {
+        "utc": "2026-10-08T05:34:55Z",
+        "madrid": "2026-10-08T07:34:55+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-09T20:06:35Z",
+        "madrid": "2026-10-09T22:06:35+02:00"
+      },
+      "prs": [
+        33,
+        34,
+        35,
+        36,
+        44,
+        45,
+        46,
+        48,
+        52,
+        53,
+        54
+      ],
+      "agent_replies": 48,
+      "usage_session_total": {
+        "cost_usd": 86.64,
+        "input_tokens": 37619,
+        "output_tokens": 725452,
+        "cache_read_tokens": 220976432,
+        "cache_write_tokens": 3478126,
+        "note": "acumulado; empezó el miércoles 8"
+      },
+      "usage_this_week": {
+        "cost_usd": 86.6372,
+        "input": 37619,
+        "output": 725452,
+        "cache_read": 220976432,
+        "cache_write": 3478126,
+        "thinking": 126054,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 67,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 22,
+          "task-notification": 43
+        },
+        "turns_with_error": [],
+        "active_time_ms": 16901122,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791452400,
+        1791472800,
+        1791508200,
+        1791526800,
+        1791552600,
+        1791577200
+      ],
+      "notes": [
+        "Rediseño UI-A..UI-G y hito AE (archivar y eliminar)."
+      ]
+    },
+    {
+      "session_id": "session_01AccEZuoG9r9ZxzS8J8Ebhd",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-05T06:46:56Z",
+        "madrid": "2026-10-05T08:46:56+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-05T08:10:32Z",
+        "madrid": "2026-10-05T10:10:32+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 1.06,
+        "input_tokens": 1371,
+        "output_tokens": 3465,
+        "cache_read_tokens": 2016119,
+        "cache_write_tokens": 73626
+      },
+      "usage_this_week": {
+        "cost_usd": 1.06,
+        "input": 1371,
+        "output": 3465,
+        "cache_read": 2016119,
+        "cache_write": 73626,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Arrancó el hilo de M3 a partir del mensaje de Diego."
+      ]
+    },
+    {
+      "session_id": "session_01MBT5hAryS31yS9LJ4S35hq",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-08T04:48:08Z",
+        "madrid": "2026-10-08T06:48:08+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-08T06:23:19Z",
+        "madrid": "2026-10-08T08:23:19+02:00"
+      },
+      "status": "archivada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-08T06:18:45Z",
+        "madrid": "2026-10-08T08:18:45+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-08T06:18:45Z",
+        "madrid": "2026-10-08T08:18:45+02:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 1.63,
+        "input_tokens": 1719,
+        "output_tokens": 6779,
+        "cache_read_tokens": 2891197,
+        "cache_write_tokens": 126734
+      },
+      "usage_this_week": {
+        "cost_usd": 1.63,
+        "input": 1719,
+        "output": 6779,
+        "cache_read": 2891197,
+        "cache_write": 126734,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Arrancó el hilo de fase actual y le pasó el encargo del rediseño."
+      ]
+    },
+    {
+      "session_id": "session_016eeTfx3DWv3xXk9uUnk75A",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-09T11:45:15Z",
+        "madrid": "2026-10-09T13:45:15+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-09T13:10:41Z",
+        "madrid": "2026-10-09T15:10:41+02:00"
+      },
+      "status": "archivada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-09T12:08:46Z",
+        "madrid": "2026-10-09T14:08:46+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-09T12:08:46Z",
+        "madrid": "2026-10-09T14:08:46+02:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 1.06,
+        "input_tokens": 1695,
+        "output_tokens": 4150,
+        "cache_read_tokens": 1615399,
+        "cache_write_tokens": 82439
+      },
+      "usage_this_week": {
+        "cost_usd": 1.06,
+        "input": 1695,
+        "output": 4150,
+        "cache_read": 1615399,
+        "cache_write": 82439,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": {
+        "turns_total": 9,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 2
+        },
+        "turns_with_error": [],
+        "active_time_ms": 58134,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791552600
+      ],
+      "notes": [
+        "Atendió la petición de este recap."
+      ]
+    },
+    {
+      "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+      "kind": "hilo",
+      "title": "Logotipo e imagen corporativa",
+      "thread": "Logotipo e imagen corporativa (UI-H)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-09T20:08:55Z",
+        "madrid": "2026-10-09T22:08:55+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-09T23:58:16Z",
+        "madrid": "2026-10-10T01:58:16+02:00"
+      },
+      "status": "completada",
+      "prompts": 3,
+      "first_prompt": {
+        "utc": "2026-10-09T20:08:44Z",
+        "madrid": "2026-10-09T22:08:44+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-09T23:57:45Z",
+        "madrid": "2026-10-10T01:57:45+02:00"
+      },
+      "prs": [
+        56
+      ],
+      "agent_replies": 5,
+      "usage_session_total": {
+        "cost_usd": 6.46,
+        "input_tokens": 1884,
+        "output_tokens": 39057,
+        "cache_read_tokens": 14184610,
+        "cache_write_tokens": 355934
+      },
+      "usage_this_week": {
+        "cost_usd": 6.4578,
+        "input": 1884,
+        "output": 39057,
+        "cache_read": 14184610,
+        "cache_write": 355934,
+        "thinking": 6546,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 10,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 3,
+          "task-notification": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 659394,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791577200,
+        1791595200
+      ],
+      "notes": [
+        "UI-H: identidad visual con el logo del estudio de Diego."
+      ]
+    },
+    {
+      "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+      "kind": "hilo",
+      "title": "Planificar W1 y W2",
+      "thread": "Planificar W1 y W2",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-10T00:03:33Z",
+        "madrid": "2026-10-10T02:03:33+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-10T17:52:10Z",
+        "madrid": "2026-10-10T19:52:10+02:00"
+      },
+      "status": "completada",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-10-10T00:03:20Z",
+        "madrid": "2026-10-10T02:03:20+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-10T17:51:12Z",
+        "madrid": "2026-10-10T19:51:12+02:00"
+      },
+      "prs": [
+        61,
+        62,
+        63,
+        64
+      ],
+      "agent_replies": 14,
+      "usage_session_total": {
+        "cost_usd": 49.44,
+        "input_tokens": 16862,
+        "output_tokens": 437654,
+        "cache_read_tokens": 127136887,
+        "cache_write_tokens": 1901470
+      },
+      "usage_this_week": {
+        "cost_usd": 49.4365,
+        "input": 16862,
+        "output": 437654,
+        "cache_read": 127136887,
+        "cache_write": 1901470,
+        "thinking": 102846,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 27,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 6,
+          "task-notification": 20
+        },
+        "turns_with_error": [],
+        "active_time_ms": 8261814,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791595200,
+        1791633600,
+        1791651600,
+        1791672600
+      ],
+      "notes": [
+        "Fase 2: definiciones de workflow (W1) y motor (W2)."
+      ]
+    },
+    {
+      "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+      "kind": "hilo",
+      "title": "Planificar W3 nodos",
+      "thread": "Planificar W3 nodos",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-10T19:04:17Z",
+        "madrid": "2026-10-10T21:04:17+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-11T07:30:24Z",
+        "madrid": "2026-10-11T09:30:24+02:00"
+      },
+      "status": "esperando a Diego (probar PR #71)",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-10-10T19:04:08Z",
+        "madrid": "2026-10-10T21:04:08+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-11T06:56:42Z",
+        "madrid": "2026-10-11T08:56:42+02:00"
+      },
+      "prs": [
+        69,
+        70,
+        71
+      ],
+      "agent_replies": 12,
+      "usage_session_total": {
+        "cost_usd": 30.94,
+        "input_tokens": 15034,
+        "output_tokens": 259502,
+        "cache_read_tokens": 80384120,
+        "cache_write_tokens": 1202867
+      },
+      "usage_this_week": {
+        "cost_usd": 30.9385,
+        "input": 15034,
+        "output": 259502,
+        "cache_read": 80384120,
+        "cache_write": 1202867,
+        "thinking": 50104,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 17,
+        "turns_by_origin": {
+          "task-notification": 11,
+          "human": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 4128725,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1791672600,
+        1791716400
+      ],
+      "notes": [
+        "W3-A y W3-B fusionadas; W3-C (#71) abierta."
+      ]
+    },
+    {
+      "session_id": "session_01WTSTuv4chSvi26TSMLpUK3",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-09T20:06:36Z",
+        "madrid": "2026-10-09T22:06:36+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-09T20:21:10Z",
+        "madrid": "2026-10-09T22:21:10+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.62,
+        "input_tokens": 1700,
+        "output_tokens": 1779,
+        "cache_read_tokens": 673896,
+        "cache_write_tokens": 56762
+      },
+      "usage_this_week": {
+        "cost_usd": 0.62,
+        "input": 1700,
+        "output": 1779,
+        "cache_read": 673896,
+        "cache_write": 56762,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Arrancó el hilo del logotipo."
+      ]
+    },
+    {
+      "session_id": "session_01ULHXYALhLVTEwjMdKAHoAd",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-09T23:57:45Z",
+        "madrid": "2026-10-10T01:57:45+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-10T00:45:11Z",
+        "madrid": "2026-10-10T02:45:11+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.85,
+        "input_tokens": 1683,
+        "output_tokens": 3416,
+        "cache_read_tokens": 998031,
+        "cache_write_tokens": 73143
+      },
+      "usage_this_week": {
+        "cost_usd": 0.85,
+        "input": 1683,
+        "output": 3416,
+        "cache_read": 998031,
+        "cache_write": 73143,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Arrancó el hilo de W1 y W2."
+      ]
+    },
+    {
+      "session_id": "session_01VLmZLvqmpB5WVk8Vzg9sPD",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto (coordinador)",
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-10T19:02:11Z",
+        "madrid": "2026-10-10T21:02:11+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-10T19:07:00Z",
+        "madrid": "2026-10-10T21:07:00+02:00"
+      },
+      "status": "archivada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-10T19:02:12Z",
+        "madrid": "2026-10-10T21:02:12+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-10T19:02:12Z",
+        "madrid": "2026-10-10T21:02:12+02:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.48,
+        "input_tokens": 1463,
+        "output_tokens": 1971,
+        "cache_read_tokens": 429874,
+        "cache_write_tokens": 45282
+      },
+      "usage_this_week": {
+        "cost_usd": 0.48,
+        "input": 1463,
+        "output": 1971,
+        "cache_read": 429874,
+        "cache_write": 45282,
+        "note": "sin eventos de turno; es el acumulado de la sesión, que empezó esta semana"
+      },
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Arrancó el hilo de W3."
+      ]
+    },
+    {
+      "session_id": "session_01ARfoyhxKU2EHprvUz1UuSA",
+      "kind": "hilo",
+      "title": "Informe semanal para el recap",
+      "thread": "Informe semanal para el recap",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-09T12:49:24Z",
+        "madrid": "2026-10-09T14:49:24+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-11T08:00:00Z",
+        "madrid": "2026-10-11T10:00:00+02:00"
+      },
+      "status": "en curso (genera este fichero; la rutina del domingo lo regeneró)",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-09T12:49:05Z",
+        "madrid": "2026-10-09T14:49:05+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-09T12:49:05Z",
+        "madrid": "2026-10-09T14:49:05+02:00"
+      },
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Esta misma sesión; su uso no está incluido."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [
+      {
+        "number": 16,
+        "title": "M2 (paso 5): extremo a extremo y redacción de secretos",
+        "squash_sha": "e114c1b",
+        "merged_at": "2026-10-05T09:00:09+02:00",
+        "additions": 869,
+        "deletions": 10,
+        "files_changed": 16,
+        "session_id": "session_014EYgYyJi2T5AtWKfUqqWG3",
+        "url": "https://github.com/guilu/skynet/pull/16",
+        "milestone": null,
+        "closes_issues": [
+          5
+        ],
+        "phase": "M2"
+      },
+      {
+        "number": 17,
+        "title": "M3-A: contratos y proyecciones de lectura del control plane",
+        "squash_sha": "ed14333",
+        "merged_at": "2026-10-05T11:30:28+02:00",
+        "additions": 2043,
+        "deletions": 73,
+        "files_changed": 48,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/17",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M3"
+      },
+      {
+        "number": 18,
+        "title": "M3-B: shell, cabecera de ejecución, páginas y límites al lanzar",
+        "squash_sha": "067e3b4",
+        "merged_at": "2026-10-05T12:03:07+02:00",
+        "additions": 1224,
+        "deletions": 174,
+        "files_changed": 26,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/18",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M3"
+      },
+      {
+        "number": 19,
+        "title": "M3-C: navegación de fases y agentes e inspector",
+        "squash_sha": "27a3215",
+        "merged_at": "2026-10-05T12:27:52+02:00",
+        "additions": 991,
+        "deletions": 96,
+        "files_changed": 13,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/19",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M3"
+      },
+      {
+        "number": 20,
+        "title": "M3-D: timeline semántico con filtros, deltas del SSE y cola por suscriptor",
+        "squash_sha": "565cfe1",
+        "merged_at": "2026-10-05T13:26:23+02:00",
+        "additions": 1313,
+        "deletions": 95,
+        "files_changed": 19,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/20",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M3"
+      },
+      {
+        "number": 21,
+        "title": "M3-E: E2E con Playwright en CI, teclado en agentes y timeline, cierre de SSE al apagar",
+        "squash_sha": "130427b",
+        "merged_at": "2026-10-05T15:52:38+02:00",
+        "additions": 468,
+        "deletions": 25,
+        "files_changed": 19,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/21",
+        "milestone": null,
+        "closes_issues": [
+          6
+        ],
+        "phase": "M3"
+      },
+      {
+        "number": 22,
+        "title": "M4-A: modelo, órdenes y API de reanudar, reintentar y bifurcar",
+        "squash_sha": "2c6e51a",
+        "merged_at": "2026-10-05T18:10:15+02:00",
+        "additions": 1274,
+        "deletions": 83,
+        "files_changed": 31,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/22",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M4"
+      },
+      {
+        "number": 23,
+        "title": "M4-B: el runner reanuda y bifurca sesiones y mata el grupo de procesos",
+        "squash_sha": "0dbff26",
+        "merged_at": "2026-10-06T07:25:06+02:00",
+        "additions": 970,
+        "deletions": 158,
+        "files_changed": 19,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/23",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M4"
+      },
+      {
+        "number": 24,
+        "title": "M4-C: conversación en la web, reintentar y bifurcar, y E2E de reanudar y cancelar",
+        "squash_sha": "54368d6",
+        "merged_at": "2026-10-06T08:29:43+02:00",
+        "additions": 701,
+        "deletions": 73,
+        "files_changed": 15,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/24",
+        "milestone": null,
+        "closes_issues": [
+          7
+        ],
+        "phase": "M4"
+      },
+      {
+        "number": 25,
+        "title": "M5-A: verificaciones y artefactos en el control plane",
+        "squash_sha": "6b36d12",
+        "merged_at": "2026-10-07T07:29:50+02:00",
+        "additions": 2100,
+        "deletions": 40,
+        "files_changed": 46,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/25",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M5"
+      },
+      {
+        "number": 26,
+        "title": "M5-B: el runner sube los artefactos de cada invocación y ejecuta la verificación",
+        "squash_sha": "335143b",
+        "merged_at": "2026-10-07T09:00:58+02:00",
+        "additions": 2066,
+        "deletions": 74,
+        "files_changed": 25,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/26",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M5"
+      },
+      {
+        "number": 27,
+        "title": "M5-C: artefactos, verificación y coste en la web",
+        "squash_sha": "ef85a84",
+        "merged_at": "2026-10-07T09:28:04+02:00",
+        "additions": 1678,
+        "deletions": 13,
+        "files_changed": 29,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/27",
+        "milestone": null,
+        "closes_issues": [
+          8
+        ],
+        "phase": "M5"
+      },
+      {
+        "number": 28,
+        "title": "M6-A: login con usuario único y revocación del token del runner",
+        "squash_sha": "f95f2ad",
+        "merged_at": "2026-10-07T18:02:23+02:00",
+        "additions": 1006,
+        "deletions": 36,
+        "files_changed": 30,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/28",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M6"
+      },
+      {
+        "number": 29,
+        "title": "M6-B: política de agentes por repositorio y presupuesto que hace cumplir el runner",
+        "squash_sha": "6392f9a",
+        "merged_at": "2026-10-07T18:35:23+02:00",
+        "additions": 1531,
+        "deletions": 58,
+        "files_changed": 35,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/29",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M6"
+      },
+      {
+        "number": 30,
+        "title": "M6-C: reconciliación con los latidos, limpieza de worktrees y E2E de reinicio",
+        "squash_sha": "a50ea24",
+        "merged_at": "2026-10-07T21:53:02+02:00",
+        "additions": 1373,
+        "deletions": 75,
+        "files_changed": 54,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/30",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M6"
+      },
+      {
+        "number": 31,
+        "title": "M6-D - Métricas del dashboard, accesibilidad y secretos en el DOM",
+        "squash_sha": "86156cc",
+        "merged_at": "2026-10-08T06:48:44+02:00",
+        "additions": 1162,
+        "deletions": 73,
+        "files_changed": 25,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/31",
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "M6"
+      },
+      {
+        "number": 32,
+        "title": "M6-E - Cierre del MVP: Compose, runner como servicio y checklist",
+        "squash_sha": "3612cba",
+        "merged_at": "2026-10-08T07:24:26+02:00",
+        "additions": 411,
+        "deletions": 6,
+        "files_changed": 13,
+        "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+        "url": "https://github.com/guilu/skynet/pull/32",
+        "milestone": null,
+        "closes_issues": [
+          9
+        ],
+        "phase": "M6"
+      },
+      {
+        "number": 33,
+        "title": "M6-F - Cierre de la Fase 1",
+        "squash_sha": "6e914a5",
+        "merged_at": "2026-10-08T08:10:57+02:00",
+        "additions": 33,
+        "deletions": 20,
+        "files_changed": 4,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/33",
+        "milestone": null,
+        "closes_issues": [
+          2,
+          6
+        ],
+        "phase": "M6"
+      },
+      {
+        "number": 34,
+        "title": "UI-A - Fundamentos",
+        "squash_sha": "719c52d",
+        "merged_at": "2026-10-08T22:17:35+02:00",
+        "additions": 3195,
+        "deletions": 944,
+        "files_changed": 30,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/34",
+        "milestone": "UI-A",
+        "closes_issues": [
+          38
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 35,
+        "title": "UI-B - Shell y navegación",
+        "squash_sha": "713eff6",
+        "merged_at": "2026-10-09T00:25:09+02:00",
+        "additions": 2222,
+        "deletions": 179,
+        "files_changed": 20,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/35",
+        "milestone": "UI-B",
+        "closes_issues": [
+          39
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 36,
+        "title": "UI-C - Listas y dashboard",
+        "squash_sha": "17d834b",
+        "merged_at": "2026-10-09T01:15:44+02:00",
+        "additions": 1937,
+        "deletions": 452,
+        "files_changed": 28,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/36",
+        "milestone": "UI-C",
+        "closes_issues": [
+          40
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 44,
+        "title": "UI-D - Vista de ejecución",
+        "squash_sha": "e21145a",
+        "merged_at": "2026-10-09T03:27:50+02:00",
+        "additions": 1807,
+        "deletions": 329,
+        "files_changed": 26,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/44",
+        "milestone": "UI-D",
+        "closes_issues": [
+          41
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 45,
+        "title": "UI-E - Proyecto, trabajo y formularios",
+        "squash_sha": "8e19dff",
+        "merged_at": "2026-10-09T10:37:20+02:00",
+        "additions": 1728,
+        "deletions": 584,
+        "files_changed": 15,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/45",
+        "milestone": "UI-E",
+        "closes_issues": [
+          42
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 46,
+        "title": "UI-F - Pulido y documentación",
+        "squash_sha": "1daca5a",
+        "merged_at": "2026-10-09T13:45:29+02:00",
+        "additions": 942,
+        "deletions": 18,
+        "files_changed": 39,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/46",
+        "milestone": "UI-F",
+        "closes_issues": [
+          43,
+          37
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 48,
+        "title": "UI-G - Colores personalizables",
+        "squash_sha": "c92edbd",
+        "merged_at": "2026-10-09T17:20:27+02:00",
+        "additions": 1415,
+        "deletions": 38,
+        "files_changed": 42,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/48",
+        "milestone": "UI-G - Colores personalizables",
+        "closes_issues": [
+          47
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 52,
+        "title": "AE-A - Archivar y restaurar (backend)",
+        "squash_sha": "52c1654",
+        "merged_at": "2026-10-09T18:51:47+02:00",
+        "additions": 1049,
+        "deletions": 47,
+        "files_changed": 32,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/52",
+        "milestone": "AE - Archivar y eliminar",
+        "closes_issues": [
+          49
+        ],
+        "phase": "AE"
+      },
+      {
+        "number": 53,
+        "title": "AE-B - Eliminar (backend)",
+        "squash_sha": "04c7ceb",
+        "merged_at": "2026-10-09T19:12:50+02:00",
+        "additions": 1199,
+        "deletions": 0,
+        "files_changed": 11,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/53",
+        "milestone": "AE - Archivar y eliminar",
+        "closes_issues": [
+          50
+        ],
+        "phase": "AE"
+      },
+      {
+        "number": 54,
+        "title": "AE-C - Archivar y eliminar en la web",
+        "squash_sha": "c301580",
+        "merged_at": "2026-10-09T19:47:40+02:00",
+        "additions": 1358,
+        "deletions": 129,
+        "files_changed": 23,
+        "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "url": "https://github.com/guilu/skynet/pull/54",
+        "milestone": "AE - Archivar y eliminar",
+        "closes_issues": [
+          51
+        ],
+        "phase": "AE"
+      },
+      {
+        "number": 56,
+        "title": "UI-H - Identidad visual",
+        "squash_sha": "ca694a9",
+        "merged_at": "2026-10-10T01:57:59+02:00",
+        "additions": 324,
+        "deletions": 23,
+        "files_changed": 34,
+        "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+        "url": "https://github.com/guilu/skynet/pull/56",
+        "milestone": "UI-H - Identidad visual",
+        "closes_issues": [
+          55
+        ],
+        "phase": "rediseño UI"
+      },
+      {
+        "number": 61,
+        "title": "W1-A - Definiciones (backend)",
+        "squash_sha": "d168c71",
+        "merged_at": "2026-10-10T09:37:02+02:00",
+        "additions": 3309,
+        "deletions": 4,
+        "files_changed": 31,
+        "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "url": "https://github.com/guilu/skynet/pull/61",
+        "milestone": "W1 - Definiciones",
+        "closes_issues": [
+          57
+        ],
+        "phase": "W1"
+      },
+      {
+        "number": 62,
+        "title": "W1-B - Definiciones (web)",
+        "squash_sha": "b24b729",
+        "merged_at": "2026-10-10T13:17:56+02:00",
+        "additions": 2443,
+        "deletions": 180,
+        "files_changed": 44,
+        "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "url": "https://github.com/guilu/skynet/pull/62",
+        "milestone": "W1 - Definiciones",
+        "closes_issues": [
+          58
+        ],
+        "phase": "W1"
+      },
+      {
+        "number": 63,
+        "title": "W2-A - Motor (backend y runner)",
+        "squash_sha": "c672e87",
+        "merged_at": "2026-10-10T14:49:18+02:00",
+        "additions": 2822,
+        "deletions": 190,
+        "files_changed": 50,
+        "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "url": "https://github.com/guilu/skynet/pull/63",
+        "milestone": "W2 - Motor",
+        "closes_issues": [
+          59
+        ],
+        "phase": "W2"
+      },
+      {
+        "number": 64,
+        "title": "W2-B - Motor (web y E2E)",
+        "squash_sha": "0343664",
+        "merged_at": "2026-10-10T19:51:30+02:00",
+        "additions": 1438,
+        "deletions": 237,
+        "files_changed": 31,
+        "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "url": "https://github.com/guilu/skynet/pull/64",
+        "milestone": "W2 - Motor",
+        "closes_issues": [
+          60
+        ],
+        "phase": "W2"
+      },
+      {
+        "number": 69,
+        "title": "W3-A - Comandos",
+        "squash_sha": "68282e0",
+        "merged_at": "2026-10-11T08:21:24+02:00",
+        "additions": 1368,
+        "deletions": 96,
+        "files_changed": 37,
+        "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+        "url": "https://github.com/guilu/skynet/pull/69",
+        "milestone": "W3 - Nodos",
+        "closes_issues": [
+          65
+        ],
+        "phase": "W3"
+      },
+      {
+        "number": 70,
+        "title": "W3-B - Fase paralela",
+        "squash_sha": "e8f5a9f",
+        "merged_at": "2026-10-11T08:56:47+02:00",
+        "additions": 1075,
+        "deletions": 155,
+        "files_changed": 37,
+        "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+        "url": "https://github.com/guilu/skynet/pull/70",
+        "milestone": "W3 - Nodos",
+        "closes_issues": [
+          66
+        ],
+        "phase": "W3"
+      }
+    ],
+    "open": [
+      {
+        "number": 71,
+        "title": "W3-C - Condiciones",
+        "url": "https://github.com/guilu/skynet/pull/71",
+        "created_at": "2026-10-11T07:17:00Z",
+        "milestone": "W3 - Nodos",
+        "state": "abierta, lista para revisión; CI en verde; espera la prueba de Diego",
+        "session_id": "session_01VrgQkS71qmwPeGrvYMog68"
+      }
+    ]
+  },
+  "issues_closed": [
+    {
+      "number": 5,
+      "title": "M2 — Runner y adaptador de Claude Code",
+      "closed_at": "2026-10-05T07:00:23Z"
+    },
+    {
+      "number": 7,
+      "title": "M4 — Interacción con sesiones (reanudar, cancelar, reintentar, fork)",
+      "closed_at": "2026-10-06T06:31:50Z"
+    },
+    {
+      "number": 8,
+      "title": "M5 — Git, tests y artefactos",
+      "closed_at": "2026-10-07T07:28:24Z"
+    },
+    {
+      "number": 9,
+      "title": "M6 — Endurecimiento y cierre del MVP",
+      "closed_at": "2026-10-08T05:24:32Z"
+    },
+    {
+      "number": 2,
+      "title": "Fase 1 — Observabilidad (MVP)",
+      "closed_at": "2026-10-08T06:10:59Z"
+    },
+    {
+      "number": 6,
+      "title": "M3 — Control plane visual de ejecuciones y agentes",
+      "closed_at": "2026-10-08T06:10:59Z"
+    },
+    {
+      "number": 38,
+      "title": "UI-A - Fundamentos",
+      "closed_at": "2026-10-08T22:58:02Z"
+    },
+    {
+      "number": 39,
+      "title": "UI-B - Shell y navegación",
+      "closed_at": "2026-10-08T22:58:04Z"
+    },
+    {
+      "number": 40,
+      "title": "UI-C - Listas y dashboard",
+      "closed_at": "2026-10-08T23:15:46Z"
+    },
+    {
+      "number": 41,
+      "title": "UI-D - Vista de ejecución",
+      "closed_at": "2026-10-09T01:27:52Z"
+    },
+    {
+      "number": 42,
+      "title": "UI-E - Proyecto, trabajo y formularios",
+      "closed_at": "2026-10-09T08:37:22Z"
+    },
+    {
+      "number": 43,
+      "title": "UI-F - Pulido y documentación",
+      "closed_at": "2026-10-09T11:45:31Z"
+    },
+    {
+      "number": 37,
+      "title": "Rediseño de la interfaz (UI-A a UI-F)",
+      "closed_at": "2026-10-09T11:45:32Z"
+    },
+    {
+      "number": 47,
+      "title": "UI-G - Colores personalizables",
+      "closed_at": "2026-10-09T15:20:29Z"
+    },
+    {
+      "number": 49,
+      "title": "AE-A - Archivar y restaurar (backend)",
+      "closed_at": "2026-10-09T16:51:49Z"
+    },
+    {
+      "number": 50,
+      "title": "AE-B - Eliminar (backend)",
+      "closed_at": "2026-10-09T17:12:52Z"
+    },
+    {
+      "number": 51,
+      "title": "AE-C - Archivar y eliminar en la web",
+      "closed_at": "2026-10-09T17:47:42Z"
+    },
+    {
+      "number": 55,
+      "title": "UI-H - Identidad visual",
+      "closed_at": "2026-10-09T23:58:01Z"
+    },
+    {
+      "number": 57,
+      "title": "W1-A - Definiciones (backend)",
+      "closed_at": "2026-10-10T07:37:03Z"
+    },
+    {
+      "number": 58,
+      "title": "W1-B - Definiciones (web)",
+      "closed_at": "2026-10-10T11:17:57Z"
+    },
+    {
+      "number": 59,
+      "title": "W2-A - Motor (backend y runner)",
+      "closed_at": "2026-10-10T12:49:20Z"
+    },
+    {
+      "number": 60,
+      "title": "W2-B - Motor (web y E2E)",
+      "closed_at": "2026-10-10T17:51:32Z"
+    },
+    {
+      "number": 65,
+      "title": "W3-A - Comandos",
+      "closed_at": "2026-10-11T06:21:25Z"
+    },
+    {
+      "number": 66,
+      "title": "W3-B - Fase paralela",
+      "closed_at": "2026-10-11T06:56:48Z"
+    }
+  ],
+  "milestones_closed": [
+    {
+      "title": "UI-A - Fundamentos",
+      "closed_at": "2026-10-09T09:08:21Z"
+    },
+    {
+      "title": "UI-B - Shell y navegación",
+      "closed_at": "2026-10-09T09:08:24Z"
+    },
+    {
+      "title": "UI-C - Listas y dashboard",
+      "closed_at": "2026-10-09T09:08:28Z"
+    },
+    {
+      "title": "UI-D - Vista de ejecución",
+      "closed_at": "2026-10-09T09:08:32Z"
+    },
+    {
+      "title": "UI-E - Proyecto, trabajo y formularios",
+      "closed_at": "2026-10-09T09:08:35Z"
+    },
+    {
+      "title": "UI-F - Pulido y documentación",
+      "closed_at": "2026-10-09T11:45:40Z"
+    },
+    {
+      "title": "UI-G - Colores personalizables",
+      "closed_at": "2026-10-09T15:20:41Z"
+    },
+    {
+      "title": "AE - Archivar y eliminar",
+      "closed_at": "2026-10-09T17:47:55Z"
+    },
+    {
+      "title": "UI-H - Identidad visual",
+      "closed_at": "2026-10-09T23:58:07Z"
+    },
+    {
+      "title": "W1 - Definiciones",
+      "closed_at": "2026-10-10T11:18:08Z"
+    },
+    {
+      "title": "W2 - Motor",
+      "closed_at": "2026-10-10T17:51:48Z"
+    }
+  ],
+  "dead_ends": [
+    {
+      "at": "2026-10-05T08:10:30Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 17,
+      "what": "SonarCloud inaccesible desde el entorno",
+      "detail": "La política de red bloqueaba sonarcloud.io (web y API). Claude no podía ver las issues del quality gate y pidió a Diego que las pegara. Se repitió en #25 (C Security Rating) y #26 (D Security Rating): Diego pasó capturas.",
+      "outcome": "Resuelto a mano con capturas. En #26 el problema de seguridad era un índice temporal de git creado en /tmp; pasó al directorio git del worktree."
+    },
+    {
+      "at": "2026-10-05T15:56:25Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 22,
+      "what": "E2E intermitente en main",
+      "detail": "Un test E2E hacía clic antes de que cargara la página del proyecto.",
+      "outcome": "Arreglado dentro de M4-A."
+    },
+    {
+      "at": "2026-10-05T20:00:22Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 23,
+      "what": "Tres fallos al bifurcar sesiones encontrados en autorrevisión",
+      "detail": "Ficheros no UTF-8 alterados al copiarse como texto; enlaces simbólicos seguidos fuera del repo; restos de worktree y rama tras un fork fallido. El CI estaba en verde y nadie había comentado.",
+      "outcome": "Corregidos con un test cada uno antes de fusionar."
+    },
+    {
+      "at": "2026-10-06T05:24:35Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 23,
+      "what": "Jobs Web y E2E colgados",
+      "detail": "Diego vio la CI de #23 parada y pidió relanzarla.",
+      "outcome": "Ya se habían relanzado la noche anterior y estaban en verde."
+    },
+    {
+      "at": "2026-10-06T06:00:54Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 24,
+      "what": "PR abierta en draft",
+      "detail": "M4-C se abrió como draft y Diego no podía probarla en local así.",
+      "outcome": "Pasada a lista para revisión; desde entonces todas las PRs se abren listas."
+    },
+    {
+      "at": "2026-10-06T06:11:10Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 24,
+      "what": "La reanudación se quedaba en «Arrancando» para siempre",
+      "detail": "En la prueba local de M4-C la respuesta nueva nunca llegaba. La causa la encontró Diego: el runner en marcha era el binario viejo, sin soporte para reanudar.",
+      "outcome": "Recompilar el runner lo resolvió. Dejó al descubierto que un runner que no entiende una orden la confirma y deja el agente colgado; se llevó a M6 (agentes perdidos pasan a Fallida tras 2 latidos)."
+    },
+    {
+      "at": "2026-10-06T09:18:49Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 25,
+      "what": "Quality gate de Sonar en rojo en M5-A",
+      "detail": "Límites de subida multipart de 64 MB, literal repetido y una resta de enteros (Integer.MAX_VALUE - 8) en ArtifactService.",
+      "outcome": "Subida reescrita como cuerpo crudo + metadatos en cabecera, constante long; Sonar en verde."
+    },
+    {
+      "at": "2026-10-07T15:45:18Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 28,
+      "what": "No había contraseña por defecto en el login",
+      "detail": "Diego preguntó cuál era al probar M6-A. Con bootRun y sin SKYNET_ADMIN_PASSWORD se genera una aleatoria en cada arranque (sale en el log); con Compose es obligatoria.",
+      "outcome": "Aclarado en el hilo; sin cambios de código."
+    },
+    {
+      "at": "2026-10-07T17:00:33Z",
+      "session_id": "session_01NQYQdW1Jerv9n8MDcVsAQv",
+      "pr": 30,
+      "what": "GitHub devolvía 500 al hacer push",
+      "detail": "El push de la rama de M6-C falló varias veces con error 500 de GitHub.",
+      "outcome": "Entró tras reintentar."
+    },
+    {
+      "at": "2026-10-08T05:34:55Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": null,
+      "what": "W1+W2 (Fase 2) aparcada",
+      "detail": "Con la Fase 1 cerrada, Diego decidió no empezar el workflow explícito y rediseñar antes toda la interfaz.",
+      "outcome": "Decisión de producto; W1+W2 queda en espera."
+    },
+    {
+      "at": "2026-10-08T06:23:16Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": null,
+      "what": "Webs de referencia bloqueadas",
+      "detail": "El estudio de 19 herramientas de flujos agénticos (Langfuse, Prefect, Trigger.dev, Airflow, Temporal, n8n, Dify, Langflow, Mastra, OpenHands...) no pudo usar capturas: sus webs estaban bloqueadas desde el entorno.",
+      "outcome": "Las conclusiones salieron de su código fuente."
+    },
+    {
+      "at": "2026-10-08T10:28:59Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": null,
+      "what": "shadcn/ui descartado",
+      "detail": "El estudio recomendaba shadcn/ui (lo usan casi todas). Diego lo rechazó por demasiado estándar y pidió un lenguaje visual propio inspirado en apps educativas gamificadas (claridad, tactilidad, expresividad tipo Duolingo, sin copiar su marca).",
+      "outcome": "Maqueta nueva aprobada a la primera: «es exactamente lo que tenía en mente»."
+    },
+    {
+      "at": "2026-10-08T11:27:51Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": 34,
+      "what": "Fallos en móvil vistos en las capturas",
+      "detail": "Revisando capturas de UI-A en móvil, la fila de navegación ocupaba media pantalla (y otro fallo más).",
+      "outcome": "Arreglados antes de pedir la prueba."
+    },
+    {
+      "at": "2026-10-08T22:57:18Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": null,
+      "what": "Faltaban las issues de los hitos UI",
+      "detail": "Diego echó en falta en GitHub los hitos UI-A..UI-F enlazados a cada PR.",
+      "outcome": "Creadas la issue #37 y las sub-issues #38-#43."
+    },
+    {
+      "at": "2026-10-09T09:07:37Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": 46,
+      "what": "Los milestones nunca se habían creado",
+      "detail": "Diego vio que la PR #46 no tenía milestone. Claude comprobó que no existía ningún milestone en GitHub: solo se enlazaban issues.",
+      "outcome": "Creados y asignados los milestones UI-A..UI-F (cerrados los ya fusionados); nueva convención issue + milestone por hito."
+    },
+    {
+      "at": "2026-10-09T12:06:55Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": 48,
+      "what": "E2E nueva de la paleta en rojo",
+      "detail": "8 de 9 E2E pasaban; fallaba la nueva de UI-G.",
+      "outcome": "Corregida antes de abrir la PR (4/4 en la E2E de revisión, axe incluido)."
+    },
+    {
+      "at": "2026-10-09T12:52:26Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": 48,
+      "what": "El ancho máximo no era el del plan",
+      "detail": "Diego vio un max-width de 1024 px en pantalla grande; en realidad era de 1240 px.",
+      "outcome": "Se quitó el ancho máximo: el contenido ocupa todo el navegador."
+    },
+    {
+      "at": "2026-10-09T12:54:02Z",
+      "session_id": "session_01A1DMbguxN7PtSmPQEEWaLd",
+      "pr": 48,
+      "what": "Aviso de Sonar que no se podía ver",
+      "detail": "Sonar marcaba un aviso menor en la PR #48. Claude supuso que era un parseInt y lo cambió por Number.parseInt; no era eso, y desde el entorno no se podía ver cuál era.",
+      "outcome": "Se dejó: el aviso no bloqueaba y el CI quedó en verde."
+    },
+    {
+      "at": "2026-10-09T20:21:01Z",
+      "session_id": "session_01XKpL5BR5CMDEpEctcbPXka",
+      "pr": 56,
+      "what": "CI de Docker Compose caído por una descarga externa",
+      "detail": "Una descarga externa de Gradle devolvió un 500 en el check de Docker Compose.",
+      "outcome": "Al relanzar el job pasó; CI en verde."
+    },
+    {
+      "at": "2026-10-10T00:34:55Z",
+      "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+      "pr": 61,
+      "what": "Cuatro fallos de fiabilidad de Sonar",
+      "detail": "En W1-A Sonar marcó cuatro fallos de fiabilidad, como un posible nulo o una expresión regular lenta.",
+      "outcome": "Corregidos antes de que Diego probara la PR."
+    },
+    {
+      "at": "2026-10-10T12:21:14Z",
+      "session_id": "session_01KVwbnnWbQggRyFGb3JUTFb",
+      "pr": 63,
+      "what": "Interbloqueo del motor y E2E del diff de Monaco",
+      "detail": "En W2-A falló la E2E que lee el diff en Monaco (en local y en el CI) y el log de Postgres del CI mostró interbloqueos entre el motor y la secuencia de eventos: la evaluación en la transacción del cambio esperaba a una ejecución que tenía bloqueada un worker.",
+      "outcome": "El motor deja esa evaluación al worker, la E2E lee las líneas que pinta Monaco y se ajustó RunnerEndToEndIT al cierre diferido. CI en verde."
+    },
+    {
+      "at": "2026-10-10T21:18:40Z",
+      "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+      "pr": 69,
+      "what": "Maven Central limitando descargas",
+      "detail": "Al compilar W3-A, Maven Central limitaba las descargas.",
+      "outcome": "Se reintentó y el build pasó."
+    },
+    {
+      "at": "2026-10-10T21:32:13Z",
+      "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+      "pr": 69,
+      "what": "Desvío del plan: sin tabla command_run",
+      "detail": "La decisión 2 del plan de W3 preveía una tabla command_run; Claude guardó cada comando como una invocación más de su fase, con proveedor command, para reutilizar worktree, cancelación, tiempo máximo y recuperación sin migración.",
+      "outcome": "Diego lo aceptó al aprobar la PR."
+    },
+    {
+      "at": "2026-10-11T06:06:42Z",
+      "session_id": "session_01VrgQkS71qmwPeGrvYMog68",
+      "pr": 69,
+      "what": "Editor YAML inutilizable en Safari de iPhone",
+      "detail": "Diego no podía seleccionar, copiar ni pegar en el editor de workflows desde el móvil: Monaco no admite pantallas táctiles e intercepta los toques.",
+      "outcome": "En dispositivos solo táctiles se usa un campo de texto nativo con la misma validación. Probado por Diego y fusionado."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-10-05T07:04:06Z",
+      "what": "Plan de M3 con 6 decisiones (contratos JSON compartidos, migración V4 para tokens de caché...)",
+      "by": "Diego aprobó"
+    },
+    {
+      "at": "2026-10-06T06:00:54Z",
+      "what": "Las PRs se abren listas para revisión, nunca en draft (Diego necesita probarlas en local)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-07T16:15:24Z",
+      "what": "Convención «M6-B - Nombre» en los títulos y guía de pruebas commiteada en docs/tests/probar-<hito>.md para que Hermes la ejecute al desplegar",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-08T05:54:40Z",
+      "what": "Cerrar la Fase 1 y rediseñar toda la interfaz antes de W1+W2",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-08T10:28:59Z",
+      "what": "Lenguaje visual propio inspirado en apps educativas gamificadas en lugar de shadcn/ui; Tailwind y lucide sí",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-08T22:57:18Z",
+      "what": "Cada hito tiene issue y milestone en GitHub y cada PR se enlaza a él",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-09T11:47:25Z",
+      "what": "UI-G: colores personalizables (acento + 5 estados) guardados en el servidor, con comprobación de contraste AA",
+      "by": "Diego aprobó"
+    },
+    {
+      "at": "2026-10-09T12:52:26Z",
+      "what": "Quitar el ancho máximo: la web ocupa todo el ancho del navegador",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-09T15:33:45Z",
+      "what": "Antes de la Fase 2, un hito para archivar y eliminar proyectos, ejecuciones, etc.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-09T15:44:18Z",
+      "what": "Plan AE con las 4 decisiones recomendadas: eliminar solo lo archivado; los eventos se borran y queda una lápida; no eliminar con worktrees vivos; runners y repos con historial solo se archivan",
+      "by": "Diego aprobó"
+    },
+    {
+      "at": "2026-10-09T20:13:35Z",
+      "what": "UI-H: aplicar la identidad visual de su estudio (logo SVG que toma el acento, favicon dinámico) con el lema en español «AGENTES · FLUJOS · EJECUCIONES»",
+      "by": "Diego aprobó"
+    },
+    {
+      "at": "2026-10-10T00:10:13Z",
+      "what": "Plan de W1+W2 con las 9 decisiones recomendadas (editor YAML en la web, una fase sigue en el worktree de la que depende, fail-fast)",
+      "by": "Diego aprobó"
+    },
+    {
+      "at": "2026-10-10T21:12:18Z",
+      "what": "W3 con las 8 decisiones recomendadas, más `model` por agente y `provider` reservado; hito de proveedores (Codex, Gemini) justo después de W3",
+      "by": "Diego aprobó"
+    }
+  ],
+  "summary": {
+    "prompts": 79,
+    "sessions": 10,
+    "sessions_note": "sesiones con prompts o turnos esta semana: hilos de trabajo + coordinadores del chat del proyecto",
+    "windows_5h": {
+      "total": 20,
+      "per_day": {
+        "lunes": 4,
+        "martes": 2,
+        "miércoles": 3,
+        "jueves": 3,
+        "viernes": 4,
+        "sábado": 3,
+        "domingo": 1
+      },
+      "sparkline": {
+        "es": [
+          {
+            "d": "L",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "M",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "X",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "J",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "V",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "D",
+            "v": 1,
+            "on": 1
+          }
+        ],
+        "en": [
+          {
+            "d": "M",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "W",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "F",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 1,
+            "on": 1
+          }
+        ],
+        "max": 4
+      },
+      "method": "una ventana por cada valor distinto de five_hour.resetsAt en los rate_limit_event; los prompts que no caen en ninguna se agrupan en ventanas inferidas desde su hora en punto"
+    },
+    "prompts_per_window": 4.0,
+    "first_timestamp": {
+      "utc": "2026-10-05T06:46:56Z",
+      "madrid": "2026-10-05T08:46:56+02:00"
+    },
+    "last_timestamp": {
+      "utc": "2026-10-11T06:56:42Z",
+      "madrid": "2026-10-11T08:56:42+02:00"
+    },
+    "days_without_activity": [],
+    "days_not_yet_elapsed": [],
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": true,
+      "seven_day_utilization_max": 0.98,
+      "statuses_seen": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "periods": [
+        {
+          "resets_at": {
+            "utc": "2026-10-10T20:00:00Z",
+            "madrid": "2026-10-10T22:00:00+02:00"
+          },
+          "seven_day_utilization_max": 0.98,
+          "statuses_seen": [
+            "allowed",
+            "allowed_warning"
+          ],
+          "warning": true,
+          "exhausted": false,
+          "events_from": "2026-10-04T22:00:31.746571Z",
+          "events_to": "2026-10-09T23:58:10.217363Z"
+        },
+        {
+          "resets_at": {
+            "utc": "2026-10-17T20:00:00Z",
+            "madrid": "2026-10-17T22:00:00+02:00"
+          },
+          "seven_day_utilization_max": 0.09,
+          "statuses_seen": [
+            "allowed"
+          ],
+          "warning": false,
+          "exhausted": false,
+          "events_from": "2026-10-10T21:03:42.197390Z",
+          "events_to": "2026-10-11T07:30:08.286343Z"
+        }
+      ],
+      "overage_used": false,
+      "note": "allowed_warning = aviso de uso alto, no agotada; exhausted solo si llegó al 100 % o hubo un estado de rechazo"
+    },
+    "prs_merged": 35,
+    "prs_merged_by_repo": {
+      "guilu/skynet": 35
+    },
+    "prs_open": 1,
+    "prs_cumulative_skynet": 42,
+    "lines": {
+      "added": 50844,
+      "removed": 4787,
+      "files_changed_net": {
+        "files": 429,
+        "added": 47429,
+        "removed": 1372,
+        "note": "git diff main del domingo 4 → main del domingo 11 07:57 UTC (cuenta los ficheros, no la suma por PR)"
+      }
+    },
+    "flyway_migrations": {
+      "range": "V4 → V14",
+      "added": [
+        "V4__read_projections.sql",
+        "V5__sessions.sql",
+        "V6__artifacts.sql",
+        "V7__agent_policy.sql",
+        "V8__reconciliation_and_cleanup.sql",
+        "V9__settings.sql",
+        "V10__archive.sql",
+        "V11__purge.sql",
+        "V12__workflow_definitions.sql",
+        "V13__workflow_engine.sql",
+        "V14__parallel_stages.sql"
+      ],
+      "engine": "Flyway / PostgreSQL"
+    },
+    "issues_closed": 24,
+    "milestones_closed": 11,
+    "deploys_to_production": null,
+    "cost_usd_week_estimate": 324.91
+  },
+  "windows_5h": [
+    {
+      "start": {
+        "utc": "2026-10-04T22:00:00Z",
+        "madrid": "2026-10-05T00:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-05T03:00:00Z",
+        "madrid": "2026-10-05T05:00:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 0,
+      "utilization_5h_max": 0,
+      "utilization_7d_max": 0.05,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_014EYgYyJi2T5AtWKfUqqWG3"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-05T06:40:00Z",
+        "madrid": "2026-10-05T08:40:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-05T11:40:00Z",
+        "madrid": "2026-10-05T13:40:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 12,
+      "utilization_5h_max": 0.57,
+      "utilization_7d_max": 0.12,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_014EYgYyJi2T5AtWKfUqqWG3",
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-05T13:50:00Z",
+        "madrid": "2026-10-05T15:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-05T18:50:00Z",
+        "madrid": "2026-10-05T20:50:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 3,
+      "utilization_5h_max": 0.44,
+      "utilization_7d_max": 0.18,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-05T19:50:00Z",
+        "madrid": "2026-10-05T21:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-06T00:50:00Z",
+        "madrid": "2026-10-06T02:50:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 2,
+      "utilization_5h_max": 0.14,
+      "utilization_7d_max": 0.2,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-06T05:20:00Z",
+        "madrid": "2026-10-06T07:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-06T10:20:00Z",
+        "madrid": "2026-10-06T12:20:00+02:00"
+      },
+      "weekday": "martes",
+      "prompts": 9,
+      "utilization_5h_max": 0.72,
+      "utilization_7d_max": 0.3,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-06T10:20:00Z",
+        "madrid": "2026-10-06T12:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-06T15:20:00Z",
+        "madrid": "2026-10-06T17:20:00+02:00"
+      },
+      "weekday": "martes",
+      "prompts": 0,
+      "utilization_5h_max": 0,
+      "utilization_7d_max": 0.3,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-07T05:20:00Z",
+        "madrid": "2026-10-07T07:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-07T10:20:00Z",
+        "madrid": "2026-10-07T12:20:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 2,
+      "utilization_5h_max": 0.31,
+      "utilization_7d_max": 0.34,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-07T13:10:00Z",
+        "madrid": "2026-10-07T15:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-07T18:10:00Z",
+        "madrid": "2026-10-07T20:10:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 7,
+      "utilization_5h_max": 0.74,
+      "utilization_7d_max": 0.44,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-07T19:50:00Z",
+        "madrid": "2026-10-07T21:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-08T00:50:00Z",
+        "madrid": "2026-10-08T02:50:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.22,
+      "utilization_7d_max": 0.47,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-08T04:40:00Z",
+        "madrid": "2026-10-08T06:40:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-08T09:40:00Z",
+        "madrid": "2026-10-08T11:40:00+02:00"
+      },
+      "weekday": "jueves",
+      "prompts": 6,
+      "utilization_5h_max": 0.26,
+      "utilization_7d_max": 0.5,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "session_01NQYQdW1Jerv9n8MDcVsAQv"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-08T10:20:00Z",
+        "madrid": "2026-10-08T12:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-08T15:20:00Z",
+        "madrid": "2026-10-08T17:20:00+02:00"
+      },
+      "weekday": "jueves",
+      "prompts": 2,
+      "utilization_5h_max": 0.29,
+      "utilization_7d_max": 0.54,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01A1DMbguxN7PtSmPQEEWaLd"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-08T20:10:00Z",
+        "madrid": "2026-10-08T22:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-09T01:10:00Z",
+        "madrid": "2026-10-09T03:10:00+02:00"
+      },
+      "weekday": "jueves",
+      "prompts": 4,
+      "utilization_5h_max": 0.65,
+      "utilization_7d_max": 0.62,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01A1DMbguxN7PtSmPQEEWaLd"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-09T01:20:00Z",
+        "madrid": "2026-10-09T03:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-09T06:20:00Z",
+        "madrid": "2026-10-09T08:20:00+02:00"
+      },
+      "weekday": "viernes",
+      "prompts": 1,
+      "utilization_5h_max": 0.16,
+      "utilization_7d_max": 0.65,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01A1DMbguxN7PtSmPQEEWaLd"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-09T08:30:00Z",
+        "madrid": "2026-10-09T10:30:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-09T13:30:00Z",
+        "madrid": "2026-10-09T15:30:00+02:00"
+      },
+      "weekday": "viernes",
+      "prompts": 7,
+      "utilization_5h_max": 0.58,
+      "utilization_7d_max": 0.72,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_016eeTfx3DWv3xXk9uUnk75A",
+        "session_01A1DMbguxN7PtSmPQEEWaLd"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-09T15:20:00Z",
+        "madrid": "2026-10-09T17:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-09T20:20:00Z",
+        "madrid": "2026-10-09T22:20:00+02:00"
+      },
+      "weekday": "viernes",
+      "prompts": 9,
+      "utilization_5h_max": 0.59,
+      "utilization_7d_max": 0.8,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01A1DMbguxN7PtSmPQEEWaLd",
+        "session_01XKpL5BR5CMDEpEctcbPXka"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-09T20:20:00Z",
+        "madrid": "2026-10-09T22:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-10T01:20:00Z",
+        "madrid": "2026-10-10T03:20:00+02:00"
+      },
+      "weekday": "viernes",
+      "prompts": 3,
+      "utilization_5h_max": 0.29,
+      "utilization_7d_max": 0.84,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "session_01XKpL5BR5CMDEpEctcbPXka"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-10T07:00:00Z",
+        "madrid": "2026-10-10T09:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-10T12:00:00Z",
+        "madrid": "2026-10-10T14:00:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 2,
+      "utilization_5h_max": 0.66,
+      "utilization_7d_max": 0.93,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01KVwbnnWbQggRyFGb3JUTFb"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-10T12:00:00Z",
+        "madrid": "2026-10-10T14:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-10T17:00:00Z",
+        "madrid": "2026-10-10T19:00:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 1,
+      "utilization_5h_max": 0.27,
+      "utilization_7d_max": 0.97,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01KVwbnnWbQggRyFGb3JUTFb"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-10T17:50:00Z",
+        "madrid": "2026-10-10T19:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-10T22:50:00Z",
+        "madrid": "2026-10-11T00:50:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 5,
+      "utilization_5h_max": 0.35,
+      "utilization_7d_max": 0.98,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01KVwbnnWbQggRyFGb3JUTFb",
+        "session_01VrgQkS71qmwPeGrvYMog68"
+      ],
+      "source": "rate_limit_event"
+    },
+    {
+      "start": {
+        "utc": "2026-10-11T06:00:00Z",
+        "madrid": "2026-10-11T08:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-11T11:00:00Z",
+        "madrid": "2026-10-11T13:00:00+02:00"
+      },
+      "weekday": "domingo",
+      "prompts": 3,
+      "utilization_5h_max": 0.47,
+      "utilization_7d_max": 0.09,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01VrgQkS71qmwPeGrvYMog68"
+      ],
+      "source": "rate_limit_event"
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "skills_used",
+      "why": "Los registros a los que llego no listan las herramientas ni las skills invocadas por turno; contarlas exigiría recorrer cada transcripción completa. Si te importa, lo saco en otra pasada."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay despliegues registrados en estas sesiones; Hermes despliega fuera de ellas."
+    },
+    {
+      "item": "engram",
+      "why": "Las sesiones en la nube no usan Engram; las decisiones y callejones están en dead_ends y decisions."
+    },
+    {
+      "item": "coordinador del 6 y 7 de octubre",
+      "why": "Los mensajes de Diego del 7 en el chat del proyecto (\"Vamos con M6\" y la convención de títulos) los atendió un coordinador que no he localizado; su uso (céntimos o pocos dólares, como los demás coordinadores) no está sumado."
+    },
+    {
+      "item": "eventos de los coordinadores",
+      "why": "De los coordinadores solo tengo los eventos de uso de uno (9 de octubre, 11:45-13:10 UTC); del resto se suma su uso total de get_session, sin desglosar por ventana."
+    },
+    {
+      "item": "uso de esta sesión",
+      "why": "La sesión que genera el fichero no se incluye en los totales."
+    },
+    {
+      "item": "hora de cierre de PR #71 y W3",
+      "why": "El informe se generó el domingo 11 a las 08:00 UTC; lo que pase después (PR #71 abierta, W3-C y W3-D) no está."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-10-05 (Europe/Madrid)\n\n## skynet\n\n- 2026-10-05 08:46 · Planificar el siguiente hito (M2) · Hago la prueba en local y el prompt queda en cola... es esto correcto?\n- 2026-10-05 08:59 · Planificar el siguiente hito (M2) · ya he probado en local, arrancando el runner. y los jobs finalizan correctamente.\n- 2026-10-05 09:00 · Planificar el siguiente hito (M2) · si\n- 2026-10-05 09:01 · Planificar e implementar M3→M6 (Principal) · Continua con siguiente hito M3\n- 2026-10-05 09:06 · Planificar e implementar M3→M6 (Principal) · ok\n- 2026-10-05 10:09 · Planificar e implementar M3→M6 (Principal) · cuales son las 4 issues de quality gate?\n- 2026-10-05 11:27 · Planificar e implementar M3→M6 (Principal) · No hace falta, vamos a mergear la PR, dime los pasos para probarla en local…\n- 2026-10-05 11:30 · Planificar e implementar M3→M6 (Principal) · Vale,todo ok Mergea y pasamos al siguiente\n- 2026-10-05 12:00 · Planificar e implementar M3→M6 (Principal) · La pr tiene revisión en local?\n- 2026-10-05 12:02 · Planificar e implementar M3→M6 (Principal) · Visto en local,todo ok, fusiona y sigue\n- 2026-10-05 12:27 · Planificar e implementar M3→M6 (Principal) · Todo ok, fusiona y sigue\n- 2026-10-05 13:25 · Planificar e implementar M3→M6 (Principal) · Todo ok, fusiona y sigue\n- 2026-10-05 15:52 · Planificar e implementar M3→M6 (Principal) · Todo ok, fusiona y sigue\n- 2026-10-05 17:25 · Planificar e implementar M3→M6 (Principal) · Aprobado sigue con las recomendaciones\n- 2026-10-05 18:09 · Planificar e implementar M3→M6 (Principal) · me vale, fusiona y vamos con la siguiente\n- 2026-10-05 21:53 · Planificar e implementar M3→M6 (Principal) · Revisa la PR\n- 2026-10-05 23:48 · Planificar e implementar M3→M6 (Principal) · Mergea la 23 y vamos con lo siguiente\n- 2026-10-06 07:24 · Planificar e implementar M3→M6 (Principal) · por lo visto se ha quedado colgado Web y E2E, relanzalos para fusionar y completar\n- 2026-10-06 08:00 · Planificar e implementar M3→M6 (Principal) · para poder hacer la prueba en local necesito que la PR no esté en draft, tienes que abrir la PR normal\n- 2026-10-06 08:11 · Planificar e implementar M3→M6 (Principal) · la reaunudación se está quedando colgada, y la nueva respuesta no llega nunca\n- 2026-10-06 08:21 · Planificar e implementar M3→M6 (Principal) · vale, he detecatado porque pasaba, no había recompilado el runner y el que se estaba ejecutando era el viejo sin soporte para reanudar, una vez recompilador y levantado , una vez hecho la reanudación ha completado:\n- 2026-10-06 08:29 · Planificar e implementar M3→M6 (Principal) · vale todo está probado y ok\n- 2026-10-06 08:31 · Planificar e implementar M3→M6 (Principal) · si cierrala que vamos a pasar al siguiente hito\n- 2026-10-06 08:59 · Planificar e implementar M3→M6 (Principal) · adelante con las recomendaciones\n- 2026-10-06 11:18 · Planificar e implementar M3→M6 (Principal) · Aquí tienes el sonarqube\n- 2026-10-06 12:14 · Planificar e implementar M3→M6 (Principal) · (solo adjunto)\n- 2026-10-07 09:00 · Planificar e implementar M3→M6 (Principal) · PR validada, fusiona y continua con siguiente\n- 2026-10-07 09:27 · Planificar e implementar M3→M6 (Principal) · todo probado, fusiona\n- 2026-10-07 15:10 · Chat del proyecto (coordinador) · Vamos con M6\n- 2026-10-07 16:27 · Planificar e implementar M3→M6 (Principal) · Adela te\n- 2026-10-07 16:27 · Planificar e implementar M3→M6 (Principal) · Adelante\n- 2026-10-07 17:45 · Planificar e implementar M3→M6 (Principal) · Cual es el password que hemos puesto por defecto\n- 2026-10-07 18:02 · Planificar e implementar M3→M6 (Principal) · todo verificado, M6-a funciona\n- 2026-10-07 18:15 · Chat del proyecto (coordinador) · de ahora en adelante la guia de pruebas además de escribirla aqui subela junto el codigo en ficheros docs/tests/probar-(milestone).md e indicamos en el nombre de la PR también el milestone para que Hermes ejecute la verificación automáticamente cuando despliegue. Por ejemplo si la siguiente PR es #29 es M6-B. En el nombre de la PR debe llevarlo (como lo hacemos hasta ahora) M6-B - Nombre de la PR y luego el documento de pruebas que generamos probar-m6b.md subirlo al repo en docs/tests/probar-m6b.md\n- 2026-10-07 18:35 · Planificar e implementar M3→M6 (Principal) · Todo ok, fusiona y sigue\n- 2026-10-07 21:52 · Planificar e implementar M3→M6 (Principal) · Todo probado, fusiona y sigue\n- 2026-10-08 06:48 · Planificar e implementar M3→M6 (Principal) · Todo ok fusiona y sigue\n- 2026-10-08 07:24 · Planificar e implementar M3→M6 (Principal) · todo probado, fusiona la PR\n- 2026-10-08 07:34 · Fase actual y próximos pasos / Interfaz gráfico · revisa el plan de implementación y tambien el [adr](https://github.com/guilu/skynet/tree/main/docs/adr)/0001-control-plane-user-interface.md y dime en que fase estamos y cual serían los proximos pasos\n- 2026-10-08 07:54 · Fase actual y próximos pasos / Interfaz gráfico · Prepara la PR de cierre.... pero antes de continuar con W1+W2, quiero cambiar todo el interfaz grafico, las vistas, paneles, etc.  Hare un estudio de las webs que implementan flujos agenticos para tomar inspiración de paneles, grafos, componentes css, etc. para replicar el estilo.\n- 2026-10-08 08:10 · Fase actual y próximos pasos / Interfaz gráfico · todo probado, puedes fusionar\n- 2026-10-08 08:18 · Chat del proyecto (coordinador) · Antes de continuar con más funcionalidades quiero hacer un rediseño del interfaz gráfico de akynet. Analiza las webs y aplicaciones  de flujos agenticos que sean como nuestro skynet, para tomar inspiración de los componentes de UI que utilizan, los estilos css, si usan tailwind, si usan graficos 2d o 3d, los componentes de frontend para los paneles, flujos, cajas, botones, acordeones, barras de navegación, etc.  Con este análisis vamos a crear un plan de rediseño para aplicarlo a skynet.\n- 2026-10-08 12:28 · Fase actual y próximos pasos / Interfaz gráfico · Me encaja el plan, apruebo las recomendaciones del 7 pero quiero hacer un apunte. Me gusta la idea de usar shadcn/ui pero es tan estandar que quería diferenciarme. Queremos diseñar los componentes de Skynet con un lenguaje visual inspirado en las aplicaciones educativas gamificadas modernas, especialmente en la claridad, tactilidad y expresividad asociadas a Duolingo, pero sin copiar su marca, mascota, ilustraciones, iconos propietarios ni composición exacta.  Skynet debe sentirse:  - moderno; - amable; - táctil; - dinámico; - accesible; - fácil de explorar; - profesional, pero no corporativo ni frío; - adecuado para una plataforma de agentes, workflows, ejecuciones y runners.  La interfaz debe convertir procesos técnicos complejos en estados visuales fáciles de comprender.  1. Lenguaje visual general  Usa una estética de formas redondeadas, superficies limpias y profundidad sutil.  Características principales:  - esquinas muy redondeadas; - tarjetas con bordes visibles; - botones con volumen y sensación física; - sombras cortas y firmes, no sombras difusas; - colores vivos utilizados con moderación; - jerarquía visual muy clara; - iconos grandes y simples; - textos breves y directos; - estados acompañados por color, icono y etiqueta; - animaciones cortas que comuniquen una acción o cambio de estado.\n- 2026-10-08 12:52 · Fase actual y próximos pasos / Interfaz gráfico · El estilo está pefecto!, es exactamente lo que tenía en mente. Quizás cambiaría un poco los colores, sobre todo el color verde, pero podemos hacerlos personalizables en un panel de control para el administrador más adelante. Por ahora, la maqueta está perfecta y podemos pasar a la siguiente tarea\n- 2026-10-08 22:17 · Fase actual y próximos pasos / Interfaz gráfico · Todo revisado puedes fusionar y pasamos a lo siguiente\n- 2026-10-09 00:24 · Fase actual y próximos pasos / Interfaz gráfico · Todo probado, fusiona y seguimos\n- 2026-10-09 00:57 · Fase actual y próximos pasos / Interfaz gráfico · Hecho en falta todas la milestones de UI (UI-A,UI-B, etc) creadas en github, y luego relacionar cada PR que abrimos con ella, para ir marcándola como completada\n- 2026-10-09 01:15 · Fase actual y próximos pasos / Interfaz gráfico · Ya la he probado, todo ok, seguimos\n- 2026-10-09 03:27 · Fase actual y próximos pasos / Interfaz gráfico · Todo revisado, continuamos\n- 2026-10-09 10:37 · Fase actual y próximos pasos / Interfaz gráfico · todo probado ok! seguimos\n- 2026-10-09 11:07 · Fase actual y próximos pasos / Interfaz gráfico · a PR 46 no tiene asignado el milestone UI-F\n- 2026-10-09 13:45 · Fase actual y próximos pasos / Interfaz gráfico · todo ok, fusiona y seguimos\n- 2026-10-09 13:47 · Fase actual y próximos pasos / Interfaz gráfico · adelante\n- 2026-10-09 14:08 · Chat del proyecto (coordinador) · En mi configuración de claude code local, tengo una skill que hace el recap de la semana de las sesiones en las que trabajo y hace un resumen, y pasa estadísticas y luego escribe un articulo, etc.   Esta semana solo he trabajado en claude desktop en este proyecto que se llama \"Skynet\" y quiero utilizar todas esas sesiones y la información relativa a las PRs, los callejones sin salida, las estadísticas de cada sesión, las ventanas de 5h, etc. para pasarselas a claude code y que pueda realizar el recap de la semana.  Antes de hacer nada, explicame como podemos hacerlo\n- 2026-10-09 14:49 · Informe semanal para el recap · esta es la skill del recap... gran parte de ella es sobre como escribir el articulo... básicamente necesitamos que el informe de las sesiones en lugar de hacerlo desde las de claude code las obtenga del informe este que dejemos recap/semana-YYYY-MM-DD.json\n- 2026-10-09 14:52 · Fase actual y próximos pasos / Interfaz gráfico · estoy viendo que en la web en formato grande el main tiene como un max-width de 1024px pero prefiero que se adapte al ancho del navegador para verlo ocupar todo el ancho disponible\n- 2026-10-09 17:20 · Fase actual y próximos pasos / Interfaz gráfico · Todo ok, puedes fusionar\n- 2026-10-09 17:33 · Fase actual y próximos pasos / Interfaz gráfico · Antes de seguir con la fase 2 hay algo que quiero atacar. No hay funcionalidad para eliminar o archivar proyectos,ejecuciones,etc. crea un plan para implementarlo en un milestone nuevo.\n- 2026-10-09 17:44 · Fase actual y próximos pasos / Interfaz gráfico · Adelante\n- 2026-10-09 18:51 · Fase actual y próximos pasos / Interfaz gráfico · todo probado en backend  fusiona y seguimos\n- 2026-10-09 19:12 · Fase actual y próximos pasos / Interfaz gráfico · todo ok, fusiona y seguimos\n- 2026-10-09 19:47 · Fase actual y próximos pasos / Interfaz gráfico · todo probado, fusiona\n- 2026-10-09 22:06 · Fase actual y próximos pasos / Interfaz gráfico · Lo abriré yo que antes quiero hacer unos retoques gráficos, este hilo lo podemos cerrar\n- 2026-10-09 22:08 · Logotipo e imagen corporativa (UI-H) · Este es el estudio que he hecho para el logotipo e imagen corporativa de skynet. Ayúdame a aplicarlo a nuestra app\n- 2026-10-09 22:13 · Logotipo e imagen corporativa (UI-H) · Adelante con todo\n- 2026-10-10 01:57 · Logotipo e imagen corporativa (UI-H) · Probado, todo ok, fusiona\n- 2026-10-10 02:03 · Planificar W1 y W2 · Planifica lo siguiente que creo que es W1 y W2\n- 2026-10-10 02:10 · Planificar W1 y W2 · Adelante\n- 2026-10-10 09:36 · Planificar W1 y W2 · todo revisado, fusiona y seguimos\n- 2026-10-10 13:17 · Planificar W1 y W2 · todo ok, fusiona que seguimos\n- 2026-10-10 14:48 · Planificar W1 y W2 · Si, fusiona y seguimos\n- 2026-10-10 19:51 · Planificar W1 y W2 · Todo ok fusiona\n- 2026-10-10 21:02 · Chat del proyecto (coordinador) · Ya hemos terminado W1 y W2, que es lo siguiente?\n- 2026-10-10 21:04 · Planificar W3 nodos · Si\n- 2026-10-10 23:03 · Planificar W3 nodos · Antes de empezar con W3, quiero saber si en el plan o en el ADR hay alguna previsión de añadir en el futuro agentes códex o gemini, que se puedan llamar con headless igual que Claude -p, de tal manera que podamos asignar a los workflows o a los pasos de los workflows agentes diferentes incluso modelos diferentes dentro de esos agentes\n- 2026-10-10 23:12 · Planificar W3 nodos · Adelante con recomendado\n- 2026-10-11 08:06 · Planificar W3 nodos · Antes de aprobar, algunos fixes…. En el editor de yaml de los workflows no se puede, seleccionar texto, copiar y pegar, por lo menos en el safari de móviles. Analiza y corrige\n- 2026-10-11 08:21 · Planificar W3 nodos · Ahora si está bien, fusiona que vamos a la siguiente\n- 2026-10-11 08:56 · Planificar W3 nodos · Todo ok, fusiona y vamos a lo siguiente\n\n## Summary\n\n- prompts: 79\n- sesiones: 10\n- ventanas de 5 h: 20 (lunes 4, martes 2, miércoles 3, jueves 3, viernes 4, sábado 3, domingo 1)\n- primera marca: 2026-10-05T08:46:56+02:00 · última: 2026-10-11T08:56:42+02:00\n- días sin actividad: ninguno\n- cuota semanal agotada: no (con aviso de uso alto); periodo hasta 2026-10-10T22:00:00+02:00: uso máx. 0.98; periodo hasta 2026-10-17T22:00:00+02:00: uso máx. 0.09\n- PRs fusionadas: 35 · +50844 / -4787 líneas"
+}
