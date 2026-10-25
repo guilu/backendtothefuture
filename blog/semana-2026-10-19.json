@@ -1,0 +1,3680 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-10-25T13:35:05Z",
+    "madrid": "2026-10-25T14:35:05+01:00"
+  },
+  "week": {
+    "monday": "2026-10-19",
+    "yyyymmdd": "20261019",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-10-18T22:00:00Z",
+      "madrid": "2026-10-19T00:00:00+02:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-10-25T13:35:05Z",
+      "madrid": "2026-10-25T14:35:05+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-10-18T15:15:16Z",
+      "madrid": "2026-10-18T17:15:16+02:00"
+    },
+    "start_note": "el periodo empieza antes del lunes para recoger lo que quedó fuera del informe anterior"
+  },
+  "sources": {
+    "threads": "hilos y chat del proyecto (mensajes de Diego con su hora)",
+    "session_events": "rate_limit_event y result de cada sesión (list_events)",
+    "session_meta": "get_session (uso acumulado, modelo, fechas)",
+    "github": "API de GitHub para PRs, issues y milestones; git log de main para líneas por PR (squash)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Claude (proyecto «Skynet», sesiones en la nube)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-10-18T16:14:27Z",
+            "madrid": "2026-10-18T18:14:27+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Qm1kSaSWqxaiPuM4izYd3D",
+          "text": "He encontrado un corportamiento raro...  Teniendo en cuenta que el workflow id:adhoc, es un workflow que tiene un agente simple que recibe un text y lanza solamente ese prompt (primera imagen).\nHe creado un proyecto nuevo Tokenmeter.\nHe creado un trabajo nuevo TKM-1 Simple prompt\nHe registrado un repositorio nuevo /home/diegobarrioh/code/tkm\nHe querido lanzar el workflow de agente prompt · v3 (que es el de id:adhoc un simple workflow con un agente que lanza un prompt) como ves en la imagen 2.\nPorque si es simplemente recibir el prompt el prompt es \"contesta con hola\" \nporque la ejecución es read calc.py luego edit calc.py y luego bash... \nes por el fake-claude que reciba lo que reciba da esa respuesta?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-18T16:17:26Z",
+            "madrid": "2026-10-18T18:17:26+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69rUDQeDv95ZG2zYkJijyFy",
+          "text": "si, quiero saber cuando los runners están usando un cli simulado o cuando están usando cli reales. Además ya podríamos conectar a claude y a codex pero creo que no podemos conectar todavía a antigravity cli (comando agy). Planifica que falta para usar los 3 agentes reales en akynet."
+        },
+        {
+          "at": {
+            "utc": "2026-10-18T17:55:12Z",
+            "madrid": "2026-10-18T19:55:12+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MYhtmh8ccSt1ybtccNMsCp",
+          "text": "Vamos a quitar Gemini-Cli y cambiarlo por  antigravity-cli,"
+        },
+        {
+          "at": {
+            "utc": "2026-10-18T17:59:12Z",
+            "madrid": "2026-10-18T19:59:12+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SbQVLSwnxkTGarnvQACq4W",
+          "text": "si, vamos con AR-A"
+        },
+        {
+          "at": {
+            "utc": "2026-10-18T19:28:56Z",
+            "madrid": "2026-10-18T21:28:56+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SbjCzF6cEiZanyNP2QPyJP",
+          "text": "probada ok, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-18T19:46:05Z",
+            "madrid": "2026-10-18T21:46:05+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6G3UdJ9JbEirq6onyxTzczG",
+          "text": "esta es la salida y subo los ficheros"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T06:00:00Z",
+            "madrid": "2026-10-19T08:00:00+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y631qr2hJXGen2NL1xJ3rCjU",
+          "text": "todo probado, fusiona que seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T09:45:58Z",
+            "madrid": "2026-10-19T11:45:58+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61b9maY7T6DGAmQSLimHQK1",
+          "text": "probado, fusiona y pasamos al siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T12:57:01Z",
+            "madrid": "2026-10-19T14:57:01+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68WB3wTX14M66zX3puq95XQ",
+          "text": "En la PR #127 W8-A: renombra docs/tests/probar-w8-a.md a docs/tests/probar-w8a.md; haz que review, además de build, muestre su insignia cuando ambas fases forman un ciclo y añade regresiones que lo comprueben; corrige el SQL de reprogramación de workflow_job.run_after, que mezcla timestamp with time zone e interval en un CASE y deja ejecuciones en RUNNING; ejecuta los E2E de workflows, spec y usage, y actualiza la misma PR hasta dejar toda la CI verde."
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T14:17:45Z",
+            "madrid": "2026-10-19T16:17:45+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LgRSpbiD7JSsjDNUF7gLsc",
+          "text": "Probado, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T14:58:14Z",
+            "madrid": "2026-10-19T16:58:14+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WYTFRhVBBzjfm6bhVb9zMn",
+          "text": "Todo ok, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T15:45:57Z",
+            "madrid": "2026-10-19T17:45:57+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MneNvkNNsz4kS8CsPCHPuS",
+          "text": "Probado, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T20:05:15Z",
+            "madrid": "2026-10-19T22:05:15+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UycBsm9E3puWLJ1ZnYHZgj",
+          "text": "Antes de la fase 3 y meter github etc quiero probar skynet en local con proyectos de software locales… quiero dejar la base de datos limpia y empezar con unos workflows iniciales"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T20:10:37Z",
+            "madrid": "2026-10-19T22:10:37+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6F6i66TmgFeD1r6YnakPtK4",
+          "text": "Adelante con esto pero quiero que los workflows utilicen Claude code y también codex y Gemini, quiero que investigues para que tareas es mejor uno que otro y que modelos además utilizar con cada proveedor"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T21:44:36Z",
+            "madrid": "2026-10-19T23:44:36+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6CQvBrLk3KKPMnzMp8TiEnn",
+          "text": "De nuevo has nombrado mal el runbook, debe ser docs/tests/probar-ala.md y no probar-al-a.md"
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T21:47:48Z",
+            "madrid": "2026-10-19T23:47:48+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6APz6w3YPWdbD5voWHSHeRk",
+          "text": "Me lo ha dicho Hermes, no, me he equivocado como tiene que ser es probar-al-a.md: Contrato de aceptación\n\n- Token canónico extraído: AL-A\n- Runbook obligatorio derivado: docs/tests/probar-al-a.md\n- Resultado: incumplido\n- El PR añadió docs/tests/probar-ala.md, sin el guion requerido.\n- docs/tests/probar-al-a.md no existe en el SHA del PR."
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T22:59:52Z",
+            "madrid": "2026-10-20T00:59:52+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GNfjojHn9TV86SPm15akrV",
+          "text": "En la PR #131, corrige scripts/reset-local.sh para que --dry-run --runner no aborte con código 128 cuando la base contiene una ruta histórica inexistente o que ya no es Git. Debe advertir, omitir solo esa ruta y seguir procesando las válidas. Añade pruebas para rutas inexistentes, no Git, válidas y mezcladas; garantiza que dry-run no modifica nada y termina con código 0 si solo hay rutas inválidas; conserva la confirmación exacta borrar y los límites de borrado; actualiza la documentación y el runbook. No ejecutes el reset real y actualiza la misma PR #131 hasta dejar la CI verde."
+        },
+        {
+          "at": {
+            "utc": "2026-10-19T23:10:17Z",
+            "madrid": "2026-10-20T01:10:17+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Sxo4feZCxBTgG7UZwCoaTf",
+          "text": "Todo ok. Fusiona y yo reseteo en la máquina local."
+        },
+        {
+          "at": {
+            "utc": "2026-10-20T10:30:08Z",
+            "madrid": "2026-10-20T12:30:08+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64ryrAaWieqrjCG9bVxHWNy",
+          "text": "Cierra la PR 132 y vamos a implementar la Issue que ha abierto Hermes"
+        },
+        {
+          "at": {
+            "utc": "2026-10-20T13:33:46Z",
+            "madrid": "2026-10-20T15:33:46+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69ysRPJcGqcjovHUEr3NyKd",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-20T16:37:48Z",
+            "madrid": "2026-10-20T18:37:48+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6EYAw89UtA3tBprGyXp2rvT",
+          "text": "Hermes ha encontrado alguna pega en la PR, indica: Actualiza la PR #138 (RV-A) sin ampliar el alcance a RV-B/C/D:\n\n1. Al publicar una definición nueva, rechaza cualquier type: array sin items, pero mantén la compatibilidad para leer y ejecutar versiones históricas ya publicadas. Añade tests RED/GREEN para ambos comportamientos.\n\n2. Corrige AntigravityEventParser para que pendingUsage nunca se pierda si llega una respuesta vacía o solo de razonamiento y el agente es cancelado antes del siguiente mensaje o herramienta. Añade una prueba específica de ese límite y verifica que una cancelación fail-fast conserva uso, modelo, coste y cuota ya producidos.\n\n3. Repite los tests web relacionados con App.test.tsx, Workflows.test.tsx y GraphEditor.test.tsx. Corrige cualquier regresión real y reduce los timeouts frágiles si el fallo depende de la carga.\n\nMantén toda la CI verde, actualiza las pruebas y documentación técnica afectada, y no ejecutes el runbook manual ni la prueba con proveedores reales: Hermes realizará la aceptación final."
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T10:26:19Z",
+            "madrid": "2026-10-21T12:26:19+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MNxRbZeV8yp5jN4MT26da2",
+          "text": "Todo ok, fusiona y adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T16:57:32Z",
+            "madrid": "2026-10-21T18:57:32+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6C8Lt5ad5iac1ngYgek4yeD",
+          "text": "Está todo probado. Fusiona y continuamos."
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T18:28:35Z",
+            "madrid": "2026-10-21T20:28:35+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65ZLpYRDegxD8n3UjkRThaZ",
+          "text": "Todo probado. Fusionar y continuamos."
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T19:27:36Z",
+            "madrid": "2026-10-21T21:27:36+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BaKWRtjN6tduotr8yqQk8G",
+          "text": "Todo aprobado. Fusiona y continuamos."
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T19:46:56Z",
+            "madrid": "2026-10-21T21:46:56+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69WYfYXQpgbCnvvRe6asqvF",
+          "text": "La issue 133 está completamente probada y se puede cerrar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T21:28:00Z",
+            "madrid": "2026-10-21T23:28:00+02:00"
+          },
+          "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+          "thread": "Issue 145 (AG)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MrbhbzGfyqmMVRZasUiSAK",
+          "text": "Vamos a implementar la issue 145"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T22:28:09Z",
+            "madrid": "2026-10-22T00:28:09+02:00"
+          },
+          "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+          "thread": "Issue 145 (AG)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PkjiBtFyoKH6aYwa9ccpGK",
+          "text": "Actualiza la PR #148 para corregir el bloqueo detectado en la aceptación AG-A:\n\nEl runner envía eventos con caracteres NUL (\\u0000) cuando un agente procesa salida binaria de ZIP/JAR. PostgreSQL rechaza el payload jsonb, el evento se reintenta indefinidamente y el agente queda UNRESPONSIVE.\n\nCorrígelo con tests RED/GREEN:\n\n- Sanea recursivamente los strings de NormalizedEvent antes de guardarlos o enviarlos, sustituyendo NUL y controles incompatibles por una representación visible.\n- Añade una defensa equivalente en el control plane antes de persistir el evento.\n- No interpretes contenido binario como texto ni alteres los bytes de artefactos binarios.\n- Evita que un evento inválido bloquee indefinidamente los eventos posteriores.\n- Cubre NUL en mapas/listas anidadas, salida binaria ZIP/JAR, persistencia PostgreSQL y continuidad de la cola.\n\nMantén el alcance de AG-A y toda la CI verde. Hermes repetirá el runbook y la ejecución real; no los ejecutes tú."
+        },
+        {
+          "at": {
+            "utc": "2026-10-22T06:31:49Z",
+            "madrid": "2026-10-22T08:31:49+02:00"
+          },
+          "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+          "thread": "Issue 145 (AG)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6J3g4gqGq3CTj2HmWZvZjDJ",
+          "text": "Actualiza docs/tests/probar-ag-a.md para que la aceptación real de AG-A no use el repositorio skynet. En la sección “2. Ejecución real”, indica explícitamente que se debe crear o reutilizar un trabajo en el proyecto DEMO y lanzar el workflow conocer-repositorio seleccionando exclusivamente el repositorio demo-repo, registrado en /home/diegobarrioh/code/demo-repo. Mantén el resto de comprobaciones sobre el artefacto declarado docs/skynet/mapa.md: tipo DECLARED_FILE, metadatos, contenido, descarga autenticada, cabeceras, persistencia tras limpiar el worktree y respuesta 401 sin credenciales. No cambies la implementación ni otros archivos."
+        },
+        {
+          "at": {
+            "utc": "2026-10-22T11:46:52Z",
+            "madrid": "2026-10-22T13:46:52+02:00"
+          },
+          "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+          "thread": "Issue 145 (AG)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y668UKDrPqQuZd7YGaz6UeVEX",
+          "text": "Todo probado y ok, fusiona y seguimos."
+        },
+        {
+          "at": {
+            "utc": "2026-10-22T14:22:58Z",
+            "madrid": "2026-10-22T16:22:58+02:00"
+          },
+          "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+          "thread": "Issue 145 (AG)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LsrFvPBjzspGJ4zcPpWAUd",
+          "text": "Todo ok,  fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-23T21:02:29Z",
+            "madrid": "2026-10-23T23:02:29+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Va4AKAhisBqttQ4BcSCERH",
+          "text": "Explícame el plan de memoria, porque la intención es que skynet tenga memoria de las cosas se hacen en los proyectos y repositorios, para poder evolucionarlos e incluso lanzar workflows de investigación y mejoras de lo que ya se ha hecho"
+        },
+        {
+          "at": {
+            "utc": "2026-10-23T21:06:30Z",
+            "madrid": "2026-10-23T23:06:30+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HP7cchvytndbSFH68GpmDp",
+          "text": "He estado viendo como lo hace gentle-ai y lo hace con engram, no podemos nosotros hacer algo así?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-23T22:08:55Z",
+            "madrid": "2026-10-24T00:08:55+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AmuNJiwiVGrwrqzCaaFN1j",
+          "text": "Rehaz el plan así"
+        },
+        {
+          "at": {
+            "utc": "2026-10-23T23:13:49Z",
+            "madrid": "2026-10-24T01:13:49+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VjqhXethjGxEvkm4aKMt5Q",
+          "text": "Has modificado la issue de GitHub del hito ME?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-23T23:15:26Z",
+            "madrid": "2026-10-24T01:15:26+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GwKdimmm7mg9FY7GLSgi7s",
+          "text": "Me parece bien así. Apruebo el hito, puedes continuar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T07:12:05Z",
+            "madrid": "2026-10-24T09:12:05+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TaMZ3i11yxVqNNJQSAJix5",
+          "text": "Todo ok, fusiona y pasamos al siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T07:14:16Z",
+            "madrid": "2026-10-24T09:14:16+02:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61NEjR8swjNFFr6xKaPs43d",
+          "text": "A qué hora ejecutas el recap?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T07:16:14Z",
+            "madrid": "2026-10-24T09:16:14+02:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67eLUbsgTLXxCVbQsdgCT9V",
+          "text": "Cambia el modo de ejecución del recap para que sea a petición, yo entraré en el proyecto y te pediré ejecutar el recap"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T10:41:00Z",
+            "madrid": "2026-10-24T12:41:00+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Vn4kKJtm9jKg6zmcZz8Huq",
+          "text": "al hacer las pruebas: - ⚠️ Codex terminó la ejecución correctamente, pero mem_context, mem_search y mem_session_summary fueron rechazadas por:\n  MCP tool call requires approval, but approval policy is never\n  - Este punto de aceptación no pasa completamente y requiere ajustar la política MCP de Codex."
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T11:21:53Z",
+            "madrid": "2026-10-24T13:21:53+02:00"
+          },
+          "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+          "thread": "Acelerar la CI de los E2E (CI-A)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UDaVe6VHVZFZX18RC127gg",
+          "text": "la ejecución de los E2E tarda mucho, sobre todo 1/3 que tarda 18 minutos aprox, supongo que por las pruebas con límites individuales de hasta 4–8 minutos.  Podemos hacer algo para no ejecutar cada vez eso? Si en la PR no se ha tocado nada de eso, no lanzar los E2E, dejarlos para lanzarlos on-demand"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T11:22:21Z",
+            "madrid": "2026-10-24T13:22:21+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67AVtDRLwjXy2XRDhHVdS2F",
+          "text": "todo ok, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T11:25:48Z",
+            "madrid": "2026-10-24T13:25:48+02:00"
+          },
+          "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+          "thread": "Acelerar la CI de los E2E (CI-A)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6YSvuSgRWJMp6Gj8jYEh59i",
+          "text": "si, sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T12:01:37Z",
+            "madrid": "2026-10-24T14:01:37+02:00"
+          },
+          "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+          "thread": "Acelerar la CI de los E2E (CI-A)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NBs7fA3MocMjwdGUWaTZyo",
+          "text": "E2E rápidas:\n  - 1/3: pass, 9m11s\n  - 2/3: pass, 8m52s\n  - 3/3: pass, 3m44s\n\n⚠️ Aunque están verdes, los shards 1/3 y 2/3 superaron el objetivo documentado de aproximadamente 7 minutos. Por ello, la condición de rendimiento del runbook no queda plenamente aceptada."
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T15:00:18Z",
+            "madrid": "2026-10-24T17:00:18+02:00"
+          },
+          "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+          "thread": "Acelerar la CI de los E2E (CI-A)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6ENyKLpuZXo4Jr6Sn3B5Qu5",
+          "text": "Todo ok puedes fusionar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T15:01:58Z",
+            "madrid": "2026-10-24T17:01:58+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QQBPcVR9Nj2gZwZ8V3Pcu6",
+          "text": "Todo esta ok, puedes fusionar, se ha fusionado la 157 antes, comprueba que no haya conflictos, y continua"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T16:56:23Z",
+            "madrid": "2026-10-24T18:56:23+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HDzfTttCovJrVn2Cz9jULr",
+          "text": "El agente recibió 5 entradas de memoria mediante PROMPT, pero no registró accesos SEARCH/GET; por tanto, no se cumple literalmente la expectativa de que busque o lea memoria mediante herramientas."
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T17:47:14Z",
+            "madrid": "2026-10-24T19:47:14+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LRUtZjXSF7wHae3CWVthDd",
+          "text": "está todo ok, fusiona y dime si queda algo"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T17:53:37Z",
+            "madrid": "2026-10-24T19:53:37+02:00"
+          },
+          "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+          "thread": "Principal (AR, W8, AL)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SStqCKw81xqTqW9bFgVv1r",
+          "text": "dejamos el hito S1 para más adelante, este hilo lo puedes completar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T17:53:54Z",
+            "madrid": "2026-10-24T19:53:54+02:00"
+          },
+          "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+          "thread": "Creando memoria (RV, ME)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NmFG4GjzDYEPmQ9Cw3RuGg",
+          "text": "dejamos el S1 para más adelante este hilo lo puedes completar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T17:54:21Z",
+            "madrid": "2026-10-24T19:54:21+02:00"
+          },
+          "session_id": "session_01CtuCzXwDuUGi3vc65Sda9y",
+          "thread": "Plan de cuotas y costes",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Sy5Hf43bqp8Sw2T5tBAHAd",
+          "text": "este hilo lo puedes completar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T17:54:36Z",
+            "madrid": "2026-10-24T19:54:36+02:00"
+          },
+          "session_id": "session_01ARfoyhxKU2EHprvUz1UuSA",
+          "thread": "Informe semanal para el recap",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6R2JZeNnBFFCMexdEXsQDgH",
+          "text": "este hilo lo puedes completar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T21:24:55Z",
+            "madrid": "2026-10-24T23:24:55+02:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6U866x55TGx5Ggar5PXZg7P",
+          "text": "Hay una issue abierta para agregar a skynet una mascota o compasión que muestre estados de los agentes, está inspirado en coucou y yo he hecho un boceto de una mascota para los agentes de skynet que es un nigiri mezclado con las letras de mi logo. Te copio los bocetos. Quiero que revises la issue y las funcionalidades, y luego hagamos un estudio de como podemos integrar este companion en la web de skynet, como hacer las animaciones, en que páginas mostrarlo, como hacerlo, podemos diseñar notificaciones, animaciones de transiciones de estado, etc"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T21:47:47Z",
+            "madrid": "2026-10-24T23:47:47+02:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61VijrKu3ftxW4AKHuDTdfL",
+          "text": "No me gusta la estética, el nigiri no pega con skynet ni la template que tenemos hecho, que es de estilo ilustración 2d y colores pastel,  toma como referencia esta imagen y el logo de skynet que muestra, aunque este estilo es más 3D podemos aplanarlo y adaptarlo al estilo visual actual de nuestra plantilla HTML"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T22:48:59Z",
+            "madrid": "2026-10-25T00:48:59+02:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68q1gXK73KSjfhnLZYctAez",
+          "text": "Me parece perfecto, vamos solamente con la web, no vamos a hacer la app de escritorio"
+        },
+        {
+          "at": {
+            "utc": "2026-10-24T23:20:17Z",
+            "madrid": "2026-10-25T01:20:17+02:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LQaDeRFFAHkS4WYLzA9WcW",
+          "text": "Probada, fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T00:04:58Z",
+            "madrid": "2026-10-25T02:04:58+02:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Sy3MzVExTNCnCW886LMiLp",
+          "text": "Todo ok, fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T08:24:08Z",
+            "madrid": "2026-10-25T09:24:08+01:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MnjG4VR8RKBr7rMXBYDkF8",
+          "text": "Ya que estamos diseñando interacciones me gustaría cambiar todos los iconos de la aplicación para que coincidan con la estética del logo y sean ilustraciones en 2d que tengan microanimaciones…"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T08:43:13Z",
+            "madrid": "2026-10-25T09:43:13+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DiLRkycLs2CNqq2TJGteJR",
+          "text": "Me gustan las formas pero no me gusta que tengan los bordes con líneas gruesas, prefiero que sean más lisos. Están bien desde el de “pendiente” en adelaante, pero los demás réhazlos. Que sean más estilo a las ilustraciones que hace Duolingo en su web"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T08:47:36Z",
+            "madrid": "2026-10-25T09:47:36+01:00"
+          },
+          "session_id": "session_01K9RupttNSnYj88shBepiEi",
+          "thread": "Diseñar el companion de Skynet (CO)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QrSqVtNdPRQrDBHkJfKq5Y",
+          "text": "Está todo ok puedes fusionar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T09:03:41Z",
+            "madrid": "2026-10-25T10:03:41+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62TiqoyjG37uLi3yQzn9MpK",
+          "text": "Está mejor, Vamos a hacer una cosa, vamos ha poner la\nConfiguración de los iconos dinámica, como los colores y añadir una página a los ajustes donde se puedan cambiar…  los iconos actuales en un paquete lucide y los del rediseño en un paquete llamado ilustrados. la página de configuración que tenga como este boceto  que muestras en este hilos y que puedan seleccionar los distintos paquetes"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T09:35:06Z",
+            "madrid": "2026-10-25T10:35:06+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63WFVXK5mPyz392BNxUraQw",
+          "text": "tengo el fichero de fuente .otf que quiero utilizar en la web skynet-duo-regular.otf y skynet-duo-cursive.otf, te los paso y los pones en la web?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T09:35:40Z",
+            "madrid": "2026-10-25T10:35:40+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6CujxkpfkZnAhQWWEXTA4M3",
+          "text": "estas son las fuentes"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T09:38:57Z",
+            "madrid": "2026-10-25T10:38:57+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Gs3wHXwZfW6jbsKsxfwWHH",
+          "text": "no estoy seguro de que usar la cursiva para titulos y marca quede bien... vamos primero todo con la regular y ya veremos en el futuro"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T09:42:53Z",
+            "madrid": "2026-10-25T10:42:53+01:00"
+          },
+          "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+          "thread": "Poner una fuente libre tipo Skynet Duo (TI)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6J8jQFWGuMvqHCzV27mJKuA",
+          "text": "vale, pues quiero la fuente más similar que sea open"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T10:05:28Z",
+            "madrid": "2026-10-25T11:05:28+01:00"
+          },
+          "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+          "thread": "Poner una fuente libre tipo Skynet Duo (TI)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Y6rZR7XaQxcF8dJ3DL1SNd",
+          "text": "la fuente me vale... recibo el aviso:  npm audit informa 4 vulnerabilidades de dependencias: 1 baja, 2 altas y 1 crítica; no impidieron build ni aceptación."
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T10:07:52Z",
+            "madrid": "2026-10-25T11:07:52+01:00"
+          },
+          "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+          "thread": "Poner una fuente libre tipo Skynet Duo (TI)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WdCqN3AyYAMZPCYhe8ugiw",
+          "text": "vale, fusiona esta PR y abre otra de security para arreglar las vulnerabilidades.."
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T10:35:01Z",
+            "madrid": "2026-10-25T11:35:01+01:00"
+          },
+          "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+          "thread": "Poner una fuente libre tipo Skynet Duo (TI)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NxyRacZXeFB17qCCo7uRRG",
+          "text": "sg-a está probada, puedes fusionarla"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T10:35:54Z",
+            "madrid": "2026-10-25T11:35:54+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61yAMj49qA8CeBfvMUBE9Mh",
+          "text": "mira estos iconos que ha diseñado chatgpt, genera un paquete nuevo llamado chatgpt con estas ilustraciones"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T11:13:20Z",
+            "madrid": "2026-10-25T12:13:20+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VWyhyQ6zcAH9f3eHmQYAMe",
+          "text": "en esta misma PR quiero rediseñar un poco el interfaz pues los textos son un poco grandes o en negrita y todos los paneles tienen box-shadow, vamos a reducir los tamaños y dar un poco más de aire, la primera imagen es el layout actual, la segunda es duolingo (quiero seguir usando un design system que se parezca, con ese estilo de ilustraciones, muy claro, los textos no llegan a ser nunca negros, más bien una escala de grises). La tercera imagen es el diseño que ha hecho chatgpt, intenta implementar los cambios para reproducir este ultimo diseño"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T11:54:44Z",
+            "madrid": "2026-10-25T12:54:44+01:00"
+          },
+          "session_id": "session_01DoKNhSeJJjRM23GZ31EECh",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68WZAo3eifc48jb31TAYsZp",
+          "text": "ejecuta el recap semanal"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "kind": "hilo",
+      "title": "Principal",
+      "thread": "Principal (AR, W8, AL)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-18T16:14:38Z",
+        "madrid": "2026-10-18T18:14:38+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-24T17:54:06Z",
+        "madrid": "2026-10-24T19:54:06+02:00"
+      },
+      "status": "completada",
+      "prompts": 19,
+      "first_prompt": {
+        "utc": "2026-10-18T16:14:27Z",
+        "madrid": "2026-10-18T18:14:27+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-24T17:53:37Z",
+        "madrid": "2026-10-24T19:53:37+02:00"
+      },
+      "prs": [
+        121,
+        122,
+        123,
+        127,
+        128,
+        129,
+        131
+      ],
+      "agent_replies": 43,
+      "usage_session_total": {
+        "cost_usd": 69.89,
+        "input_tokens": 202307,
+        "output_tokens": 509886,
+        "cache_read_tokens": 184768333,
+        "cache_write_tokens": 2820951,
+        "note": "acumulado; empezó el domingo 18"
+      },
+      "usage_this_week": {
+        "cost_usd": 69.89,
+        "input": 202307,
+        "output": 509886,
+        "cache_read": 184768333,
+        "cache_write": 2820951,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 59,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 22,
+          "task-notification": 36
+        },
+        "turns_with_error": [],
+        "active_time_ms": 11276475,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792341000,
+        1792359600,
+        1792407600,
+        1792426800,
+        1792458000,
+        1792879800
+      ],
+      "notes": [
+        "Fusionó la PR #131 (0487109) con CI en verde, cerró el hito 41 y la issue #130, y dejó S1 aplazado."
+      ]
+    },
+    {
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "kind": "hilo",
+      "title": "Creando memoria",
+      "thread": "Creando memoria (RV, ME)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-20T10:30:24Z",
+        "madrid": "2026-10-20T12:30:24+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-24T17:54:07Z",
+        "madrid": "2026-10-24T19:54:07+02:00"
+      },
+      "status": "completada",
+      "prompts": 20,
+      "first_prompt": {
+        "utc": "2026-10-20T10:30:08Z",
+        "madrid": "2026-10-20T12:30:08+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-24T17:53:54Z",
+        "madrid": "2026-10-24T19:53:54+02:00"
+      },
+      "prs": [
+        138,
+        139,
+        142,
+        143,
+        154,
+        155,
+        158,
+        159
+      ],
+      "agent_replies": 42,
+      "usage_session_total": {
+        "cost_usd": 93.41,
+        "input_tokens": 82239,
+        "output_tokens": 582809,
+        "cache_read_tokens": 220534114,
+        "cache_write_tokens": 3283731,
+        "note": "acumulado; empezó el martes 20"
+      },
+      "usage_this_week": {
+        "cost_usd": 93.41,
+        "input": 82239,
+        "output": 582809,
+        "cache_read": 220534114,
+        "cache_write": 3283731,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 72,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 20,
+          "task-notification": 51
+        },
+        "turns_with_error": [],
+        "active_time_ms": 13993723,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792494600,
+        1792521000,
+        1792596000,
+        1792619400,
+        1792807200,
+        1792843800,
+        1792861800,
+        1792879800
+      ],
+      "notes": [
+        "Terminó el hito ME fusionando la PR #159 y cerrando el milestone 51; S1 aplazado por Diego."
+      ]
+    },
+    {
+      "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+      "kind": "hilo",
+      "title": "Issue 145",
+      "thread": "Issue 145 (AG)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-21T21:28:10Z",
+        "madrid": "2026-10-21T23:28:10+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-22T14:24:02Z",
+        "madrid": "2026-10-22T16:24:02+02:00"
+      },
+      "status": "completada",
+      "prompts": 5,
+      "first_prompt": {
+        "utc": "2026-10-21T21:28:00Z",
+        "madrid": "2026-10-21T23:28:00+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-22T14:22:58Z",
+        "madrid": "2026-10-22T16:22:58+02:00"
+      },
+      "prs": [
+        148,
+        149
+      ],
+      "agent_replies": 13,
+      "usage_session_total": {
+        "cost_usd": 27.75,
+        "input_tokens": 4261,
+        "output_tokens": 149936,
+        "cache_read_tokens": 56824386,
+        "cache_write_tokens": 1159059,
+        "note": "acumulado; empezó el miércoles 21"
+      },
+      "usage_this_week": {
+        "cost_usd": 27.75,
+        "input": 4261,
+        "output": 149936,
+        "cache_read": 56824386,
+        "cache_write": 1159059,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 22,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 6,
+          "task-notification": 15
+        },
+        "turns_with_error": [],
+        "active_time_ms": 3310127,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792619400,
+        1792637400,
+        1792668600,
+        1792687200
+      ],
+      "notes": [
+        "Fusionó la PR #149 (9637796) con la sección de archivos generados y cerró el hito AG (issues #145-#147)."
+      ]
+    },
+    {
+      "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+      "kind": "hilo",
+      "title": "Acelerar la CI de los E2E",
+      "thread": "Acelerar la CI de los E2E (CI-A)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-24T11:22:01Z",
+        "madrid": "2026-10-24T13:22:01+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-24T15:01:33Z",
+        "madrid": "2026-10-24T17:01:33+02:00"
+      },
+      "status": "completada",
+      "prompts": 4,
+      "first_prompt": {
+        "utc": "2026-10-24T11:21:53Z",
+        "madrid": "2026-10-24T13:21:53+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-24T15:00:18Z",
+        "madrid": "2026-10-24T17:00:18+02:00"
+      },
+      "prs": [
+        157
+      ],
+      "agent_replies": 8,
+      "usage_session_total": {
+        "cost_usd": 7.56,
+        "input_tokens": 1944,
+        "output_tokens": 40006,
+        "cache_read_tokens": 13046939,
+        "cache_write_tokens": 371994,
+        "note": "acumulado; empezó el sábado 24"
+      },
+      "usage_this_week": {
+        "cost_usd": 7.56,
+        "input": 1944,
+        "output": 40006,
+        "cache_read": 13046939,
+        "cache_write": 371994,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 10,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 4,
+          "task-notification": 5
+        },
+        "turns_with_error": [],
+        "active_time_ms": 932221,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792843800,
+        1792861800
+      ],
+      "notes": [
+        "Aceleró la CI de E2E con shards y filtro de rutas; PR #157 fusionada (6acd3a5) y milestone 52 cerrado."
+      ]
+    },
+    {
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "kind": "hilo",
+      "title": "Diseñar el companion de Skynet",
+      "thread": "Diseñar el companion de Skynet (CO)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-24T21:25:11Z",
+        "madrid": "2026-10-24T23:25:11+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T08:48:22Z",
+        "madrid": "2026-10-25T09:48:22+01:00"
+      },
+      "status": "completada",
+      "prompts": 7,
+      "first_prompt": {
+        "utc": "2026-10-24T21:24:55Z",
+        "madrid": "2026-10-24T23:24:55+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-25T08:47:36Z",
+        "madrid": "2026-10-25T09:47:36+01:00"
+      },
+      "prs": [
+        163,
+        164,
+        165
+      ],
+      "agent_replies": 15,
+      "usage_session_total": {
+        "cost_usd": 36.21,
+        "input_tokens": 10093,
+        "output_tokens": 288973,
+        "cache_read_tokens": 84614140,
+        "cache_write_tokens": 1025570,
+        "note": "acumulado; empezó el sábado 24"
+      },
+      "usage_this_week": {
+        "cost_usd": 36.21,
+        "input": 10093,
+        "output": 288973,
+        "cache_read": 84614140,
+        "cache_write": 1025570,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 32,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 7,
+          "task-notification": 24
+        },
+        "turns_with_error": [],
+        "active_time_ms": 4035962,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792879800,
+        1792899600,
+        1792934400
+      ],
+      "notes": [
+        "Cerró el hito CO fusionando la PR #165 (e2e867d) con la mascota en las páginas y los avisos del navegador."
+      ]
+    },
+    {
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "kind": "hilo",
+      "title": "Rediseñar los iconos de la app",
+      "thread": "Rediseñar los iconos de la app",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-25T08:24:41Z",
+        "madrid": "2026-10-25T09:24:41+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T11:56:55Z",
+        "madrid": "2026-10-25T12:56:55+01:00"
+      },
+      "status": "bloqueada",
+      "prompts": 7,
+      "first_prompt": {
+        "utc": "2026-10-25T08:43:13Z",
+        "madrid": "2026-10-25T09:43:13+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-25T11:13:20Z",
+        "madrid": "2026-10-25T12:13:20+01:00"
+      },
+      "prs": [
+        169
+      ],
+      "agent_replies": 13,
+      "usage_session_total": {
+        "cost_usd": 31.39,
+        "input_tokens": 2806,
+        "output_tokens": 274084,
+        "cache_read_tokens": 77532502,
+        "cache_write_tokens": 644966,
+        "note": "acumulado; empezó el domingo 25"
+      },
+      "usage_this_week": {
+        "cost_usd": 31.39,
+        "input": 2806,
+        "output": 274084,
+        "cache_read": 77532502,
+        "cache_write": 644966,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 22,
+        "turns_by_origin": {
+          "task-notification": 16,
+          "human": 6
+        },
+        "turns_with_error": [
+          {
+            "at": "2026-10-25T13:16:17.559184Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your session limit · resets 1:20pm (UTC)"
+          }
+        ],
+        "active_time_ms": 4884291,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792934400,
+        1792952400
+      ],
+      "notes": [
+        "Rediseño ligero de la interfaz subido a la PR #169, en verde y a la espera del visto bueno de Diego para fusionar."
+      ]
+    },
+    {
+      "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+      "kind": "hilo",
+      "title": "Poner una fuente libre tipo Skynet Duo",
+      "thread": "Poner una fuente libre tipo Skynet Duo (TI)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-25T09:36:15Z",
+        "madrid": "2026-10-25T10:36:15+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T10:35:28Z",
+        "madrid": "2026-10-25T11:35:28+01:00"
+      },
+      "status": "completada",
+      "prompts": 4,
+      "first_prompt": {
+        "utc": "2026-10-25T09:42:53Z",
+        "madrid": "2026-10-25T10:42:53+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-25T10:35:01Z",
+        "madrid": "2026-10-25T11:35:01+01:00"
+      },
+      "prs": [
+        171,
+        173
+      ],
+      "agent_replies": 10,
+      "usage_session_total": {
+        "cost_usd": 6.44,
+        "input_tokens": 1810,
+        "output_tokens": 41555,
+        "cache_read_tokens": 15766625,
+        "cache_write_tokens": 202914,
+        "note": "acumulado; empezó el domingo 25"
+      },
+      "usage_this_week": {
+        "cost_usd": 6.44,
+        "input": 1810,
+        "output": 41555,
+        "cache_read": 15766625,
+        "cache_write": 202914,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 16,
+        "turns_by_origin": {
+          "task-notification": 10,
+          "desconocido": 2,
+          "human": 4
+        },
+        "turns_with_error": [],
+        "active_time_ms": 1106745,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792934400
+      ],
+      "notes": [
+        "Fusionó la PR #171 (TI-A, fuente) y la #173 (SG-A, npm audit a cero) y cerró sus issues y milestones."
+      ]
+    },
+    {
+      "session_id": "session_01CtuCzXwDuUGi3vc65Sda9y",
+      "kind": "hilo",
+      "title": "Plan de cuotas y costes",
+      "thread": "Plan de cuotas y costes",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-17T12:12:04Z",
+        "madrid": "2026-10-17T14:12:04+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-24T17:54:36Z",
+        "madrid": "2026-10-24T19:54:36+02:00"
+      },
+      "status": "completada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-24T17:54:21Z",
+        "madrid": "2026-10-24T19:54:21+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-24T17:54:21Z",
+        "madrid": "2026-10-24T19:54:21+02:00"
+      },
+      "prs": [],
+      "agent_replies": 7,
+      "usage_session_total": {
+        "cost_usd": 10.03,
+        "input_tokens": 171531,
+        "output_tokens": 77407,
+        "cache_read_tokens": 17039165,
+        "cache_write_tokens": 664144,
+        "note": "acumulado; empezó el sábado 17"
+      },
+      "usage_this_week": {
+        "cost_usd": 2.1688,
+        "input": 6,
+        "output": 309,
+        "cache_read": 639235,
+        "cache_write": 254345,
+        "thinking": 0,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 1,
+        "turns_by_origin": {
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 9579,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792879800
+      ],
+      "notes": [
+        "Diseñó y planificó las ventanas de uso por CLI y fusionó la PR #115, cerrando el hito CU."
+      ]
+    },
+    {
+      "session_id": "session_01ARfoyhxKU2EHprvUz1UuSA",
+      "kind": "hilo",
+      "title": "Informe semanal para el recap",
+      "thread": "Informe semanal para el recap",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-09T12:49:24Z",
+        "madrid": "2026-10-09T14:49:24+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T11:57:38Z",
+        "madrid": "2026-10-25T12:57:38+01:00"
+      },
+      "status": "en curso",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-24T17:54:36Z",
+        "madrid": "2026-10-24T19:54:36+02:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-24T17:54:36Z",
+        "madrid": "2026-10-24T19:54:36+02:00"
+      },
+      "prs": [],
+      "agent_replies": 8,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Prepara el recap de la semana del 19 de octubre localizando sesiones, coordinadores y PRs.",
+        "Esta misma sesión; su uso no está incluido."
+      ]
+    },
+    {
+      "session_id": "session_01DoKNhSeJJjRM23GZ31EECh",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-25T08:24:09Z",
+        "madrid": "2026-10-25T09:24:09+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T11:55:14Z",
+        "madrid": "2026-10-25T12:55:14+01:00"
+      },
+      "status": "completada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-25T11:54:44Z",
+        "madrid": "2026-10-25T12:54:44+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-25T11:54:44Z",
+        "madrid": "2026-10-25T12:54:44+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.66,
+        "input_tokens": 1813,
+        "output_tokens": 6166,
+        "cache_read_tokens": 4139332,
+        "cache_write_tokens": 74690,
+        "note": "acumulado; empezó el domingo 25"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.66,
+        "input": 1813,
+        "output": 6166,
+        "cache_read": 4139332,
+        "cache_write": 74690,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 43,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 14,
+          "desconocido": 28
+        },
+        "turns_with_error": [],
+        "active_time_ms": 213692,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792934400
+      ],
+      "notes": [
+        "Lanzó el recap semanal en el hilo Informe y coordina los hilos de iconos y fuente."
+      ]
+    },
+    {
+      "session_id": "session_01J3Jt58vFgmd99FbVsEH6r2",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-18T15:05:56Z",
+        "madrid": "2026-10-18T17:05:56+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-18T16:20:13Z",
+        "madrid": "2026-10-18T18:20:13+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.83,
+        "input_tokens": 1735,
+        "output_tokens": 1428,
+        "cache_read_tokens": 972481,
+        "cache_write_tokens": 75813,
+        "note": "acumulado; empezó el domingo 18"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.4389,
+        "input": 15,
+        "output": 1259,
+        "cache_read": 848641,
+        "cache_write": 30488,
+        "thinking": 86,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5[1m]"
+        ]
+      },
+      "turns": {
+        "turns_total": 6,
+        "turns_by_origin": {
+          "desconocido": 3,
+          "human": 3
+        },
+        "turns_with_error": [],
+        "active_time_ms": 28145,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792341000
+      ],
+      "notes": [
+        "Abrió el hilo Principal para comprobar si fake-claude provoca el fallo de prompt."
+      ]
+    },
+    {
+      "session_id": "session_01Jhpdwf3xzJUdM1xYGpUGSP",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-20T10:30:08Z",
+        "madrid": "2026-10-20T12:30:08+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-20T10:31:34Z",
+        "madrid": "2026-10-20T12:31:34+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.46,
+        "input_tokens": 1464,
+        "output_tokens": 962,
+        "cache_read_tokens": 216337,
+        "cache_write_tokens": 50694,
+        "note": "acumulado; empezó el martes 20"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.4631,
+        "input": 1464,
+        "output": 962,
+        "cache_read": 216337,
+        "cache_write": 50694,
+        "thinking": 279,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5[1m]"
+        ]
+      },
+      "turns": {
+        "turns_total": 3,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 2
+        },
+        "turns_with_error": [],
+        "active_time_ms": 16815,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792494600
+      ],
+      "notes": [
+        "Abrió el hilo Creando memoria y se archivó enseguida."
+      ]
+    },
+    {
+      "session_id": "session_01WokX9RTFJ2SmDkfbn2BegQ",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-21T21:28:00Z",
+        "madrid": "2026-10-21T23:28:00+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-21T23:01:21Z",
+        "madrid": "2026-10-22T01:01:21+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.49,
+        "input_tokens": 1458,
+        "output_tokens": 1279,
+        "cache_read_tokens": 548306,
+        "cache_write_tokens": 41626,
+        "note": "acumulado; empezó el miércoles 21"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.49,
+        "input": 1458,
+        "output": 1279,
+        "cache_read": 548306,
+        "cache_write": 41626,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 9,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 2,
+          "desconocido": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 18216,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792619400,
+        1792637400
+      ],
+      "notes": [
+        "Abrió el hilo Issue 145 (AG) y se archivó después."
+      ]
+    },
+    {
+      "session_id": "session_01DCQ9irYaQ37o2Y86aTbqn9",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-24T10:41:01Z",
+        "madrid": "2026-10-24T12:41:01+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-24T12:16:49Z",
+        "madrid": "2026-10-24T14:16:49+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.66,
+        "input_tokens": 1799,
+        "output_tokens": 2022,
+        "cache_read_tokens": 1105185,
+        "cache_write_tokens": 46362,
+        "note": "acumulado; empezó el sábado 24"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.66,
+        "input": 1799,
+        "output": 2022,
+        "cache_read": 1105185,
+        "cache_write": 46362,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 17,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 10
+        },
+        "turns_with_error": [],
+        "active_time_ms": 45544,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792843800,
+        1792861800
+      ],
+      "notes": [
+        "Abrió el hilo para revisar los workflows de E2E y acelerar la CI."
+      ]
+    },
+    {
+      "session_id": "session_012FPoobHuLEsUkPHgCdhCTb",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-24T21:24:54Z",
+        "madrid": "2026-10-24T23:24:54+02:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T00:36:59Z",
+        "madrid": "2026-10-25T02:36:59+02:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.77,
+        "input_tokens": 2013,
+        "output_tokens": 2129,
+        "cache_read_tokens": 1278439,
+        "cache_write_tokens": 53224,
+        "note": "acumulado; empezó el sábado 24"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.77,
+        "input": 2013,
+        "output": 2129,
+        "cache_read": 1278439,
+        "cache_write": 53224,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 18,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 5,
+          "desconocido": 12
+        },
+        "turns_with_error": [],
+        "active_time_ms": 72351,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792879800,
+        1792899600
+      ],
+      "notes": [
+        "Abrió el hilo del companion de Skynet (CO) y se archivó."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [
+      {
+        "number": 121,
+        "title": "AR-A - CLI simulado o real",
+        "squash_sha": "b7565ba",
+        "merged_at": "2026-10-18T19:29:16+00:00",
+        "files_changed": 30,
+        "additions": 311,
+        "deletions": 30,
+        "milestone": "AR-A - CLI simulado o real",
+        "closes_issues": [
+          118
+        ],
+        "phase": "AR-A",
+        "url": "https://github.com/guilu/skynet/pull/121",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 122,
+        "title": "AR-B - Antigravity sustituye a Gemini CLI",
+        "squash_sha": "fc53036",
+        "merged_at": "2026-10-19T06:00:26+00:00",
+        "files_changed": 82,
+        "additions": 1571,
+        "deletions": 1689,
+        "milestone": "AR-B - Antigravity sustituye a Gemini CLI",
+        "closes_issues": [
+          119
+        ],
+        "phase": "AR-B",
+        "url": "https://github.com/guilu/skynet/pull/122",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 123,
+        "title": "AR-C - Guía de CLIs reales",
+        "squash_sha": "3c3e005",
+        "merged_at": "2026-10-19T09:46:26+00:00",
+        "files_changed": 4,
+        "additions": 79,
+        "deletions": 4,
+        "milestone": "AR-C - Los tres agentes reales",
+        "closes_issues": [
+          120
+        ],
+        "phase": "AR-C",
+        "url": "https://github.com/guilu/skynet/pull/123",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 127,
+        "title": "W8-A - Motor de edición y problemas en el grafo",
+        "squash_sha": "1803fcf",
+        "merged_at": "2026-10-19T14:18:06+00:00",
+        "files_changed": 17,
+        "additions": 1604,
+        "deletions": 16,
+        "milestone": "W8-A - Motor de edición y problemas en el grafo",
+        "closes_issues": [
+          124
+        ],
+        "phase": "W8-A",
+        "url": "https://github.com/guilu/skynet/pull/127",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 128,
+        "title": "W8-B - Edición visual de fases",
+        "squash_sha": "1569a67",
+        "merged_at": "2026-10-19T15:08:43+00:00",
+        "files_changed": 14,
+        "additions": 1763,
+        "deletions": 34,
+        "milestone": "W8-B - Edición visual de fases",
+        "closes_issues": [
+          125
+        ],
+        "phase": "W8-B",
+        "url": "https://github.com/guilu/skynet/pull/128",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 129,
+        "title": "W8-C - Agentes, workflow nuevo y aceptación",
+        "squash_sha": "a778f1a",
+        "merged_at": "2026-10-19T15:46:11+00:00",
+        "files_changed": 15,
+        "additions": 1248,
+        "deletions": 11,
+        "milestone": "W8-C - Agentes, workflow nuevo y aceptación",
+        "closes_issues": [
+          126
+        ],
+        "phase": "W8-C",
+        "url": "https://github.com/guilu/skynet/pull/129",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 131,
+        "title": "AL-A - Arranque limpio y workflows iniciales",
+        "squash_sha": "0487109",
+        "merged_at": "2026-10-19T23:23:10+00:00",
+        "files_changed": 15,
+        "additions": 1244,
+        "deletions": 0,
+        "milestone": "AL-A - Arranque limpio y workflows iniciales",
+        "closes_issues": [
+          130
+        ],
+        "phase": "AL-A",
+        "url": "https://github.com/guilu/skynet/pull/131",
+        "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV"
+      },
+      {
+        "number": 138,
+        "title": "RV-A - Revisión real con Antigravity",
+        "squash_sha": "02d30c2",
+        "merged_at": "2026-10-21T10:26:43+00:00",
+        "files_changed": 26,
+        "additions": 583,
+        "deletions": 32,
+        "milestone": "RV-A - Revisión real con Antigravity",
+        "closes_issues": [
+          134
+        ],
+        "phase": "RV-A",
+        "url": "https://github.com/guilu/skynet/pull/138",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 139,
+        "title": "RV-B - Seguridad: rutas, Git y salida estructurada",
+        "squash_sha": "40c40ba",
+        "merged_at": "2026-10-21T16:59:11+00:00",
+        "files_changed": 23,
+        "additions": 477,
+        "deletions": 37,
+        "milestone": "RV-B - Seguridad: rutas, Git y salida estructurada",
+        "closes_issues": [
+          135
+        ],
+        "phase": "RV-B",
+        "url": "https://github.com/guilu/skynet/pull/139",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 142,
+        "title": "RV-C - Seguridad: runner, secretos y entradas",
+        "squash_sha": "bcd32d1",
+        "merged_at": "2026-10-21T18:29:04+00:00",
+        "files_changed": 27,
+        "additions": 1141,
+        "deletions": 19,
+        "milestone": "RV-C - Seguridad: runner, secretos y entradas",
+        "closes_issues": [
+          136
+        ],
+        "phase": "RV-C",
+        "url": "https://github.com/guilu/skynet/pull/142",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 143,
+        "title": "RV-D - Seguridad: despliegue",
+        "squash_sha": "ed62d1b",
+        "merged_at": "2026-10-21T19:28:04+00:00",
+        "files_changed": 9,
+        "additions": 147,
+        "deletions": 12,
+        "milestone": "RV-D - Seguridad: despliegue",
+        "closes_issues": [
+          137
+        ],
+        "phase": "RV-D",
+        "url": "https://github.com/guilu/skynet/pull/143",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 144,
+        "title": "fix(infra): preserve compose config during local reset",
+        "squash_sha": "0ec6dfc",
+        "merged_at": "2026-10-21T20:01:36+00:00",
+        "files_changed": 2,
+        "additions": 38,
+        "deletions": 4,
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "fix",
+        "url": "https://github.com/guilu/skynet/pull/144",
+        "session_id": null
+      },
+      {
+        "number": 148,
+        "title": "AG-A - Captura y descarga de archivos declarados",
+        "squash_sha": "33b9824",
+        "merged_at": "2026-10-22T11:47:17+00:00",
+        "files_changed": 30,
+        "additions": 1412,
+        "deletions": 47,
+        "milestone": "AG-A - Captura y descarga de archivos declarados",
+        "closes_issues": [
+          146
+        ],
+        "phase": "AG-A",
+        "url": "https://github.com/guilu/skynet/pull/148",
+        "session_id": "session_019wNygBeUXfTd7rMksq2fhD"
+      },
+      {
+        "number": 149,
+        "title": "AG-B - Archivos generados en la web",
+        "squash_sha": "9637796",
+        "merged_at": "2026-10-22T14:23:18+00:00",
+        "files_changed": 22,
+        "additions": 2335,
+        "deletions": 61,
+        "milestone": "AG-B - Archivos generados en la web",
+        "closes_issues": [
+          147,
+          145
+        ],
+        "phase": "AG-B",
+        "url": "https://github.com/guilu/skynet/pull/149",
+        "session_id": "session_019wNygBeUXfTd7rMksq2fhD"
+      },
+      {
+        "number": 154,
+        "title": "ME-A - Modelo, búsqueda y API de memoria",
+        "squash_sha": "5c73036",
+        "merged_at": "2026-10-24T07:12:37+00:00",
+        "files_changed": 17,
+        "additions": 1494,
+        "deletions": 1,
+        "milestone": "ME-A - Modelo, búsqueda y API de memoria",
+        "closes_issues": [
+          150
+        ],
+        "phase": "ME-A",
+        "url": "https://github.com/guilu/skynet/pull/154",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 155,
+        "title": "ME-B - Puente MCP de memoria para los agentes",
+        "squash_sha": "b3d5152",
+        "merged_at": "2026-10-24T11:22:33+00:00",
+        "files_changed": 33,
+        "additions": 2628,
+        "deletions": 10,
+        "milestone": "ME-B - Puente MCP de memoria para los agentes",
+        "closes_issues": [
+          151
+        ],
+        "phase": "ME-B",
+        "url": "https://github.com/guilu/skynet/pull/155",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 157,
+        "title": "CI-A - E2E más rápidas y bajo demanda",
+        "squash_sha": "6acd3a5",
+        "merged_at": "2026-10-24T15:00:49+00:00",
+        "files_changed": 10,
+        "additions": 702,
+        "deletions": 421,
+        "milestone": "CI-A - E2E más rápidas y bajo demanda",
+        "closes_issues": [
+          156
+        ],
+        "phase": "CI-A",
+        "url": "https://github.com/guilu/skynet/pull/157",
+        "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT"
+      },
+      {
+        "number": 158,
+        "title": "ME-C - Protocolo de memoria y bitácora",
+        "squash_sha": "9220d2e",
+        "merged_at": "2026-10-24T15:02:33+00:00",
+        "files_changed": 32,
+        "additions": 1197,
+        "deletions": 54,
+        "milestone": "ME-C - Protocolo de memoria y bitácora",
+        "closes_issues": [
+          152
+        ],
+        "phase": "ME-C",
+        "url": "https://github.com/guilu/skynet/pull/158",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 159,
+        "title": "ME-D - Memoria en la web, E2E y documentación",
+        "squash_sha": "9c64617",
+        "merged_at": "2026-10-24T17:47:31+00:00",
+        "files_changed": 26,
+        "additions": 1818,
+        "deletions": 28,
+        "milestone": "ME-D - Memoria en la web, E2E y documentación",
+        "closes_issues": [
+          153,
+          141
+        ],
+        "phase": "ME-D",
+        "url": "https://github.com/guilu/skynet/pull/159",
+        "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf"
+      },
+      {
+        "number": 163,
+        "title": "CO-A - Mascota y motor de estados",
+        "squash_sha": "fd26e73",
+        "merged_at": "2026-10-24T23:20:23+00:00",
+        "files_changed": 20,
+        "additions": 1422,
+        "deletions": 24,
+        "milestone": "CO-A - Mascota y motor de estados",
+        "closes_issues": [
+          160
+        ],
+        "phase": "CO-A",
+        "url": "https://github.com/guilu/skynet/pull/163",
+        "session_id": "session_01K9RupttNSnYj88shBepiEi"
+      },
+      {
+        "number": 164,
+        "title": "CO-B - Companion global y avisos",
+        "squash_sha": "ad90fae",
+        "merged_at": "2026-10-25T00:05:11+00:00",
+        "files_changed": 23,
+        "additions": 1800,
+        "deletions": 62,
+        "milestone": "CO-B - Companion global y avisos",
+        "closes_issues": [
+          161
+        ],
+        "phase": "CO-B",
+        "url": "https://github.com/guilu/skynet/pull/164",
+        "session_id": "session_01K9RupttNSnYj88shBepiEi"
+      },
+      {
+        "number": 165,
+        "title": "CO-C - Companion en las páginas y fuera de la pestaña",
+        "squash_sha": "e2e867d",
+        "merged_at": "2026-10-25T08:47:53+00:00",
+        "files_changed": 22,
+        "additions": 815,
+        "deletions": 24,
+        "milestone": "CO-C - Companion en las páginas y fuera de la pestaña",
+        "closes_issues": [
+          162,
+          140
+        ],
+        "phase": "CO-C",
+        "url": "https://github.com/guilu/skynet/pull/165",
+        "session_id": "session_01K9RupttNSnYj88shBepiEi"
+      },
+      {
+        "number": 171,
+        "title": "TI-A - Tipografía Barlow",
+        "squash_sha": "55474f5",
+        "merged_at": "2026-10-25T10:07:58+00:00",
+        "files_changed": 6,
+        "additions": 55,
+        "deletions": 28,
+        "milestone": "TI-A - Tipografía Barlow",
+        "closes_issues": [
+          170
+        ],
+        "phase": "TI-A",
+        "url": "https://github.com/guilu/skynet/pull/171",
+        "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh"
+      },
+      {
+        "number": 173,
+        "title": "SG-A - Vulnerabilidades de dependencias npm",
+        "squash_sha": "2abaf6e",
+        "merged_at": "2026-10-25T10:35:08+00:00",
+        "files_changed": 3,
+        "additions": 125,
+        "deletions": 87,
+        "milestone": "SG-A - Vulnerabilidades de dependencias npm",
+        "closes_issues": [
+          172
+        ],
+        "phase": "SG-A",
+        "url": "https://github.com/guilu/skynet/pull/173",
+        "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh"
+      }
+    ],
+    "open": [
+      {
+        "number": 169,
+        "title": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+        "url": "https://github.com/guilu/skynet/pull/169",
+        "created_at": "2026-10-25T09:39:44Z",
+        "milestone": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+        "state": "abierta",
+        "session_id": "session_01WdvCwqrrdnBTAy5VicARds"
+      }
+    ]
+  },
+  "issues_closed": [
+    {
+      "number": 118,
+      "title": "AR-A - CLI simulado o real",
+      "closed_at": "2026-10-18T19:29:17Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 119,
+      "title": "AR-B - Antigravity sustituye a Gemini CLI",
+      "closed_at": "2026-10-19T06:00:28Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 120,
+      "title": "AR-C - Los tres agentes reales",
+      "closed_at": "2026-10-19T09:46:28Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 124,
+      "title": "W8-A - Motor de edición y problemas en el grafo",
+      "closed_at": "2026-10-19T14:18:08Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 125,
+      "title": "W8-B - Edición visual de fases",
+      "closed_at": "2026-10-19T15:09:03Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 126,
+      "title": "W8-C - Agentes, workflow nuevo y aceptación",
+      "closed_at": "2026-10-19T15:46:13Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 130,
+      "title": "AL-A - Arranque limpio y workflows iniciales",
+      "closed_at": "2026-10-19T23:23:12Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 134,
+      "title": "RV-A - Revisión real con Antigravity",
+      "closed_at": "2026-10-21T10:26:45Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 135,
+      "title": "RV-B - Seguridad: rutas, Git y salida estructurada",
+      "closed_at": "2026-10-21T16:59:13Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 136,
+      "title": "RV-C - Seguridad: runner, secretos y entradas",
+      "closed_at": "2026-10-21T18:29:06Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 137,
+      "title": "RV-D - Seguridad: despliegue",
+      "closed_at": "2026-10-21T19:28:06Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 133,
+      "title": "Corregir ejecución real de revisar-codigo y validar hallazgos de seguridad",
+      "closed_at": "2026-10-21T19:47:19Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 146,
+      "title": "AG-A - Captura y descarga de archivos declarados",
+      "closed_at": "2026-10-22T11:47:19Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 147,
+      "title": "AG-B - Archivos generados en la web",
+      "closed_at": "2026-10-22T14:23:21Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 145,
+      "title": "Permitir abrir y descargar los artefactos declarados por las fases",
+      "closed_at": "2026-10-22T14:23:23Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 150,
+      "title": "ME-A - Modelo, búsqueda y API de memoria",
+      "closed_at": "2026-10-24T07:12:39Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 151,
+      "title": "ME-B - Puente MCP de memoria para los agentes",
+      "closed_at": "2026-10-24T11:22:35Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 156,
+      "title": "CI-A - E2E más rápidas y bajo demanda",
+      "closed_at": "2026-10-24T15:00:51Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 152,
+      "title": "ME-C - Protocolo de memoria y bitácora",
+      "closed_at": "2026-10-24T15:02:35Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 153,
+      "title": "ME-D - Memoria en la web, E2E y documentación",
+      "closed_at": "2026-10-24T17:47:33Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 141,
+      "title": "feat: Memoria persistente de proyecto entre ejecuciones de agentes",
+      "closed_at": "2026-10-24T17:47:57Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 160,
+      "title": "CO-A - Mascota y motor de estados",
+      "closed_at": "2026-10-24T23:20:25Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 161,
+      "title": "CO-B - Companion global y avisos",
+      "closed_at": "2026-10-25T00:05:13Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 162,
+      "title": "CO-C - Companion en las páginas y fuera de la pestaña",
+      "closed_at": "2026-10-25T08:47:54Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 140,
+      "title": "feat: Skynet Companion — PoC con Coucou y mascota de escritorio multiplataforma",
+      "closed_at": "2026-10-25T08:47:55Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 170,
+      "title": "TI-A - Tipografía Barlow",
+      "closed_at": "2026-10-25T10:08:00Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 172,
+      "title": "SG-A - Vulnerabilidades de dependencias npm",
+      "closed_at": "2026-10-25T10:35:10Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    }
+  ],
+  "milestones_closed": [
+    {
+      "title": "AR-A - CLI simulado o real",
+      "closed_at": "2026-10-18T19:29:16+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "AR-B - Antigravity sustituye a Gemini CLI",
+      "closed_at": "2026-10-19T06:00:26+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "AR-C - Los tres agentes reales",
+      "closed_at": "2026-10-19T09:46:26+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "W8-A - Motor de edición y problemas en el grafo",
+      "closed_at": "2026-10-19T14:18:06+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "W8-B - Edición visual de fases",
+      "closed_at": "2026-10-19T15:08:43+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "W8-C - Agentes, workflow nuevo y aceptación",
+      "closed_at": "2026-10-19T15:46:11+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "AL-A - Arranque limpio y workflows iniciales",
+      "closed_at": "2026-10-19T23:23:10+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "RV-A - Revisión real con Antigravity",
+      "closed_at": "2026-10-21T10:26:43+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "RV-B - Seguridad: rutas, Git y salida estructurada",
+      "closed_at": "2026-10-21T16:59:11+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "RV-C - Seguridad: runner, secretos y entradas",
+      "closed_at": "2026-10-21T18:29:04+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "RV-D - Seguridad: despliegue",
+      "closed_at": "2026-10-21T19:28:04+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "AG-A - Captura y descarga de archivos declarados",
+      "closed_at": "2026-10-22T11:47:17+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "AG-B - Archivos generados en la web",
+      "closed_at": "2026-10-22T14:23:18+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "ME-A - Modelo, búsqueda y API de memoria",
+      "closed_at": "2026-10-24T07:12:37+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "ME-B - Puente MCP de memoria para los agentes",
+      "closed_at": "2026-10-24T11:22:33+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CI-A - E2E más rápidas y bajo demanda",
+      "closed_at": "2026-10-24T15:00:49+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "ME-C - Protocolo de memoria y bitácora",
+      "closed_at": "2026-10-24T15:02:33+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "ME-D - Memoria en la web, E2E y documentación",
+      "closed_at": "2026-10-24T17:47:31+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CO-A - Mascota y motor de estados",
+      "closed_at": "2026-10-24T23:20:23+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CO-B - Companion global y avisos",
+      "closed_at": "2026-10-25T00:05:11+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CO-C - Companion en las páginas y fuera de la pestaña",
+      "closed_at": "2026-10-25T08:47:53+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "TI-A - Tipografía Barlow",
+      "closed_at": "2026-10-25T10:07:58+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "SG-A - Vulnerabilidades de dependencias npm",
+      "closed_at": "2026-10-25T10:35:08+00:00",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    }
+  ],
+  "dead_ends": [
+    {
+      "at": "2026-10-18T16:14:27Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": null,
+      "what": "Respuesta rara en TKM-1: era fake-claude",
+      "detail": "La ejecución de «contesta con hola» devolvía Read, Edit y Bash sobre calc.py porque el runner omarchy arrancaba el simulador fake-claude (fixture 02-tools), que ignora el prompt. El coste de 0,0574 US$ venía del fixture.",
+      "outcome": "No era un bug: se propuso arrancar el runner sin las variables SKYNET_CLAUDE_BIN y FAKE_CLAUDE_*, y de ahí nació el hito AR con el chip «Simulado»."
+    },
+    {
+      "at": "2026-10-18T17:53:31Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": null,
+      "what": "Plan AR descartado en parte: mantener Gemini CLI",
+      "detail": "El plan inicial mantenía el proveedor gemini para clave de API y añadía antigravity. Diego eligió «Cambiar algo» y pidió retirar Gemini CLI.",
+      "outcome": "Se rehízo AR-B: el proveedor gemini se convierte en antigravity y publicar con provider: gemini da error."
+    },
+    {
+      "at": "2026-10-19T06:14:48Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 123,
+      "what": "E2E 2/3 agotó el tiempo en la PR #123",
+      "detail": "La PR solo cambiaba documentación, así que el fallo de la E2E 2/3 por tiempo no venía de ella.",
+      "outcome": "Se comentó en la PR y se repitió el job; la CI pasó entera en verde."
+    },
+    {
+      "at": "2026-10-19T10:19:22Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 127,
+      "what": "E2E 3/3 de W8-A falló por un fallo del motor en main",
+      "detail": "Cuando una evaluación tenía que esperar, el UPDATE de JobQueue.retryLater daba error en PostgreSQL por falta de un cast a timestamptz y la ejecución quedaba parada unos 2 minutos.",
+      "outcome": "Se repitió el job y pasó; Diego eligió arreglarlo en la misma PR con un commit aparte y un test de integración."
+    },
+    {
+      "at": "2026-10-19T12:57:17Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 127,
+      "what": "Ciclo sin insignia en review y SQL de run_after",
+      "detail": "El control plane apuntaba el ciclo solo en build, y Diego pidió además renombrar la guía a probar-w8a.md y revisar el SQL de run_after. El SQL ya estaba arreglado en 2af4fad; se comprobó y se añadió el CAST en retryLater con test.",
+      "outcome": "El grafo pone la insignia en todas las fases del ciclo, con regresiones. Queda frágil: depende del texto del error. La CI quedó en verde."
+    },
+    {
+      "at": "2026-10-19T20:10:41Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 131,
+      "what": "«Gemini» pedido por Diego chocaba con la retirada en AR",
+      "detail": "El coordinador recordó que Gemini CLI se había retirado en AR-B. El agente asumió Antigravity con modelos Gemini y lo avisó en la PR.",
+      "outcome": "Diego no lo desmintió en el hilo."
+    },
+    {
+      "at": "2026-10-19T20:23:54Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 131,
+      "what": "Ids de modelos de Codex y Antigravity sin rellenar",
+      "detail": "Las fuentes consultadas no coincidían en los nombres exactos de los modelos, así que workflows/modelos.env quedó con los ids vacíos (se usa el modelo por defecto del CLI). Además, Antigravity con permisos de edición no puede ejecutar comandos.",
+      "outcome": "Se pidió a Diego rellenarlos con /model en codex y agy models antes de sembrar."
+    },
+    {
+      "at": "2026-10-19T21:44:36Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 131,
+      "what": "Nombre del runbook de AL-A: ida y vuelta",
+      "detail": "Diego pidió probar-ala.md; el agente dijo que ya era así. Diego aclaró que Hermes le había dado la ruta y que se había equivocado: el contrato de aceptación exige docs/tests/probar-al-a.md (token canónico AL-A). Esto contradice lo pedido en W8 (probar-w8a.md).",
+      "outcome": "Se renombró la guía a probar-al-a.md, también la copia de plans, y se anotó la regla de Hermes para los próximos hitos."
+    },
+    {
+      "at": "2026-10-19T22:59:52Z",
+      "session_id": "session_012pYiDWj5hNNqFWNdKRKjQV",
+      "pr": 131,
+      "what": "reset-local.sh abortaba con código 128",
+      "detail": "Con --dry-run --runner el script fallaba si la base contenía una ruta histórica inexistente o que ya no era Git (reproducido con un .git roto).",
+      "outcome": "Se omiten con aviso esas rutas y se añadieron 85 comprobaciones en scripts/tests; la confirmación «borrar » con espacio ya no vale. CI en verde y fusionada."
+    },
+    {
+      "at": "2026-10-20T13:45:49Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 138,
+      "what": "Maven Central limita las descargas",
+      "detail": "Al ejecutar los tests Java de RV-A, Maven Central limitó las descargas y hubo que reintentar.",
+      "outcome": "Se reintentó y los tests unitarios pasaron en local."
+    },
+    {
+      "at": "2026-10-20T16:37:48Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 138,
+      "what": "Pegas de Hermes en la PR de RV-A",
+      "detail": "Hermes pidió rechazar arrays sin items al publicar, conservar el uso pendiente al cancelar y estabilizar tests web. El aviso inicial en lugar de error era una decisión de Claude para no romper versiones históricas.",
+      "outcome": "Se rechazó al publicar, se siguen leyendo las versiones históricas y se corrigieron los tres puntos en la misma PR."
+    },
+    {
+      "at": "2026-10-20T16:48:06Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 138,
+      "what": "Tests web frágiles bajo carga",
+      "detail": "Los fallos de App, Workflows y GraphEditor (y otros dos) no eran regresiones: se reproducían con la máquina cargada por esperas de 1 s y 5 s.",
+      "outcome": "Se subió la espera de Testing Library a 5 s y la de cada test a 20 s; 240/240 en tres pasadas en paralelo."
+    },
+    {
+      "at": "2026-10-20T17:20:21Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 138,
+      "what": "CI fallida por un IT de versión histórica",
+      "detail": "El test intentaba editar una versión ya publicada, cosa que el trigger de la base de datos impide.",
+      "outcome": "Se corrigió para dejar la versión publicada sin items desde el principio y la CI quedó en verde."
+    },
+    {
+      "at": "2026-10-21T10:56:17Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 139,
+      "what": "Cuatro ITs del motor con hashes falsos",
+      "detail": "Tras validar hashes en RV-B, cuatro ITs del motor que usaban hashes falsos dejaron de pasar.",
+      "outcome": "Se corrigieron los ITs y se siguió esperando la CI."
+    },
+    {
+      "at": "2026-10-21T17:34:08Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 142,
+      "what": "Deadlock en los ITs nuevos de RV-C",
+      "detail": "Los ITs nuevos provocaron un deadlock en la CI.",
+      "outcome": "Se corrigió y se siguió con la PR."
+    },
+    {
+      "at": "2026-10-21T21:29:59Z",
+      "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+      "pr": null,
+      "what": "El check de artefactos seguía los symlinks",
+      "detail": "Al revisar el código, el agente vio que el check `artifacts` seguía los symlinks, así que un enlace a un fichero fuera del worktree contaba como «existe».",
+      "outcome": "La captura nueva no reutiliza ese check tal cual: los symlinks que salen del worktree se rechazan y esto cambia el comportamiento del check."
+    },
+    {
+      "at": "2026-10-21T21:47:22Z",
+      "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+      "pr": 148,
+      "what": "Maven Central devolvió 429 al compilar",
+      "detail": "La compilación local de AG-A falló un tiempo porque Maven Central respondía 429 (demasiadas peticiones).",
+      "outcome": "Se reintentó y la compilación terminó; los tests pasaron en local a las 21:59."
+    },
+    {
+      "at": "2026-10-21T22:28:09Z",
+      "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+      "pr": 148,
+      "what": "Eventos con NUL bloqueaban la cola y dejaban el agente UNRESPONSIVE",
+      "detail": "En la aceptación de AG-A el runner enviaba eventos con NUL (\\u0000) al procesar salida binaria de ZIP/JAR. PostgreSQL rechazaba el jsonb, el evento se reintentaba sin fin y el agente quedaba UNRESPONSIVE. Antes del arreglo el lote con NUL devolvía 500.",
+      "outcome": "Corregido en la PR #148 (commit 17e2aee): 8 tests RED pasaron a verde, saneado en runner y control plane, `invalid-event` y reenvío uno a uno. CI en verde."
+    },
+    {
+      "at": "2026-10-22T12:09:37Z",
+      "session_id": "session_019wNygBeUXfTd7rMksq2fhD",
+      "pr": 149,
+      "what": "Cambio respecto al plan: no hizo falta tocar la CSP",
+      "detail": "El plan de AG-B preveía ajustar la CSP para las imágenes; al cargarlas desde la propia descarga no fue necesario.",
+      "outcome": "Las imágenes se cargan desde el endpoint de descarga y la CSP queda sin cambios."
+    },
+    {
+      "at": "2026-10-23T21:02:29Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": null,
+      "what": "Plan de memoria curada insuficiente",
+      "detail": "Diego explicó que quería que Skynet recordara lo hecho para evolucionar proyectos y lanzar investigaciones; el plan original solo cubría memoria escrita a mano.",
+      "outcome": "Claude amplió el plan con bitácora y variables, y después Diego propuso el modelo engram."
+    },
+    {
+      "at": "2026-10-23T21:07:21Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": null,
+      "what": "Engram no se usa tal cual",
+      "detail": "Engram guarda en un SQLite local por máquina y los runners pueden ser varios, así que no encaja.",
+      "outcome": "Se copió su modelo dentro del control plane de Skynet."
+    },
+    {
+      "at": "2026-10-24T07:38:21Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 155,
+      "what": "Antigravity sin soporte MCP verificado",
+      "detail": "No se pudo comprobar si agy acepta servidores MCP sin interfaz.",
+      "outcome": "Antigravity arranca sin memoria en ME-B y solo recibe el bloque inicial en ME-C."
+    },
+    {
+      "at": "2026-10-24T10:41:00Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 155,
+      "what": "Codex rechaza las herramientas mem_*",
+      "detail": "En la prueba, codex exec rechazó mem_context, mem_search y mem_session_summary porque requerían aprobación y la política es never.",
+      "outcome": "Se añadió default_tools_approval_mode=approve solo para el servidor de memoria (aa181ba) y la CI quedó en verde."
+    },
+    {
+      "at": "2026-10-24T11:24:43Z",
+      "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+      "pr": null,
+      "what": "Un filtro de rutas por sí solo casi nunca omitiría las E2E",
+      "detail": "De unas 40 PRs de octubre, solo 4 no tocaban `control-plane/` ni `web/`. El shard 1/3 tardaba 17,5 min porque Playwright reparte por orden alfabético y le tocaban todas las pruebas pesadas.",
+      "outcome": "Se propuso además marcar las pruebas lentas con `@lento` y repartir mejor los shards; Diego aprobó."
+    },
+    {
+      "at": "2026-10-24T11:56:53Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 158,
+      "what": "Fixtures web sin la clave memory",
+      "detail": "Dos fixtures web no incluían la nueva clave memory y rompían tests.",
+      "outcome": "Se corrigieron en un commit posterior y la CI quedó en verde."
+    },
+    {
+      "at": "2026-10-24T12:01:37Z",
+      "session_id": "session_018dv6ozcVhXYDqATWzGQ8XT",
+      "pr": 157,
+      "what": "Los shards rápidos seguían en unos 9 minutos",
+      "detail": "En la primera CI de la PR #157 los shards rápidos 1/3 y 2/3 tardaron 9m11s y 8m52s, por encima del objetivo de ~7 min: tenían ~7 min de pruebas más ~2 min de preparar el entorno.",
+      "outcome": "Se repartieron las rápidas en 6 shards; con `e2e-completo` todo pasó en 6,8 min y el job más lento en 6,4 min."
+    },
+    {
+      "at": "2026-10-24T16:56:23Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 159,
+      "what": "El agente no usó mem_search ni mem_get",
+      "detail": "En la prueba de ME-D el agente recibió 5 entradas por el prompt pero no buscó ni leyó con herramientas; el prompt solo lo sugería y quizá el modo plan bloqueaba las herramientas sin readOnlyHint.",
+      "outcome": "Se hizo que investigar-mejoras pida ambas herramientas y se anotaron las de lectura con readOnlyHint; no se pudo verificar sin el CLI real."
+    },
+    {
+      "at": "2026-10-24T17:20:59Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 159,
+      "what": "Test Java intermitente ajeno a la PR",
+      "detail": "Carrera de git al crear worktrees en paralelo, no relacionada con la PR.",
+      "outcome": "Se relanzó el job una vez y pasó."
+    },
+    {
+      "at": "2026-10-24T17:27:32Z",
+      "session_id": "session_01AmvTvoFFyEtpuqbViJqQMf",
+      "pr": 159,
+      "what": "E2E intermitente por el menú Más",
+      "detail": "Abrir la pestaña Verificación del agente podía fallar cuando se reorganizaba el menú Más con la nueva pestaña Memoria.",
+      "outcome": "Las E2E ahora reintentan y pasaron en local y en CI."
+    },
+    {
+      "at": "2026-10-24T21:33:19Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": null,
+      "what": "Mascota nigiri descartada",
+      "detail": "El primer estudio proponía el nigiri del boceto de Diego, pero no encajaba con la estética 2D pastel de la plantilla de Skynet.",
+      "outcome": "Se rehízo la mascota a partir del logo de Skynet, plana y en pastel (v2 aprobada)."
+    },
+    {
+      "at": "2026-10-24T21:33:19Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": null,
+      "what": "Fallo del servidor detectado en el estudio",
+      "detail": "Una conexión nueva a los eventos en vivo sin filtro recibía todo el histórico desde el principio.",
+      "outcome": "Se resolvió en CO-B con after=latest y filtro de tipos."
+    },
+    {
+      "at": "2026-10-24T23:09:39Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": 163,
+      "what": "E2E de axe colgada en Ajustes",
+      "detail": "En la primera CI de la PR #163 fallaron las pruebas de accesibilidad de Ajustes: las mascotas quietas de la galería tenían la animación en pausa y una no terminaba nunca, así que la prueba se quedaba esperando.",
+      "outcome": "Se dejaron sin animación en lugar de en pausa; CI en verde."
+    },
+    {
+      "at": "2026-10-24T23:27:02Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": 164,
+      "what": "Maven Central limita las descargas",
+      "detail": "En el entorno de la sesión no se pudieron ejecutar los tests de Java de CO-B por el límite de descargas de Maven Central.",
+      "outcome": "Se validaron en la CI de la PR; más tarde los tests de Java compilaron tras corregir un fallo del test."
+    },
+    {
+      "at": "2026-10-24T23:42:29Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": 164,
+      "what": "Fallos de CI en CO-B: compilación del test Java y SonarCloud",
+      "detail": "SonarCloud marcó fiabilidad C (probable causa: condiciones de texto en JSX) y un test Java no compilaba. En total la CI pidió tres arreglos, todos de los tests o de calidad de código.",
+      "outcome": "Corregidos; CI de la PR #164 en verde (Java, Web, E2E, Sonar)."
+    },
+    {
+      "at": "2026-10-25T00:26:53Z",
+      "session_id": "session_01K9RupttNSnYj88shBepiEi",
+      "pr": 165,
+      "what": "E2E 1/6 en rojo por un paso nuevo",
+      "detail": "En la PR #165 la E2E del companion falló porque el paso añadido recargaba la página y vaciaba la campana.",
+      "outcome": "Corregido en 5f302b9; CI entera en verde y Sonar OK."
+    },
+    {
+      "at": "2026-10-25T08:43:13Z",
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "pr": null,
+      "what": "Boceto v1 de iconos rechazado por los contornos gruesos",
+      "detail": "Diego aceptó las formas, pero no los bordes con líneas gruesas; las insignias de estado desde «Pendiente» sí le gustaban.",
+      "outcome": "Se rehicieron los otros 31 iconos lisos, sin contorno, en tres tonos del acento (v2); Diego dijo «está mejor»."
+    },
+    {
+      "at": "2026-10-25T09:11:11Z",
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "pr": 169,
+      "what": "Maven Central limita las peticiones",
+      "detail": "Los tests del servidor de IC-A tuvieron que esperar por el límite de peticiones de Maven.",
+      "outcome": "Más tarde los tests del backend pasaron en verde."
+    },
+    {
+      "at": "2026-10-25T09:36:08Z",
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "pr": null,
+      "what": "Fuentes fuera de la rama de iconos",
+      "detail": "Diego pasó las fuentes en el hilo de iconos; como esa rama ya llevaba la PR de iconos, se llevaron a un hilo aparte con su propia PR para que avancen a la vez.",
+      "outcome": "Las fuentes pasaron al hilo de TI (PR #171)."
+    },
+    {
+      "at": "2026-10-25T09:37:10Z",
+      "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+      "pr": null,
+      "what": "Las fuentes eran Duolingo Sans con licencia exclusiva",
+      "detail": "Al abrir los .otf se vio que eran «Duolingo Sans Thin» y su itálica (© 2025 Bézier Inc.), y su licencia prohíbe usarlas o distribuirlas fuera de Duolingo; el repo guilu/skynet es público. Además eran de peso Thin y la «cursive» era solo la itálica.",
+      "outcome": "Se descartó incluirlas; Diego pidió la fuente libre más parecida y se eligió Barlow (OFL)."
+    },
+    {
+      "at": "2026-10-25T10:19:59Z",
+      "session_id": "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+      "pr": 173,
+      "what": "E2E 1/6 fallida por un deadlock del servidor",
+      "detail": "En la PR #173 una E2E falló por un deadlock en PostgreSQL al cancelar dos agentes en paralelo, entre EventStore y otra inserción de eventos; no tenía relación con la PR.",
+      "outcome": "Al relanzar el job pasó. Se sugirió un hito propio si vuelve a aparecer."
+    },
+    {
+      "at": "2026-10-25T10:51:37Z",
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "pr": 169,
+      "what": "Logos de OpenAI, Claude y Gemini sin equivalente",
+      "detail": "Las láminas de ChatGPT incluían logos de OpenAI, Claude y Gemini, pero la web no tiene esos iconos.",
+      "outcome": "Se dejaron fuera; el paquete ChatGPT cubre los 101 iconos de la web."
+    },
+    {
+      "at": "2026-10-25T13:16:17Z",
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "pr": 169,
+      "what": "Límite de uso alcanzado en el hilo de iconos",
+      "detail": "El turno terminó con error 429 («usage limit reached») y el límite de 5 h en rechazo, al 100 %. A la misma hora se cortaron por el mismo límite las extracciones de este informe.",
+      "outcome": "Sin resolver al generar el informe; la PR #169 sigue abierta."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-10-18T16:17:26Z",
+      "what": "Quiere un aviso cuando los runners usen un CLI simulado y que se planifique lo que falta para usar Claude, Codex y Antigravity reales (hito AR)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-18T17:53:31Z",
+      "what": "No aprobar el plan AR tal cual: eligió «Cambiar algo» en la tarjeta de decisión",
+      "by": "Diego, en contra de lo recomendado"
+    },
+    {
+      "at": "2026-10-18T17:55:12Z",
+      "what": "Retirar Gemini CLI y sustituirlo por Antigravity CLI",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-18T17:59:12Z",
+      "what": "Aprobar el plan AR corregido y empezar por AR-A",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-18T19:28:56Z",
+      "what": "AR-A probada: fusionar la #121 y seguir con AR-B",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T06:00:00Z",
+      "what": "AR-B probada con el agy real: fusionar la #122 y seguir",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T09:45:58Z",
+      "what": "AR-C probada: fusionar la #123 y pasar al siguiente hito; no respondió a la tarjeta, así que se cerró sin la plantilla de tres revisores (Sin plantilla nueva)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T09:50:06Z",
+      "what": "Aprobar el plan del hito W8 con las recomendaciones (YAML como única fuente, colocación automática)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T11:22:57Z",
+      "what": "Meter el arreglo del motor (retryLater) en W8-A como commit aparte con su test, en vez de una PR separada",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T12:57:01Z",
+      "what": "En la #127: renombrar la guía a probar-w8a.md, insignia de ciclo también en review, corregir el SQL de run_after y pasar las E2E de workflows, spec y usage",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T14:17:45Z",
+      "what": "W8-A probada: fusionar la #127 y seguir con W8-B",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T14:58:14Z",
+      "what": "W8-B probada: fusionar la #128 y seguir con W8-C",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T15:45:57Z",
+      "what": "W8-C probada: fusionar la #129 y dar W8 por terminado",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T20:05:15Z",
+      "what": "Aplazar la Fase 3 (S1, GitHub App) y antes probar Skynet en local con proyectos propios: base de datos limpia y workflows iniciales (hito AL)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T20:10:37Z",
+      "what": "Aprobar AL-A y pedir que los workflows usen Claude Code, Codex y Gemini, investigando qué proveedor y modelo conviene a cada tarea",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T21:47:48Z",
+      "what": "El runbook de AL-A se llamará docs/tests/probar-al-a.md (con guion), según el contrato de aceptación de Hermes",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T22:59:52Z",
+      "what": "Corregir reset-local.sh en la misma PR #131: omitir rutas históricas inválidas, con pruebas, sin ejecutar el reset real y conservando la confirmación «borrar»",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-19T23:10:17Z",
+      "what": "Fusionar la #131; Diego hace el reset en su máquina local",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-20T10:30:08Z",
+      "what": "Cerrar la PR 132 e implementar la issue #133 que abrió Hermes.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-20T13:33:46Z",
+      "what": "Aprobar el plan del hito RV en cuatro PRs (RV-A a RV-D).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-20T16:37:48Z",
+      "what": "Aplicar en la PR #138 las tres correcciones de Hermes sin ampliar el alcance y dejar la aceptación final con proveedores reales a Hermes.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T10:26:19Z",
+      "what": "Fusionar la PR #138 (RV-A) y continuar con RV-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T16:57:32Z",
+      "what": "Fusionar la PR #139 (RV-B) tras probarla y continuar con RV-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T18:28:35Z",
+      "what": "Fusionar la PR #142 (RV-C) tras probarla y continuar con RV-D.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T19:27:36Z",
+      "what": "Aprobar y fusionar la PR #143 (RV-D); acepta de hecho la contraseña de PostgreSQL obligatoria solo con el perfil app.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T19:46:56Z",
+      "what": "Dar por probada y cerrar la issue #133; hito RV terminado.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T21:35:04Z",
+      "what": "Aprobó el plan del hito AG para la issue #145 (dos PRs: AG-A runner y control plane, AG-B web) con los límites y el tratamiento de symlinks recomendados, eligiendo «Adelante con lo recomendado» en la tarjeta.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-21T22:28:09Z",
+      "what": "Ordenó corregir en la PR #148 el bloqueo por NUL: sanear recursivamente NormalizedEvent, defensa en el control plane, no alterar bytes de artefactos binarios, que un evento inválido no bloquee la cola, y mantener el alcance de AG-A. Hermes ejecuta el runbook, no Claude.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-22T06:31:49Z",
+      "what": "Decidió que la aceptación real de AG-A no use el repositorio skynet sino el proyecto DEMO con el repositorio demo-repo, sin cambiar la implementación ni otros archivos.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-22T11:46:52Z",
+      "what": "Aceptó AG-A y ordenó fusionar la PR #148 y seguir con AG-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-22T14:22:58Z",
+      "what": "Aceptó AG-B y ordenó fusionar la PR #149, cerrando el hito AG.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-23T21:06:30Z",
+      "what": "Seguir el modelo de memoria de engram (gentle-ai) en lugar del plan de memoria curada, aunque Claude había recomendado ajustar el plan anterior.",
+      "by": "Diego, en contra de lo recomendado"
+    },
+    {
+      "at": "2026-10-23T22:08:55Z",
+      "what": "Rehacer el plan de memoria con el modelo engram: servidor MCP en el control plane, bitácora y clave memory.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-23T23:15:26Z",
+      "what": "Aprobar el hito ME y dejar un comentario en #141 en lugar de reescribir su texto; crear milestones e issues de ME-A a ME-D.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T07:12:05Z",
+      "what": "Fusionar ME-A (#154) y pasar a ME-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T11:21:53Z",
+      "what": "Pidió no lanzar las E2E cuando la PR no toque su código y dejarlas para ejecución bajo demanda.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T11:22:21Z",
+      "what": "Fusionar ME-B (#155) y seguir con ME-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T11:25:48Z",
+      "what": "Aprobó la propuesta CI-A: workflow E2E propio con filtro de rutas, pruebas lentas marcadas `@lento` bajo la etiqueta `e2e-completo` y mejor reparto de shards.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T12:01:37Z",
+      "what": "No dio por aceptada la condición de rendimiento porque los shards 1/3 y 2/3 superaban los ~7 minutos objetivo.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T15:00:18Z",
+      "what": "Aceptó CI-A y ordenó fusionar la PR #157.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T15:01:58Z",
+      "what": "Fusionar ME-C (#158) comprobando que no haya conflictos con la #157 y continuar con ME-D.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T17:47:14Z",
+      "what": "Fusionar ME-D (#159) y cerrar el hito ME.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T17:53:37Z",
+      "what": "Dejar el hito S1 para más adelante y dar por completado el hilo",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T17:53:54Z",
+      "what": "Posponer S1 (GitHub App) y no abordar la #140 por ahora; dar el hilo por completado.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T17:54:21Z",
+      "what": "Dio el hilo por completado (el hito CU quedó terminado).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T21:47:47Z",
+      "what": "Descartar el nigiri y rehacer la mascota a partir del logo de Skynet, en 2D plano y colores pastel, según la imagen de referencia.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T22:48:59Z",
+      "what": "Aprobar el plan del hito CO (3 PRs) e ir solo con la web; no se hará la app de escritorio.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-24T23:20:17Z",
+      "what": "Dar por probada la CO-A (#163) y ordenar fusionarla y seguir con CO-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T00:04:58Z",
+      "what": "Dar por probada la CO-B (#164) y ordenar fusionarla y seguir con CO-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T08:24:08Z",
+      "what": "Cambiar todos los iconos de la app a ilustraciones 2D con microanimaciones, a llevar en un hilo aparte.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T08:43:13Z",
+      "what": "Rechazar los contornos gruesos del boceto de iconos: rehacer los iconos anteriores a «Pendiente» lisos, al estilo de las ilustraciones de Duolingo; mantener las insignias de estado.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T08:47:36Z",
+      "what": "Dar por probada la CO-C (#165) y ordenar fusionarla, cerrando el hito CO.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T09:03:41Z",
+      "what": "Hacer los iconos configurables por paquetes (Lucide, los actuales, e Ilustrados, el rediseño), con una página nueva en Ajustes para elegirlos, como los colores.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T09:35:06Z",
+      "what": "Poner las fuentes Skynet Duo en la web (llevado a un hilo aparte).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T09:38:57Z",
+      "what": "No usar la cursiva en títulos y marca: de momento toda la web con la regular.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T09:42:53Z",
+      "what": "No usar las fuentes con licencia exclusiva de Duolingo; buscar la fuente libre (open) más similar (se eligió Barlow). Es distinto a lo recomendado (cargarlas solo en su máquina).",
+      "by": "Diego, en contra de lo recomendado"
+    },
+    {
+      "at": "2026-10-25T10:05:28Z",
+      "what": "Dar por buena la fuente Barlow.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T10:07:52Z",
+      "what": "Fusionar la #171 (TI-A) y abrir una PR aparte de seguridad (SG-A) para arreglar las 4 vulnerabilidades de npm audit.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T10:35:01Z",
+      "what": "Dar por probada la SG-A (#173) y ordenar fusionarla.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T10:35:54Z",
+      "what": "Añadir un tercer paquete de iconos llamado ChatGPT con las ilustraciones que diseñó ChatGPT.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T11:13:20Z",
+      "what": "Rediseñar la interfaz dentro de la misma PR #169: textos más pequeños y en grises, sin box-shadow, más aire, reproduciendo el diseño de ChatGPT con un design system parecido al de Duolingo.",
+      "by": "Diego"
+    }
+  ],
+  "summary": {
+    "prompts": 71,
+    "sessions": 15,
+    "sessions_note": "sesiones con prompts o turnos esta semana: hilos de trabajo + coordinadores del chat del proyecto",
+    "windows_5h": {
+      "total": 18,
+      "per_day": {
+        "lunes": 3,
+        "martes": 2,
+        "miércoles": 3,
+        "jueves": 2,
+        "viernes": 1,
+        "sábado": 3,
+        "domingo": 3
+      },
+      "sparkline": {
+        "es": [
+          {
+            "d": "L",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "M",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "X",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "J",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "V",
+            "v": 1,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "D",
+            "v": 3,
+            "on": 1
+          }
+        ],
+        "en": [
+          {
+            "d": "M",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "W",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "F",
+            "v": 1,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          }
+        ],
+        "max": 3
+      },
+      "before_monday": {
+        "label": "domingo anterior, desde 17:15",
+        "windows": 1,
+        "prompts": 4,
+        "shared_with_previous_report": [
+          {
+            "start": {
+              "utc": "2026-10-18T11:30:00Z",
+              "madrid": "2026-10-18T13:30:00+02:00"
+            },
+            "end": {
+              "utc": "2026-10-18T16:30:00Z",
+              "madrid": "2026-10-18T18:30:00+02:00"
+            },
+            "prompts_in_this_report": 2
+          }
+        ],
+        "note": "ventanas del domingo anterior al lunes; cuentan en total pero no en per_day ni en sparkline. Las de shared_with_previous_report empezaron antes de --desde, ya están en el informe anterior y no se cuentan aquí"
+      },
+      "method": "una ventana por cada valor distinto de five_hour.resetsAt en los rate_limit_event; los prompts que no caen en ninguna se agrupan en ventanas inferidas desde su hora en punto"
+    },
+    "prompts_per_window": 3.9,
+    "first_timestamp": {
+      "utc": "2026-10-18T16:14:27Z",
+      "madrid": "2026-10-18T18:14:27+02:00"
+    },
+    "last_timestamp": {
+      "utc": "2026-10-25T11:54:44Z",
+      "madrid": "2026-10-25T12:54:44+01:00"
+    },
+    "days_without_activity": [],
+    "days_not_yet_elapsed": [],
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": true,
+      "seven_day_utilization_max": 0.81,
+      "statuses_seen": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "periods": [
+        {
+          "resets_at": {
+            "utc": "2026-10-24T20:00:00Z",
+            "madrid": "2026-10-24T22:00:00+02:00"
+          },
+          "seven_day_utilization_max": 0.81,
+          "statuses_seen": [
+            "allowed_warning"
+          ],
+          "warning": true,
+          "exhausted": false,
+          "events_from": "2026-10-18T16:14:49.437838Z",
+          "events_to": "2026-10-24T17:54:31.114535Z"
+        },
+        {
+          "resets_at": {
+            "utc": "2026-10-31T20:00:00Z",
+            "madrid": "2026-10-31T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.23,
+          "statuses_seen": [],
+          "warning": false,
+          "exhausted": false,
+          "events_from": "2026-10-24T21:25:02.431211Z",
+          "events_to": "2026-10-25T13:22:00.957245Z"
+        }
+      ],
+      "overage_used": false,
+      "five_hour_limit_reached": [
+        {
+          "window_start": {
+            "utc": "2026-10-25T08:20:00Z",
+            "madrid": "2026-10-25T09:20:00+01:00"
+          },
+          "window_end": {
+            "utc": "2026-10-25T13:20:00Z",
+            "madrid": "2026-10-25T14:20:00+01:00"
+          }
+        }
+      ],
+      "note": "allowed_warning = aviso de uso alto, no agotada; exhausted solo si el límite semanal llegó al 100 % o lo rechazó. Los rechazos del límite de 5 h van en five_hour_limit_reached"
+    },
+    "prs_merged": 24,
+    "prs_merged_by_repo": {
+      "guilu/skynet": 24
+    },
+    "prs_open": 1,
+    "prs_cumulative_skynet": 94,
+    "lines": {
+      "added": 26009,
+      "removed": 2735,
+      "files_changed_net": {
+        "files": 348,
+        "added": 25989,
+        "removed": 2715,
+        "note": "git diff de main del domingo 18 a las 15:15 UTC (88e28e2, tras la #117) → main del domingo 25 a las 10:35 UTC (2abaf6e) (cuenta los ficheros, no la suma por PR)"
+      }
+    },
+    "flyway_migrations": {
+      "range": "V26 → V29",
+      "added": [
+        "V26__agent_run_simulated.sql",
+        "V27__memory.sql",
+        "V28__memory_token.sql",
+        "V29__agent_memory.sql"
+      ],
+      "engine": "Flyway / PostgreSQL"
+    },
+    "issues_closed": 27,
+    "milestones_closed": 23,
+    "deploys_to_production": null,
+    "cost_usd_week_estimate": 279.3
+  },
+  "windows_5h": [
+    {
+      "start": {
+        "utc": "2026-10-18T11:30:00Z",
+        "madrid": "2026-10-18T13:30:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-18T16:30:00Z",
+        "madrid": "2026-10-18T18:30:00+02:00"
+      },
+      "weekday": "domingo",
+      "prompts": 2,
+      "utilization_5h_max": 0.55,
+      "utilization_7d_max": 0.21,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012pYiDWj5hNNqFWNdKRKjQV",
+        "session_01J3Jt58vFgmd99FbVsEH6r2"
+      ],
+      "source": "rate_limit_event",
+      "shared_with_previous_report": true
+    },
+    {
+      "start": {
+        "utc": "2026-10-18T16:40:00Z",
+        "madrid": "2026-10-18T18:40:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-18T21:40:00Z",
+        "madrid": "2026-10-18T23:40:00+02:00"
+      },
+      "weekday": "domingo",
+      "prompts": 4,
+      "utilization_5h_max": 0.49,
+      "utilization_7d_max": 0.27,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_012pYiDWj5hNNqFWNdKRKjQV"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": true
+    },
+    {
+      "start": {
+        "utc": "2026-10-19T06:00:00Z",
+        "madrid": "2026-10-19T08:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-19T11:00:00Z",
+        "madrid": "2026-10-19T13:00:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 2,
+      "utilization_5h_max": 0.4,
+      "utilization_7d_max": 0.33,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012pYiDWj5hNNqFWNdKRKjQV"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-19T11:20:00Z",
+        "madrid": "2026-10-19T13:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-19T16:20:00Z",
+        "madrid": "2026-10-19T18:20:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 4,
+      "utilization_5h_max": 0.41,
+      "utilization_7d_max": 0.38,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012pYiDWj5hNNqFWNdKRKjQV"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-19T20:00:00Z",
+        "madrid": "2026-10-19T22:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-20T01:00:00Z",
+        "madrid": "2026-10-20T03:00:00+02:00"
+      },
+      "weekday": "lunes",
+      "prompts": 6,
+      "utilization_5h_max": 0.33,
+      "utilization_7d_max": 0.42,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012pYiDWj5hNNqFWNdKRKjQV"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-20T06:10:00Z",
+        "madrid": "2026-10-20T08:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-20T11:10:00Z",
+        "madrid": "2026-10-20T13:10:00+02:00"
+      },
+      "weekday": "martes",
+      "prompts": 1,
+      "utilization_5h_max": 0.05,
+      "utilization_7d_max": 0.43,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01AmvTvoFFyEtpuqbViJqQMf",
+        "session_01Jhpdwf3xzJUdM1xYGpUGSP"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-20T13:30:00Z",
+        "madrid": "2026-10-20T15:30:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-20T18:30:00Z",
+        "madrid": "2026-10-20T20:30:00+02:00"
+      },
+      "weekday": "martes",
+      "prompts": 2,
+      "utilization_5h_max": 0.27,
+      "utilization_7d_max": 0.47,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01AmvTvoFFyEtpuqbViJqQMf"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-21T10:20:00Z",
+        "madrid": "2026-10-21T12:20:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-21T15:20:00Z",
+        "madrid": "2026-10-21T17:20:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.19,
+      "utilization_7d_max": 0.5,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01AmvTvoFFyEtpuqbViJqQMf"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-21T16:50:00Z",
+        "madrid": "2026-10-21T18:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-21T21:50:00Z",
+        "madrid": "2026-10-21T23:50:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 5,
+      "utilization_5h_max": 0.45,
+      "utilization_7d_max": 0.55,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_019wNygBeUXfTd7rMksq2fhD",
+        "session_01AmvTvoFFyEtpuqbViJqQMf",
+        "session_01WokX9RTFJ2SmDkfbn2BegQ"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-21T21:50:00Z",
+        "madrid": "2026-10-21T23:50:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-22T02:50:00Z",
+        "madrid": "2026-10-22T04:50:00+02:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.15,
+      "utilization_7d_max": 0.57,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_019wNygBeUXfTd7rMksq2fhD",
+        "session_01WokX9RTFJ2SmDkfbn2BegQ"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-22T06:30:00Z",
+        "madrid": "2026-10-22T08:30:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-22T11:30:00Z",
+        "madrid": "2026-10-22T13:30:00+02:00"
+      },
+      "weekday": "jueves",
+      "prompts": 1,
+      "utilization_5h_max": 0.07,
+      "utilization_7d_max": 0.58,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_019wNygBeUXfTd7rMksq2fhD"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-22T11:40:00Z",
+        "madrid": "2026-10-22T13:40:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-22T16:40:00Z",
+        "madrid": "2026-10-22T18:40:00+02:00"
+      },
+      "weekday": "jueves",
+      "prompts": 2,
+      "utilization_5h_max": 0.26,
+      "utilization_7d_max": 0.62,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_019wNygBeUXfTd7rMksq2fhD"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-23T21:00:00Z",
+        "madrid": "2026-10-23T23:00:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-24T02:00:00Z",
+        "madrid": "2026-10-24T04:00:00+02:00"
+      },
+      "weekday": "viernes",
+      "prompts": 5,
+      "utilization_5h_max": 0.22,
+      "utilization_7d_max": 0.65,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01AmvTvoFFyEtpuqbViJqQMf"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-24T07:10:00Z",
+        "madrid": "2026-10-24T09:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-24T12:10:00Z",
+        "madrid": "2026-10-24T14:10:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 8,
+      "utilization_5h_max": 0.71,
+      "utilization_7d_max": 0.74,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_018dv6ozcVhXYDqATWzGQ8XT",
+        "session_01AmvTvoFFyEtpuqbViJqQMf",
+        "session_01DCQ9irYaQ37o2Y86aTbqn9"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-24T12:10:00Z",
+        "madrid": "2026-10-24T14:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-24T17:10:00Z",
+        "madrid": "2026-10-24T19:10:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 3,
+      "utilization_5h_max": 0.38,
+      "utilization_7d_max": 0.79,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_018dv6ozcVhXYDqATWzGQ8XT",
+        "session_01AmvTvoFFyEtpuqbViJqQMf",
+        "session_01DCQ9irYaQ37o2Y86aTbqn9"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-24T17:10:00Z",
+        "madrid": "2026-10-24T19:10:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-24T22:10:00Z",
+        "madrid": "2026-10-25T00:10:00+02:00"
+      },
+      "weekday": "sábado",
+      "prompts": 7,
+      "utilization_5h_max": 0.36,
+      "utilization_7d_max": 0.81,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_012FPoobHuLEsUkPHgCdhCTb",
+        "session_012pYiDWj5hNNqFWNdKRKjQV",
+        "session_01AmvTvoFFyEtpuqbViJqQMf",
+        "session_01CtuCzXwDuUGi3vc65Sda9y",
+        "session_01K9RupttNSnYj88shBepiEi"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-24T22:40:00Z",
+        "madrid": "2026-10-25T00:40:00+02:00"
+      },
+      "end": {
+        "utc": "2026-10-25T03:40:00Z",
+        "madrid": "2026-10-25T04:40:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 3,
+      "utilization_5h_max": 0.56,
+      "utilization_7d_max": 0.09,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012FPoobHuLEsUkPHgCdhCTb",
+        "session_01K9RupttNSnYj88shBepiEi"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-25T08:20:00Z",
+        "madrid": "2026-10-25T09:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-25T13:20:00Z",
+        "madrid": "2026-10-25T14:20:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 14,
+      "utilization_5h_max": 1,
+      "utilization_7d_max": 0.22,
+      "status": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "sessions": [
+        "session_01DoKNhSeJJjRM23GZ31EECh",
+        "session_01Fe4RUVgg7WLDGWaZvmc9qh",
+        "session_01K9RupttNSnYj88shBepiEi",
+        "session_01WdvCwqrrdnBTAy5VicARds"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-25T13:20:00Z",
+        "madrid": "2026-10-25T14:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-25T18:20:00Z",
+        "madrid": "2026-10-25T19:20:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 0,
+      "utilization_5h_max": 0.06,
+      "utilization_7d_max": 0.23,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01WdvCwqrrdnBTAy5VicARds"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "skills_used",
+      "why": "Los registros a los que llego no listan las herramientas ni las skills invocadas por turno."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay despliegues registrados en estas sesiones; Hermes despliega y prueba en omarchy fuera de ellas."
+    },
+    {
+      "item": "engram",
+      "why": "Las sesiones en la nube no usan Engram; las decisiones y callejones están en dead_ends y decisions."
+    },
+    {
+      "item": "periodo ampliado",
+      "why": "El informe empieza el domingo 18 a las 15:15 UTC, donde terminó el de la semana anterior, para recoger aquella tarde (el hilo Principal y el hito AR). Esas horas no están en semana-2026-10-12.json."
+    },
+    {
+      "item": "PR #144",
+      "why": "fix(infra) para conservar el Compose privado en el reset local: se abrió y fusionó en 15 segundos y no aparece en ningún hilo, así que no tiene sesión asignada."
+    },
+    {
+      "item": "coordinador del chat del 24 de octubre a las 07:14 UTC",
+      "why": "Los dos mensajes de Diego sobre la hora del recap los atendió un coordinador que no se ha localizado; van sin sesión."
+    },
+    {
+      "item": "uso de esta sesión",
+      "why": "La sesión que genera el fichero no se incluye en los totales."
+    },
+    {
+      "item": "lo posterior al domingo 25 a la hora de generación",
+      "why": "El informe se generó el domingo a petición de Diego; la PR #169 (IC-A, iconos) sigue abierta."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-10-19 (Europe/Madrid) · desde 2026-10-18 17:15\n\n## skynet\n\n- 2026-10-18 18:14 · Principal (AR, W8, AL) · He encontrado un corportamiento raro...  Teniendo en cuenta que el workflow id:adhoc, es un workflow que tiene un agente simple que recibe un text y lanza solamente ese prompt (primera imagen). He creado un proyecto nuevo Tokenmeter. He creado un trabajo nuevo TKM-1 Simple prompt He registrado un repositorio nuevo /home/diegobarrioh/code/tkm He querido lanzar el workflow de agente prompt · v3 (que es el de id:adhoc un simple workflow con un agente que lanza un prompt) como ves en la imagen 2. Porque si es simplemente recibir el prompt el prompt es \"contesta con hola\"  porque la ejecución es read calc.py luego edit calc.py y luego bash...  es por el fake-claude que reciba lo que reciba da esa respuesta?\n- 2026-10-18 18:17 · Principal (AR, W8, AL) · si, quiero saber cuando los runners están usando un cli simulado o cuando están usando cli reales. Además ya podríamos conectar a claude y a codex pero creo que no podemos conectar todavía a antigravity cli (comando agy). Planifica que falta para usar los 3 agentes reales en akynet.\n- 2026-10-18 19:55 · Principal (AR, W8, AL) · Vamos a quitar Gemini-Cli y cambiarlo por  antigravity-cli,\n- 2026-10-18 19:59 · Principal (AR, W8, AL) · si, vamos con AR-A\n- 2026-10-18 21:28 · Principal (AR, W8, AL) · probada ok, fusiona y seguimos\n- 2026-10-18 21:46 · Principal (AR, W8, AL) · esta es la salida y subo los ficheros\n- 2026-10-19 08:00 · Principal (AR, W8, AL) · todo probado, fusiona que seguimos\n- 2026-10-19 11:45 · Principal (AR, W8, AL) · probado, fusiona y pasamos al siguiente\n- 2026-10-19 14:57 · Principal (AR, W8, AL) · En la PR #127 W8-A: renombra docs/tests/probar-w8-a.md a docs/tests/probar-w8a.md; haz que review, además de build, muestre su insignia cuando ambas fases forman un ciclo y añade regresiones que lo comprueben; corrige el SQL de reprogramación de workflow_job.run_after, que mezcla timestamp with time zone e interval en un CASE y deja ejecuciones en RUNNING; ejecuta los E2E de workflows, spec y usage, y actualiza la misma PR hasta dejar toda la CI verde.\n- 2026-10-19 16:17 · Principal (AR, W8, AL) · Probado, fusiona y seguimos\n- 2026-10-19 16:58 · Principal (AR, W8, AL) · Todo ok, fusiona y seguimos\n- 2026-10-19 17:45 · Principal (AR, W8, AL) · Probado, fusiona y seguimos\n- 2026-10-19 22:05 · Principal (AR, W8, AL) · Antes de la fase 3 y meter github etc quiero probar skynet en local con proyectos de software locales… quiero dejar la base de datos limpia y empezar con unos workflows iniciales\n- 2026-10-19 22:10 · Principal (AR, W8, AL) · Adelante con esto pero quiero que los workflows utilicen Claude code y también codex y Gemini, quiero que investigues para que tareas es mejor uno que otro y que modelos además utilizar con cada proveedor\n- 2026-10-19 23:44 · Principal (AR, W8, AL) · De nuevo has nombrado mal el runbook, debe ser docs/tests/probar-ala.md y no probar-al-a.md\n- 2026-10-19 23:47 · Principal (AR, W8, AL) · Me lo ha dicho Hermes, no, me he equivocado como tiene que ser es probar-al-a.md: Contrato de aceptación  - Token canónico extraído: AL-A - Runbook obligatorio derivado: docs/tests/probar-al-a.md - Resultado: incumplido - El PR añadió docs/tests/probar-ala.md, sin el guion requerido. - docs/tests/probar-al-a.md no existe en el SHA del PR.\n- 2026-10-20 00:59 · Principal (AR, W8, AL) · En la PR #131, corrige scripts/reset-local.sh para que --dry-run --runner no aborte con código 128 cuando la base contiene una ruta histórica inexistente o que ya no es Git. Debe advertir, omitir solo esa ruta y seguir procesando las válidas. Añade pruebas para rutas inexistentes, no Git, válidas y mezcladas; garantiza que dry-run no modifica nada y termina con código 0 si solo hay rutas inválidas; conserva la confirmación exacta borrar y los límites de borrado; actualiza la documentación y el runbook. No ejecutes el reset real y actualiza la misma PR #131 hasta dejar la CI verde.\n- 2026-10-20 01:10 · Principal (AR, W8, AL) · Todo ok. Fusiona y yo reseteo en la máquina local.\n- 2026-10-20 12:30 · Creando memoria (RV, ME) · Cierra la PR 132 y vamos a implementar la Issue que ha abierto Hermes\n- 2026-10-20 15:33 · Creando memoria (RV, ME) · Adelante\n- 2026-10-20 18:37 · Creando memoria (RV, ME) · Hermes ha encontrado alguna pega en la PR, indica: Actualiza la PR #138 (RV-A) sin ampliar el alcance a RV-B/C/D:  1. Al publicar una definición nueva, rechaza cualquier type: array sin items, pero mantén la compatibilidad para leer y ejecutar versiones históricas ya publicadas. Añade tests RED/GREEN para ambos comportamientos.  2. Corrige AntigravityEventParser para que pendingUsage nunca se pierda si llega una respuesta vacía o solo de razonamiento y el agente es cancelado antes del siguiente mensaje o herramienta. Añade una prueba específica de ese límite y verifica que una cancelación fail-fast conserva uso, modelo, coste y cuota ya producidos.  3. Repite los tests web relacionados con App.test.tsx, Workflows.test.tsx y GraphEditor.test.tsx. Corrige cualquier regresión real y reduce los timeouts frágiles si el fallo depende de la carga.  Mantén toda la CI verde, actualiza las pruebas y documentación técnica afectada, y no ejecutes el runbook manual ni la prueba con proveedores reales: Hermes realizará la aceptación final.\n- 2026-10-21 12:26 · Creando memoria (RV, ME) · Todo ok, fusiona y adelante\n- 2026-10-21 18:57 · Creando memoria (RV, ME) · Está todo probado. Fusiona y continuamos.\n- 2026-10-21 20:28 · Creando memoria (RV, ME) · Todo probado. Fusionar y continuamos.\n- 2026-10-21 21:27 · Creando memoria (RV, ME) · Todo aprobado. Fusiona y continuamos.\n- 2026-10-21 21:46 · Creando memoria (RV, ME) · La issue 133 está completamente probada y se puede cerrar\n- 2026-10-21 23:28 · Issue 145 (AG) · Vamos a implementar la issue 145\n- 2026-10-22 00:28 · Issue 145 (AG) · Actualiza la PR #148 para corregir el bloqueo detectado en la aceptación AG-A:  El runner envía eventos con caracteres NUL (\\u0000) cuando un agente procesa salida binaria de ZIP/JAR. PostgreSQL rechaza el payload jsonb, el evento se reintenta indefinidamente y el agente queda UNRESPONSIVE.  Corrígelo con tests RED/GREEN:  - Sanea recursivamente los strings de NormalizedEvent antes de guardarlos o enviarlos, sustituyendo NUL y controles incompatibles por una representación visible. - Añade una defensa equivalente en el control plane antes de persistir el evento. - No interpretes contenido binario como texto ni alteres los bytes de artefactos binarios. - Evita que un evento inválido bloquee indefinidamente los eventos posteriores. - Cubre NUL en mapas/listas anidadas, salida binaria ZIP/JAR, persistencia PostgreSQL y continuidad de la cola.  Mantén el alcance de AG-A y toda la CI verde. Hermes repetirá el runbook y la ejecución real; no los ejecutes tú.\n- 2026-10-22 08:31 · Issue 145 (AG) · Actualiza docs/tests/probar-ag-a.md para que la aceptación real de AG-A no use el repositorio skynet. En la sección “2. Ejecución real”, indica explícitamente que se debe crear o reutilizar un trabajo en el proyecto DEMO y lanzar el workflow conocer-repositorio seleccionando exclusivamente el repositorio demo-repo, registrado en /home/diegobarrioh/code/demo-repo. Mantén el resto de comprobaciones sobre el artefacto declarado docs/skynet/mapa.md: tipo DECLARED_FILE, metadatos, contenido, descarga autenticada, cabeceras, persistencia tras limpiar el worktree y respuesta 401 sin credenciales. No cambies la implementación ni otros archivos.\n- 2026-10-22 13:46 · Issue 145 (AG) · Todo probado y ok, fusiona y seguimos.\n- 2026-10-22 16:22 · Issue 145 (AG) · Todo ok,  fusiona y seguimos\n- 2026-10-23 23:02 · Creando memoria (RV, ME) · Explícame el plan de memoria, porque la intención es que skynet tenga memoria de las cosas se hacen en los proyectos y repositorios, para poder evolucionarlos e incluso lanzar workflows de investigación y mejoras de lo que ya se ha hecho\n- 2026-10-23 23:06 · Creando memoria (RV, ME) · He estado viendo como lo hace gentle-ai y lo hace con engram, no podemos nosotros hacer algo así?\n- 2026-10-24 00:08 · Creando memoria (RV, ME) · Rehaz el plan así\n- 2026-10-24 01:13 · Creando memoria (RV, ME) · Has modificado la issue de GitHub del hito ME?\n- 2026-10-24 01:15 · Creando memoria (RV, ME) · Me parece bien así. Apruebo el hito, puedes continuar\n- 2026-10-24 09:12 · Creando memoria (RV, ME) · Todo ok, fusiona y pasamos al siguiente\n- 2026-10-24 09:14 · Chat del proyecto · A qué hora ejecutas el recap?\n- 2026-10-24 09:16 · Chat del proyecto · Cambia el modo de ejecución del recap para que sea a petición, yo entraré en el proyecto y te pediré ejecutar el recap\n- 2026-10-24 12:41 · Creando memoria (RV, ME) · al hacer las pruebas: - ⚠️ Codex terminó la ejecución correctamente, pero mem_context, mem_search y mem_session_summary fueron rechazadas por:   MCP tool call requires approval, but approval policy is never   - Este punto de aceptación no pasa completamente y requiere ajustar la política MCP de Codex.\n- 2026-10-24 13:21 · Acelerar la CI de los E2E (CI-A) · la ejecución de los E2E tarda mucho, sobre todo 1/3 que tarda 18 minutos aprox, supongo que por las pruebas con límites individuales de hasta 4–8 minutos.  Podemos hacer algo para no ejecutar cada vez eso? Si en la PR no se ha tocado nada de eso, no lanzar los E2E, dejarlos para lanzarlos on-demand\n- 2026-10-24 13:22 · Creando memoria (RV, ME) · todo ok, fusiona y sigue\n- 2026-10-24 13:25 · Acelerar la CI de los E2E (CI-A) · si, sigue\n- 2026-10-24 14:01 · Acelerar la CI de los E2E (CI-A) · E2E rápidas:   - 1/3: pass, 9m11s   - 2/3: pass, 8m52s   - 3/3: pass, 3m44s  ⚠️ Aunque están verdes, los shards 1/3 y 2/3 superaron el objetivo documentado de aproximadamente 7 minutos. Por ello, la condición de rendimiento del runbook no queda plenamente aceptada.\n- 2026-10-24 17:00 · Acelerar la CI de los E2E (CI-A) · Todo ok puedes fusionar\n- 2026-10-24 17:01 · Creando memoria (RV, ME) · Todo esta ok, puedes fusionar, se ha fusionado la 157 antes, comprueba que no haya conflictos, y continua\n- 2026-10-24 18:56 · Creando memoria (RV, ME) · El agente recibió 5 entradas de memoria mediante PROMPT, pero no registró accesos SEARCH/GET; por tanto, no se cumple literalmente la expectativa de que busque o lea memoria mediante herramientas.\n- 2026-10-24 19:47 · Creando memoria (RV, ME) · está todo ok, fusiona y dime si queda algo\n- 2026-10-24 19:53 · Principal (AR, W8, AL) · dejamos el hito S1 para más adelante, este hilo lo puedes completar\n- 2026-10-24 19:53 · Creando memoria (RV, ME) · dejamos el S1 para más adelante este hilo lo puedes completar\n- 2026-10-24 19:54 · Plan de cuotas y costes · este hilo lo puedes completar\n- 2026-10-24 19:54 · Informe semanal para el recap · este hilo lo puedes completar\n- 2026-10-24 23:24 · Diseñar el companion de Skynet (CO) · Hay una issue abierta para agregar a skynet una mascota o compasión que muestre estados de los agentes, está inspirado en coucou y yo he hecho un boceto de una mascota para los agentes de skynet que es un nigiri mezclado con las letras de mi logo. Te copio los bocetos. Quiero que revises la issue y las funcionalidades, y luego hagamos un estudio de como podemos integrar este companion en la web de skynet, como hacer las animaciones, en que páginas mostrarlo, como hacerlo, podemos diseñar notificaciones, animaciones de transiciones de estado, etc\n- 2026-10-24 23:47 · Diseñar el companion de Skynet (CO) · No me gusta la estética, el nigiri no pega con skynet ni la template que tenemos hecho, que es de estilo ilustración 2d y colores pastel,  toma como referencia esta imagen y el logo de skynet que muestra, aunque este estilo es más 3D podemos aplanarlo y adaptarlo al estilo visual actual de nuestra plantilla HTML\n- 2026-10-25 00:48 · Diseñar el companion de Skynet (CO) · Me parece perfecto, vamos solamente con la web, no vamos a hacer la app de escritorio\n- 2026-10-25 01:20 · Diseñar el companion de Skynet (CO) · Probada, fusiona y sigue\n- 2026-10-25 02:04 · Diseñar el companion de Skynet (CO) · Todo ok, fusiona y seguimos\n- 2026-10-25 09:24 · Diseñar el companion de Skynet (CO) · Ya que estamos diseñando interacciones me gustaría cambiar todos los iconos de la aplicación para que coincidan con la estética del logo y sean ilustraciones en 2d que tengan microanimaciones…\n- 2026-10-25 09:43 · Rediseñar los iconos de la app · Me gustan las formas pero no me gusta que tengan los bordes con líneas gruesas, prefiero que sean más lisos. Están bien desde el de “pendiente” en adelaante, pero los demás réhazlos. Que sean más estilo a las ilustraciones que hace Duolingo en su web\n- 2026-10-25 09:47 · Diseñar el companion de Skynet (CO) · Está todo ok puedes fusionar\n- 2026-10-25 10:03 · Rediseñar los iconos de la app · Está mejor, Vamos a hacer una cosa, vamos ha poner la Configuración de los iconos dinámica, como los colores y añadir una página a los ajustes donde se puedan cambiar…  los iconos actuales en un paquete lucide y los del rediseño en un paquete llamado ilustrados. la página de configuración que tenga como este boceto  que muestras en este hilos y que puedan seleccionar los distintos paquetes\n- 2026-10-25 10:35 · Rediseñar los iconos de la app · tengo el fichero de fuente .otf que quiero utilizar en la web skynet-duo-regular.otf y skynet-duo-cursive.otf, te los paso y los pones en la web?\n- 2026-10-25 10:35 · Rediseñar los iconos de la app · estas son las fuentes\n- 2026-10-25 10:38 · Rediseñar los iconos de la app · no estoy seguro de que usar la cursiva para titulos y marca quede bien... vamos primero todo con la regular y ya veremos en el futuro\n- 2026-10-25 10:42 · Poner una fuente libre tipo Skynet Duo (TI) · vale, pues quiero la fuente más similar que sea open\n- 2026-10-25 11:05 · Poner una fuente libre tipo Skynet Duo (TI) · la fuente me vale... recibo el aviso:  npm audit informa 4 vulnerabilidades de dependencias: 1 baja, 2 altas y 1 crítica; no impidieron build ni aceptación.\n- 2026-10-25 11:07 · Poner una fuente libre tipo Skynet Duo (TI) · vale, fusiona esta PR y abre otra de security para arreglar las vulnerabilidades..\n- 2026-10-25 11:35 · Poner una fuente libre tipo Skynet Duo (TI) · sg-a está probada, puedes fusionarla\n- 2026-10-25 11:35 · Rediseñar los iconos de la app · mira estos iconos que ha diseñado chatgpt, genera un paquete nuevo llamado chatgpt con estas ilustraciones\n- 2026-10-25 12:13 · Rediseñar los iconos de la app · en esta misma PR quiero rediseñar un poco el interfaz pues los textos son un poco grandes o en negrita y todos los paneles tienen box-shadow, vamos a reducir los tamaños y dar un poco más de aire, la primera imagen es el layout actual, la segunda es duolingo (quiero seguir usando un design system que se parezca, con ese estilo de ilustraciones, muy claro, los textos no llegan a ser nunca negros, más bien una escala de grises). La tercera imagen es el diseño que ha hecho chatgpt, intenta implementar los cambios para reproducir este ultimo diseño\n- 2026-10-25 12:54 · Chat del proyecto · ejecuta el recap semanal\n\n## Summary\n\n- prompts: 71\n- sesiones: 15\n- ventanas de 5 h: 18 (domingo anterior 1, lunes 3, martes 2, miércoles 3, jueves 2, viernes 1, sábado 3, domingo 3)\n- primera marca: 2026-10-18T18:14:27+02:00 · última: 2026-10-25T12:54:44+01:00\n- días sin actividad: ninguno\n- cuota semanal agotada: no (con aviso de uso alto); periodo hasta 2026-10-24T22:00:00+02:00: uso máx. 0.81; periodo hasta 2026-10-31T21:00:00+01:00: uso máx. 0.23\n- límite de 5 h alcanzado: ventana 2026-10-25 09:20–14:20\n- PRs fusionadas: 24 · +26009 / -2735 líneas"
+}
