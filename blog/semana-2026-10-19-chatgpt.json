@@ -1,0 +1,419 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-10-31T11:52:51.136845Z",
+    "madrid": "2026-10-31T12:52:51.136845+01:00"
+  },
+  "week": {
+    "monday": "2026-10-19",
+    "yyyymmdd": "20261019",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-10-18T22:00:00Z",
+      "madrid": "2026-10-19T00:00:00+02:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "complete": null,
+    "start_effective": {
+      "utc": "2026-10-18T22:00:00Z",
+      "madrid": "2026-10-19T00:00:00+02:00"
+    },
+    "start_note": "Semana cerrada cronológicamente; completitud del historial ChatGPT no verificable."
+  },
+  "sources": {
+    "threads": "Recuperación contextual de conversaciones de ChatGPT del proyecto Skynet; no es exportación exhaustiva",
+    "session_events": "no disponible",
+    "session_meta": "no disponible",
+    "github": "No consultado: actividad GitHub recogida por el recap de Claude; se evita duplicarla",
+    "reference_schema": "semana-2026-10-19.json de Claude, proporcionado por el usuario"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "ChatGPT (proyecto «skynet», recuperación contextual parcial)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-10-21T10:49:00Z",
+            "madrid": "2026-10-21T12:49:00+02:00"
+          },
+          "session_id": "chatgpt_reconstructed_20261021_01",
+          "thread": "Revisión de arquitectura y workflows",
+          "message_id": null,
+          "text": "Revisar estado de Skynet, documentación, ADRs y pruebas; preparar workflows reales para evolucionar Forma, Akademia y Tokenmeter.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "minute",
+          "source_quality": "context_retrieval"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T10:57:00Z",
+            "madrid": "2026-10-21T12:57:00+02:00"
+          },
+          "session_id": "chatgpt_reconstructed_20261021_02",
+          "thread": "Integración Hermes y Telegram",
+          "message_id": null,
+          "text": "Poder enviar instrucciones a Skynet mediante Telegram, usando Hermes como interfaz.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "minute",
+          "source_quality": "context_retrieval"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T12:07:00Z",
+            "madrid": "2026-10-21T14:07:00+02:00"
+          },
+          "session_id": "chatgpt_reconstructed_20261021_03",
+          "thread": "Desglose Hermes–Skynet",
+          "message_id": null,
+          "text": "Desglosar la integración en tareas e issues, pero revisar primero un boceto antes de crearlas.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "minute",
+          "source_quality": "context_retrieval"
+        },
+        {
+          "at": {
+            "utc": "2026-10-21T12:12:00Z",
+            "madrid": "2026-10-21T14:12:00+02:00"
+          },
+          "session_id": "chatgpt_reconstructed_20261021_04",
+          "thread": "Coucou y Skynet Companion",
+          "message_id": null,
+          "text": "Explorar Coucou para mostrar estados de agentes y notificaciones, sin adoptar su mascota como identidad final.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "minute",
+          "source_quality": "context_retrieval"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261024_05",
+          "thread": "Mascota DBH / Skyny",
+          "message_id": null,
+          "text": "Diseñar mascota 2D sin cuerpo a partir del logotipo d/B/h, con forma de onigiri y la h integrada en el alga nori.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "project_conversation_context"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261025_06",
+          "thread": "Rediseño de interfaz Skynet",
+          "message_id": null,
+          "text": "Rediseñar UI con referencia visual Duolingo: textos más pequeños, grises, paneles aireados, botones con sombra inferior e iconos como ilustraciones sin recuadro.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "project_conversation_context"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261025_07",
+          "thread": "Estados y animaciones de Skyny",
+          "message_id": null,
+          "text": "Definir estados default, espera, pausa, ejecutando, pensando, revisando, éxito, error y atención; corregir las tres bandas oscuras desde el centro hacia cada lado bajo la cara.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "project_conversation_context"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "chatgpt_reconstructed_20261021_01",
+      "kind": "hilo",
+      "title": "Revisión de arquitectura y workflows",
+      "thread": "Revisión de arquitectura y workflows",
+      "model": null,
+      "created_at": null,
+      "last_activity": {
+        "utc": "2026-10-21T10:49:00Z",
+        "madrid": "2026-10-21T12:49:00+02:00"
+      },
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "Se prioriza validar workflows sobre la integración GitHub/Fase 3."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261021_02",
+      "kind": "hilo",
+      "title": "Integración Hermes y Telegram",
+      "thread": "Integración Hermes y Telegram",
+      "model": null,
+      "created_at": null,
+      "last_activity": {
+        "utc": "2026-10-21T10:57:00Z",
+        "madrid": "2026-10-21T12:57:00+02:00"
+      },
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "Hermes como puente, Skynet como motor; API y eventos como integración propuesta."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261021_03",
+      "kind": "hilo",
+      "title": "Desglose Hermes–Skynet",
+      "thread": "Desglose Hermes–Skynet",
+      "model": null,
+      "created_at": null,
+      "last_activity": {
+        "utc": "2026-10-21T12:07:00Z",
+        "madrid": "2026-10-21T14:07:00+02:00"
+      },
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "No crear issues hasta revisar la propuesta."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261021_04",
+      "kind": "hilo",
+      "title": "Coucou y Skynet Companion",
+      "thread": "Coucou y Skynet Companion",
+      "model": null,
+      "created_at": null,
+      "last_activity": {
+        "utc": "2026-10-21T12:12:00Z",
+        "madrid": "2026-10-21T14:12:00+02:00"
+      },
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "PoC con Coucou; producto definitivo con mascota propia."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261024_05",
+      "kind": "hilo",
+      "title": "Mascota DBH / Skyny",
+      "thread": "Mascota DBH / Skyny",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "Conservar la h minúscula y usar d y B como ojos."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261025_06",
+      "kind": "hilo",
+      "title": "Rediseño de interfaz Skynet",
+      "thread": "Rediseño de interfaz Skynet",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "Mantener tarjetas con bordes visibles; cambiar iconografía y jerarquía visual."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261025_07",
+      "kind": "hilo",
+      "title": "Estados y animaciones de Skyny",
+      "thread": "Estados y animaciones de Skyny",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Registro temático reconstruido, no identificador ni transcripción de sesión original.",
+        "Espera con interrogación; pausa con símbolo pausa; animación idle y SVG 2D."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [],
+    "note": "No se atribuyen PRs a ChatGPT sin evidencia de su ejecución en ChatGPT. Consultar recap de Claude para actividad GitHub."
+  },
+  "issues_closed": [],
+  "milestones_closed": [],
+  "dead_ends": [
+    {
+      "at": null,
+      "session_id": "chatgpt_reconstructed_20261021_04",
+      "pr": null,
+      "what": "Coucou no como mascota final",
+      "detail": "Se valoró Coucou como referencia/PoC, pero se descartó adoptarlo como producto o identidad definitiva.",
+      "outcome": "Diseño de Skyny como mascota propia."
+    },
+    {
+      "at": null,
+      "session_id": "chatgpt_reconstructed_20261025_07",
+      "pr": null,
+      "what": "Corrección de bandas de Skyny",
+      "detail": "Las primeras posiciones de las bandas no coincidían con el logo de referencia.",
+      "outcome": "Tres bandas oscuras desde el centro hacia cada lado, bajo el círculo de la cara."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-10-21T10:49:00Z",
+      "what": "Se prioriza validar workflows sobre la integración GitHub/Fase 3.",
+      "by": "Diego",
+      "thread": "Revisión de arquitectura y workflows"
+    },
+    {
+      "at": "2026-10-21T10:57:00Z",
+      "what": "Hermes como puente, Skynet como motor; API y eventos como integración propuesta.",
+      "by": "Diego",
+      "thread": "Integración Hermes y Telegram"
+    },
+    {
+      "at": "2026-10-21T12:07:00Z",
+      "what": "No crear issues hasta revisar la propuesta.",
+      "by": "Diego",
+      "thread": "Desglose Hermes–Skynet"
+    },
+    {
+      "at": "2026-10-21T12:12:00Z",
+      "what": "PoC con Coucou; producto definitivo con mascota propia.",
+      "by": "Diego",
+      "thread": "Coucou y Skynet Companion"
+    },
+    {
+      "at": null,
+      "what": "Conservar la h minúscula y usar d y B como ojos.",
+      "by": "Diego",
+      "thread": "Mascota DBH / Skyny"
+    },
+    {
+      "at": null,
+      "what": "Mantener tarjetas con bordes visibles; cambiar iconografía y jerarquía visual.",
+      "by": "Diego",
+      "thread": "Rediseño de interfaz Skynet"
+    },
+    {
+      "at": null,
+      "what": "Espera con interrogación; pausa con símbolo pausa; animación idle y SVG 2D.",
+      "by": "Diego",
+      "thread": "Estados y animaciones de Skyny"
+    }
+  ],
+  "summary": {
+    "prompts": null,
+    "sessions": null,
+    "reconstructed_topics": 7,
+    "recovered_prompt_texts": 0,
+    "note": "7 registros temáticos recuperados; no son 7 prompts originales ni 7 sesiones verificadas. No hay recuento exhaustivo.",
+    "windows_5h": null,
+    "prs_merged": null,
+    "additions": null,
+    "deletions": null,
+    "weekly_quota": null
+  },
+  "windows_5h": [],
+  "unavailable": [
+    {
+      "item": "complete_chat_history",
+      "why": "No existe un acceso exhaustivo al listado de chats y mensajes del proyecto para la semana."
+    },
+    {
+      "item": "exact_prompts",
+      "why": "Los textos disponibles son paráfrasis; no se dispone de todas las transcripciones literales."
+    },
+    {
+      "item": "session_ids_and_message_ids",
+      "why": "No se dispone de identificadores originales; se usan identificadores de reconstrucción claramente etiquetados."
+    },
+    {
+      "item": "message_timestamps",
+      "why": "Algunos registros solo tienen fecha de día; las horas exactas no se inventan."
+    },
+    {
+      "item": "tokens_cost_usd_rate_limits",
+      "why": "ChatGPT no expone aquí métricas históricas de tokens, costes o ventanas de uso por chat."
+    },
+    {
+      "item": "github_activity",
+      "why": "No se consulta ni duplica el registro de PRs de Claude; no es atribuible a ChatGPT."
+    },
+    {
+      "item": "completeness",
+      "why": "No se puede verificar que estén todas las conversaciones del proyecto entre el 19 y 25."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay evidencia verificable de despliegues desde estas conversaciones."
+    }
+  ],
+  "digest_markdown": "# Recap ChatGPT · Skynet · 19–25 octubre 2026\n\n**Cobertura:** reconstrucción contextual parcial, no inventario exhaustivo.\n\n- **2026-10-21 · Revisión de arquitectura y workflows:** Revisar estado de Skynet, documentación, ADRs y pruebas; preparar workflows reales para evolucionar Forma, Akademia y Tokenmeter. **Decisión:** Se prioriza validar workflows sobre la integración GitHub/Fase 3.\n- **2026-10-21 · Integración Hermes y Telegram:** Poder enviar instrucciones a Skynet mediante Telegram, usando Hermes como interfaz. **Decisión:** Hermes como puente, Skynet como motor; API y eventos como integración propuesta.\n- **2026-10-21 · Desglose Hermes–Skynet:** Desglosar la integración en tareas e issues, pero revisar primero un boceto antes de crearlas. **Decisión:** No crear issues hasta revisar la propuesta.\n- **2026-10-21 · Coucou y Skynet Companion:** Explorar Coucou para mostrar estados de agentes y notificaciones, sin adoptar su mascota como identidad final. **Decisión:** PoC con Coucou; producto definitivo con mascota propia.\n- **2026-10-24 · Mascota DBH / Skyny:** Diseñar mascota 2D sin cuerpo a partir del logotipo d/B/h, con forma de onigiri y la h integrada en el alga nori. **Decisión:** Conservar la h minúscula y usar d y B como ojos.\n- **2026-10-25 · Rediseño de interfaz Skynet:** Rediseñar UI con referencia visual Duolingo: textos más pequeños, grises, paneles aireados, botones con sombra inferior e iconos como ilustraciones sin recuadro. **Decisión:** Mantener tarjetas con bordes visibles; cambiar iconografía y jerarquía visual.\n- **2026-10-25 · Estados y animaciones de Skyny:** Definir estados default, espera, pausa, ejecutando, pensando, revisando, éxito, error y atención; corregir las tres bandas oscuras desde el centro hacia cada lado bajo la cara. **Decisión:** Espera con interrogación; pausa con símbolo pausa; animación idle y SVG 2D.\n\n**Limitaciones:** sin prompts literales completos, IDs originales, métricas de uso ni conteos verificables. Las PRs se contabilizan en el informe de Claude, no aquí.\n"
+}
