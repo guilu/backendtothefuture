@@ -1,0 +1,348 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-01T08:26:00Z",
+    "madrid": "2026-11-01T09:26:00+01:00"
+  },
+  "week": {
+    "monday": "2026-10-26",
+    "yyyymmdd": "20261026",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-01T23:00:00Z",
+      "madrid": "2026-11-02T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-01T08:26:00Z",
+      "madrid": "2026-11-01T09:26:00+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "start_note": "Informe parcial: domingo 1 de noviembre a las 09:26 Europe/Madrid; puede haber actividad posterior. Recuperación contextual no exhaustiva."
+  },
+  "sources": {
+    "threads": "Recuperación contextual parcial de conversaciones de ChatGPT sobre Skynet, con fechas conocidas; no es exportación completa de mensajes del proyecto.",
+    "session_events": "no disponible",
+    "session_meta": "no disponible",
+    "github": "Hechos de GitHub y ejecución aportados en conversaciones ChatGPT, sin auditoría independiente de GitHub.",
+    "reference_schema": "semana-2026-10-19.json de Claude y semana-2026-10-19-chatgpt.json como modelo de compatibilidad"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "ChatGPT (proyecto «Skynet»; recuperación contextual parcial, algunas conversaciones de integración pueden proceder de otros hilos)",
+      "prompts": [
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_01",
+          "thread": "Investigación AI Factory Skynet",
+          "message_id": null,
+          "text": "Investigar las AI Factories y establecer la hoja de ruta para convertir Skynet en una fábrica de software con fases de análisis, especificación, implementación, pruebas, validación, aprobaciones humanas, costes y memoria.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "conversation_project",
+          "date_madrid": "2026-10-28"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_02",
+          "thread": "Arquitectura de Skynet y operación desde ChatGPT",
+          "message_id": null,
+          "text": "Revisar estado de Skynet y estudiar cómo operar sus workflows desde ChatGPT Plus, preferentemente por voz o móvil, utilizando Hermes como puerta de entrada.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "context_retrieval",
+          "date_madrid": "2026-10-29"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_03",
+          "thread": "Repositorio de comandos y puente seguro",
+          "message_id": null,
+          "text": "Crear repositorio privado guilu/skynet-commands y organizar integración de GitHub Issues con Hermes y Skynet mediante webhook, firma, idempotencia y retorno de resultados.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "context_retrieval",
+          "date_madrid": "2026-10-29"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_04",
+          "thread": "Pruebas end-to-end del bridge",
+          "message_id": null,
+          "text": "Probar el circuito GitHub Issue etiquetada skynet:run → bridge → Skynet → workflow conocer-repositorio y publicar resultado.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "context_retrieval",
+          "date_madrid": "2026-10-29"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_05",
+          "thread": "Skill de recap semanal ChatGPT",
+          "message_id": null,
+          "text": "Crear una skill que genere dentro de ChatGPT un JSON semanal compatible con recap-week/1, limitado a conversaciones del proyecto Skynet, sin exportar datos ni ejecutar scripts externos.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "context_retrieval",
+          "date_madrid": "2026-10-31"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261026_06",
+          "thread": "Recap semanal 26 octubre–1 noviembre",
+          "message_id": null,
+          "text": "Generar el recap ChatGPT de la semana del 26-10 al 01-11.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "current_conversation",
+          "date_madrid": "2026-11-01"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "chatgpt_reconstructed_20261026_01",
+      "kind": "hilo_reconstruido",
+      "title": "Investigación AI Factory Skynet",
+      "thread": "Investigación AI Factory Skynet",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-10-28; no equivale necesariamente a una sesión original completa.",
+        "Petición de investigación y definición de gaps; no consta implementación completada."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261026_02",
+      "kind": "hilo_reconstruido",
+      "title": "Arquitectura de Skynet y operación desde ChatGPT",
+      "thread": "Arquitectura de Skynet y operación desde ChatGPT",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-10-29; no equivale necesariamente a una sesión original completa.",
+        "Arquitectura acordada: ChatGPT → GitHub Issues → Hermes → API Skynet → workflows/runners."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261026_03",
+      "kind": "hilo_reconstruido",
+      "title": "Repositorio de comandos y puente seguro",
+      "thread": "Repositorio de comandos y puente seguro",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-10-29; no equivale necesariamente a una sesión original completa.",
+        "Issue #1 de conectividad; issue #2 de bridge; PR #3 implementó el puente, y se reportaron PR #4/#5/#7 fusionadas."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261026_04",
+      "kind": "hilo_reconstruido",
+      "title": "Pruebas end-to-end del bridge",
+      "thread": "Pruebas end-to-end del bridge",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-10-29; no equivale necesariamente a una sesión original completa.",
+        "Issue #8 completó SKY-2 SUCCEEDED; issue #9 falló por cuerpo JSON skynet-order inválido; issue #10 reintentó y terminó SUCCEEDED (SKY-3)."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261026_05",
+      "kind": "hilo_reconstruido",
+      "title": "Skill de recap semanal ChatGPT",
+      "thread": "Skill de recap semanal ChatGPT",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-10-31; no equivale necesariamente a una sesión original completa.",
+        "Se examinó esquema de Claude y se generó un primer recap de prueba de la semana 19–25; se reconocieron limitaciones de historial y métricas."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261026_06",
+      "kind": "hilo_reconstruido",
+      "title": "Recap semanal 26 octubre–1 noviembre",
+      "thread": "Recap semanal 26 octubre–1 noviembre",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad documentada en fecha local 2026-11-01; no equivale necesariamente a una sesión original completa.",
+        "Generación del presente JSON; semana aún no finalizada al momento del corte."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [],
+    "note": "En las conversaciones se reportaron PR #4, #5 y #7 fusionadas en guilu/skynet-commands; no se incorporan como PR verificadas sin consulta a GitHub ni atribución segura al trabajo ejecutado desde ChatGPT. PR #3 reportada como implementada."
+  },
+  "issues_closed": [],
+  "milestones_closed": [],
+  "dead_ends": [
+    {
+      "at": null,
+      "session_id": "chatgpt_reconstructed_20261026_04",
+      "pr": null,
+      "what": "Issue #9 rechazada por formato de orden",
+      "detail": "El cuerpo contenía texto adicional fuera del único bloque JSON skynet-order; el bridge rechazó la orden y no creó trabajo/run. Editar la issue no reactivaba automáticamente el evento.",
+      "outcome": "Se preparó una issue nueva (#10) con formato válido y etiqueta skynet:run; la ejecución posterior fue reportada como SUCCEEDED."
+    }
+  ],
+  "decisions": [
+    {
+      "at": null,
+      "what": "Enfocar Skynet como AI Factory con fases verificables y aprobaciones humanas selectivas; registrar coste, trazabilidad y memoria.",
+      "by": "Diego",
+      "thread": "Investigación AI Factory Skynet"
+    },
+    {
+      "at": null,
+      "what": "Operar Skynet desde ChatGPT Plus usando GitHub Issues como canal de órdenes y Hermes como bridge hacia la API de Skynet.",
+      "by": "Diego",
+      "thread": "Arquitectura de Skynet y operación desde ChatGPT"
+    },
+    {
+      "at": null,
+      "what": "Usar repositorio privado separado guilu/skynet-commands para las órdenes; emplear etiqueta skynet:run, webhook seguro, deduplicación y formato skynet-order.",
+      "by": "Diego",
+      "thread": "Repositorio de comandos y puente seguro"
+    },
+    {
+      "at": null,
+      "what": "Para repetir un intento tras corregir el contenido de una issue, crear una nueva orden/evento y evitar duplicados.",
+      "by": "Diego",
+      "thread": "Pruebas end-to-end del bridge"
+    },
+    {
+      "at": null,
+      "what": "El recap de ChatGPT debe cubrir solo el proyecto Skynet y usar recap-week/1 sin inventar telemetría no disponible.",
+      "by": "Diego",
+      "thread": "Skill de recap semanal ChatGPT"
+    }
+  ],
+  "summary": {
+    "prompts": null,
+    "sessions": null,
+    "reconstructed_topics": 6,
+    "recovered_prompt_texts": 0,
+    "note": "6 bloques temáticos documentados; no representan un censo completo de prompts ni sesiones. Semana parcial al 01/11/2026 09:26 CET.",
+    "windows_5h": null,
+    "prs_merged": null,
+    "additions": null,
+    "deletions": null,
+    "weekly_quota": null
+  },
+  "windows_5h": [],
+  "unavailable": [
+    {
+      "item": "complete_project_chat_history",
+      "why": "No hay inventario completo de conversaciones/mensajes con filtro verificable por pertenencia al proyecto Skynet; algunas interacciones sobre Skynet pueden proceder de otros chats."
+    },
+    {
+      "item": "exact_prompts",
+      "why": "Se recuperaron temas y fragmentos, no el texto literal de todos los mensajes; prompts del JSON están etiquetados como paráfrasis."
+    },
+    {
+      "item": "session_ids_and_message_ids",
+      "why": "Los identificadores chatgpt_reconstructed son internos del informe, no IDs reales de ChatGPT."
+    },
+    {
+      "item": "exact_timestamps",
+      "why": "Las fechas de los bloques están documentadas, pero no se puede asignar hora exacta fiable a cada uno."
+    },
+    {
+      "item": "tokens_cost_usd_rate_limits",
+      "why": "No se dispone de métricas históricas por conversación ni ventanas de uso de cinco horas o cuota semanal."
+    },
+    {
+      "item": "verified_github_metrics",
+      "why": "Se incluyen hechos reportados en la conversación, no un inventario independiente de PR, issues, commits ni líneas cambiadas."
+    },
+    {
+      "item": "completeness",
+      "why": "La semana sigue abierta en el momento del corte y la recuperación contextual no garantiza exhaustividad."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No se ha verificado un despliegue de producción en la semana; sí se reportó bridge/webhook HTTPS activo para pruebas."
+    }
+  ],
+  "digest_markdown": "# Recap ChatGPT · Skynet · 26 octubre–1 noviembre 2026\n\n**Cobertura:** parcial hasta el domingo 1 de noviembre a las 09:26 (Europe/Madrid); recuperación contextual, no historial completo.\n\n- **2026-10-28 · Investigación AI Factory Skynet:** Investigar las AI Factories y establecer la hoja de ruta para convertir Skynet en una fábrica de software con fases de análisis, especificación, implementación, pruebas, validación, aprobaciones humanas, costes y memoria. **Resultado:** Petición de investigación y definición de gaps; no consta implementación completada.\n- **2026-10-29 · Arquitectura de Skynet y operación desde ChatGPT:** Revisar estado de Skynet y estudiar cómo operar sus workflows desde ChatGPT Plus, preferentemente por voz o móvil, utilizando Hermes como puerta de entrada. **Resultado:** Arquitectura acordada: ChatGPT → GitHub Issues → Hermes → API Skynet → workflows/runners.\n- **2026-10-29 · Repositorio de comandos y puente seguro:** Crear repositorio privado guilu/skynet-commands y organizar integración de GitHub Issues con Hermes y Skynet mediante webhook, firma, idempotencia y retorno de resultados. **Resultado:** Issue #1 de conectividad; issue #2 de bridge; PR #3 implementó el puente, y se reportaron PR #4/#5/#7 fusionadas.\n- **2026-10-29 · Pruebas end-to-end del bridge:** Probar el circuito GitHub Issue etiquetada skynet:run → bridge → Skynet → workflow conocer-repositorio y publicar resultado. **Resultado:** Issue #8 completó SKY-2 SUCCEEDED; issue #9 falló por cuerpo JSON skynet-order inválido; issue #10 reintentó y terminó SUCCEEDED (SKY-3).\n- **2026-10-31 · Skill de recap semanal ChatGPT:** Crear una skill que genere dentro de ChatGPT un JSON semanal compatible con recap-week/1, limitado a conversaciones del proyecto Skynet, sin exportar datos ni ejecutar scripts externos. **Resultado:** Se examinó esquema de Claude y se generó un primer recap de prueba de la semana 19–25; se reconocieron limitaciones de historial y métricas.\n- **2026-11-01 · Recap semanal 26 octubre–1 noviembre:** Generar el recap ChatGPT de la semana del 26-10 al 01-11. **Resultado:** Generación del presente JSON; semana aún no finalizada al momento del corte.\n\n## Resultados técnicos reportados\n\n- Arquitectura de mando: ChatGPT → GitHub Issues (`guilu/skynet-commands`) → Hermes → API Skynet → workflow/runners.\n- Puente con webhook seguro, validación de firma, formato `skynet-order`, cola SQLite e idempotencia (según los reportes de la conversación).\n- Pruebas: issue #8 / SKY-2 SUCCEEDED; issue #9 falló por formato; issue #10 / SKY-3 SUCCEEDED, con duración reportada aproximada de 9 min 32 s y sin reintentos del bridge.\n- Se solicitó una investigación sobre AI Factory y una skill de recap compatible con `recap-week/1`.\n\n## Limitaciones\n\nNo se dispone de inventario completo de chats del proyecto, prompts originales íntegros, identificadores reales, tokens, costes, ventanas de uso ni métricas GitHub auditadas. Los PR y resultados E2E citados son hechos comunicados en las conversaciones, no comprobaciones independientes."
+}

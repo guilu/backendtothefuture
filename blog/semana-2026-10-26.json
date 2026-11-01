@@ -1,0 +1,3099 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-01T08:39:42Z",
+    "madrid": "2026-11-01T09:39:42+01:00"
+  },
+  "week": {
+    "monday": "2026-10-26",
+    "yyyymmdd": "20261026",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-10-25T23:00:00Z",
+      "madrid": "2026-10-26T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-01T23:00:00Z",
+      "madrid": "2026-11-02T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-01T08:39:42Z",
+      "madrid": "2026-11-01T09:39:42+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-10-25T13:34:44Z",
+      "madrid": "2026-10-25T14:34:44+01:00"
+    },
+    "start_note": "el periodo empieza antes del lunes para recoger lo que quedó fuera del informe anterior"
+  },
+  "sources": {
+    "threads": "hilos y chat del proyecto (mensajes de Diego con su hora)",
+    "session_events": "rate_limit_event y result de cada sesión (list_events)",
+    "session_meta": "get_session (uso acumulado, modelo, fechas)",
+    "github": "API de GitHub para PRs, issues y milestones; git log de main para líneas por PR (squash)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Claude (proyecto «Skynet», sesiones en la nube)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-10-25T14:44:57Z",
+            "madrid": "2026-10-25T15:44:57+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6CC7L2xtEddjWCxhCmiMtup",
+          "text": "el background color del main lo quiero blanco"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T14:46:28Z",
+            "madrid": "2026-10-25T15:46:28+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BHXXm4VmTPUPmNEXQEneZE",
+          "text": "y todos los botones (o enlaces de boton) que mantengan la estética de duolingo  con el box-shadow por abajo"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T14:48:26Z",
+            "madrid": "2026-10-25T15:48:26+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6RNhCs4X6QCbVStRjdaTrZT",
+          "text": "El companion se llama Skyny (diminutivo de skynet) para que lo pongas en las frases \"Hola, soy Skynet. No hay nada en marcha: ¿lanzamos algo?\" y enl a pagina de configuración del companion"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T14:57:28Z",
+            "madrid": "2026-10-25T15:57:28+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MyvanmFWwx4mQFGhu9nkna",
+          "text": "en la pagina de ejecuciones vamos a poner los iconos del paquete de iconos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T15:02:25Z",
+            "madrid": "2026-10-25T16:02:25+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6C1RaAXhz6J9Nhnfem7zjgk",
+          "text": "El main en el tema oscuro debe tener el background-color: #171f30"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T16:48:54Z",
+            "madrid": "2026-10-25T17:48:54+01:00"
+          },
+          "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+          "thread": "Rediseñar los iconos de la app",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Fj77KkhpraBeyABCXvYPmn",
+          "text": "perfecto, todo probado, fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T20:08:04Z",
+            "madrid": "2026-10-25T21:08:04+01:00"
+          },
+          "session_id": "session_01ARfoyhxKU2EHprvUz1UuSA",
+          "thread": "Informe semanal para el recap",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6H4D4WRhjU66hm2vhzUP2N6",
+          "text": "Este hilo dalo por completado"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T20:13:15Z",
+            "madrid": "2026-10-25T21:13:15+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61Tp8M6foryP7ojz52GNBx7",
+          "text": "Vamos a implementar la issue 174"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T20:35:15Z",
+            "madrid": "2026-10-25T21:35:15+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y666RZpMj51WrPmiZeEvmdM68",
+          "text": "Aprobado, adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T21:56:50Z",
+            "madrid": "2026-10-25T22:56:50+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66VZZXvqXBxgM7yEAe4mRgKC",
+          "text": "Lee la revisión de la PR y efectúa los cambios que indica"
+        },
+        {
+          "at": {
+            "utc": "2026-10-25T22:40:15Z",
+            "madrid": "2026-10-25T23:40:15+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66MRPjDuYy6R5Mwqg7PNYEis",
+          "text": "Todo probado entonces fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T06:22:33Z",
+            "madrid": "2026-10-26T07:22:33+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66Mc3T2RZkM6RwddLSBggKAm",
+          "text": "se suben los screenshots al repo?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T12:22:45Z",
+            "madrid": "2026-10-26T13:22:45+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y668DCBctXVatbQSdUKeSmc8R",
+          "text": "VS-B está perfecto, se puede fusionar y seguir"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T13:35:36Z",
+            "madrid": "2026-10-26T14:35:36+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66MKT7s8WeS8dyZbGD3VENN",
+          "text": "La carpeta social se sube al repo?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T13:37:39Z",
+            "madrid": "2026-10-26T14:37:39+01:00"
+          },
+          "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+          "thread": "Crear galería visual de capturas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66Tfa9p95Kr1bZQopDjUJfUa",
+          "text": "No, ya está todo probado puedes fusionar"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T13:54:19Z",
+            "madrid": "2026-10-26T14:54:19+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63KpGB3615V5L5hBobKaDwV",
+          "text": "Tengo una versión nueva del diseño de skyny, la mascota companion de skynet. Me gustaría actualizar el icono de la app y las animaciones de skyny con esta nueva versión. Abre una issue y planifica cómo hacerlo, también si se te ocurren más interacciones en la web con la mascota vamos a censarlas a ver si se pueden hacer"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T15:13:37Z",
+            "madrid": "2026-10-26T16:13:37+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66DWoPB1ebv77Q5U4E4JPc89",
+          "text": "Está bien pero las bandas oscuras de skyny se han generado mal, toma como referencia la primera imagen y corrige las bandas superiores que están hacia abajo"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T15:18:06Z",
+            "madrid": "2026-10-26T16:18:06+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66Wqr7TGvWiei7hUWCuCsDYQ",
+          "text": "Ahora si, no me termina de gustar la lupa que tiene el skyny de revisando, si representa que la bola derecha es la mano debería ser más grande y apuntando hacia la derecha"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T15:22:21Z",
+            "madrid": "2026-10-26T16:22:21+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66Me55f4FcYXdGiEGQLb9KJX",
+          "text": "Me vale… está perfecto, ya puedes arrancar por SY-A, sí que quiero que skyny sustituya al isotipo de la barra lateral y los accesorios de temporada van ya"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T16:53:47Z",
+            "madrid": "2026-10-26T17:53:47+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66TGGczQUQavEJHQaiu3HJcF",
+          "text": "No nos gusta que los sombreros estén encima de la bola superior, queda muy alto e interfiere con los bocadillos, puedes ponerlos en el lado izquierdo como si lo tuviera ladeado"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T17:11:41Z",
+            "madrid": "2026-10-26T18:11:41+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66PoNt9ok5LeLcsLSb4rMNKL",
+          "text": "esta todo ok, fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T18:11:25Z",
+            "madrid": "2026-10-26T19:11:25+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66C5kE4tjFHWqAtzaLy4h3vn",
+          "text": "Dale"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T20:54:26Z",
+            "madrid": "2026-10-26T21:54:26+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66HAARaLHntXeFAoj16wt38t",
+          "text": "Cuándo sea una PR pequeña que tenga todo en verde puede bastar con la petición de Hermes. Vamos a crear una clasificación de PRs y las que sean pequeñas y Hermes pida fusionarlas, tú las fusionas"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T20:58:28Z",
+            "madrid": "2026-10-26T21:58:28+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y661ghPqTFPDrM8ryuEWfGQxw",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-26T21:08:45Z",
+            "madrid": "2026-10-26T22:08:45+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66MD56Xdcxr8JSFFHngFzUna",
+          "text": "Arranca"
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T06:40:18Z",
+            "madrid": "2026-10-27T07:40:18+01:00"
+          },
+          "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+          "thread": "Actualizar Skyny con el nuevo diseño",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66JzRf5BMpbQf6DNPBHPwtKP",
+          "text": "Las animaciones están probadas, fusiona."
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T17:46:30Z",
+            "madrid": "2026-10-27T18:46:30+01:00"
+          },
+          "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+          "thread": "Poner logotipos de proveedores en Uso",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KWK6jVvU1gC8hKmHonMYNb",
+          "text": "Implementa la issue RN-A"
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T21:57:17Z",
+            "madrid": "2026-10-27T22:57:17+01:00"
+          },
+          "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+          "thread": "Poner logotipos de proveedores en Uso",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WgLzZt2YWyUoGFGxJJWxZ8",
+          "text": "Ya lo ha hecho Hermes, no hacemos nada aquí"
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T22:46:43Z",
+            "madrid": "2026-10-27T23:46:43+01:00"
+          },
+          "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+          "thread": "Parametrizar la ruta del mapa en los workflows iniciales",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6H8C1UjwyowgtUL9ftSKENk",
+          "text": "He ejecutado el reset y tengo skynet en vacío con los workflows iniciales… he creado el proyecto de skynet,con su repositorio /home/diegobarrioh/code/skynet y voy a lanzar el workflow de conocer repositorio, que se supone que tiene puesto harcoded, que genera el mapa en docs/skynet/mapa.md sea el que sea el iproyecto o repo en el que lo lance… debería de generar docs/skynet/mapa-{project}.md donde project sea el nombre del proyecto sobre el que se lance. Analiza el requerimiento y vamos a abrir una issue para mejorar los workflows iniciales"
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T22:57:47Z",
+            "madrid": "2026-10-27T23:57:47+01:00"
+          },
+          "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+          "thread": "Parametrizar la ruta del mapa en los workflows iniciales",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62jSuUYnjRmsBM7Qhz1HBh6",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-10-27T23:00:58Z",
+            "madrid": "2026-10-28T00:00:58+01:00"
+          },
+          "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+          "thread": "Parametrizar la ruta del mapa en los workflows iniciales",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y629x4ZYM7cnRhUnnPDpGSoZ",
+          "text": "Implmenta MP-A"
+        },
+        {
+          "at": {
+            "utc": "2026-10-28T06:41:11Z",
+            "madrid": "2026-10-28T07:41:11+01:00"
+          },
+          "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+          "thread": "Poner logotipos de proveedores en Uso",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QC4whxAM91JoWExQVt6jRf",
+          "text": "quiero poner los logotipos de Antrophic Gemini y Codex en la ventana de Uso donde ahora mismo está la C de Claude Code la X en Codex y la A en Antigravity CLI"
+        },
+        {
+          "at": {
+            "utc": "2026-10-28T07:15:04Z",
+            "madrid": "2026-10-28T08:15:04+01:00"
+          },
+          "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+          "thread": "Poner logotipos de proveedores en Uso",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6YKkMQaDhpQPykQvdvPCCEt",
+          "text": "acepto yo, fusiona, y tambien fusiona MP-A que ya he validado que el mapa lo hace en docs/skynet/mapa-sky.md"
+        },
+        {
+          "at": {
+            "utc": "2026-10-28T18:20:51Z",
+            "madrid": "2026-10-28T19:20:51+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6E6XbVM24bXEvfGjAYUeKQN",
+          "text": "De igual modo que yo estoy creando skynet, he leído que la tendencia últimamente son las AI Factories que son workflows agenticos auditables y repetobles para la generacion de software, tener una fábrica de software en la que los agentes analizan, crean specs, implementan, prueban y validan con aprobaciones humanas para algunos procesos para otros no, de manera que son capaces de sacar features de manera completamente autónoma, y luego se tienen herramientas para analizar las ejecuciones, los costes, tener toda la memoria de lo aprendido en las tareas, etc. He visto en vídeos que stripe tiene un sistema que llama Orbit que es algo así y las empresas están creando sus propias AI Factories. \nQuiero que hagas deep research en la web y me des el camino y lo que falta para llegar a tener mi propia AI Factory en Skynet"
+        },
+        {
+          "at": {
+            "utc": "2026-10-30T21:01:45Z",
+            "madrid": "2026-10-30T22:01:45+01:00"
+          },
+          "session_id": "session_01PyBwEUtBmVEkhBjPMQTx1w",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6W3m4Ng15u9gGLjHvzCZRNu",
+          "text": "He revisado la investigación y me parece bien, empezar por GH, que es el S1 que ya hay escrito, para luego seguir con EN.... empieza por preparar el plan de GH"
+        },
+        {
+          "at": {
+            "utc": "2026-10-30T23:58:34Z",
+            "madrid": "2026-10-31T00:58:34+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KRso7S6EiSqB4px1YL8zwK",
+          "text": "Aprobado"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T00:58:39Z",
+            "madrid": "2026-10-31T01:58:39+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6JZwadq9zEZE6sphpUqgAJs",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T08:05:45Z",
+            "madrid": "2026-10-31T09:05:45+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GKKtqqo4G4exSvWezZaEoU",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T11:28:39Z",
+            "madrid": "2026-10-31T12:28:39+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6K7MsX2Wuq9AKewehhDmnV9",
+          "text": "fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T11:30:55Z",
+            "madrid": "2026-10-31T12:30:55+01:00"
+          },
+          "session_id": "session_01PyBwEVGnKQ932uU8UzFdHp",
+          "thread": "Llevar la skill de recap a Codex",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6JRyFPZinQ4QcmTTndg2uce",
+          "text": "quiero trasladar la misma skill de recap que tengo aqui a codex.... me puedes dar el prompt o el SKILL.md que tengo que trasladarle"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T12:12:33Z",
+            "madrid": "2026-10-31T13:12:33+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64XUC8NnqvbnYZ3ti4GYKKh",
+          "text": "fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T12:34:27Z",
+            "madrid": "2026-10-31T13:34:27+01:00"
+          },
+          "session_id": "session_01PyBwEVKajEagN48Vpqy8wt",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65ttmAGSnC1ZTCwWsqfNBYW",
+          "text": "Vale, hemos terminado el hito GH. Hazme un resumen de la funcionalidad nueva que tengo disponible en skynet."
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T13:07:57Z",
+            "madrid": "2026-10-31T14:07:57+01:00"
+          },
+          "session_id": "session_01PyBwEVKajEagN48Vpqy8wt",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68QGLnqiu4XTLLNgqgH9pDW",
+          "text": "acabo de conectar skynet con github app skynet-guilu, de manera que el hito GH está terminado... vamos a seguir con EN"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T14:34:28Z",
+            "madrid": "2026-10-31T15:34:28+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61paoyAcZZ4j51azyDP5SEm",
+          "text": "Adelante, aprobado, y dime si tengo  que cambiar alguna permiso en la app de github skynet-guilu"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T16:21:48Z",
+            "madrid": "2026-10-31T17:21:48+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AT8WG2HmWn8GRkQzoEbWh4",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T16:53:20Z",
+            "madrid": "2026-10-31T17:53:20+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VSSWf7mFFamCMnU4XWoosc",
+          "text": "Ya he añadido el permiso actions read only. Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T17:00:20Z",
+            "madrid": "2026-10-31T18:00:20+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HThi7a9RTgacSd6Vf2gcUu",
+          "text": "Dale"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T17:53:54Z",
+            "madrid": "2026-10-31T18:53:54+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KW9uRcNi8X7sZWTr1axwfQ",
+          "text": "Pero existe el repo guilu/demo-repo?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T20:38:54Z",
+            "madrid": "2026-10-31T21:38:54+01:00"
+          },
+          "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+          "thread": "Entregar el trabajo por PR (EN)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67M6eu6A81ysiQGRVpsLfpJ",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:47:51Z",
+            "madrid": "2026-11-01T00:47:51+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PpMXv39nZKExu6PHn1FAYu",
+          "text": "Resume que era el hito DS"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:50:20Z",
+            "madrid": "2026-11-01T00:50:20+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PeqJR5JsQHgVU54vsFGrE9",
+          "text": "Tengo una duda… donde hay que crear la issue?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:51:34Z",
+            "madrid": "2026-11-01T00:51:34+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6MRxk7GTdAXrFv2zyhxK5fS",
+          "text": "Entonces tengo qu instalar la aplicación en cada repo de github que quiera crear…"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:53:08Z",
+            "madrid": "2026-11-01T00:53:08+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BB2T4q4uyXjGUQ4uyWcTn9",
+          "text": "La instalé con all repositorios…. Y entonces hay que crear webhooks en cada repo?"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:56:19Z",
+            "madrid": "2026-11-01T00:56:19+01:00"
+          },
+          "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6N341qMD3xTKT9dGY1fCPXs",
+          "text": "Es que ya tengo un repo privado llamado guilu/skynet-commands,que cuando creas una issue con una etiqueta skynet: run command. Se lanza un webhook que llega a hermes y este lanza un workflow en skynet. Esto es parecido a el hito DS"
+        },
+        {
+          "at": {
+            "utc": "2026-10-31T23:57:42Z",
+            "madrid": "2026-11-01T00:57:42+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NYdsnkmkbfSBF1vZpUVcA5",
+          "text": "Vale, pues adelante con el plan de DS"
+        },
+        {
+          "at": {
+            "utc": "2026-11-01T08:27:45Z",
+            "madrid": "2026-11-01T09:27:45+01:00"
+          },
+          "session_id": "session_01PyBwEW6nag5Lnz7hTY2W4q",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Vcpt8xyLLRy1NmQHmAHDPP",
+          "text": "genera el recap de la semana"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session_01WdvCwqrrdnBTAy5VicARds",
+      "kind": "hilo",
+      "title": "Rediseñar los iconos de la app",
+      "thread": "Rediseñar los iconos de la app",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-25T08:24:41Z",
+        "madrid": "2026-10-25T09:24:41+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T16:49:47Z",
+        "madrid": "2026-10-25T17:49:47+01:00"
+      },
+      "status": "completada",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-10-25T14:44:57Z",
+        "madrid": "2026-10-25T15:44:57+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-25T16:48:54Z",
+        "madrid": "2026-10-25T17:48:54+01:00"
+      },
+      "prs": [
+        169
+      ],
+      "agent_replies": 21,
+      "usage_session_total": {
+        "cost_usd": 42.44,
+        "input_tokens": 5205,
+        "output_tokens": 301304,
+        "cache_read_tokens": 90175043,
+        "cache_write_tokens": 1450758,
+        "note": "acumulado desde el domingo 25 a las 08:24; en este informe solo cuentan los eventos desde las 13:34"
+      },
+      "usage_this_week": {
+        "cost_usd": 6.8674,
+        "input": 2393,
+        "output": 26931,
+        "cache_read": 11914919,
+        "cache_write": 492427,
+        "thinking": 3382,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 7,
+        "turns_by_origin": {
+          "human": 2,
+          "task-notification": 5
+        },
+        "turns_with_error": [],
+        "active_time_ms": 1295508,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792952400
+      ],
+      "notes": [
+        "Fusionó la #169 (IC-A, 419ce16) y cerró #166; IC-B e IC-C se cerraron sin PR."
+      ]
+    },
+    {
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "kind": "hilo",
+      "title": "Crear galería visual de capturas",
+      "thread": "Crear galería visual de capturas",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-25T20:13:27Z",
+        "madrid": "2026-10-25T21:13:27+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-26T13:38:22Z",
+        "madrid": "2026-10-26T14:38:22+01:00"
+      },
+      "status": "completada",
+      "prompts": 8,
+      "first_prompt": {
+        "utc": "2026-10-25T20:13:15Z",
+        "madrid": "2026-10-25T21:13:15+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-26T13:37:39Z",
+        "madrid": "2026-10-26T14:37:39+01:00"
+      },
+      "prs": [
+        178,
+        179,
+        180
+      ],
+      "agent_replies": 16,
+      "usage_session_total": {
+        "cost_usd": 26.57,
+        "input_tokens": 4386,
+        "output_tokens": 210177,
+        "cache_read_tokens": 61565867,
+        "cache_write_tokens": 860913,
+        "note": "acumulado; empezó el domingo 25 por la noche"
+      },
+      "usage_this_week": {
+        "cost_usd": 26.57,
+        "input": 4386,
+        "output": 210177,
+        "cache_read": 61565867,
+        "cache_write": 860913,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 26,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 7,
+          "task-notification": 18
+        },
+        "turns_with_error": [],
+        "active_time_ms": 5557165,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792976400,
+        1793013600,
+        1793035200
+      ],
+      "notes": [
+        "Hito VS completo: #178, #179 y #180; milestones 61-63 cerrados."
+      ]
+    },
+    {
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "kind": "hilo",
+      "title": "Actualizar Skyny con el nuevo diseño",
+      "thread": "Actualizar Skyny con el nuevo diseño",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-26T13:54:32Z",
+        "madrid": "2026-10-26T14:54:32+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-27T06:40:58Z",
+        "madrid": "2026-10-27T07:40:58+01:00"
+      },
+      "status": "completada",
+      "prompts": 11,
+      "first_prompt": {
+        "utc": "2026-10-26T13:54:19Z",
+        "madrid": "2026-10-26T14:54:19+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-27T06:40:18Z",
+        "madrid": "2026-10-27T07:40:18+01:00"
+      },
+      "prs": [
+        185,
+        186,
+        187
+      ],
+      "agent_replies": 23,
+      "usage_session_total": {
+        "cost_usd": 29.45,
+        "input_tokens": 7555,
+        "output_tokens": 208626,
+        "cache_read_tokens": 69434741,
+        "cache_write_tokens": 1343277,
+        "note": "acumulado; empezó el lunes 26"
+      },
+      "usage_this_week": {
+        "cost_usd": 29.45,
+        "input": 7555,
+        "output": 208626,
+        "cache_read": 69434741,
+        "cache_write": 1343277,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 26,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 11,
+          "task-notification": 14
+        },
+        "turns_with_error": [],
+        "active_time_ms": 3888181,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793035200,
+        1793053200,
+        1793101200
+      ],
+      "notes": [
+        "Hito SY completo: #185, #186 y #187; issues #181-#184 cerradas."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+      "kind": "hilo",
+      "title": "Poner logotipos de proveedores en Uso",
+      "thread": "Poner logotipos de proveedores en Uso",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-27T17:46:43Z",
+        "madrid": "2026-10-27T18:46:43+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-28T07:15:51Z",
+        "madrid": "2026-10-28T08:15:51+01:00"
+      },
+      "status": "completada",
+      "prompts": 4,
+      "first_prompt": {
+        "utc": "2026-10-27T17:46:30Z",
+        "madrid": "2026-10-27T18:46:30+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-28T07:15:04Z",
+        "madrid": "2026-10-28T08:15:04+01:00"
+      },
+      "prs": [
+        192,
+        190
+      ],
+      "agent_replies": 5,
+      "usage_session_total": {
+        "cost_usd": 4.38,
+        "input_tokens": 1784,
+        "output_tokens": 23305,
+        "cache_read_tokens": 8322536,
+        "cache_write_tokens": 272527,
+        "note": "acumulado; empezó el martes 27"
+      },
+      "usage_this_week": {
+        "cost_usd": 4.38,
+        "input": 1784,
+        "output": 23305,
+        "cache_read": 8322536,
+        "cache_write": 272527,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 9,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 4,
+          "task-notification": 4
+        },
+        "turns_with_error": [],
+        "active_time_ms": 432179,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793140800,
+        1793187600
+      ],
+      "notes": [
+        "Empezó como RN-A (ya resuelto por Hermes), hizo LG-A (#192) y fusionó también la #190."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+      "kind": "hilo",
+      "title": "Parametrizar la ruta del mapa en los workflows iniciales",
+      "thread": "Parametrizar la ruta del mapa en los workflows iniciales",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-27T22:46:56Z",
+        "madrid": "2026-10-27T23:46:56+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-28T07:15:58Z",
+        "madrid": "2026-10-28T08:15:58+01:00"
+      },
+      "status": "completada",
+      "prompts": 3,
+      "first_prompt": {
+        "utc": "2026-10-27T22:46:43Z",
+        "madrid": "2026-10-27T23:46:43+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-27T23:00:58Z",
+        "madrid": "2026-10-28T00:00:58+01:00"
+      },
+      "prs": [
+        190
+      ],
+      "agent_replies": 6,
+      "usage_session_total": {
+        "cost_usd": 5.12,
+        "input_tokens": 2039,
+        "output_tokens": 34040,
+        "cache_read_tokens": 10900975,
+        "cache_write_tokens": 272094,
+        "note": "acumulado; empezó el martes 27"
+      },
+      "usage_this_week": {
+        "cost_usd": 5.12,
+        "input": 2039,
+        "output": 34040,
+        "cache_read": 10900975,
+        "cache_write": 272094,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 13,
+        "turns_by_origin": {
+          "desconocido": 5,
+          "human": 3,
+          "task-notification": 5
+        },
+        "turns_with_error": [],
+        "active_time_ms": 567393,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793158800,
+        1793187600
+      ],
+      "notes": [
+        "MP-A: abrió la #190, issue #189 y milestone 68."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "kind": "hilo",
+      "title": "Entregar el trabajo por PR (EN)",
+      "thread": "Entregar el trabajo por PR (EN)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-28T18:21:04Z",
+        "madrid": "2026-10-28T19:21:04+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-31T20:40:38Z",
+        "madrid": "2026-10-31T21:40:38+01:00"
+      },
+      "status": "completada",
+      "prompts": 11,
+      "first_prompt": {
+        "utc": "2026-10-28T18:20:51Z",
+        "madrid": "2026-10-28T19:20:51+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-31T20:38:54Z",
+        "madrid": "2026-10-31T21:38:54+01:00"
+      },
+      "prs": [
+        196,
+        197,
+        198,
+        199,
+        203,
+        204,
+        205
+      ],
+      "agent_replies": 28,
+      "usage_session_total": {
+        "cost_usd": 78.57,
+        "input_tokens": 196309,
+        "output_tokens": 637963,
+        "cache_read_tokens": 212284298,
+        "cache_write_tokens": 2882977,
+        "note": "acumulado; empezó el miércoles 28"
+      },
+      "usage_this_week": {
+        "cost_usd": 78.57,
+        "input": 196309,
+        "output": 637963,
+        "cache_read": 212284298,
+        "cache_write": 2882977,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 63,
+        "turns_by_origin": {
+          "desconocido": 5,
+          "human": 12,
+          "task-notification": 46
+        },
+        "turns_with_error": [
+          {
+            "at": "2026-10-31T16:22:04.056792Z",
+            "subtype": "error_during_execution",
+            "api_error": null,
+            "terminal": "aborted_streaming",
+            "result_head": ""
+          },
+          {
+            "at": "2026-10-31T17:55:42.995051Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 6pm (UTC)"
+          }
+        ],
+        "active_time_ms": 11598627,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793229600,
+        1793412000,
+        1793451600,
+        1793469600,
+        1793487600
+      ],
+      "notes": [
+        "Investigación AI Factory (hoja de ruta de 14 hitos) y luego los hitos GH y EN completos."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEVGnKQ932uU8UzFdHp",
+      "kind": "hilo",
+      "title": "Llevar la skill de recap a Codex",
+      "thread": "Llevar la skill de recap a Codex",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-31T11:31:05Z",
+        "madrid": "2026-10-31T12:31:05+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-31T11:32:50Z",
+        "madrid": "2026-10-31T12:32:50+01:00"
+      },
+      "status": "completada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-31T11:30:55Z",
+        "madrid": "2026-10-31T12:30:55+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-31T11:30:55Z",
+        "madrid": "2026-10-31T12:30:55+01:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.77,
+        "input_tokens": 1716,
+        "output_tokens": 7226,
+        "cache_read_tokens": 766153,
+        "cache_write_tokens": 56907,
+        "note": "acumulado; sábado 31"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.77,
+        "input": 1716,
+        "output": 7226,
+        "cache_read": 766153,
+        "cache_write": 56907,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 2,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 99220,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793451600
+      ],
+      "notes": [
+        "SKILL.md y build.py del recap para Codex."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "kind": "hilo",
+      "title": "Lanzar trabajo desde GitHub (DS)",
+      "thread": "Lanzar trabajo desde GitHub (DS)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-31T23:57:53Z",
+        "madrid": "2026-11-01T00:57:53+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-01T00:02:39Z",
+        "madrid": "2026-11-01T01:02:39+01:00"
+      },
+      "status": "esperando a Diego",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-31T23:57:42Z",
+        "madrid": "2026-11-01T00:57:42+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-31T23:57:42Z",
+        "madrid": "2026-11-01T00:57:42+01:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 1.8,
+        "input_tokens": 1713,
+        "output_tokens": 19570,
+        "cache_read_tokens": 2783023,
+        "cache_write_tokens": 103251,
+        "note": "acumulado; empezó el sábado 31"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.8,
+        "input": 1713,
+        "output": 19570,
+        "cache_read": 2783023,
+        "cache_write": 103251,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 2,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 279783,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793508000
+      ],
+      "notes": [
+        "Plan DS (absorber el puente skynet-commands) pendiente de aprobación."
+      ]
+    },
+    {
+      "session_id": "session_01M6To4SoL8omXE1c8auJWPe",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-25T20:08:05Z",
+        "madrid": "2026-10-25T21:08:05+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-25T23:16:07Z",
+        "madrid": "2026-10-26T00:16:07+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.9,
+        "input_tokens": 1692,
+        "output_tokens": 2386,
+        "cache_read_tokens": 1413107,
+        "cache_write_tokens": 61476,
+        "note": "acumulado; domingo 25"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.9,
+        "input": 1692,
+        "output": 2386,
+        "cache_read": 1413107,
+        "cache_write": 61476,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 16,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 9
+        },
+        "turns_with_error": [],
+        "active_time_ms": 95546,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1792976400
+      ],
+      "notes": [
+        "Lanzó el hilo de la galería (issue 174)."
+      ]
+    },
+    {
+      "session_id": "session_01F9HkMVMZeyPprhj2FLyeAZ",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-26T12:22:46Z",
+        "madrid": "2026-10-26T13:22:46+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-26T14:00:57Z",
+        "madrid": "2026-10-26T15:00:57+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.75,
+        "input_tokens": 1684,
+        "output_tokens": 1895,
+        "cache_read_tokens": 921243,
+        "cache_write_tokens": 59888,
+        "note": "acumulado; lunes 26"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.75,
+        "input": 1684,
+        "output": 1895,
+        "cache_read": 921243,
+        "cache_write": 59888,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 12,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 5,
+          "desconocido": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 59301,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793035200
+      ],
+      "notes": [
+        "Lanzó el hilo del nuevo Skyny."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEZ2Yg5CKkiS78ZBTPu",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-27T17:46:30Z",
+        "madrid": "2026-10-27T18:46:30+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-27T17:46:50Z",
+        "madrid": "2026-10-27T18:46:50+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.3,
+        "input_tokens": 1442,
+        "output_tokens": 866,
+        "cache_read_tokens": 85233,
+        "cache_write_tokens": 31023,
+        "note": "acumulado; martes 27"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.3,
+        "input": 1442,
+        "output": 866,
+        "cache_read": 85233,
+        "cache_write": 31023,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 2,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 15814,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793140800
+      ],
+      "notes": [
+        "Lanzó el hilo de RN-A, que acabó en LG-A."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXY2QMyLF8v4Rb1LQZ",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-27T21:57:18Z",
+        "madrid": "2026-10-27T22:57:18+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-27T23:25:34Z",
+        "madrid": "2026-10-28T00:25:34+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.52,
+        "input_tokens": 1696,
+        "output_tokens": 1576,
+        "cache_read_tokens": 656949,
+        "cache_write_tokens": 39927,
+        "note": "acumulado; martes 27"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.52,
+        "input": 1696,
+        "output": 1576,
+        "cache_read": 656949,
+        "cache_write": 39927,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 11,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 7,
+          "desconocido": 3
+        },
+        "turns_with_error": [],
+        "active_time_ms": 41864,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793140800,
+        1793158800
+      ],
+      "notes": [
+        "Lanzó el hilo del mapa por proyecto (MP-A)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEUtBmVEkhBjPMQTx1w",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-28T18:20:50Z",
+        "madrid": "2026-10-28T19:20:50+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-30T21:03:46Z",
+        "madrid": "2026-10-30T22:03:46+01:00"
+      },
+      "status": "completada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-10-30T21:01:45Z",
+        "madrid": "2026-10-30T22:01:45+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-30T21:01:45Z",
+        "madrid": "2026-10-30T22:01:45+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.83,
+        "input_tokens": 1736,
+        "output_tokens": 1586,
+        "cache_read_tokens": 395266,
+        "cache_write_tokens": 84904,
+        "note": "acumulado; miércoles 28 a viernes 30"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.83,
+        "input": 1736,
+        "output": 1586,
+        "cache_read": 395266,
+        "cache_write": 84904,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 5,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 4
+        },
+        "turns_with_error": [],
+        "active_time_ms": 40987,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793229600,
+        1793412000
+      ],
+      "notes": [
+        "Lanzó la investigación AI Factory y pasó la aprobación para empezar por GH."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEVKajEagN48Vpqy8wt",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-31T08:39:35Z",
+        "madrid": "2026-10-31T09:39:35+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-10-31T16:22:26Z",
+        "madrid": "2026-10-31T17:22:26+01:00"
+      },
+      "status": "completada",
+      "prompts": 2,
+      "first_prompt": {
+        "utc": "2026-10-31T12:34:27Z",
+        "madrid": "2026-10-31T13:34:27+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-31T13:07:57Z",
+        "madrid": "2026-10-31T14:07:57+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.49,
+        "input_tokens": 43,
+        "output_tokens": 6185,
+        "cache_read_tokens": 885206,
+        "cache_write_tokens": 147846,
+        "note": "acumulado; sábado 31"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.4837,
+        "input": 43,
+        "output": 6185,
+        "cache_read": 885206,
+        "cache_write": 147846,
+        "thinking": 281,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 20,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "desconocido": 15,
+          "human": 4
+        },
+        "turns_with_error": [],
+        "active_time_ms": 153127,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793451600,
+        1793469600
+      ],
+      "notes": [
+        "Avisó de las PRs de GH, resumió el hito GH y pidió el plan de EN."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXywd5HWS78iowC4wx",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-10-31T16:48:09Z",
+        "madrid": "2026-10-31T17:48:09+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-01T00:02:45Z",
+        "madrid": "2026-11-01T01:02:45+01:00"
+      },
+      "status": "completada",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-10-31T16:53:20Z",
+        "madrid": "2026-10-31T17:53:20+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-10-31T23:56:19Z",
+        "madrid": "2026-11-01T00:56:19+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.62,
+        "input_tokens": 58,
+        "output_tokens": 10081,
+        "cache_read_tokens": 1649376,
+        "cache_write_tokens": 134858,
+        "note": "acumulado; sábado 31"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.6106,
+        "input": 58,
+        "output": 10081,
+        "cache_read": 1649376,
+        "cache_write": 134858,
+        "thinking": 344,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 20,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "desconocido": 12,
+          "human": 7
+        },
+        "turns_with_error": [],
+        "active_time_ms": 188431,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793469600,
+        1793487600,
+        1793508000
+      ],
+      "notes": [
+        "Pasó los «fusiona» de EN, explicó DS y lanzó el hilo del plan DS."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEW6nag5Lnz7hTY2W4q",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-01T08:27:45Z",
+        "madrid": "2026-11-01T09:27:45+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-01T08:29:08Z",
+        "madrid": "2026-11-01T09:29:08+01:00"
+      },
+      "status": "activa",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-01T08:27:45Z",
+        "madrid": "2026-11-01T09:27:45+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-01T08:27:45Z",
+        "madrid": "2026-11-01T09:27:45+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.29,
+        "input_tokens": 8,
+        "output_tokens": 634,
+        "cache_read_tokens": 143347,
+        "cache_write_tokens": 30568,
+        "note": "acumulado; domingo 1, en curso"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.2859,
+        "input": 8,
+        "output": 634,
+        "cache_read": 143347,
+        "cache_write": 30568,
+        "thinking": 0,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 3,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 1,
+          "desconocido": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 14845,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793539200
+      ],
+      "notes": [
+        "Encargó este recap."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [
+      {
+        "number": 169,
+        "title": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+        "squash_sha": "419ce16",
+        "merged_at": "2026-10-25T16:49:17Z",
+        "files_changed": 98,
+        "additions": 6047,
+        "deletions": 637,
+        "milestone": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+        "closes_issues": [
+          166
+        ],
+        "phase": "IC-A",
+        "url": "https://github.com/guilu/skynet/pull/169",
+        "session_id": "session_01WdvCwqrrdnBTAy5VicARds"
+      },
+      {
+        "number": 178,
+        "title": "VS-A - Generador de capturas y galería",
+        "squash_sha": "70e5376",
+        "merged_at": "2026-10-25T22:40:44Z",
+        "files_changed": 64,
+        "additions": 2354,
+        "deletions": 5,
+        "milestone": "VS-A - Generador de capturas y galería",
+        "closes_issues": [
+          175
+        ],
+        "phase": "VS-A",
+        "url": "https://github.com/guilu/skynet/pull/178",
+        "session_id": "session_016kHR328keT2U6pzY8XxPMM"
+      },
+      {
+        "number": 179,
+        "title": "VS-B - Mapa visual de navegación",
+        "squash_sha": "4755524",
+        "merged_at": "2026-10-26T12:23:01Z",
+        "files_changed": 57,
+        "additions": 2515,
+        "deletions": 11,
+        "milestone": "VS-B - Mapa visual de navegación",
+        "closes_issues": [
+          176
+        ],
+        "phase": "VS-B",
+        "url": "https://github.com/guilu/skynet/pull/179",
+        "session_id": "session_016kHR328keT2U6pzY8XxPMM"
+      },
+      {
+        "number": 180,
+        "title": "VS-C - Composiciones para redes sociales",
+        "squash_sha": "77c2173",
+        "merged_at": "2026-10-26T13:37:52Z",
+        "files_changed": 15,
+        "additions": 666,
+        "deletions": 28,
+        "milestone": "VS-C - Composiciones para redes sociales",
+        "closes_issues": [
+          177,
+          174
+        ],
+        "phase": "VS-C",
+        "url": "https://github.com/guilu/skynet/pull/180",
+        "session_id": "session_016kHR328keT2U6pzY8XxPMM"
+      },
+      {
+        "number": 185,
+        "title": "SY-A - Skyny v3: dibujo, colores, animaciones y accesorios",
+        "squash_sha": "fc2da7d",
+        "merged_at": "2026-10-26T17:31:33Z",
+        "files_changed": 19,
+        "additions": 854,
+        "deletions": 298,
+        "milestone": "SY-A - Skyny v3: dibujo, colores, animaciones y accesorios",
+        "closes_issues": [
+          182
+        ],
+        "phase": "SY-A",
+        "url": "https://github.com/guilu/skynet/pull/185",
+        "session_id": "session_012UYkxzsWyyNc1d8YG7kf34"
+      },
+      {
+        "number": 186,
+        "title": "SY-B - Icono de la app con Skyny",
+        "squash_sha": "75d9cc3",
+        "merged_at": "2026-10-26T20:58:40Z",
+        "files_changed": 19,
+        "additions": 299,
+        "deletions": 117,
+        "milestone": "SY-B - Icono de la app con Skyny",
+        "closes_issues": [
+          183
+        ],
+        "phase": "SY-B",
+        "url": "https://github.com/guilu/skynet/pull/186",
+        "session_id": "session_012UYkxzsWyyNc1d8YG7kf34"
+      },
+      {
+        "number": 187,
+        "title": "SY-C - Interacciones de Skyny",
+        "squash_sha": "1610612",
+        "merged_at": "2026-10-27T06:40:35Z",
+        "files_changed": 34,
+        "additions": 1195,
+        "deletions": 53,
+        "milestone": "SY-C - Interacciones nuevas con Skyny",
+        "closes_issues": [
+          184,
+          181
+        ],
+        "phase": "SY-C",
+        "url": "https://github.com/guilu/skynet/pull/187",
+        "session_id": "session_012UYkxzsWyyNc1d8YG7kf34"
+      },
+      {
+        "number": 190,
+        "title": "MP-A - Mapa del repositorio por proyecto",
+        "squash_sha": "99405ac",
+        "merged_at": "2026-10-28T07:15:26Z",
+        "files_changed": 11,
+        "additions": 179,
+        "deletions": 19,
+        "milestone": "MP-A - Mapa del repositorio por proyecto",
+        "closes_issues": [
+          189
+        ],
+        "phase": "MP-A",
+        "url": "https://github.com/guilu/skynet/pull/190",
+        "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+        "merged_by_session": "session_01PyBwEWNbbFm4z6LDQ1ZKhY"
+      },
+      {
+        "number": 192,
+        "title": "LG-A - Logotipos de los proveedores en Uso",
+        "squash_sha": "3261e9d",
+        "merged_at": "2026-10-28T07:15:16Z",
+        "files_changed": 5,
+        "additions": 121,
+        "deletions": 9,
+        "milestone": null,
+        "closes_issues": [
+          191
+        ],
+        "phase": "LG-A",
+        "url": "https://github.com/guilu/skynet/pull/192",
+        "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY"
+      },
+      {
+        "number": 196,
+        "title": "GH-A - App y tokens de instalación",
+        "squash_sha": "cd91934",
+        "merged_at": "2026-10-31T00:58:55Z",
+        "files_changed": 23,
+        "additions": 1731,
+        "deletions": 1,
+        "milestone": "GH-A - App y tokens de instalación",
+        "closes_issues": [
+          193
+        ],
+        "phase": "GH-A",
+        "url": "https://github.com/guilu/skynet/pull/196",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 197,
+        "title": "GH-B - Webhooks firmados",
+        "squash_sha": "90c1e3a",
+        "merged_at": "2026-10-31T08:06:09Z",
+        "files_changed": 29,
+        "additions": 1596,
+        "deletions": 41,
+        "milestone": "GH-B - Webhooks firmados",
+        "closes_issues": [
+          194
+        ],
+        "phase": "GH-B",
+        "url": "https://github.com/guilu/skynet/pull/197",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 198,
+        "title": "GH-C - Ajustes de GitHub, web y E2E",
+        "squash_sha": "de51e83",
+        "merged_at": "2026-10-31T12:12:41Z",
+        "files_changed": 23,
+        "additions": 1444,
+        "deletions": 10,
+        "milestone": "GH-C - Ajustes de GitHub, web y E2E",
+        "closes_issues": [
+          195
+        ],
+        "phase": "GH-C",
+        "url": "https://github.com/guilu/skynet/pull/198",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 199,
+        "title": "CI - E2E y capturas en ubuntu-24.04",
+        "squash_sha": "4489a35",
+        "merged_at": "2026-10-31T11:28:45Z",
+        "files_changed": 2,
+        "additions": 6,
+        "deletions": 4,
+        "milestone": null,
+        "closes_issues": [],
+        "phase": "CI",
+        "url": "https://github.com/guilu/skynet/pull/199",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 203,
+        "title": "EN-A - Subir la rama y abrir la PR",
+        "squash_sha": "81b4dc9",
+        "merged_at": "2026-10-31T16:22:01Z",
+        "files_changed": 52,
+        "additions": 3014,
+        "deletions": 52,
+        "milestone": "EN-A - Subir la rama y abrir la PR",
+        "closes_issues": [
+          200
+        ],
+        "phase": "EN-A",
+        "url": "https://github.com/guilu/skynet/pull/203",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 204,
+        "title": "EN-B - Esperar la CI y corregirla",
+        "squash_sha": "394c9bd",
+        "merged_at": "2026-10-31T16:57:54Z",
+        "files_changed": 35,
+        "additions": 2542,
+        "deletions": 34,
+        "milestone": "EN-B - Esperar la CI y corregirla",
+        "closes_issues": [
+          201
+        ],
+        "phase": "EN-B",
+        "url": "https://github.com/guilu/skynet/pull/204",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      },
+      {
+        "number": 205,
+        "title": "EN-C - Fusionar tras el gate, web y E2E",
+        "squash_sha": "280ca12",
+        "merged_at": "2026-10-31T20:39:25Z",
+        "files_changed": 56,
+        "additions": 2925,
+        "deletions": 33,
+        "milestone": "EN-C - Fusionar tras el gate, web y E2E",
+        "closes_issues": [
+          202
+        ],
+        "phase": "EN-C",
+        "url": "https://github.com/guilu/skynet/pull/205",
+        "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr"
+      }
+    ],
+    "open": []
+  },
+  "issues_closed": [
+    {
+      "number": 202,
+      "title": "EN-C - Fusionar tras el gate, web y E2E",
+      "closed_at": "2026-10-31T20:39:27Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 201,
+      "title": "EN-B - Esperar la CI y corregirla",
+      "closed_at": "2026-10-31T16:57:56Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 200,
+      "title": "EN-A - Subir la rama y abrir la PR",
+      "closed_at": "2026-10-31T16:22:03Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 195,
+      "title": "GH-C - Ajustes de GitHub, web y E2E",
+      "closed_at": "2026-10-31T12:12:43Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 194,
+      "title": "GH-B - Webhooks firmados",
+      "closed_at": "2026-10-31T08:06:11Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 193,
+      "title": "GH-A - App y tokens de instalación",
+      "closed_at": "2026-10-31T00:58:56Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 191,
+      "title": "LG-A - Logotipos de los proveedores en Uso",
+      "closed_at": "2026-10-28T07:15:17Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 189,
+      "title": "MP-A - Mapa del repositorio por proyecto",
+      "closed_at": "2026-10-28T07:15:28Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 188,
+      "title": "RN-A - Restaurar el runner real tras la aceptación webhook",
+      "closed_at": "2026-10-27T18:03:24Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 184,
+      "title": "SY-C - Interacciones nuevas con Skyny",
+      "closed_at": "2026-10-27T06:40:37Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 183,
+      "title": "SY-B - Icono de la app con Skyny",
+      "closed_at": "2026-10-26T20:58:41Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 182,
+      "title": "SY-A - Skyny v3: dibujo, colores, animaciones y accesorios",
+      "closed_at": "2026-10-26T17:31:34Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 181,
+      "title": "Skyny v3: nuevo diseño de la mascota, icono de la app y animaciones",
+      "closed_at": "2026-10-27T06:40:37Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 177,
+      "title": "VS-C - Composiciones para redes sociales",
+      "closed_at": "2026-10-26T13:37:53Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 176,
+      "title": "VS-B - Mapa visual de navegación",
+      "closed_at": "2026-10-26T12:23:03Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 175,
+      "title": "VS-A - Generador de capturas y galería",
+      "closed_at": "2026-10-25T22:40:45Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 174,
+      "title": "VS-A - Galería visual y capturas de producto",
+      "closed_at": "2026-10-26T13:37:54Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 168,
+      "title": "IC-C - Iconos del dominio y cierre",
+      "closed_at": "2026-10-25T16:50:32Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 167,
+      "title": "IC-B - Iconos de acciones y controles",
+      "closed_at": "2026-10-25T16:50:32Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 166,
+      "title": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+      "closed_at": "2026-10-25T16:49:18Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    }
+  ],
+  "milestones_closed": [
+    {
+      "title": "IC-A - Paquetes de iconos y Ajustes › Iconos",
+      "closed_at": "2026-10-25T16:49:17Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VS-A - Generador de capturas y galería",
+      "closed_at": "2026-10-25T22:40:44Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VS-B - Mapa visual de navegación",
+      "closed_at": "2026-10-26T12:23:01Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VS-C - Composiciones para redes sociales",
+      "closed_at": "2026-10-26T13:37:52Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "SY-A - Skyny v3: dibujo, colores, animaciones y accesorios",
+      "closed_at": "2026-10-26T17:31:33Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "SY-B - Icono de la app con Skyny",
+      "closed_at": "2026-10-26T20:58:40Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "SY-C - Interacciones nuevas con Skyny",
+      "closed_at": "2026-10-27T06:40:35Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "MP-A - Mapa del repositorio por proyecto",
+      "closed_at": "2026-10-28T07:15:26Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "GH-A - App y tokens de instalación",
+      "closed_at": "2026-10-31T00:58:55Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "GH-B - Webhooks firmados",
+      "closed_at": "2026-10-31T08:06:09Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "GH-C - Ajustes de GitHub, web y E2E",
+      "closed_at": "2026-10-31T12:12:41Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "EN-A - Subir la rama y abrir la PR",
+      "closed_at": "2026-10-31T16:22:01Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "EN-B - Esperar la CI y corregirla",
+      "closed_at": "2026-10-31T16:57:54Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "EN-C - Fusionar tras el gate, web y E2E",
+      "closed_at": "2026-10-31T20:39:25Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    }
+  ],
+  "dead_ends": [
+    {
+      "at": "2026-10-25T20:55:03Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 178,
+      "what": "Primeras generaciones con capturas fallidas",
+      "detail": "La primera generación real pasó 39 de 41 en escritorio claro y la completa 159 de 161; faltaba el artefacto abierto en móvil.",
+      "outcome": "Ajustado hasta obtener 160 capturas, privacidad correcta y ZIP de 21 MB."
+    },
+    {
+      "at": "2026-10-25T21:18:52Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 178,
+      "what": "Desplazar las fechas por SQL descartado",
+      "detail": "El plan proponía fijar las fechas desplazándolas por SQL en la base desechable, pero el runner sigue escribiendo con la hora real y algunos datos quedaban en el futuro.",
+      "outcome": "Se dejó sin desplazar: las fechas relativas y duraciones salen iguales, las absolutas y el saludo dependen del momento de generación."
+    },
+    {
+      "at": "2026-10-25T21:18:52Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 178,
+      "what": "Runner de E2E usaba el ~/.skynet-runner del usuario",
+      "detail": "Un comentario mal colocado en e2e-service.sh hacía que el runner de las E2E usara el directorio del usuario en lugar del propio; ocurría desde CU-A.",
+      "outcome": "Corregido en la misma PR #178."
+    },
+    {
+      "at": "2026-10-25T22:04:19Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 178,
+      "what": "Desbordamiento horizontal en móvil en la pestaña Artefactos",
+      "detail": "Al verificar la generación completa apareció que en móvil la pestaña Artefactos desborda en horizontal.",
+      "outcome": "Se muestra como aviso para el rediseño, sin hacer fallar la generación."
+    },
+    {
+      "at": "2026-10-25T23:03:25Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 179,
+      "what": "E2E 3/6 falló en axe por contraste",
+      "detail": "La prueba de accesibilidad falló por contraste de color en la página de proyecto, que la PR no toca.",
+      "outcome": "Se relanzó y pasó; se dejó explicado en un comentario de la PR."
+    },
+    {
+      "at": "2026-10-26T12:36:31Z",
+      "session_id": "session_016kHR328keT2U6pzY8XxPMM",
+      "pr": 180,
+      "what": "Titular con datos fake en la composición de Uso",
+      "detail": "Al revisar el diseño, la pantalla Uso mostraba 'fake-claude' y 'fake-agy' de los datos de demo.",
+      "outcome": "Se sustituyó por 'Proyecto: trabajos' en la selección de composiciones."
+    },
+    {
+      "at": "2026-10-26T14:00:10Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": null,
+      "what": "Modelo sobrecargado",
+      "detail": "El modelo claude-opus-5-5 estaba sobrecargado y la sesión cambió temporalmente a claude-opus-5.",
+      "outcome": "Cambio automático de modelo; el trabajo continuó sin más incidencias."
+    },
+    {
+      "at": "2026-10-26T15:13:37Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": null,
+      "what": "Bandas oscuras del boceto mal dibujadas",
+      "detail": "Diego indicó que las bandas superiores de Skyny iban hacia abajo, al contrario que en su imagen de referencia.",
+      "outcome": "Se rehicieron para que salgan del visor y suban hacia el borde, más gruesas, con triángulo ensanchado y aro claro."
+    },
+    {
+      "at": "2026-10-26T15:18:06Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": null,
+      "what": "Lupa de 'Revisando' poco convincente",
+      "detail": "La lupa era pequeña y no encajaba con la bola derecha como mano.",
+      "outcome": "Se hizo más grande, sujeta por la mano derecha y apuntando a la derecha, con los ojos mirándola."
+    },
+    {
+      "at": "2026-10-26T16:53:47Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": 185,
+      "what": "Sombreros de temporada demasiado altos",
+      "detail": "Los sombreros sobre la bola superior quedaban muy altos e interferían con los bocadillos.",
+      "outcome": "Se movieron ladeados al lado izquierdo de la cabeza; se actualizaron guía y capturas."
+    },
+    {
+      "at": "2026-10-26T17:23:47Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": 185,
+      "what": "Trabajo de E2E 1/6 colgado",
+      "detail": "Se colgó instalando el navegador antes de llegar a ejecutar tests.",
+      "outcome": "Se relanzó, pasó todo y se fusionó la PR."
+    },
+    {
+      "at": "2026-10-26T20:55:26Z",
+      "session_id": "session_012UYkxzsWyyNc1d8YG7kf34",
+      "pr": 186,
+      "what": "Fusión bloqueada por el permiso de la sesión",
+      "detail": "Tras crear la regla de PRs pequeñas, el permiso de la sesión bloqueó la fusión de #186 por no haber un 'fusiona' explícito de Diego.",
+      "outcome": "Diego dijo 'Fusiona' y se fusionó."
+    },
+    {
+      "at": "2026-10-27T17:48:01Z",
+      "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+      "pr": null,
+      "what": "RN-A: el webhook no está en el repositorio skynet",
+      "detail": "La issue #188 pedía cambiar el webhook de despliegue/aceptación, pero ese código lo ejecuta Hermes en la máquina de despliegue y no está en skynet ni en ningún repositorio accesible.",
+      "outcome": "Diego respondió que Hermes ya lo había hecho; no se cambió código ni se abrió PR. La issue #188 y su milestone quedaron abiertos."
+    },
+    {
+      "at": "2026-10-27T23:05:52Z",
+      "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+      "pr": 190,
+      "what": "Maven Central limita las descargas",
+      "detail": "Al ejecutar los tests de Java en local, Maven Central limitó las descargas y hubo que reintentar.",
+      "outcome": "Los tests locales acabaron pasando y la PR #190 salió con la CI en verde."
+    },
+    {
+      "at": "2026-10-28T06:45:48Z",
+      "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+      "pr": 192,
+      "what": "Sin milestone para LG-A",
+      "detail": "No se pudo crear el milestone de LG-A porque no hay herramienta para ello.",
+      "outcome": "La PR #192 se abrió sin milestone."
+    },
+    {
+      "at": "2026-10-28T07:15:13Z",
+      "session_id": "session_01PyBwEYwRMNiuawmaqCVjwZ",
+      "pr": 190,
+      "what": "Fusión duplicada de la #190",
+      "detail": "El coordinador pidió fusionar MP-A en este hilo, pero el hilo de LG-A ya la había fusionado (squash 99405ac).",
+      "outcome": "No hizo falta fusionarla aquí; solo quedó abierto el milestone 68."
+    },
+    {
+      "at": "2026-10-28T07:15:40Z",
+      "session_id": "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+      "pr": 190,
+      "what": "Milestone 68 de MP-A sin cerrar",
+      "detail": "Tras fusionar #190 y #192 no había herramienta para cerrar el milestone 68.",
+      "outcome": "Quedó abierto para que Diego lo cerrara."
+    },
+    {
+      "at": "2026-10-28T18:26:17Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": null,
+      "what": "Orbit de Stripe no existe con ese nombre",
+      "detail": "Diego citó un sistema de Stripe llamado Orbit; la investigación no encontró nada con ese nombre y sí los «Minions».",
+      "outcome": "Se corrigió la premisa y se usó Minions como referencia. Algunas páginas originales (stripe.dev, openai.com) no se pudieron abrir y las cifras salen de fuentes secundarias."
+    },
+    {
+      "at": "2026-10-31T00:07:06Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 196,
+      "what": "Maven Central limita las descargas",
+      "detail": "Al compilar GH-A, Maven Central limitó las descargas y retrasó la compilación.",
+      "outcome": "Se pudo continuar y los tests de GitHub y la batería completa pasaron en local."
+    },
+    {
+      "at": "2026-10-31T08:40:48Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 198,
+      "what": "E2E de CI rojas por Ubuntu 26.04",
+      "detail": "Las E2E de la #198 y de main fallaban porque los runners pasaron a Ubuntu 26.04, que Playwright no soporta.",
+      "outcome": "Diego eligió fijar ubuntu-24.04; la PR #199 lo hizo y se fusionó (4489a35)."
+    },
+    {
+      "at": "2026-10-31T11:32:38Z",
+      "session_id": "session_01PyBwEVGnKQ932uU8UzFdHp",
+      "pr": null,
+      "what": "Campos de los rollouts de Codex sin verificar",
+      "detail": "Los nombres de campo de los rollouts de Codex cambian según la versión y no se pudieron comprobar desde aquí; tampoco hay coste en dólares, hilos del proyecto ni subagentes por sesión.",
+      "outcome": "La skill pide a Codex mirar un rollout antes de extraer, y esos datos quedan como unavailable."
+    },
+    {
+      "at": "2026-10-31T11:40:51Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 198,
+      "what": "La E2E de GitHub fallaba en CI por el historial de Actividad",
+      "detail": "En CI la página de Actividad tenía mucho historial y la E2E de GitHub no encontraba sus eventos.",
+      "outcome": "Se añadió la opción GitHub al filtro «Origen» de Actividad; la CI quedó en verde."
+    },
+    {
+      "at": "2026-10-31T15:01:15Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 203,
+      "what": "La suite completa rompió contratos de EN-A",
+      "detail": "Al pasar la suite completa fallaron el contrato workflow-version, el esquema y los tipos de la web.",
+      "outcome": "Se arreglaron antes de abrir la PR #203."
+    },
+    {
+      "at": "2026-10-31T15:09:54Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 203,
+      "what": "GitPushTest fallaba sin identidad de git",
+      "detail": "Una prueba nueva del runner hacía un commit sin identidad de git y la máquina de CI no tiene ninguna configurada.",
+      "outcome": "Corregido en la prueba; la CI de la #203 quedó en verde."
+    },
+    {
+      "at": "2026-10-31T17:54:05Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 205,
+      "what": "Se dio por hecho que guilu/demo-repo existía en GitHub",
+      "detail": "Los planes de GH y EN citaban guilu/demo-repo para la prueba real, pero la sesión no puede comprobar si existe; solo existe el demo-repo local.",
+      "outcome": "Se ofrecieron crearlo o saltarse la sección 3 de la guía; la PR #205 no depende de ello. Diego no ha respondido en el hilo."
+    },
+    {
+      "at": "2026-10-31T17:55:43Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 205,
+      "what": "Límite de uso alcanzado",
+      "detail": "La sesión llegó a su límite de uso (extra_usage_unavailable) mientras trabajaba en EN-C.",
+      "outcome": "Se reanudó a los pocos minutos sin intervención de Diego."
+    },
+    {
+      "at": "2026-10-31T18:04:43Z",
+      "session_id": "session_01PyBwEYLKU1wzGscq8K2jqr",
+      "pr": 205,
+      "what": "Deadlock en la CI Java de la #205",
+      "detail": "Al limpiar la base entre tests, el TRUNCATE chocaba con el latido del runner sobre quota_snapshot y quota_interval; no venía de EN-C.",
+      "outcome": "Se cambió el orden de las tablas del TRUNCATE y la CI quedó en verde."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-10-25T14:44:57Z",
+      "what": "El fondo del main en el tema claro pasa a ser blanco",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T14:46:28Z",
+      "what": "Los botones y enlaces con forma de botón mantienen la estética Duolingo con sombra inferior",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T14:48:26Z",
+      "what": "El companion se llama Skyny y se usa en el saludo del dashboard y en Ajustes › Companion",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T14:57:28Z",
+      "what": "La página de una ejecución usa los iconos del paquete elegido",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T15:02:25Z",
+      "what": "El fondo del main en el tema oscuro es #171f30",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T16:48:54Z",
+      "what": "Fusionar la PR #169 (IC-A) tras probarla",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T20:35:15Z",
+      "what": "Aprueba el plan de la issue #174 repartido en tres PRs (VS-A, VS-B, VS-C) con inventario común, PostgreSQL desechable y solo capturas de escritorio claro versionadas.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T21:56:50Z",
+      "what": "Pide aplicar la revisión de la PR #178: aceptación más barata con una sola generación verificada, SCREENSHOTS_OUT y pruebas de privacidad en tests unitarios.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-25T22:40:15Z",
+      "what": "Da por probada VS-A y ordena fusionar #178 y seguir con VS-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T12:22:45Z",
+      "what": "Da por bueno VS-B y ordena fusionar #179 y seguir con VS-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T13:37:39Z",
+      "what": "La carpeta social no se sube al repo; ordena fusionar VS-C (#180) cerrando el hito VS.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T15:13:37Z",
+      "what": "Exige corregir las bandas superiores de Skyny para que suban, tomando su primera imagen como referencia.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T15:18:06Z",
+      "what": "Pide una lupa más grande, en la mano derecha y apuntando a la derecha.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T15:22:21Z",
+      "what": "Aprueba el plan y arranca SY-A; Skyny sustituye al isotipo de la barra lateral y los accesorios de temporada entran ya en SY-A.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T16:53:47Z",
+      "what": "Los sombreros van ladeados en el lado izquierdo de la cabeza, no sobre la bola superior.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T17:11:41Z",
+      "what": "Da por buena la prueba de SY-A y ordena fusionar #185.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T18:11:25Z",
+      "what": "Ordena arrancar SY-B (icono de la app).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T20:54:26Z",
+      "what": "Crear una clasificación de PRs por tamaño: las pequeñas con todo en verde y petición de fusión de Hermes las fusiona Claude sin esperar su visto bueno.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T20:58:28Z",
+      "what": "Ordena fusionar #186 (SY-B).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-26T21:08:45Z",
+      "what": "Ordena arrancar SY-C (primer lote de interacciones).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-27T06:40:18Z",
+      "what": "Da por probadas las animaciones y ordena fusionar #187, cerrando el hito SY.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-27T21:57:17Z",
+      "what": "RN-A no se implementa en skynet porque ya lo ha hecho Hermes en su webhook",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-27T22:57:47Z",
+      "what": "Abrir la issue #189 y su milestone MP-A con el análisis propuesto (clave del proyecto, variable slug)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-27T23:00:58Z",
+      "what": "Implementar MP-A",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-28T06:41:11Z",
+      "what": "Sustituir las iniciales C, X y A de la ventana de Uso por los logotipos de Anthropic, OpenAI y Gemini",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-28T07:15:04Z",
+      "what": "Diego acepta él mismo la PR #192 (sin pasar por Hermes) y ordena fusionarla junto con la #190 (MP-A), ya validada",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-30T21:01:45Z",
+      "what": "Aprobar la hoja de ruta de 14 hitos en 5 etapas y pedir el plan de GH a partir de plans/siguiente-hito-s1.md, con propuesta antes de abrir issues (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-30T23:58:34Z",
+      "what": "Aprobar el plan de GH (3 PRs: GH-A, GH-B, GH-C) y que se abran milestones e issues",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T00:58:39Z",
+      "what": "Fusionar la #196 (GH-A)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T08:05:45Z",
+      "what": "Fusionar la #197 (GH-B)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T11:16:47Z",
+      "what": "Arreglar las E2E de CI fijando ubuntu-24.04 en una PR aparte, en lugar de subir Playwright o esperar",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T11:28:39Z",
+      "what": "Fusionar la #199 (fijar ubuntu-24.04)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T11:30:55Z",
+      "what": "Llevar la skill de recap a Codex como SKILL.md y script copiables",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T12:12:33Z",
+      "what": "Fusionar la #198 (GH-C), con lo que se cierra el hito GH",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T13:07:57Z",
+      "what": "Seguir con el hito EN tras haber conectado Skynet a su GitHub App skynet-guilu (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T14:34:28Z",
+      "what": "Aprobar el plan de EN (3 PRs: EN-A, EN-B, EN-C) con sus decisiones, incluido el permiso nuevo Actions: lectura en la App",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T16:21:48Z",
+      "what": "Fusionar la #203 (EN-A)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T16:53:20Z",
+      "what": "Añadir el permiso Actions: Read-only a skynet-guilu y dar el «fusiona» a la #204 (EN-B) (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T17:00:20Z",
+      "what": "Empezar ya con EN-C",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T20:38:54Z",
+      "what": "Fusionar la #205 (EN-C), con lo que se cierra el hito EN",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-10-31T23:57:42Z",
+      "what": "Aprobar el plan del hito DS (lanzar trabajo desde GitHub) y seguir adelante",
+      "by": "Diego"
+    }
+  ],
+  "summary": {
+    "prompts": 56,
+    "sessions": 16,
+    "sessions_note": "sesiones con prompts o turnos esta semana: hilos de trabajo + coordinadores del chat del proyecto",
+    "windows_5h": {
+      "total": 15,
+      "per_day": {
+        "lunes": 3,
+        "martes": 3,
+        "miércoles": 2,
+        "jueves": 0,
+        "viernes": 1,
+        "sábado": 3,
+        "domingo": 2
+      },
+      "sparkline": {
+        "es": [
+          {
+            "d": "L",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "M",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "X",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "J",
+            "v": 0,
+            "on": 0
+          },
+          {
+            "d": "V",
+            "v": 1,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "D",
+            "v": 2,
+            "on": 1
+          }
+        ],
+        "en": [
+          {
+            "d": "M",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "W",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 0,
+            "on": 0
+          },
+          {
+            "d": "F",
+            "v": 1,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          }
+        ],
+        "max": 3
+      },
+      "before_monday": {
+        "label": "domingo anterior, desde 14:34",
+        "windows": 1,
+        "prompts": 5,
+        "shared_with_previous_report": [
+          {
+            "start": {
+              "utc": "2026-10-25T13:20:00Z",
+              "madrid": "2026-10-25T14:20:00+01:00"
+            },
+            "end": {
+              "utc": "2026-10-25T18:20:00Z",
+              "madrid": "2026-10-25T19:20:00+01:00"
+            },
+            "prompts_in_this_report": 6
+          }
+        ],
+        "note": "ventanas del domingo anterior al lunes; cuentan en total pero no en per_day ni en sparkline. Las de shared_with_previous_report empezaron antes de --desde, ya están en el informe anterior y no se cuentan aquí"
+      },
+      "method": "una ventana por cada valor distinto de five_hour.resetsAt en los rate_limit_event; los prompts que no caen en ninguna se agrupan en ventanas inferidas desde su hora en punto"
+    },
+    "prompts_per_window": 3.7,
+    "first_timestamp": {
+      "utc": "2026-10-25T14:44:57Z",
+      "madrid": "2026-10-25T15:44:57+01:00"
+    },
+    "last_timestamp": {
+      "utc": "2026-11-01T08:27:45Z",
+      "madrid": "2026-11-01T09:27:45+01:00"
+    },
+    "days_without_activity": [
+      "jueves"
+    ],
+    "days_not_yet_elapsed": [],
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": true,
+      "seven_day_utilization_max": 0.77,
+      "statuses_seen": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "periods": [
+        {
+          "resets_at": {
+            "utc": "2026-10-31T20:00:00Z",
+            "madrid": "2026-10-31T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.77,
+          "statuses_seen": [
+            "allowed_warning"
+          ],
+          "warning": true,
+          "exhausted": false,
+          "events_from": "2026-10-25T14:45:31.363356Z",
+          "events_to": "2026-10-31T18:13:47.419322Z"
+        },
+        {
+          "resets_at": {
+            "utc": "2026-11-07T20:00:00Z",
+            "madrid": "2026-11-07T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.03,
+          "statuses_seen": [],
+          "warning": false,
+          "exhausted": false,
+          "events_from": "2026-10-31T20:39:19.121658Z",
+          "events_to": "2026-11-01T08:29:06.724084Z"
+        }
+      ],
+      "overage_used": false,
+      "five_hour_limit_reached": [
+        {
+          "window_start": {
+            "utc": "2026-10-31T13:00:00Z",
+            "madrid": "2026-10-31T14:00:00+01:00"
+          },
+          "window_end": {
+            "utc": "2026-10-31T18:00:00Z",
+            "madrid": "2026-10-31T19:00:00+01:00"
+          }
+        }
+      ],
+      "note": "allowed_warning = aviso de uso alto, no agotada; exhausted solo si el límite semanal llegó al 100 % o lo rechazó. Los rechazos del límite de 5 h van en five_hour_limit_reached"
+    },
+    "prs_merged": 16,
+    "prs_merged_by_repo": {
+      "guilu/skynet": 16
+    },
+    "prs_open": 0,
+    "prs_cumulative_skynet": 110,
+    "lines": {
+      "added": 27488,
+      "removed": 1352,
+      "files_changed_net": {
+        "files": 400,
+        "added": 27322,
+        "removed": 1186,
+        "note": "git diff de main del domingo 25 a las 13:34 UTC (2abaf6e, tras la #173) → main del domingo 1 a las 08:30 UTC (280ca12) (cuenta los ficheros, no la suma por PR)"
+      }
+    },
+    "flyway_migrations": {
+      "range": "V30 → V34",
+      "added": [
+        "V30__github.sql",
+        "V31__github_delivery_events.sql",
+        "V32__github_pull_request.sql",
+        "V33__github_ci_wait.sql",
+        "V34__github_merge.sql"
+      ],
+      "engine": "Flyway / PostgreSQL"
+    },
+    "issues_closed": 20,
+    "milestones_closed": 14,
+    "deploys_to_production": null,
+    "cost_usd_week_estimate": 160.21
+  },
+  "windows_5h": [
+    {
+      "start": {
+        "utc": "2026-10-25T13:20:00Z",
+        "madrid": "2026-10-25T14:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-25T18:20:00Z",
+        "madrid": "2026-10-25T19:20:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 6,
+      "utilization_5h_max": 0.66,
+      "utilization_7d_max": 0.31,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01WdvCwqrrdnBTAy5VicARds"
+      ],
+      "source": "rate_limit_event",
+      "shared_with_previous_report": true
+    },
+    {
+      "start": {
+        "utc": "2026-10-25T20:00:00Z",
+        "madrid": "2026-10-25T21:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-26T01:00:00Z",
+        "madrid": "2026-10-26T02:00:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 5,
+      "utilization_5h_max": 0.48,
+      "utilization_7d_max": 0.37,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_016kHR328keT2U6pzY8XxPMM",
+        "session_01M6To4SoL8omXE1c8auJWPe"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": true
+    },
+    {
+      "start": {
+        "utc": "2026-10-26T06:20:00Z",
+        "madrid": "2026-10-26T07:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-26T11:20:00Z",
+        "madrid": "2026-10-26T12:20:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 1,
+      "utilization_5h_max": 0.04,
+      "utilization_7d_max": 0.38,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_016kHR328keT2U6pzY8XxPMM"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-26T12:20:00Z",
+        "madrid": "2026-10-26T13:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-26T17:20:00Z",
+        "madrid": "2026-10-26T18:20:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 9,
+      "utilization_5h_max": 0.47,
+      "utilization_7d_max": 0.44,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012UYkxzsWyyNc1d8YG7kf34",
+        "session_016kHR328keT2U6pzY8XxPMM",
+        "session_01F9HkMVMZeyPprhj2FLyeAZ"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-26T17:20:00Z",
+        "madrid": "2026-10-26T18:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-26T22:20:00Z",
+        "madrid": "2026-10-26T23:20:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 4,
+      "utilization_5h_max": 0.34,
+      "utilization_7d_max": 0.49,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_012UYkxzsWyyNc1d8YG7kf34"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-27T06:40:00Z",
+        "madrid": "2026-10-27T07:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-27T11:40:00Z",
+        "madrid": "2026-10-27T12:40:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 1,
+      "utilization_5h_max": 0.06,
+      "utilization_7d_max": 0.5,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_012UYkxzsWyyNc1d8YG7kf34"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-27T17:40:00Z",
+        "madrid": "2026-10-27T18:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-27T22:40:00Z",
+        "madrid": "2026-10-27T23:40:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 2,
+      "utilization_5h_max": 0.05,
+      "utilization_7d_max": 0.5,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+        "session_01PyBwEXY2QMyLF8v4Rb1LQZ",
+        "session_01PyBwEZ2Yg5CKkiS78ZBTPu"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-27T22:40:00Z",
+        "madrid": "2026-10-27T23:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-28T03:40:00Z",
+        "madrid": "2026-10-28T04:40:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 3,
+      "utilization_5h_max": 0.09,
+      "utilization_7d_max": 0.51,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXY2QMyLF8v4Rb1LQZ",
+        "session_01PyBwEYwRMNiuawmaqCVjwZ"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-28T06:40:00Z",
+        "madrid": "2026-10-28T07:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-28T11:40:00Z",
+        "madrid": "2026-10-28T12:40:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 2,
+      "utilization_5h_max": 0.11,
+      "utilization_7d_max": 0.53,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEWNbbFm4z6LDQ1ZKhY",
+        "session_01PyBwEYwRMNiuawmaqCVjwZ"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-28T18:20:00Z",
+        "madrid": "2026-10-28T19:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-28T23:20:00Z",
+        "madrid": "2026-10-29T00:20:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.06,
+      "utilization_7d_max": 0.54,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEUtBmVEkhBjPMQTx1w",
+        "session_01PyBwEYLKU1wzGscq8K2jqr"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-30T21:00:00Z",
+        "madrid": "2026-10-30T22:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-31T02:00:00Z",
+        "madrid": "2026-10-31T03:00:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 3,
+      "utilization_5h_max": 0.35,
+      "utilization_7d_max": 0.58,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEUtBmVEkhBjPMQTx1w",
+        "session_01PyBwEYLKU1wzGscq8K2jqr"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-31T08:00:00Z",
+        "madrid": "2026-10-31T09:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-31T13:00:00Z",
+        "madrid": "2026-10-31T14:00:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 5,
+      "utilization_5h_max": 0.38,
+      "utilization_7d_max": 0.63,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEVGnKQ932uU8UzFdHp",
+        "session_01PyBwEVKajEagN48Vpqy8wt",
+        "session_01PyBwEYLKU1wzGscq8K2jqr"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-31T13:00:00Z",
+        "madrid": "2026-10-31T14:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-31T18:00:00Z",
+        "madrid": "2026-10-31T19:00:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 6,
+      "utilization_5h_max": 1,
+      "utilization_7d_max": 0.77,
+      "status": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "sessions": [
+        "session_01PyBwEVKajEagN48Vpqy8wt",
+        "session_01PyBwEXywd5HWS78iowC4wx",
+        "session_01PyBwEYLKU1wzGscq8K2jqr"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-31T18:00:00Z",
+        "madrid": "2026-10-31T19:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-10-31T23:00:00Z",
+        "madrid": "2026-11-01T00:00:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 1,
+      "utilization_5h_max": 0.12,
+      "utilization_7d_max": 0.77,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXywd5HWS78iowC4wx",
+        "session_01PyBwEYLKU1wzGscq8K2jqr"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-10-31T23:40:00Z",
+        "madrid": "2026-11-01T00:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-01T04:40:00Z",
+        "madrid": "2026-11-01T05:40:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 6,
+      "utilization_5h_max": 0.07,
+      "utilization_7d_max": 0.02,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+        "session_01PyBwEXywd5HWS78iowC4wx"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-01T08:20:00Z",
+        "madrid": "2026-11-01T09:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-01T13:20:00Z",
+        "madrid": "2026-11-01T14:20:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 1,
+      "utilization_5h_max": 0.07,
+      "utilization_7d_max": 0.03,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEW6nag5Lnz7hTY2W4q"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "skills_used",
+      "why": "Los registros a los que llego no listan las herramientas ni las skills invocadas por turno."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay despliegues registrados en estas sesiones; Hermes despliega y prueba en omarchy fuera de ellas."
+    },
+    {
+      "item": "engram",
+      "why": "Las sesiones en la nube no usan Engram; las decisiones y callejones están en dead_ends y decisions."
+    },
+    {
+      "item": "periodo ampliado",
+      "why": "El informe empieza el domingo 25 a las 13:34 UTC, donde terminó el de la semana anterior, para recoger aquella tarde (el final de IC-A y el arranque de la galería). Esas horas no están en semana-2026-10-19.json."
+    },
+    {
+      "item": "coordinador del martes 28 a las 07:15 UTC",
+      "why": "Los avisos de fusión de LG-A y MP-A de esa hora los dio un coordinador que no aparece como padre de ningún hilo; no se ha localizado y su uso no está incluido."
+    },
+    {
+      "item": "uso de esta sesión",
+      "why": "La sesión que genera el fichero no se incluye en los totales."
+    },
+    {
+      "item": "lo posterior al domingo 1 a la hora de generación",
+      "why": "El informe se generó el domingo por la mañana a petición de Diego; el plan de DS sigue esperando su aprobación."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-10-26 (Europe/Madrid) · desde 2026-10-25 14:34\n\n## skynet\n\n- 2026-10-25 15:44 · Rediseñar los iconos de la app · el background color del main lo quiero blanco\n- 2026-10-25 15:46 · Rediseñar los iconos de la app · y todos los botones (o enlaces de boton) que mantengan la estética de duolingo  con el box-shadow por abajo\n- 2026-10-25 15:48 · Rediseñar los iconos de la app · El companion se llama Skyny (diminutivo de skynet) para que lo pongas en las frases \"Hola, soy Skynet. No hay nada en marcha: ¿lanzamos algo?\" y enl a pagina de configuración del companion\n- 2026-10-25 15:57 · Rediseñar los iconos de la app · en la pagina de ejecuciones vamos a poner los iconos del paquete de iconos\n- 2026-10-25 16:02 · Rediseñar los iconos de la app · El main en el tema oscuro debe tener el background-color: #171f30\n- 2026-10-25 17:48 · Rediseñar los iconos de la app · perfecto, todo probado, fusiona\n- 2026-10-25 21:08 · Informe semanal para el recap · Este hilo dalo por completado\n- 2026-10-25 21:13 · Crear galería visual de capturas · Vamos a implementar la issue 174\n- 2026-10-25 21:35 · Crear galería visual de capturas · Aprobado, adelante\n- 2026-10-25 22:56 · Crear galería visual de capturas · Lee la revisión de la PR y efectúa los cambios que indica\n- 2026-10-25 23:40 · Crear galería visual de capturas · Todo probado entonces fusiona y seguimos\n- 2026-10-26 07:22 · Crear galería visual de capturas · se suben los screenshots al repo?\n- 2026-10-26 13:22 · Crear galería visual de capturas · VS-B está perfecto, se puede fusionar y seguir\n- 2026-10-26 14:35 · Crear galería visual de capturas · La carpeta social se sube al repo?\n- 2026-10-26 14:37 · Crear galería visual de capturas · No, ya está todo probado puedes fusionar\n- 2026-10-26 14:54 · Actualizar Skyny con el nuevo diseño · Tengo una versión nueva del diseño de skyny, la mascota companion de skynet. Me gustaría actualizar el icono de la app y las animaciones de skyny con esta nueva versión. Abre una issue y planifica cómo hacerlo, también si se te ocurren más interacciones en la web con la mascota vamos a censarlas a ver si se pueden hacer\n- 2026-10-26 16:13 · Actualizar Skyny con el nuevo diseño · Está bien pero las bandas oscuras de skyny se han generado mal, toma como referencia la primera imagen y corrige las bandas superiores que están hacia abajo\n- 2026-10-26 16:18 · Actualizar Skyny con el nuevo diseño · Ahora si, no me termina de gustar la lupa que tiene el skyny de revisando, si representa que la bola derecha es la mano debería ser más grande y apuntando hacia la derecha\n- 2026-10-26 16:22 · Actualizar Skyny con el nuevo diseño · Me vale… está perfecto, ya puedes arrancar por SY-A, sí que quiero que skyny sustituya al isotipo de la barra lateral y los accesorios de temporada van ya\n- 2026-10-26 17:53 · Actualizar Skyny con el nuevo diseño · No nos gusta que los sombreros estén encima de la bola superior, queda muy alto e interfiere con los bocadillos, puedes ponerlos en el lado izquierdo como si lo tuviera ladeado\n- 2026-10-26 18:11 · Actualizar Skyny con el nuevo diseño · esta todo ok, fusiona\n- 2026-10-26 19:11 · Actualizar Skyny con el nuevo diseño · Dale\n- 2026-10-26 21:54 · Actualizar Skyny con el nuevo diseño · Cuándo sea una PR pequeña que tenga todo en verde puede bastar con la petición de Hermes. Vamos a crear una clasificación de PRs y las que sean pequeñas y Hermes pida fusionarlas, tú las fusionas\n- 2026-10-26 21:58 · Actualizar Skyny con el nuevo diseño · Fusiona\n- 2026-10-26 22:08 · Actualizar Skyny con el nuevo diseño · Arranca\n- 2026-10-27 07:40 · Actualizar Skyny con el nuevo diseño · Las animaciones están probadas, fusiona.\n- 2026-10-27 18:46 · Poner logotipos de proveedores en Uso · Implementa la issue RN-A\n- 2026-10-27 22:57 · Poner logotipos de proveedores en Uso · Ya lo ha hecho Hermes, no hacemos nada aquí\n- 2026-10-27 23:46 · Parametrizar la ruta del mapa en los workflows iniciales · He ejecutado el reset y tengo skynet en vacío con los workflows iniciales… he creado el proyecto de skynet,con su repositorio /home/diegobarrioh/code/skynet y voy a lanzar el workflow de conocer repositorio, que se supone que tiene puesto harcoded, que genera el mapa en docs/skynet/mapa.md sea el que sea el iproyecto o repo en el que lo lance… debería de generar docs/skynet/mapa-{project}.md donde project sea el nombre del proyecto sobre el que se lance. Analiza el requerimiento y vamos a abrir una issue para mejorar los workflows iniciales\n- 2026-10-27 23:57 · Parametrizar la ruta del mapa en los workflows iniciales · Adelante\n- 2026-10-28 00:00 · Parametrizar la ruta del mapa en los workflows iniciales · Implmenta MP-A\n- 2026-10-28 07:41 · Poner logotipos de proveedores en Uso · quiero poner los logotipos de Antrophic Gemini y Codex en la ventana de Uso donde ahora mismo está la C de Claude Code la X en Codex y la A en Antigravity CLI\n- 2026-10-28 08:15 · Poner logotipos de proveedores en Uso · acepto yo, fusiona, y tambien fusiona MP-A que ya he validado que el mapa lo hace en docs/skynet/mapa-sky.md\n- 2026-10-28 19:20 · Entregar el trabajo por PR (EN) · De igual modo que yo estoy creando skynet, he leído que la tendencia últimamente son las AI Factories que son workflows agenticos auditables y repetobles para la generacion de software, tener una fábrica de software en la que los agentes analizan, crean specs, implementan, prueban y validan con aprobaciones humanas para algunos procesos para otros no, de manera que son capaces de sacar features de manera completamente autónoma, y luego se tienen herramientas para analizar las ejecuciones, los costes, tener toda la memoria de lo aprendido en las tareas, etc. He visto en vídeos que stripe tiene un sistema que llama Orbit que es algo así y las empresas están creando sus propias AI Factories.  Quiero que hagas deep research en la web y me des el camino y lo que falta para llegar a tener mi propia AI Factory en Skynet\n- 2026-10-30 22:01 · Chat del proyecto · He revisado la investigación y me parece bien, empezar por GH, que es el S1 que ya hay escrito, para luego seguir con EN.... empieza por preparar el plan de GH\n- 2026-10-31 00:58 · Entregar el trabajo por PR (EN) · Aprobado\n- 2026-10-31 01:58 · Entregar el trabajo por PR (EN) · Fusiona\n- 2026-10-31 09:05 · Entregar el trabajo por PR (EN) · Fusiona\n- 2026-10-31 12:28 · Entregar el trabajo por PR (EN) · fusiona\n- 2026-10-31 12:30 · Llevar la skill de recap a Codex · quiero trasladar la misma skill de recap que tengo aqui a codex.... me puedes dar el prompt o el SKILL.md que tengo que trasladarle\n- 2026-10-31 13:12 · Entregar el trabajo por PR (EN) · fusiona\n- 2026-10-31 13:34 · Chat del proyecto · Vale, hemos terminado el hito GH. Hazme un resumen de la funcionalidad nueva que tengo disponible en skynet.\n- 2026-10-31 14:07 · Chat del proyecto · acabo de conectar skynet con github app skynet-guilu, de manera que el hito GH está terminado... vamos a seguir con EN\n- 2026-10-31 15:34 · Entregar el trabajo por PR (EN) · Adelante, aprobado, y dime si tengo  que cambiar alguna permiso en la app de github skynet-guilu\n- 2026-10-31 17:21 · Entregar el trabajo por PR (EN) · Fusiona\n- 2026-10-31 17:53 · Chat del proyecto · Ya he añadido el permiso actions read only. Fusiona\n- 2026-10-31 18:00 · Entregar el trabajo por PR (EN) · Dale\n- 2026-10-31 18:53 · Entregar el trabajo por PR (EN) · Pero existe el repo guilu/demo-repo?\n- 2026-10-31 21:38 · Entregar el trabajo por PR (EN) · Fusiona\n- 2026-11-01 00:47 · Chat del proyecto · Resume que era el hito DS\n- 2026-11-01 00:50 · Chat del proyecto · Tengo una duda… donde hay que crear la issue?\n- 2026-11-01 00:51 · Chat del proyecto · Entonces tengo qu instalar la aplicación en cada repo de github que quiera crear…\n- 2026-11-01 00:53 · Chat del proyecto · La instalé con all repositorios…. Y entonces hay que crear webhooks en cada repo?\n- 2026-11-01 00:56 · Chat del proyecto · Es que ya tengo un repo privado llamado guilu/skynet-commands,que cuando creas una issue con una etiqueta skynet: run command. Se lanza un webhook que llega a hermes y este lanza un workflow en skynet. Esto es parecido a el hito DS\n- 2026-11-01 00:57 · Lanzar trabajo desde GitHub (DS) · Vale, pues adelante con el plan de DS\n- 2026-11-01 09:27 · Chat del proyecto · genera el recap de la semana\n\n## Summary\n\n- prompts: 56\n- sesiones: 16\n- ventanas de 5 h: 15 (domingo anterior 1, lunes 3, martes 3, miércoles 2, jueves 0, viernes 1, sábado 3, domingo 2)\n- primera marca: 2026-10-25T15:44:57+01:00 · última: 2026-11-01T09:27:45+01:00\n- días sin actividad: jueves\n- cuota semanal agotada: no (con aviso de uso alto); periodo hasta 2026-10-31T21:00:00+01:00: uso máx. 0.77; periodo hasta 2026-11-07T21:00:00+01:00: uso máx. 0.03\n- límite de 5 h alcanzado: ventana 2026-10-31 14:00–19:00\n- PRs fusionadas: 16 · +27488 / -1352 líneas"
+}
