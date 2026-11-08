@@ -1,0 +1,3924 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-08T13:01:51Z",
+    "madrid": "2026-11-08T14:01:51+01:00"
+  },
+  "week": {
+    "monday": "2026-11-02",
+    "yyyymmdd": "20261102",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-11-01T23:00:00Z",
+      "madrid": "2026-11-02T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-08T23:00:00Z",
+      "madrid": "2026-11-09T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-08T13:01:51Z",
+      "madrid": "2026-11-08T14:01:51+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-11-01T08:40:20Z",
+      "madrid": "2026-11-01T09:40:20+01:00"
+    },
+    "start_note": "el periodo empieza antes del lunes para recoger lo que quedó fuera del informe anterior"
+  },
+  "sources": {
+    "threads": "hilos y chat del proyecto (mensajes de Diego con su hora)",
+    "session_events": "rate_limit_event y result de cada sesión (list_events)",
+    "session_meta": "get_session (uso acumulado, modelo, fechas)",
+    "github": "API de GitHub para PRs, issues y milestones; git log de main para líneas por PR (squash)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Claude (proyecto «Skynet», sesiones en la nube)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-11-02T08:13:36Z",
+            "madrid": "2026-11-02T09:13:36+01:00"
+          },
+          "session_id": "session_01PyBwEWNrDX2CMA3rtFDvA2",
+          "thread": "Analizar cloudroom para extraer ideas",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62vKX62PQMjsPib5xe36F3h",
+          "text": "he revisado un proyecto que es tambíen un orquestador de flujos agenticos https://github.com/davidondrej/cloudroom analiza como funciona y vamos a ver que podemos extraer para Skynet"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T08:22:44Z",
+            "madrid": "2026-11-02T09:22:44+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6FGr2ACyUq2EPmBbdj5rMXG",
+          "text": "ahora mismo creo que el lanzamiento está desactivado, tengo que activarlo con hermes diciéndoselo"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T08:24:14Z",
+            "madrid": "2026-11-02T09:24:14+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6N4Aw4uuwHcrYUsNHKfG5pW",
+          "text": "tienes mi visto bueno, adelante con el plan"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T11:36:48Z",
+            "madrid": "2026-11-02T12:36:48+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65WvXPUmNLBZYt46Yf8AkiP",
+          "text": "fusiona y continuamos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T18:25:26Z",
+            "madrid": "2026-11-02T19:25:26+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KBSXzu9tAndFsTZw2i3bmH",
+          "text": "dame el resumen de lo que lleva esta PR, explicado a nivel de usuario"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T18:27:16Z",
+            "madrid": "2026-11-02T19:27:16+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69wQ9MTdQXYqmkoZAajnXR2",
+          "text": "fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T19:52:42Z",
+            "madrid": "2026-11-02T20:52:42+01:00"
+          },
+          "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+          "thread": "Lanzar trabajo desde GitHub (DS)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PFbi1BfJozCKA4MTrse5YU",
+          "text": "resume a nivel de usuario esta PR, y luego fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T19:54:31Z",
+            "madrid": "2026-11-02T20:54:31+01:00"
+          },
+          "session_id": "session_01PyBwEWBXLUER42kW9VXmnG",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TUyEQSs636f1NK47gDzxYR",
+          "text": "ya hemos integrado DS cual sería lo siguiente?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T19:55:51Z",
+            "madrid": "2026-11-02T20:55:51+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61AGW33xA1qSG3cVBfXQYJf",
+          "text": "vale, vamos con CQ primero y luego ampliamos VA con lo de cloudroom"
+        },
+        {
+          "at": {
+            "utc": "2026-11-02T20:11:24Z",
+            "madrid": "2026-11-02T21:11:24+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AMWsfRf1rew1vcna2CWi3A",
+          "text": "adelante con las recomendaciones"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T06:27:08Z",
+            "madrid": "2026-11-03T07:27:08+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61KA42PvJHGWr4cpVAxVvg5",
+          "text": "hazme el resmen de la PR para la gente de producto (nivel usuario que lo pueda entender alguien que no sea técnico)  y fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T06:38:17Z",
+            "madrid": "2026-11-03T07:38:17+01:00"
+          },
+          "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+          "thread": "Poner a Skyny en los bullets de estado",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GxoxJNE9uaDVN8XPdn1Jv9",
+          "text": "En el interfaz grafico, quiero ver como queda cambiando los iconos de los bullets de estado por el icono de skyny que corresponda, igual hay que hacer los bullets más grandes..."
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T07:02:33Z",
+            "madrid": "2026-11-03T08:02:33+01:00"
+          },
+          "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+          "thread": "Poner a Skyny en los bullets de estado",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Ap8tnccoYVd3MGj14gxL26",
+          "text": "dale un poco de padding para que el bullet respire alrededor de skyny"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T07:07:12Z",
+            "madrid": "2026-11-03T08:07:12+01:00"
+          },
+          "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+          "thread": "Poner a Skyny en los bullets de estado",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GKzKtBPDZiSdJaa5LCSH4A",
+          "text": "hay skyny de un color distinto al de su bullet. No sé si en esos casos cambiar el bullet de color para que sea igual que skyny o cambiar skyny para que sea igual que el bullet, vamos a ver qué es mejor"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T07:10:06Z",
+            "madrid": "2026-11-03T08:10:06+01:00"
+          },
+          "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+          "thread": "Poner a Skyny en los bullets de estado",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DbM4ngSoBk5emgBmYDHPF5",
+          "text": "si, vamos con la A"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T07:12:55Z",
+            "madrid": "2026-11-03T08:12:55+01:00"
+          },
+          "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+          "thread": "Poner a Skyny en los bullets de estado",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6RXC9FAVzdNXVHr3d9KkwPG",
+          "text": "si, dale"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T07:59:46Z",
+            "madrid": "2026-11-03T08:59:46+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6M2VAyAuDaWzUWmcmc1K4fX",
+          "text": "porque antigravity no es reserva?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T08:02:35Z",
+            "madrid": "2026-11-03T09:02:35+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PMNdoRQDtf4MaMEn8P1o2L",
+          "text": "si, añadelo... y porque antigravity no tiene las herramientas de memoria del proyecto? es por limitaciones del cli?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T15:48:25Z",
+            "madrid": "2026-11-03T16:48:25+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6RAsSwceMQbvcux8LSPPf3S",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T16:26:05Z",
+            "madrid": "2026-11-03T17:26:05+01:00"
+          },
+          "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+          "thread": "Planificar reintento por cuota (CQ)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AHKoGG7vus772Kc85hDeRj",
+          "text": "arranca con el plan de VA, pero en otro hilo"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T16:53:40Z",
+            "madrid": "2026-11-03T17:53:40+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68iH27FfjijHbJsxRSKDaaB",
+          "text": "Aprobado VA"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T18:13:04Z",
+            "madrid": "2026-11-03T19:13:04+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LbNgQbZHchjBQLXHivpUop",
+          "text": "Dame el resumen de producto y fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T19:04:26Z",
+            "madrid": "2026-11-03T20:04:26+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TVso1uUj23yi9DGFUcixLo",
+          "text": "Dame el resumen de producto y fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T21:11:46Z",
+            "madrid": "2026-11-03T22:11:46+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69hMz4qcvVCCqqaCPtajzL8",
+          "text": "Continúa"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T21:21:41Z",
+            "madrid": "2026-11-03T22:21:41+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6CDEDScdd4m3Rh1piUv7rmj",
+          "text": "Si ya puedes fusionar la VA-C fusioiona y haz el resumen de producto"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T21:56:16Z",
+            "madrid": "2026-11-03T22:56:16+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6X2XcNjnjedUTNygdXd38Ym",
+          "text": "Fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T22:28:24Z",
+            "madrid": "2026-11-03T23:28:24+01:00"
+          },
+          "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+          "thread": "Planificar VA ampliado con cloudroom",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6ADxFCjH1cfnvsmE5dAVMsR",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-03T22:38:05Z",
+            "madrid": "2026-11-03T23:38:05+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Vn6zL7T76xhjRKk7MFZqrK",
+          "text": "Quiero reorganizar la interfaz de skynet ya que El problema de Skynet ya no es estético, sino de arquitectura de la información. Hemos conseguido una interfaz más limpia, pero todavía parece un panel de administración de infraestructura, cuando lo que estás construyendo es una fábrica de software dirigida por agentes de IA.\nCreo que debemos cambiar el centro de gravedad de la aplicación:\nProyecto → Repositorio → Trabajo → Workflow → Ejecución → Resultado\nEl usuario debería entrar en Skynet y comprender inmediatamente tres cosas: sobre qué software está trabajando, qué están haciendo los agentes y qué cambios han producido, cuánto han costado y cuáles necesitan intervención.\nNueva propuesta de navegación\nEn lugar de dar el mismo protagonismo a proyectos, workflows, runners, ejecuciones y uso, organizaría Skynet en torno a tres áreas:\nEspacio de trabajo: proyectos, repositorios, trabajos pendientes y actividad reciente. Es la pantalla principal.\nFábrica: ejecuciones en curso, workflows, aprobaciones y resultados. Aquí se observa y controla el trabajo de los agentes.\nAdministración: proveedores, runners, consumo, configuración y mantenimiento.\nEl dashboard dejaría de ser una colección de métricas globales para convertirse en una vista operativa de los proyectos. Los costes globales seguirían disponibles, pero el dato realmente interesante sería saber cuánto ha costado implementar una funcionalidad concreta en un repositorio.\nEste boceto cambia la jerarquía: los repositorios pasan a ser protagonistas y las ejecuciones aparecen contextualizadas.\nEl siguiente nivel sería diseñar la página de detalle de un proyecto como centro de operaciones, con sus repositorios, trabajos, workflows, historial de cambios, PRs generadas, aprobaciones pendientes y costes acumulados.\nAdemás, distinguiría claramente tres conceptos que ahora pueden confundirse: un trabajo es lo que quieres conseguir, un workflow es el procedimiento para conseguirlo y una ejecución es cada intento real de llevarlo a cabo.\nAsí Skynet empezaría a comunicar visualmente lo que realmente es: una fábrica de software, no simplemente un lanzador de agentes.."
+        },
+        {
+          "at": {
+            "utc": "2026-11-04T06:28:23Z",
+            "madrid": "2026-11-04T07:28:23+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Q7EDbsAgMrUbESEwjU8yGZ",
+          "text": "haz tambien el diseño de la interfaz para moviles"
+        },
+        {
+          "at": {
+            "utc": "2026-11-04T06:39:31Z",
+            "madrid": "2026-11-04T07:39:31+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6YFpHXuGh4dniEBuPLCVPa5",
+          "text": "Está perfecto, implementa todos los recomendados"
+        },
+        {
+          "at": {
+            "utc": "2026-11-04T13:40:50Z",
+            "madrid": "2026-11-04T14:40:50+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63ZrDu8ak7vUfYHAYCjNxPY",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-04T15:17:13Z",
+            "madrid": "2026-11-04T16:17:13+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61gXnjz3Y8RdmYfJUd3mvH9",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-04T20:26:40Z",
+            "madrid": "2026-11-04T21:26:40+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WdibZ9iRQ5sn2yeoFGcq6K",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T13:38:56Z",
+            "madrid": "2026-11-05T14:38:56+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SZqZRH8UCcCWojZrHb1oAd",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T14:14:51Z",
+            "madrid": "2026-11-05T15:14:51+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VawjQNdoyf8CSX8GT5r96v",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T16:48:58Z",
+            "madrid": "2026-11-05T17:48:58+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UuJaqR4mgfuV4mTRqY3r3g",
+          "text": "Codex ha generado planificación plans/siguiente-hito-dl.md e issues, revisa por si hay que adaptar algo… para empezar a implementar"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T17:31:10Z",
+            "madrid": "2026-11-05T18:31:10+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VUQ5pQ19eg7JXH2W7jfDcz",
+          "text": "Adelante"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T18:20:16Z",
+            "madrid": "2026-11-05T19:20:16+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Sb6U8dnKtDh8K9gD7MYWPE",
+          "text": "Fusiona y hazme un resumen de producto"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T20:07:12Z",
+            "madrid": "2026-11-05T21:07:12+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67cMwEvpf8MzG51fH8j2VBv",
+          "text": "Cómo puede Hermes activar Hermes la parte manual?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T21:15:42Z",
+            "madrid": "2026-11-05T22:15:42+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65qxyDptk2RhqcQ6NHpQVAF",
+          "text": "Fusiona y pasamos al siguiente"
+        },
+        {
+          "at": {
+            "utc": "2026-11-05T22:21:38Z",
+            "madrid": "2026-11-05T23:21:38+01:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6FW1H6GA8Nmy2nUuY4vD2Rg",
+          "text": "Fusiona para seguir y dame resumen de producto"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T08:23:48Z",
+            "madrid": "2026-11-06T09:23:48+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6ALWJL7hWaXcQQoUqi1Nzi7",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T09:58:20Z",
+            "madrid": "2026-11-06T10:58:20+01:00"
+          },
+          "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+          "thread": "Revisar y empezar el hito DL",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68yP5k2LofFuN8LAZoYt8Bb",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T12:52:39Z",
+            "madrid": "2026-11-06T13:52:39+01:00"
+          },
+          "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+          "thread": "Reorganizar Skynet como fábrica de software",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6TLzWbjDyHYkAHtCzqqxSdU",
+          "text": "Este hilo ya está terminado"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T15:42:25Z",
+            "madrid": "2026-11-06T16:42:25+01:00"
+          },
+          "session_id": "session_01PyBwEVQrEv6Qk4xAmx4XZq",
+          "thread": "Implementar el hito Testbench (TB)",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6YFja5rPbtnFzBicgAqpUQa",
+          "text": "Codex ha creado las issues de un milestone que tiene el código testbench, o sea, TB, y quiero que crees el milestone y vamos a empezar a implementarlo."
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T22:28:43Z",
+            "madrid": "2026-11-06T23:28:43+01:00"
+          },
+          "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+          "thread": "Diseñar wizard para importar proyecto desde repo",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62NJz4j7DPbW6cEX3ymhiE8",
+          "text": "Ahora mismo los proyectos y sus repositorios hay que crearlos a mano, poner el nombre, descripciones, etc y también las rutas de los repositorios tanto locales como las rutas de git, etc. podemos importar un proyecto a partir de un repo que ya exista, por ejemplo ya tengo los repos de forma, akademia y tokenmeter en el disco de Omar hoy y quiero una manera de introducirlos a partir de esos ficheros, vamos a diseñar un wizard para crear un proyecto a partir de un repo clonado en el disco de omarchy"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T22:34:40Z",
+            "madrid": "2026-11-06T23:34:40+01:00"
+          },
+          "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+          "thread": "Diseñar wizard para importar proyecto desde repo",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6RRZP3rauMiPENyFLfa3oF8",
+          "text": "Todos los repos suelen estar en ~/code/ me vale el prefijo IP y vamos a ver un boceto del wizard"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T22:45:22Z",
+            "madrid": "2026-11-06T23:45:22+01:00"
+          },
+          "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+          "thread": "Diseñar wizard para importar proyecto desde repo",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6U6YrEdoE73nuBQ6ErYxQPa",
+          "text": "La URL del git la obtiene leyendo el directorio?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-06T22:46:46Z",
+            "madrid": "2026-11-06T23:46:46+01:00"
+          },
+          "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+          "thread": "Diseñar wizard para importar proyecto desde repo",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61zuCbjh4hk24UQRsJsMSZo",
+          "text": "Vale, pues adelante con la implementación"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T08:00:20Z",
+            "madrid": "2026-11-07T09:00:20+01:00"
+          },
+          "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+          "thread": "Diseñar wizard para importar proyecto desde repo",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6FPey4nZLS8uE4xXkGLwqbn",
+          "text": "Fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T08:35:27Z",
+            "madrid": "2026-11-07T09:35:27+01:00"
+          },
+          "session_id": "session_01PyBwEY1EWrBYcp9U3hQN5T",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62hCLfv7fr7zUJN3ArGobbE",
+          "text": "IP-B es pequeña y hermes emitió un comentario para fusionar directamente, porque no lo has leido?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T09:09:05Z",
+            "madrid": "2026-11-07T10:09:05+01:00"
+          },
+          "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+          "thread": "Pasar Skyny a 3D con three.js",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6PXgGuzeDQUWokGwNRz4hR4",
+          "text": "tengo una pagina html con el estudio de skyny en 3D, con el nuevo diseño de la mascota en 3d y las animaciones para los estados.... está hecho con three.js y quiero ver si puedo aplicar estas nuevas animaciones en lugar de las animaciones y mascota 2d actuales. Donde están las animaciones de skyny actuales y como se están poniendo en la aplicación. Analiza como tendría que hacer para cambiarlo comparando las animaciones y diseños de 2D vs la nueva 3D"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T09:28:42Z",
+            "madrid": "2026-11-07T10:28:42+01:00"
+          },
+          "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+          "thread": "Pasar Skyny a 3D con three.js",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y65EqKWcKuaTZi2LhnJoiQPg",
+          "text": "podemos de momento solamente ponerlo en el login en 3D?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T09:29:16Z",
+            "madrid": "2026-11-07T10:29:16+01:00"
+          },
+          "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+          "thread": "Pasar Skyny a 3D con three.js",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67MGEm3XBPoU7z5h5i6Z6p1",
+          "text": "dale"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T09:50:06Z",
+            "madrid": "2026-11-07T10:50:06+01:00"
+          },
+          "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+          "thread": "Pasar Skyny a 3D con three.js",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62tsGbRj13tSXQz5KW5cT3v",
+          "text": "está perfecto, fusiona. Estoy editando el estudio-skyny.html con codex, que tengo que hacer cuando tenga una versión nueva... a lo mejor cambia algo del modelo 3D, colores, etc. como hacemos para adaptar los cambios al código three.js introducido en el proyecto?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T09:52:34Z",
+            "madrid": "2026-11-07T10:52:34+01:00"
+          },
+          "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+          "thread": "Pasar Skyny a 3D con three.js",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UqJ4rzMyuSJzm9XoJebokd",
+          "text": "si vamos a ponerlo como hito porque ya digo que estoy haciendo el desarrollo allí"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T10:32:33Z",
+            "madrid": "2026-11-07T11:32:33+01:00"
+          },
+          "session_id": "session_01PyBwEY1EWrBYcp9U3hQN5T",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Raw7RoH89nvB5TGoDJ1DTK",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-07T17:59:43Z",
+            "madrid": "2026-11-07T18:59:43+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LM26MrtWryQSsmdJX28CSJ",
+          "text": "Quiero hacer pequeños cambios en el frontend, PR rápidas sin hitos. Por ejemplo en la lista de runners en versión móvil en lugar de una tabla que sean tarjetas"
+        },
+        {
+          "at": {
+            "utc": "2026-11-08T10:41:51Z",
+            "madrid": "2026-11-08T11:41:51+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Vh5ALDcZL4rQGaEnxHH7Xm",
+          "text": "los bordes de los paneles son demasiado finos, vamos a ponerlos a 2px, todos los bordes y lineas de separación de paneles"
+        },
+        {
+          "at": {
+            "utc": "2026-11-08T10:46:06Z",
+            "madrid": "2026-11-08T11:46:06+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6WwM9aEsvfw165EBYURhvFM",
+          "text": "aplícalo directamente a la PR"
+        },
+        {
+          "at": {
+            "utc": "2026-11-08T11:32:24Z",
+            "madrid": "2026-11-08T12:32:24+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64Eb3YUTECkR7kEcBWwM1iL",
+          "text": "En la pagina de proyectos quita el formulario de Nuevo Proyecto y ponemos un boton de \"+ Nuevo Proyecto\" que abra un panel lateral con el formulario de Nuevo Proyecto, en la versión movil, la lista de proyectos que sean tarjetas"
+        },
+        {
+          "at": {
+            "utc": "2026-11-08T12:11:52Z",
+            "madrid": "2026-11-08T13:11:52+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64endfLhFH3YVtNkX4FHFhV",
+          "text": "coloca el boton en este lado"
+        },
+        {
+          "at": {
+            "utc": "2026-11-08T12:48:51Z",
+            "madrid": "2026-11-08T13:48:51+01:00"
+          },
+          "session_id": "session_01PyBwEXGV1xTFmx7oUFQg14",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Qff8vNN916FUvTguPuH7f6",
+          "text": "genera el recap de la semana"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "kind": "hilo",
+      "title": "Lanzar trabajo desde GitHub (DS)",
+      "thread": "Lanzar trabajo desde GitHub (DS)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-10-31T23:57:53Z",
+        "madrid": "2026-11-01T00:57:53+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-02T19:53:13Z",
+        "madrid": "2026-11-02T20:53:13+01:00"
+      },
+      "status": "completada",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-11-02T08:22:44Z",
+        "madrid": "2026-11-02T09:22:44+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-02T19:52:42Z",
+        "madrid": "2026-11-02T20:52:42+01:00"
+      },
+      "prs": [
+        209,
+        210,
+        211
+      ],
+      "agent_replies": 13,
+      "usage_session_total": {
+        "cost_usd": 42.32,
+        "input_tokens": 7787,
+        "output_tokens": 358568,
+        "cache_read_tokens": 111513456,
+        "cache_write_tokens": 1584355,
+        "note": "acumulado desde el sábado 31; en este informe solo cuentan los eventos desde el domingo 1 a las 08:40"
+      },
+      "usage_this_week": {
+        "note": "la sesión empezó antes del lunes y no hay turno previo para restar; ver usage_session_total"
+      },
+      "turns": {
+        "turns_total": 24,
+        "turns_by_origin": {
+          "human": 6,
+          "task-notification": 18
+        },
+        "turns_with_error": [],
+        "active_time_ms": 5397951,
+        "subagents_spawned": 4
+      },
+      "rate_limit_windows_seen": [
+        1793625000,
+        1793661600
+      ],
+      "notes": [
+        "Hito DS completo (#209-#211), absorbe el puente skynet-commands."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWNrDX2CMA3rtFDvA2",
+      "kind": "hilo",
+      "title": "Analizar cloudroom para extraer ideas",
+      "thread": "Analizar cloudroom para extraer ideas",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-02T08:13:46Z",
+        "madrid": "2026-11-02T09:13:46+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-02T08:17:49Z",
+        "madrid": "2026-11-02T09:17:49+01:00"
+      },
+      "status": "esperando a Diego",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-02T08:13:36Z",
+        "madrid": "2026-11-02T09:13:36+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-02T08:13:36Z",
+        "madrid": "2026-11-02T09:13:36+01:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 2.1,
+        "input_tokens": 1751,
+        "output_tokens": 17559,
+        "cache_read_tokens": 2883790,
+        "cache_write_tokens": 143604,
+        "note": "acumulado; lunes 2"
+      },
+      "usage_this_week": {
+        "cost_usd": 2.1,
+        "input": 1751,
+        "output": 17559,
+        "cache_read": 2883790,
+        "cache_write": 143604,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 2,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 235496,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793625000
+      ],
+      "notes": [
+        "Informe plans/analisis-cloudroom.md; propone CQ y ampliar VA."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+      "kind": "hilo",
+      "title": "Planificar reintento por cuota (CQ)",
+      "thread": "Planificar reintento por cuota (CQ)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-02T19:55:58Z",
+        "madrid": "2026-11-02T20:55:58+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-03T16:26:28Z",
+        "madrid": "2026-11-03T17:26:28+01:00"
+      },
+      "status": "completada",
+      "prompts": 7,
+      "first_prompt": {
+        "utc": "2026-11-02T19:55:51Z",
+        "madrid": "2026-11-02T20:55:51+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-03T16:26:05Z",
+        "madrid": "2026-11-03T17:26:05+01:00"
+      },
+      "prs": [
+        214,
+        215
+      ],
+      "agent_replies": 13,
+      "usage_session_total": {
+        "cost_usd": 33.57,
+        "input_tokens": 8527,
+        "output_tokens": 275977,
+        "cache_read_tokens": 101706201,
+        "cache_write_tokens": 936840,
+        "note": "acumulado; empezó el lunes 2"
+      },
+      "usage_this_week": {
+        "cost_usd": 33.57,
+        "input": 8527,
+        "output": 275977,
+        "cache_read": 101706201,
+        "cache_write": 936840,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 22,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 7,
+          "task-notification": 13
+        },
+        "turns_with_error": [],
+        "active_time_ms": 5482237,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793661600,
+        1793704800,
+        1793738400
+      ],
+      "notes": [
+        "Hito CQ completo (#214, #215)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "kind": "hilo",
+      "title": "Poner a Skyny en los bullets de estado",
+      "thread": "Poner a Skyny en los bullets de estado",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-03T06:38:25Z",
+        "madrid": "2026-11-03T07:38:25+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-03T07:34:51Z",
+        "madrid": "2026-11-03T08:34:51+01:00"
+      },
+      "status": "completada",
+      "prompts": 5,
+      "first_prompt": {
+        "utc": "2026-11-03T06:38:17Z",
+        "madrid": "2026-11-03T07:38:17+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-03T07:12:55Z",
+        "madrid": "2026-11-03T08:12:55+01:00"
+      },
+      "prs": [
+        217
+      ],
+      "agent_replies": 10,
+      "usage_session_total": {
+        "cost_usd": 6.34,
+        "input_tokens": 1955,
+        "output_tokens": 45589,
+        "cache_read_tokens": 18293619,
+        "cache_write_tokens": 212711,
+        "note": "acumulado; martes 3"
+      },
+      "usage_this_week": {
+        "cost_usd": 6.34,
+        "input": 1955,
+        "output": 45589,
+        "cache_read": 18293619,
+        "cache_write": 212711,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 12,
+        "turns_by_origin": {
+          "desconocido": 1,
+          "human": 5,
+          "task-notification": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 1016426,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793704800
+      ],
+      "notes": [
+        "SB-A (#217) fusionada tras la aprobación de Hermes."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "kind": "hilo",
+      "title": "Planificar VA ampliado con cloudroom",
+      "thread": "Planificar VA ampliado con cloudroom",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-03T16:26:20Z",
+        "madrid": "2026-11-03T17:26:20+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-03T22:29:47Z",
+        "madrid": "2026-11-03T23:29:47+01:00"
+      },
+      "status": "completada",
+      "prompts": 7,
+      "first_prompt": {
+        "utc": "2026-11-03T16:53:40Z",
+        "madrid": "2026-11-03T17:53:40+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-03T22:28:24Z",
+        "madrid": "2026-11-03T23:28:24+01:00"
+      },
+      "prs": [
+        222,
+        223,
+        224,
+        225
+      ],
+      "agent_replies": 16,
+      "usage_session_total": {
+        "cost_usd": 53.05,
+        "input_tokens": 8185,
+        "output_tokens": 484922,
+        "cache_read_tokens": 165372418,
+        "cache_write_tokens": 1256941,
+        "note": "acumulado; martes 3"
+      },
+      "usage_this_week": {
+        "cost_usd": 53.05,
+        "input": 8185,
+        "output": 484922,
+        "cache_read": 165372418,
+        "cache_write": 1256941,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 36,
+        "turns_by_origin": {
+          "task-notification": 29,
+          "human": 6,
+          "desconocido": 1
+        },
+        "turns_with_error": [
+          {
+            "at": "2026-11-03T19:48:40.502784Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:48:40.980140Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:48:41.446276Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:48:51.906157Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:58:05.118025Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:58:05.719039Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:58:06.175553Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          },
+          {
+            "at": "2026-11-03T19:58:06.640367Z",
+            "subtype": "success",
+            "api_error": 429,
+            "terminal": "api_error",
+            "result_head": "You've hit your 5-hour limit · resets 8:40pm (UTC)"
+          }
+        ],
+        "active_time_ms": 9093218,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793738400,
+        1793756400
+      ],
+      "notes": [
+        "Hito VA completo (#222-#225)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "kind": "hilo",
+      "title": "Reorganizar Skynet como fábrica de software",
+      "thread": "Reorganizar Skynet como fábrica de software",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-03T22:38:14Z",
+        "madrid": "2026-11-03T23:38:14+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-06T12:53:01Z",
+        "madrid": "2026-11-06T13:53:01+01:00"
+      },
+      "status": "completada",
+      "prompts": 10,
+      "first_prompt": {
+        "utc": "2026-11-03T22:38:05Z",
+        "madrid": "2026-11-03T23:38:05+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-06T12:52:39Z",
+        "madrid": "2026-11-06T13:52:39+01:00"
+      },
+      "prs": [
+        232,
+        233,
+        234,
+        235,
+        236,
+        242
+      ],
+      "agent_replies": 24,
+      "usage_session_total": {
+        "cost_usd": 55.03,
+        "input_tokens": 7815,
+        "output_tokens": 370589,
+        "cache_read_tokens": 128305154,
+        "cache_write_tokens": 2700436,
+        "note": "acumulado; empezó el martes 3"
+      },
+      "usage_this_week": {
+        "cost_usd": 55.03,
+        "input": 7815,
+        "output": 370589,
+        "cache_read": 128305154,
+        "cache_write": 2700436,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 35,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 11,
+          "task-notification": 22
+        },
+        "turns_with_error": [],
+        "active_time_ms": 7133233,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793756400,
+        1793791200,
+        1793817600,
+        1793841600,
+        1793903400,
+        1793971200
+      ],
+      "notes": [
+        "Hito FS completo (#232-#236, #242) y galería de 46 pantallas."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+      "kind": "hilo",
+      "title": "Revisar y empezar el hito DL",
+      "thread": "Revisar y empezar el hito DL",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-05T16:49:25Z",
+        "madrid": "2026-11-05T17:49:25+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-06T09:59:15Z",
+        "madrid": "2026-11-06T10:59:15+01:00"
+      },
+      "status": "completada",
+      "prompts": 6,
+      "first_prompt": {
+        "utc": "2026-11-05T17:31:10Z",
+        "madrid": "2026-11-05T18:31:10+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-06T09:58:20Z",
+        "madrid": "2026-11-06T10:58:20+01:00"
+      },
+      "prs": [
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "agent_replies": 18,
+      "usage_session_total": {
+        "cost_usd": 33.29,
+        "input_tokens": 9453,
+        "output_tokens": 271088,
+        "cache_read_tokens": 82559918,
+        "cache_write_tokens": 1376949,
+        "note": "acumulado; empezó el jueves 5"
+      },
+      "usage_this_week": {
+        "cost_usd": 33.29,
+        "input": 9453,
+        "output": 271088,
+        "cache_read": 82559918,
+        "cache_write": 1376949,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 38,
+        "turns_by_origin": {
+          "task-notification": 29,
+          "desconocido": 2,
+          "human": 7
+        },
+        "turns_with_error": [],
+        "active_time_ms": 4514561,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793903400,
+        1793921400,
+        1793971200
+      ],
+      "notes": [
+        "Hito DL completo (#243-#247), plan de Codex."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEVQrEv6Qk4xAmx4XZq",
+      "kind": "hilo",
+      "title": "Implementar el hito Testbench (TB)",
+      "thread": "Implementar el hito Testbench (TB)",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-06T15:42:33Z",
+        "madrid": "2026-11-06T16:42:33+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-06T15:44:55Z",
+        "madrid": "2026-11-06T16:44:55+01:00"
+      },
+      "status": "esperando a Diego",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-06T15:42:25Z",
+        "madrid": "2026-11-06T16:42:25+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-06T15:42:25Z",
+        "madrid": "2026-11-06T16:42:25+01:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 0.95,
+        "input_tokens": 30,
+        "output_tokens": 7795,
+        "cache_read_tokens": 1251513,
+        "cache_write_tokens": 64687,
+        "note": "acumulado; viernes 6"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.95,
+        "input": 30,
+        "output": 7795,
+        "cache_read": 1251513,
+        "cache_write": 64687,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 3,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 134971,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793997600
+      ],
+      "notes": [
+        "Milestones TB 96-99 creados; espera el «adelante» de Diego."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+      "kind": "hilo",
+      "title": "Diseñar wizard para importar proyecto desde repo",
+      "thread": "Diseñar wizard para importar proyecto desde repo",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-06T22:28:52Z",
+        "madrid": "2026-11-06T23:28:52+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-07T08:48:33Z",
+        "madrid": "2026-11-07T09:48:33+01:00"
+      },
+      "status": "completada",
+      "prompts": 5,
+      "first_prompt": {
+        "utc": "2026-11-06T22:28:43Z",
+        "madrid": "2026-11-06T23:28:43+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-07T08:00:20Z",
+        "madrid": "2026-11-07T09:00:20+01:00"
+      },
+      "prs": [
+        255,
+        256,
+        257
+      ],
+      "agent_replies": 13,
+      "usage_session_total": {
+        "cost_usd": 24.45,
+        "input_tokens": 6220,
+        "output_tokens": 208575,
+        "cache_read_tokens": 70107408,
+        "cache_write_tokens": 757095,
+        "note": "acumulado; empezó el viernes 6"
+      },
+      "usage_this_week": {
+        "cost_usd": 24.45,
+        "input": 6220,
+        "output": 208575,
+        "cache_read": 70107408,
+        "cache_write": 757095,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 21,
+        "turns_by_origin": {
+          "desconocido": 3,
+          "human": 5,
+          "task-notification": 13
+        },
+        "turns_with_error": [],
+        "active_time_ms": 4925984,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794021600,
+        1794056400
+      ],
+      "notes": [
+        "Hito IP completo (#255-#257)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+      "kind": "hilo",
+      "title": "Pasar Skyny a 3D con three.js",
+      "thread": "Pasar Skyny a 3D con three.js",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-07T09:09:16Z",
+        "madrid": "2026-11-07T10:09:16+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-07T10:33:11Z",
+        "madrid": "2026-11-07T11:33:11+01:00"
+      },
+      "status": "completada",
+      "prompts": 5,
+      "first_prompt": {
+        "utc": "2026-11-07T09:09:05Z",
+        "madrid": "2026-11-07T10:09:05+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-07T09:52:34Z",
+        "madrid": "2026-11-07T10:52:34+01:00"
+      },
+      "prs": [
+        259,
+        261
+      ],
+      "agent_replies": 9,
+      "usage_session_total": {
+        "cost_usd": 12.57,
+        "input_tokens": 303,
+        "output_tokens": 121985,
+        "cache_read_tokens": 36539103,
+        "cache_write_tokens": 336424,
+        "note": "acumulado; sábado 7"
+      },
+      "usage_this_week": {
+        "cost_usd": 12.57,
+        "input": 303,
+        "output": 121985,
+        "cache_read": 36539103,
+        "cache_write": 336424,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 19,
+        "turns_by_origin": {
+          "human": 6,
+          "desconocido": 2,
+          "task-notification": 10,
+          "projects-relay": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 2624004,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794056400
+      ],
+      "notes": [
+        "TD-A (#259, login en 3D) y TD-B (#261, estudio en el repo)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "kind": "hilo",
+      "title": "Hacer pequeños cambios rápidos en el frontend",
+      "thread": "Hacer pequeños cambios rápidos en el frontend",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-07T17:59:50Z",
+        "madrid": "2026-11-07T18:59:50+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-08T12:23:59Z",
+        "madrid": "2026-11-08T13:23:59+01:00"
+      },
+      "status": "PR abierta",
+      "prompts": 5,
+      "first_prompt": {
+        "utc": "2026-11-07T17:59:43Z",
+        "madrid": "2026-11-07T18:59:43+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-08T12:11:52Z",
+        "madrid": "2026-11-08T13:11:52+01:00"
+      },
+      "prs": [
+        262
+      ],
+      "agent_replies": 9,
+      "usage_session_total": {
+        "cost_usd": 7.8,
+        "input_tokens": 265,
+        "output_tokens": 40203,
+        "cache_read_tokens": 22302607,
+        "cache_write_tokens": 301483,
+        "note": "acumulado; empezó el sábado 7"
+      },
+      "usage_this_week": {
+        "cost_usd": 7.8,
+        "input": 265,
+        "output": 40203,
+        "cache_read": 22302607,
+        "cache_write": 301483,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 22,
+        "turns_by_origin": {
+          "desconocido": 2,
+          "human": 4,
+          "task-notification": 16
+        },
+        "turns_with_error": [],
+        "active_time_ms": 1279037,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794091800,
+        1794152400
+      ],
+      "notes": [
+        "PR #262 en verde, esperando la aprobación de Hermes."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEZAZ8AFH4PrPSbFXfz",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-02T08:13:36Z",
+        "madrid": "2026-11-02T09:13:36+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-02T12:11:17Z",
+        "madrid": "2026-11-02T13:11:17+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.62,
+        "input_tokens": 16,
+        "output_tokens": 1056,
+        "cache_read_tokens": 278665,
+        "cache_write_tokens": 67534,
+        "note": "acumulado; lunes 2"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.6172,
+        "input": 16,
+        "output": 1056,
+        "cache_read": 278665,
+        "cache_write": 67534,
+        "thinking": 0,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 11,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 1,
+          "desconocido": 9
+        },
+        "turns_with_error": [],
+        "active_time_ms": 42295,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793625000
+      ],
+      "notes": [
+        "Lanzó el análisis de cloudroom."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWBXLUER42kW9VXmnG",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-02T18:25:26Z",
+        "madrid": "2026-11-02T19:25:26+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-02T21:21:10Z",
+        "madrid": "2026-11-02T22:21:10+01:00"
+      },
+      "status": "completada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-02T19:54:31Z",
+        "madrid": "2026-11-02T20:54:31+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-02T19:54:31Z",
+        "madrid": "2026-11-02T20:54:31+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.66,
+        "input_tokens": 41,
+        "output_tokens": 4643,
+        "cache_read_tokens": 987464,
+        "cache_write_tokens": 45915,
+        "note": "acumulado; lunes 2"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.6578,
+        "input": 41,
+        "output": 4643,
+        "cache_read": 987464,
+        "cache_write": 45915,
+        "thinking": 57,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 17,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 10
+        },
+        "turns_with_error": [],
+        "active_time_ms": 81372,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793661600
+      ],
+      "notes": [
+        "Propuso VA o CQ tras DS y lanzó el hilo de CQ."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXPvVL39XJyPaKapnP",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-03T06:27:09Z",
+        "madrid": "2026-11-03T07:27:09+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-03T08:15:14Z",
+        "madrid": "2026-11-03T09:15:14+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.76,
+        "input_tokens": 54,
+        "output_tokens": 2327,
+        "cache_read_tokens": 1409525,
+        "cache_write_tokens": 53408,
+        "note": "acumulado; martes 3"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.7559,
+        "input": 54,
+        "output": 2327,
+        "cache_read": 1409525,
+        "cache_write": 53408,
+        "thinking": 50,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 25,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 8,
+          "desconocido": 16
+        },
+        "turns_with_error": [],
+        "active_time_ms": 74610,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793704800
+      ],
+      "notes": [
+        "Lanzó el hilo de Skyny en los bullets."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEVsY6uM7ESsgH4pmaP",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-03T15:48:25Z",
+        "madrid": "2026-11-03T16:48:25+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-03T22:46:34Z",
+        "madrid": "2026-11-03T23:46:34+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.31,
+        "input_tokens": 68,
+        "output_tokens": 3823,
+        "cache_read_tokens": 1861767,
+        "cache_write_tokens": 107067,
+        "note": "acumulado; martes 3"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.3056,
+        "input": 68,
+        "output": 3823,
+        "cache_read": 1861767,
+        "cache_write": 107067,
+        "thinking": 64,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 30,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 10,
+          "desconocido": 19
+        },
+        "turns_with_error": [],
+        "active_time_ms": 169884,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793738400,
+        1793756400
+      ],
+      "notes": [
+        "Coordinó VA y lanzó el hilo de la fábrica de software."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEV4kkuNGTtP8cC3XAN",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-05T13:38:56Z",
+        "madrid": "2026-11-05T14:38:56+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-05T21:31:36Z",
+        "madrid": "2026-11-05T22:31:36+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.97,
+        "input_tokens": 61,
+        "output_tokens": 5962,
+        "cache_read_tokens": 1558863,
+        "cache_write_tokens": 191227,
+        "note": "acumulado; jueves 5"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.9611,
+        "input": 61,
+        "output": 5962,
+        "cache_read": 1558863,
+        "cache_write": 191227,
+        "thinking": 108,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 25,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 7,
+          "desconocido": 17
+        },
+        "turns_with_error": [],
+        "active_time_ms": 126381,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793903400,
+        1793921400
+      ],
+      "notes": [
+        "Cerró FS y lanzó el hilo de DL."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEV6wyTe8QkwHpgZn7j",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-06T08:23:48Z",
+        "madrid": "2026-11-06T09:23:48+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-06T15:45:00Z",
+        "madrid": "2026-11-06T16:45:00+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.04,
+        "input_tokens": 27,
+        "output_tokens": 3131,
+        "cache_read_tokens": 551768,
+        "cache_write_tokens": 107555,
+        "note": "acumulado; viernes 6"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.0335,
+        "input": 27,
+        "output": 3131,
+        "cache_read": 551768,
+        "cache_write": 107555,
+        "thinking": 177,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 10,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 5,
+          "desconocido": 4
+        },
+        "turns_with_error": [],
+        "active_time_ms": 81043,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1793971200,
+        1793997600
+      ],
+      "notes": [
+        "Pasó DL-D y lanzó el hilo de TB."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXr9Kce3cvNeLdcjj7",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-06T22:28:42Z",
+        "madrid": "2026-11-06T23:28:42+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-06T23:46:52Z",
+        "madrid": "2026-11-07T00:46:52+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.5,
+        "input_tokens": 28,
+        "output_tokens": 2511,
+        "cache_read_tokens": 623236,
+        "cache_write_tokens": 40071,
+        "note": "acumulado; viernes 6"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.4955,
+        "input": 28,
+        "output": 2511,
+        "cache_read": 623236,
+        "cache_write": 40071,
+        "thinking": 38,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 11,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 4,
+          "desconocido": 6
+        },
+        "turns_with_error": [],
+        "active_time_ms": 80337,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794021600
+      ],
+      "notes": [
+        "Lanzó el hilo del asistente de importación (IP)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEY1EWrBYcp9U3hQN5T",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-07T08:00:20Z",
+        "madrid": "2026-11-07T09:00:20+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-07T10:33:07Z",
+        "madrid": "2026-11-07T11:33:07+01:00"
+      },
+      "status": "completada",
+      "prompts": 2,
+      "first_prompt": {
+        "utc": "2026-11-07T08:35:27Z",
+        "madrid": "2026-11-07T09:35:27+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-07T10:32:33Z",
+        "madrid": "2026-11-07T11:32:33+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.09,
+        "input_tokens": 75,
+        "output_tokens": 7660,
+        "cache_read_tokens": 2186546,
+        "cache_write_tokens": 61451,
+        "note": "acumulado; sábado 7"
+      },
+      "usage_this_week": {
+        "cost_usd": 1.0824,
+        "input": 75,
+        "output": 7660,
+        "cache_read": 2186546,
+        "cache_write": 61451,
+        "thinking": 174,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 24,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 8,
+          "desconocido": 15
+        },
+        "turns_with_error": [],
+        "active_time_ms": 192754,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794056400
+      ],
+      "notes": [
+        "Pasó los avisos de IP y lanzó el hilo de Skyny 3D."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWmoLv1y87CRS9a4pK",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-07T17:59:42Z",
+        "madrid": "2026-11-07T18:59:42+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-07T18:05:18Z",
+        "madrid": "2026-11-07T19:05:18+01:00"
+      },
+      "status": "completada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.32,
+        "input_tokens": 6,
+        "output_tokens": 681,
+        "cache_read_tokens": 112487,
+        "cache_write_tokens": 35544,
+        "note": "acumulado; sábado 7"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.3205,
+        "input": 6,
+        "output": 681,
+        "cache_read": 112487,
+        "cache_write": 35544,
+        "thinking": 24,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 3,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 1,
+          "desconocido": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 11248,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794091800
+      ],
+      "notes": [
+        "Lanzó el hilo de cambios rápidos de frontend."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXGV1xTFmx7oUFQg14",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": null,
+      "model": "claude-opus-5-5[1m]",
+      "created_at": {
+        "utc": "2026-11-08T10:41:51Z",
+        "madrid": "2026-11-08T11:41:51+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-08T12:49:14Z",
+        "madrid": "2026-11-08T13:49:14+01:00"
+      },
+      "status": "activa",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-08T12:48:51Z",
+        "madrid": "2026-11-08T13:48:51+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-08T12:48:51Z",
+        "madrid": "2026-11-08T13:48:51+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 0.45,
+        "input_tokens": 30,
+        "output_tokens": 1533,
+        "cache_read_tokens": 647085,
+        "cache_write_tokens": 35942,
+        "note": "acumulado; domingo 8, en curso"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.4872,
+        "input": 34,
+        "output": 1997,
+        "cache_read": 749208,
+        "cache_write": 37165,
+        "thinking": 54,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 16,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 9
+        },
+        "turns_with_error": [],
+        "active_time_ms": 79268,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794152400
+      ],
+      "notes": [
+        "Encargó este recap."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [
+      {
+        "number": 209,
+        "title": "DS-A - Lanzar desde una issue",
+        "squash_sha": "438a0e7",
+        "merged_at": "2026-11-02T11:37:30Z",
+        "files_changed": 27,
+        "additions": 2977,
+        "deletions": 12,
+        "milestone": "DS-A - Lanzar desde una issue",
+        "closes_issues": [
+          206
+        ],
+        "phase": "DS-A",
+        "url": "https://github.com/guilu/skynet/pull/209",
+        "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo"
+      },
+      {
+        "number": 210,
+        "title": "DS-B - Comentarios /skynet y revisiones",
+        "squash_sha": "3c41676",
+        "merged_at": "2026-11-02T18:27:25Z",
+        "files_changed": 22,
+        "additions": 1671,
+        "deletions": 53,
+        "milestone": "DS-B - Comentarios /skynet y revisiones",
+        "closes_issues": [
+          207
+        ],
+        "phase": "DS-B",
+        "url": "https://github.com/guilu/skynet/pull/210",
+        "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo"
+      },
+      {
+        "number": 211,
+        "title": "DS-C - Cron, cola por repositorio y web",
+        "squash_sha": "e96e8cd",
+        "merged_at": "2026-11-02T19:52:50Z",
+        "files_changed": 50,
+        "additions": 3290,
+        "deletions": 58,
+        "milestone": "DS-C - Cron, cola por repositorio y web",
+        "closes_issues": [
+          208
+        ],
+        "phase": "DS-C",
+        "url": "https://github.com/guilu/skynet/pull/211",
+        "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo"
+      },
+      {
+        "number": 214,
+        "title": "CQ-A - Esperar a que se renueve la cuota",
+        "squash_sha": "7fa2863",
+        "merged_at": "2026-11-03T06:27:20Z",
+        "files_changed": 58,
+        "additions": 2541,
+        "deletions": 66,
+        "milestone": "CQ-A - Esperar a que se renueve la cuota",
+        "closes_issues": [
+          212
+        ],
+        "phase": "CQ-A",
+        "url": "https://github.com/guilu/skynet/pull/214",
+        "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s"
+      },
+      {
+        "number": 215,
+        "title": "CQ-B - Proveedor de reserva",
+        "squash_sha": "4d6f8eb",
+        "merged_at": "2026-11-03T15:48:46Z",
+        "files_changed": 42,
+        "additions": 1340,
+        "deletions": 110,
+        "milestone": "CQ-B - Proveedor de reserva",
+        "closes_issues": [
+          213
+        ],
+        "phase": "CQ-B",
+        "url": "https://github.com/guilu/skynet/pull/215",
+        "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s"
+      },
+      {
+        "number": 217,
+        "title": "SB-A - Skyny en las píldoras de estado",
+        "squash_sha": "ffd7919",
+        "merged_at": "2026-11-03T07:34:22Z",
+        "files_changed": 10,
+        "additions": 228,
+        "deletions": 15,
+        "milestone": "SB-A - Skyny en las píldoras de estado",
+        "closes_issues": [
+          216
+        ],
+        "phase": "SB-A",
+        "url": "https://github.com/guilu/skynet/pull/217",
+        "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg"
+      },
+      {
+        "number": 222,
+        "title": "VA-A - Rutas protegidas y tests intactos",
+        "squash_sha": "38f6f9d",
+        "merged_at": "2026-11-03T18:13:26Z",
+        "files_changed": 41,
+        "additions": 1772,
+        "deletions": 49,
+        "milestone": "VA-A - Rutas protegidas y tests intactos",
+        "closes_issues": [
+          218
+        ],
+        "phase": "VA-A",
+        "url": "https://github.com/guilu/skynet/pull/222",
+        "session_id": "session_01PyBwEW68tRFqEnD3xyHk51"
+      },
+      {
+        "number": 223,
+        "title": "VA-B - Juez con rúbrica",
+        "squash_sha": "4676577",
+        "merged_at": "2026-11-03T19:11:45Z",
+        "files_changed": 47,
+        "additions": 4150,
+        "deletions": 36,
+        "milestone": "VA-B - Juez con rúbrica",
+        "closes_issues": [
+          219
+        ],
+        "phase": "VA-B",
+        "url": "https://github.com/guilu/skynet/pull/223",
+        "session_id": "session_01PyBwEW68tRFqEnD3xyHk51"
+      },
+      {
+        "number": 224,
+        "title": "VA-C - Verificación adversarial y workflows iniciales",
+        "squash_sha": "fde2d1a",
+        "merged_at": "2026-11-03T21:22:11Z",
+        "files_changed": 39,
+        "additions": 1571,
+        "deletions": 167,
+        "milestone": "VA-C - Verificación adversarial y workflows iniciales",
+        "closes_issues": [
+          220
+        ],
+        "phase": "VA-C",
+        "url": "https://github.com/guilu/skynet/pull/224",
+        "session_id": "session_01PyBwEW68tRFqEnD3xyHk51"
+      },
+      {
+        "number": 225,
+        "title": "VA-D - La guía de pruebas como fase",
+        "squash_sha": "5312b57",
+        "merged_at": "2026-11-03T22:28:46Z",
+        "files_changed": 35,
+        "additions": 2203,
+        "deletions": 36,
+        "milestone": "VA-D - La guía de pruebas como fase",
+        "closes_issues": [
+          221
+        ],
+        "phase": "VA-D",
+        "url": "https://github.com/guilu/skynet/pull/225",
+        "session_id": "session_01PyBwEW68tRFqEnD3xyHk51"
+      },
+      {
+        "number": 232,
+        "title": "FS-A - Navegación en tres áreas",
+        "squash_sha": "61c3741",
+        "merged_at": "2026-11-04T07:07:12Z",
+        "files_changed": 11,
+        "additions": 421,
+        "deletions": 91,
+        "milestone": "FS-A - Navegación en tres áreas",
+        "closes_issues": [
+          226
+        ],
+        "phase": "FS-A",
+        "url": "https://github.com/guilu/skynet/pull/232",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 233,
+        "title": "FS-B - Datos operativos de la fábrica",
+        "squash_sha": "62518f8",
+        "merged_at": "2026-11-04T13:41:14Z",
+        "files_changed": 27,
+        "additions": 1372,
+        "deletions": 18,
+        "milestone": "FS-B - Datos operativos: repositorio del trabajo y agregados",
+        "closes_issues": [
+          227
+        ],
+        "phase": "FS-B",
+        "url": "https://github.com/guilu/skynet/pull/233",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 234,
+        "title": "FS-C - Inicio como espacio de trabajo",
+        "squash_sha": "4910f40",
+        "merged_at": "2026-11-04T15:17:38Z",
+        "files_changed": 21,
+        "additions": 1584,
+        "deletions": 410,
+        "milestone": "FS-C - Inicio como espacio de trabajo",
+        "closes_issues": [
+          228
+        ],
+        "phase": "FS-C",
+        "url": "https://github.com/guilu/skynet/pull/234",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 235,
+        "title": "FS-D - Proyecto como centro de operaciones",
+        "squash_sha": "c85470d",
+        "merged_at": "2026-11-04T20:27:05Z",
+        "files_changed": 14,
+        "additions": 1108,
+        "deletions": 34,
+        "milestone": "FS-D - Proyecto como centro de operaciones",
+        "closes_issues": [
+          229
+        ],
+        "phase": "FS-D",
+        "url": "https://github.com/guilu/skynet/pull/235",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 236,
+        "title": "FS-E - Trabajo con intentos, coste y resultado",
+        "squash_sha": "a4bf1b1",
+        "merged_at": "2026-11-05T13:39:19Z",
+        "files_changed": 20,
+        "additions": 1164,
+        "deletions": 245,
+        "milestone": "FS-E - Trabajo con intentos, coste y resultado",
+        "closes_issues": [
+          230
+        ],
+        "phase": "FS-E",
+        "url": "https://github.com/guilu/skynet/pull/236",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 242,
+        "title": "FS-F - Fábrica y Administración",
+        "squash_sha": "82f481c",
+        "merged_at": "2026-11-05T14:24:00Z",
+        "files_changed": 23,
+        "additions": 2121,
+        "deletions": 197,
+        "milestone": "FS-F - Fábrica y Administración",
+        "closes_issues": [
+          231
+        ],
+        "phase": "FS-F",
+        "url": "https://github.com/guilu/skynet/pull/242",
+        "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      },
+      {
+        "number": 243,
+        "title": "DL-A - Modelo de despliegues y persistencia",
+        "squash_sha": "ba9e4f3",
+        "merged_at": "2026-11-05T18:20:29Z",
+        "files_changed": 10,
+        "additions": 1133,
+        "deletions": 20,
+        "milestone": "DL-A - Modelo de despliegues y persistencia",
+        "closes_issues": [
+          237
+        ],
+        "phase": "DL-A",
+        "url": "https://github.com/guilu/skynet/pull/243",
+        "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      },
+      {
+        "number": 244,
+        "title": "DL-B - Eventos de despliegue desde GitHub Deployments",
+        "squash_sha": "7fa86f0",
+        "merged_at": "2026-11-05T21:16:00Z",
+        "files_changed": 15,
+        "additions": 840,
+        "deletions": 8,
+        "milestone": "DL-B - Eventos de despliegue desde GitHub Deployments",
+        "closes_issues": [
+          238
+        ],
+        "phase": "DL-B",
+        "url": "https://github.com/guilu/skynet/pull/244",
+        "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      },
+      {
+        "number": 245,
+        "title": "DL-C - Verificación de salud y reconciliación",
+        "squash_sha": "8c2dd74",
+        "merged_at": "2026-11-05T22:22:04Z",
+        "files_changed": 16,
+        "additions": 1534,
+        "deletions": 70,
+        "milestone": "DL-C - Verificación de salud y reconciliación",
+        "closes_issues": [
+          239
+        ],
+        "phase": "DL-C",
+        "url": "https://github.com/guilu/skynet/pull/245",
+        "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      },
+      {
+        "number": 246,
+        "title": "DL-E - Interfaz de despliegues",
+        "squash_sha": "3e366d4",
+        "merged_at": "2026-11-06T08:24:04Z",
+        "files_changed": 19,
+        "additions": 1642,
+        "deletions": 8,
+        "milestone": "DL-E - Seguimiento de despliegues en la interfaz",
+        "closes_issues": [
+          241
+        ],
+        "phase": "DL-E",
+        "url": "https://github.com/guilu/skynet/pull/246",
+        "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      },
+      {
+        "number": 247,
+        "title": "DL-D - Disparadores por despliegue",
+        "squash_sha": "ce78b2b",
+        "merged_at": "2026-11-06T09:58:33Z",
+        "files_changed": 20,
+        "additions": 1352,
+        "deletions": 48,
+        "milestone": "DL-D - Workflows por eventos de despliegue",
+        "closes_issues": [
+          240
+        ],
+        "phase": "DL-D",
+        "url": "https://github.com/guilu/skynet/pull/247",
+        "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      },
+      {
+        "number": 255,
+        "title": "IP-A - Catálogo de repositorios del runner",
+        "squash_sha": "5997406",
+        "merged_at": "2026-11-07T08:00:35Z",
+        "files_changed": 28,
+        "additions": 2076,
+        "deletions": 10,
+        "milestone": "IP-A - Catálogo de repositorios del runner",
+        "closes_issues": [
+          252
+        ],
+        "phase": "IP-A",
+        "url": "https://github.com/guilu/skynet/pull/255",
+        "session_id": "session_01PyBwEXMTepvHCbynkZhe5b"
+      },
+      {
+        "number": 256,
+        "title": "IP-B - Importación de proyecto en un paso",
+        "squash_sha": "15d0973",
+        "merged_at": "2026-11-07T08:35:43Z",
+        "files_changed": 14,
+        "additions": 669,
+        "deletions": 8,
+        "milestone": "IP-B - Importación de proyecto en un paso",
+        "closes_issues": [
+          253
+        ],
+        "phase": "IP-B",
+        "url": "https://github.com/guilu/skynet/pull/256",
+        "session_id": "session_01PyBwEXMTepvHCbynkZhe5b"
+      },
+      {
+        "number": 257,
+        "title": "IP-C - Asistente «Importar proyecto»",
+        "squash_sha": "7b80316",
+        "merged_at": "2026-11-07T08:47:53Z",
+        "files_changed": 18,
+        "additions": 2071,
+        "deletions": 35,
+        "milestone": "IP-C - Asistente «Importar proyecto»",
+        "closes_issues": [
+          254
+        ],
+        "phase": "IP-C",
+        "url": "https://github.com/guilu/skynet/pull/257",
+        "session_id": "session_01PyBwEXMTepvHCbynkZhe5b"
+      },
+      {
+        "number": 259,
+        "title": "TD-A - Skyny 3D en el login",
+        "squash_sha": "ca176a1",
+        "merged_at": "2026-11-07T09:50:17Z",
+        "files_changed": 10,
+        "additions": 950,
+        "deletions": 9,
+        "milestone": null,
+        "closes_issues": [
+          258
+        ],
+        "phase": "TD-A",
+        "url": "https://github.com/guilu/skynet/pull/259",
+        "session_id": "session_01PyBwEXvGccvujeeVr4bKDc"
+      },
+      {
+        "number": 261,
+        "title": "TD-B - Estudio de Skyny 3D dentro del repo",
+        "squash_sha": "220519e",
+        "merged_at": "2026-11-07T10:32:48Z",
+        "files_changed": 15,
+        "additions": 1691,
+        "deletions": 385,
+        "milestone": null,
+        "closes_issues": [
+          260
+        ],
+        "phase": "TD-B",
+        "url": "https://github.com/guilu/skynet/pull/261",
+        "session_id": "session_01PyBwEXvGccvujeeVr4bKDc"
+      }
+    ],
+    "open": [
+      {
+        "number": 262,
+        "title": "Runners y proyectos en tarjetas en el móvil, «Nuevo proyecto» en panel lateral y bordes a 2 px",
+        "url": "https://github.com/guilu/skynet/pull/262",
+        "created_at": "2026-11-07T18:04:54Z",
+        "milestone": null,
+        "state": "abierta",
+        "session_id": "session_01PyBwEXbBADKS5hr85yketR"
+      }
+    ]
+  },
+  "issues_closed": [
+    {
+      "number": 260,
+      "title": "TD-B - Estudio de Skyny 3D dentro del repo",
+      "closed_at": "2026-11-07T10:32:49Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 258,
+      "title": "TD-A - Skyny 3D en el login",
+      "closed_at": "2026-11-07T09:50:18Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 254,
+      "title": "IP-C - Asistente «Importar proyecto»",
+      "closed_at": "2026-11-07T08:47:54Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 253,
+      "title": "IP-B - Importación de proyecto en un paso",
+      "closed_at": "2026-11-07T08:35:44Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 252,
+      "title": "IP-A - Catálogo de repositorios del runner",
+      "closed_at": "2026-11-07T08:00:36Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 241,
+      "title": "DL-E - Seguimiento de despliegues en la interfaz",
+      "closed_at": "2026-11-06T08:24:05Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 240,
+      "title": "DL-D - Workflows por eventos de despliegue",
+      "closed_at": "2026-11-06T09:58:35Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 239,
+      "title": "DL-C - Verificación de salud y reconciliación",
+      "closed_at": "2026-11-05T22:22:05Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 238,
+      "title": "DL-B - Eventos de despliegue desde GitHub Deployments",
+      "closed_at": "2026-11-05T21:16:01Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 237,
+      "title": "DL-A - Modelo de despliegues y persistencia",
+      "closed_at": "2026-11-05T18:20:30Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 231,
+      "title": "FS-F - Fábrica y Administración",
+      "closed_at": "2026-11-05T14:24:02Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 230,
+      "title": "FS-E - Trabajo con intentos, coste y resultado",
+      "closed_at": "2026-11-05T13:39:21Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 229,
+      "title": "FS-D - Proyecto como centro de operaciones",
+      "closed_at": "2026-11-04T20:27:07Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 228,
+      "title": "FS-C - Inicio como espacio de trabajo",
+      "closed_at": "2026-11-04T15:17:40Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 227,
+      "title": "FS-B - Datos operativos: repositorio del trabajo y agregados",
+      "closed_at": "2026-11-04T13:41:16Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 226,
+      "title": "FS-A - Navegación en tres áreas",
+      "closed_at": "2026-11-04T07:07:14Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 221,
+      "title": "VA-D - La guía de pruebas como fase",
+      "closed_at": "2026-11-03T22:28:48Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 220,
+      "title": "VA-C - Verificación adversarial y workflows iniciales",
+      "closed_at": "2026-11-03T21:22:13Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 219,
+      "title": "VA-B - Juez con rúbrica",
+      "closed_at": "2026-11-03T19:11:47Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 218,
+      "title": "VA-A - Rutas protegidas y tests intactos",
+      "closed_at": "2026-11-03T18:13:27Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 216,
+      "title": "SB-A - Skyny en las píldoras de estado",
+      "closed_at": "2026-11-03T07:34:24Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 213,
+      "title": "CQ-B - Proveedor de reserva",
+      "closed_at": "2026-11-03T15:48:47Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 212,
+      "title": "CQ-A - Esperar a que se renueve la cuota",
+      "closed_at": "2026-11-03T06:27:22Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 208,
+      "title": "DS-C - Cron, cola por repositorio y web",
+      "closed_at": "2026-11-02T19:52:52Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 207,
+      "title": "DS-B - Comentarios /skynet y revisiones",
+      "closed_at": "2026-11-02T18:27:26Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 206,
+      "title": "DS-A - Lanzar desde una issue",
+      "closed_at": "2026-11-02T11:37:31Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    }
+  ],
+  "milestones_closed": [
+    {
+      "title": "DS-A - Lanzar desde una issue",
+      "closed_at": "2026-11-02T11:37:30Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DS-B - Comentarios /skynet y revisiones",
+      "closed_at": "2026-11-02T18:27:25Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DS-C - Cron, cola por repositorio y web",
+      "closed_at": "2026-11-02T19:52:50Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CQ-A - Esperar a que se renueve la cuota",
+      "closed_at": "2026-11-03T06:27:20Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "CQ-B - Proveedor de reserva",
+      "closed_at": "2026-11-03T15:48:46Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "SB-A - Skyny en las píldoras de estado",
+      "closed_at": "2026-11-03T07:34:22Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VA-A - Rutas protegidas y tests intactos",
+      "closed_at": "2026-11-03T18:13:26Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VA-B - Juez con rúbrica",
+      "closed_at": "2026-11-03T19:11:45Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VA-C - Verificación adversarial y workflows iniciales",
+      "closed_at": "2026-11-03T21:22:11Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "VA-D - La guía de pruebas como fase",
+      "closed_at": "2026-11-03T22:28:46Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-A - Navegación en tres áreas",
+      "closed_at": "2026-11-04T07:07:12Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-B - Datos operativos: repositorio del trabajo y agregados",
+      "closed_at": "2026-11-04T13:41:14Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-C - Inicio como espacio de trabajo",
+      "closed_at": "2026-11-04T15:17:38Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-D - Proyecto como centro de operaciones",
+      "closed_at": "2026-11-04T20:27:05Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-E - Trabajo con intentos, coste y resultado",
+      "closed_at": "2026-11-05T13:39:19Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "FS-F - Fábrica y Administración",
+      "closed_at": "2026-11-05T14:24:00Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DL-A - Modelo de despliegues y persistencia",
+      "closed_at": "2026-11-05T18:20:29Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DL-B - Eventos de despliegue desde GitHub Deployments",
+      "closed_at": "2026-11-05T21:16:00Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DL-C - Verificación de salud y reconciliación",
+      "closed_at": "2026-11-05T22:22:04Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DL-E - Seguimiento de despliegues en la interfaz",
+      "closed_at": "2026-11-06T08:24:04Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "DL-D - Workflows por eventos de despliegue",
+      "closed_at": "2026-11-06T09:58:33Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "IP-A - Catálogo de repositorios del runner",
+      "closed_at": "2026-11-07T08:00:35Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "IP-B - Importación de proyecto en un paso",
+      "closed_at": "2026-11-07T08:35:43Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    },
+    {
+      "title": "IP-C - Asistente «Importar proyecto»",
+      "closed_at": "2026-11-07T08:47:53Z",
+      "closed_at_note": "hora de fusión de su PR; un milestone por PR, cerrado al fusionar según los hilos"
+    }
+  ],
+  "dead_ends": [
+    {
+      "at": "2026-11-02T08:22:57Z",
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "pr": null,
+      "what": "Puente skynet-commands/Hermes descartado",
+      "detail": "Diego confirmó que el lanzamiento del puente estaba desactivado; se recomendó no activarlo porque DS hace lo mismo desde dentro de Skynet.",
+      "outcome": "No se activó; su retirada queda como paso manual de Diego (sección 5 de probar-ds-c.md)."
+    },
+    {
+      "at": "2026-11-02T08:35:21Z",
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "pr": 209,
+      "what": "SonarCloud marcó fiabilidad C",
+      "detail": "Sonar frenó la PR DS-A por fiabilidad C, probablemente un null sobre un Optional.",
+      "outcome": "Se subió un arreglo y Sonar quedó en verde; la CI completa pasó."
+    },
+    {
+      "at": "2026-11-02T08:40:28Z",
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "pr": 209,
+      "what": "Primeros fallos en las IT de DS-A",
+      "detail": "Las pruebas de integración con FakeGitHub fallaron al principio y hubo que corregirlas.",
+      "outcome": "Quedaron 5/5 en verde."
+    },
+    {
+      "at": "2026-11-02T11:48:53Z",
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "pr": 210,
+      "what": "Primeros fallos en las IT de DS-B",
+      "detail": "Las pruebas de integración fallaron al principio; al ajustarlas se descubrió un fallo de DS-A: al marcar un aviso como enviado fallaba una sentencia SQL.",
+      "outcome": "Arreglado en DS-B; los comentarios de GitHub ya no se repiten hasta 5 veces."
+    },
+    {
+      "at": "2026-11-02T19:15:44Z",
+      "session_id": "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+      "pr": 211,
+      "what": "E2E de entrega por PR falló en la CI de DS-C",
+      "detail": "Falló con los cambios de la PR aunque en main pasaba; en local pasó 3 de 4 veces, lo que apunta a una carrera ya existente en la lista de eventos.",
+      "outcome": "Se relanzó una vez y pasó; se dejó explicado en un comentario en la PR."
+    },
+    {
+      "at": "2026-11-02T20:27:53Z",
+      "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+      "pr": 214,
+      "what": "Maven Central devuelve 429",
+      "detail": "La compilación de CQ-A se vio frenada por errores 429 intermitentes de Maven Central.",
+      "outcome": "Se compiló tras reintentar."
+    },
+    {
+      "at": "2026-11-02T21:09:58Z",
+      "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+      "pr": 214,
+      "what": "Aviso de «sin cuota» de Claude no verificado",
+      "detail": "El mensaje de cuota de Claude se sacó del formato documentado, no de una captura real; si no coincide, la fase falla como antes.",
+      "outcome": "Se avisó a Diego como riesgo; no se resolvió en el hilo."
+    },
+    {
+      "at": "2026-11-03T06:45:07Z",
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "pr": null,
+      "what": "Skyny a 26–30 px pierde detalle",
+      "detail": "A ese tamaño se dibuja el Skyny simplificado, sin «?», lupa, «!» ni confeti, y casi no se distinguen las caras.",
+      "outcome": "Se subió a 40 px y la píldora creció de unos 24 a unos 32 px."
+    },
+    {
+      "at": "2026-11-03T06:45:07Z",
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "pr": null,
+      "what": "Capturas de la app completa no disponibles",
+      "detail": "Maven limitaba las descargas, así que solo se sacaron capturas del componente real con datos de muestra.",
+      "outcome": "Se entregaron capturas de «Ejecuciones recientes» y una lámina."
+    },
+    {
+      "at": "2026-11-03T07:03:39Z",
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "pr": null,
+      "what": "Píldora sin aire alrededor de Skyny",
+      "detail": "Con márgenes negativos Skyny no respiraba dentro de la píldora.",
+      "outcome": "Se quitaron los márgenes; la píldora pasó a unos 42 px de alto."
+    },
+    {
+      "at": "2026-11-03T07:09:01Z",
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "pr": null,
+      "what": "Variante B (Skyny toma el color de la píldora) descartada",
+      "detail": "Uniformaba el color pero Skyny perdía su color de estado.",
+      "outcome": "Diego eligió la A y se quitó la B de la rama."
+    },
+    {
+      "at": "2026-11-03T07:24:55Z",
+      "session_id": "session_01PyBwEY5nrQKzEieSdfU2cg",
+      "pr": 217,
+      "what": "Contraste insuficiente en la píldora naranja",
+      "detail": "La E2E con axe detectó poco contraste en el texto de «Ejecutando» en modo claro.",
+      "outcome": "Se oscureció el naranja: 5,0:1 en claro y 7,8:1 en oscuro; CI en verde."
+    },
+    {
+      "at": "2026-11-03T07:59:55Z",
+      "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+      "pr": 215,
+      "what": "Antigravity sin reserva en los workflows",
+      "detail": "Al rellenar los workflows iniciales se decidió que Antigravity no fuera reserva (señal de cuota poco fiable, menos herramientas), aunque el motor lo permite.",
+      "outcome": "Diego preguntó por qué; se añadió Claude Code como reserva de los agentes de Antigravity en la #215."
+    },
+    {
+      "at": "2026-11-03T08:03:51Z",
+      "session_id": "session_01PyBwEYKa5EApv5xTsK4o4s",
+      "pr": 215,
+      "what": "Memoria del proyecto no disponible en agy",
+      "detail": "No se encontró un modo documentado de pasar un servidor MCP a agy en modo -p, así que solo recibe el bloque de memoria en el prompt.",
+      "outcome": "No es una limitación comprobada; se ofreció investigarlo en otra PR."
+    },
+    {
+      "at": "2026-11-03T17:05:11Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": null,
+      "what": "Maven Central devuelve 429",
+      "detail": "No se podía compilar VA-A porque Maven Central limitaba las descargas con errores 429.",
+      "outcome": "Se reintentó y después compiló y pasó la suite (693 Java, 459 web)."
+    },
+    {
+      "at": "2026-11-03T17:33:29Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": 222,
+      "what": "Sonar marca fiabilidad C en VA-A",
+      "detail": "Sonar señaló expresiones regulares con anclas sueltas en la PR #222.",
+      "outcome": "Se corrigieron con un commit pequeño y Sonar quedó en verde."
+    },
+    {
+      "at": "2026-11-03T19:32:56Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": 224,
+      "what": "Caso de la E2E de refutación fallando",
+      "detail": "Al preparar VA-C hubo que depurar un caso de la E2E de la refutación.",
+      "outcome": "Las 2 E2E del juez acabaron pasando."
+    },
+    {
+      "at": "2026-11-03T19:48:29Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": 224,
+      "what": "Refutación no incluida en «Revisar código»",
+      "detail": "Sus revisores no son un juez y requerirían un mecanismo propio, por lo que se dejó fuera de VA-C.",
+      "outcome": "Se ofreció hacerlo en una PR aparte."
+    },
+    {
+      "at": "2026-11-03T19:48:40Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": 224,
+      "what": "Límite de uso alcanzado",
+      "detail": "Tras abrir la PR #224 el agente agotó su cuota de uso y se detuvo unos 51 minutos.",
+      "outcome": "Diego escribió «Continúa» a las 21:11 y se reanudó con VA-D."
+    },
+    {
+      "at": "2026-11-03T21:47:53Z",
+      "session_id": "session_01PyBwEW68tRFqEnD3xyHk51",
+      "pr": 225,
+      "what": "Sonar marca fiabilidad C en VA-D",
+      "detail": "Sonar señaló regex con anclas juntas y un null en FakeGuide en la PR #225.",
+      "outcome": "Corregido en el commit c48d0e4; Sonar en verde."
+    },
+    {
+      "at": "2026-11-04T06:50:13Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 232,
+      "what": "Nombre del menú «Ejecuciones» se mantiene en FS-A",
+      "detail": "El plan decía «En curso», pero la página actual muestra todo el historial, no solo lo que está en marcha.",
+      "outcome": "Se dejó «Ejecuciones» y el cambio de nombre pasó a FS-F."
+    },
+    {
+      "at": "2026-11-04T06:57:33Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 233,
+      "what": "Maven Central limita las descargas",
+      "detail": "Al escribir la migración V44 y las consultas de FS-B, Maven Central limitaba las descargas de dependencias.",
+      "outcome": "Se fue reintentando hasta poder ejecutar las pruebas de integración."
+    },
+    {
+      "at": "2026-11-04T07:12:27Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": null,
+      "what": "FS-C a FS-F no podían subirse como PRs hasta fusionar FS-B",
+      "detail": "Solo había una rama de trabajo y FS-C a FS-F iban apiladas sobre FS-B, que esperaba el «fusiona» de Diego.",
+      "outcome": "Se avanzó en local y se subieron una a una tras cada fusión (#234, #235, #236, #242)."
+    },
+    {
+      "at": "2026-11-04T07:50:12Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 233,
+      "what": "E2E de FS-B cae por bloqueo del EventStore",
+      "detail": "La E2E cancel-retry.e2e.ts falló dos veces por un bloqueo de Postgres al cancelar dos agentes en paralelo, entre event_sequence y event. FS-B no toca ese código.",
+      "outcome": "Se relanzó la CI y a las 08:09 pasó en verde; se propuso un hito de backend propio para arreglar el bloqueo."
+    },
+    {
+      "at": "2026-11-04T13:57:13Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 234,
+      "what": "Hermes pedía fusionar sin el visto bueno de Diego",
+      "detail": "Hermes aprobó FS-C y pedía fusionar, pero la regla de Diego exige su «fusiona» en PRs medianas (unas 1.500 líneas).",
+      "outcome": "Se esperó el «fusiona» de Diego (15:17) y se fusionó."
+    },
+    {
+      "at": "2026-11-04T15:26:29Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 235,
+      "what": "E2E de FS-D buscaba la pestaña antigua «Repositorios»",
+      "detail": "Tras renombrar las pestañas del proyecto, una E2E seguía buscando la pestaña «Repositorios», que ya no existe.",
+      "outcome": "Se corrigió la E2E y se relanzó la CI; la PR se fusionó después."
+    },
+    {
+      "at": "2026-11-05T14:00:38Z",
+      "session_id": "session_01PyBwEXHodbJZ2DDTDY8EqF",
+      "pr": 242,
+      "what": "Galería móvil fallaba en «Nuevo intento»",
+      "detail": "Al regenerar la galería de capturas, en móvil fallaba la pantalla «Nuevo intento». La galería no se regenera sola al subir cambios.",
+      "outcome": "Se corrigió y se relanzó a mano; salió en verde con 46 pantallas."
+    },
+    {
+      "at": "2026-11-05T16:51:04Z",
+      "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+      "pr": null,
+      "what": "Endpoint propio de Skynet descartado",
+      "detail": "El plan de Codex proponía un POST firmado a Skynet; se descartó porque Skynet se reinicia en su propio despliegue y podría perder el aviso de inicio.",
+      "outcome": "Se eligió GitHub Deployments."
+    },
+    {
+      "at": "2026-11-05T17:43:02Z",
+      "session_id": "session_01PyBwEWxDAtkf6yUzENCm9Q",
+      "pr": 243,
+      "what": "Maven Central limitó las descargas",
+      "detail": "Durante los tests de DL-A, Maven Central limitó las descargas de dependencias.",
+      "outcome": "Se reintentó y los tests pasaron."
+    },
+    {
+      "at": "2026-11-06T22:53:06Z",
+      "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+      "pr": null,
+      "what": "Maven Central devuelve 429 al compilar",
+      "detail": "Al compilar el código de IP-A, Maven Central respondió con límite de peticiones (429) y hubo que reintentar.",
+      "outcome": "Se reintentó y la compilación siguió; IP-A quedó con tests en local."
+    },
+    {
+      "at": "2026-11-07T08:02:52Z",
+      "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+      "pr": 256,
+      "what": "Force-push no permitido al rehacer IP-B sobre main",
+      "detail": "Al rebasar la rama de IP-B sobre main no se permitió el force-push.",
+      "outcome": "Se puso al día con un merge de main; con el squash no cambia el resultado."
+    },
+    {
+      "at": "2026-11-07T08:18:13Z",
+      "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+      "pr": 256,
+      "what": "CI de la #256 falla por exceso de conexiones a PostgreSQL",
+      "detail": "El test nuevo de GitHub abría otro contexto de Spring y la suite superaba las 100 conexiones que admite PostgreSQL.",
+      "outcome": "Se movió el test a GitHubIT, que ya tenía ese contexto, y el CI pasó en verde."
+    },
+    {
+      "at": "2026-11-07T08:35:32Z",
+      "session_id": "session_01PyBwEXMTepvHCbynkZhe5b",
+      "pr": 256,
+      "what": "IP-B clasificada como mediana por error",
+      "detail": "Se clasificó la #256 como mediana por añadir endpoints (cambio de contrato de API) y por contar las líneas de tests, pero eran endpoints aditivos sin migración ni seguridad.",
+      "outcome": "Se fusionó con la aprobación de Hermes, se corrigió la regla en la memoria del proyecto y la #257 se fusionó sin esperar «fusiona»."
+    },
+    {
+      "at": "2026-11-07T09:21:06Z",
+      "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+      "pr": null,
+      "what": "Enfoque híbrido propuesto y retirado",
+      "detail": "Se propuso un enfoque híbrido (sprites WebP para tamaños pequeños y 3D en vivo desde 64 px) con tarjeta de decisión, pero Diego pidió algo más acotado.",
+      "outcome": "Se retiró la tarjeta y se acotó a Skyny 3D solo en el login (TD-A)."
+    },
+    {
+      "at": "2026-11-07T09:41:27Z",
+      "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+      "pr": 259,
+      "what": "Sin herramienta para crear milestones",
+      "detail": "La sesión no dispone de herramienta para crear milestones, así que la issue #258 de TD-A quedó sin hito.",
+      "outcome": "La PR #259 se abrió igualmente con la issue sin milestone; E2E no ejecutables en local y pasaron en CI."
+    },
+    {
+      "at": "2026-11-07T10:24:45Z",
+      "session_id": "session_01PyBwEXvGccvujeeVr4bKDc",
+      "pr": 261,
+      "what": "Fallo de E2E ajeno en la #261",
+      "detail": "Falló inicialmente delivery.e2e.ts, un test ajeno a la PR; al relanzarlo pasó.",
+      "outcome": "CI en verde y aprobación de Hermes, pero no se fusionó sola por superar el umbral de PR pequeña (unas 1.300 líneas); se fusionó tras el «Fusiona» de Diego."
+    },
+    {
+      "at": "2026-11-07T18:05:14Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 262,
+      "what": "Timeout de Gradle en Docker Compose (app)",
+      "detail": "El job Docker Compose falló porque la descarga de Gradle desde services.gradle.org agotó los 10 s de networkTimeout del wrapper, antes de compilar; no dependía de la PR.",
+      "outcome": "Falló en varios pushes y relanzamientos; finalmente pasó a las 12:23 del 8 de noviembre. Se dejó pendiente subir networkTimeout a 60 s."
+    },
+    {
+      "at": "2026-11-08T10:45:19Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 262,
+      "what": "Alcance de los 2 px mal interpretado",
+      "detail": "Se aplicaron 2 px solo a paneles y separadores, dejando campos, chips y botones a 1 px; Diego pidió aplicarlo también a los controles.",
+      "outcome": "Se subieron también los controles a 2 px, salvo los anillos de puntos pequeños que se quedan en 1 px."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-11-02T08:24:14Z",
+      "what": "Aprueba el plan de DS (tres PRs: DS-A, DS-B, DS-C); no se activa el puente de Hermes y se integra en Skynet",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-02T11:36:48Z",
+      "what": "Ordena fusionar DS-A (#209) y continuar con DS-B",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-02T18:27:16Z",
+      "what": "Ordena fusionar DS-B (#210) y continuar con DS-C",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-02T19:52:42Z",
+      "what": "Pide resumen de usuario de DS-C (#211) y ordena fusionarla",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-02T19:55:51Z",
+      "what": "Prioriza el hito CQ primero y luego ampliar VA con lo de cloudroom",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-02T20:11:24Z",
+      "what": "Aprueba el plan de CQ con las recomendaciones (activo por defecto, reanudar sesión, reserva por agente tras 15 minutos de espera)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T06:27:08Z",
+      "what": "Ordena fusionar la PR #214 (CQ-A) y pide un resumen de producto no técnico",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T06:38:17Z",
+      "what": "Pide probar en la interfaz los iconos de Skyny en vez de los de los bullets de estado, agrandándolos si hace falta",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T07:02:33Z",
+      "what": "Pide padding para que la píldora respire alrededor de Skyny",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T07:10:06Z",
+      "what": "Elige la variante A: la píldora toma el color de Skyny (recomendada por Claude)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T07:12:55Z",
+      "what": "Aprueba convertir el boceto en hito con issue, milestone y PR",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T08:02:35Z",
+      "what": "Pide añadir Claude Code como reserva de los agentes de Antigravity en la #215",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T15:48:25Z",
+      "what": "Ordena fusionar la PR #215 (CQ-B)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T16:26:05Z",
+      "what": "Decide que el plan de VA se haga en un hilo propio",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T16:53:40Z",
+      "what": "Aprueba el plan del hito VA (VA-A a VA-D) tal como se propuso",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T18:13:04Z",
+      "what": "Ordena fusionar la PR #222 (VA-A) y pide el resumen de producto",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T19:04:26Z",
+      "what": "Ordena fusionar la PR #223 (VA-B) cuando la CI esté en verde y pide el resumen de producto",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T21:11:46Z",
+      "what": "Pide continuar el trabajo tras el límite de uso",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T21:21:41Z",
+      "what": "Ordena fusionar la PR #224 (VA-C) y hacer el resumen de producto, sin esperar a más revisión",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T21:56:16Z",
+      "what": "Ordena fusionar la PR #225 (VA-D) cuando la CI acabe y seguir con el siguiente hito",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-03T22:28:24Z",
+      "what": "Reitera la orden de fusionar la PR #225",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-04T06:28:23Z",
+      "what": "Pedir también el diseño de la interfaz para móviles dentro del hito FS.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-04T06:39:31Z",
+      "what": "Aprobar el plan FS y las siete decisiones, implementando todas las opciones recomendadas (incluida la pestaña «Aprobar» en móvil y el repositorio en el trabajo con migración V44).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-04T13:40:50Z",
+      "what": "Fusionar FS-B (#233), aun con la E2E del EventStore que había fallado y pasó al relanzar.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-04T15:17:13Z",
+      "what": "Fusionar FS-C (#234), pese a que Hermes pedía fusionar sin él.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-04T20:26:40Z",
+      "what": "Fusionar FS-D (#235).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T13:38:56Z",
+      "what": "Fusionar FS-E (#236).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T14:14:51Z",
+      "what": "Fusionar FS-F (#242) con la galería de capturas.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T16:48:58Z",
+      "what": "Pasar el plan DL generado por Codex (plans/siguiente-hito-dl.md) a su propio hilo para revisarlo antes de implementar.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T17:14:53Z",
+      "what": "Elige GitHub Deployments en lugar de un endpoint propio de Skynet para los eventos de despliegue (decisión tomada en la tarjeta, recomendada)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T17:31:10Z",
+      "what": "Aprueba el resto de la revisión del hito DL: milestones 91-95, orden A, B, C, E, D y DL-D acotado",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T18:20:16Z",
+      "what": "Ordena fusionar DL-A (#243) y pide resumen de producto",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T21:15:42Z",
+      "what": "Ordena fusionar DL-B (#244) y pasar a DL-C",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-05T22:21:38Z",
+      "what": "Aprueba fusionar DL-C (#245) y pide resumen de producto del hito (según mensaje del coordinador en el hilo)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-06T08:23:48Z",
+      "what": "Ordena fusionar DL-E (#246)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-06T09:58:20Z",
+      "what": "Ordena fusionar DL-D (#247), última PR del hito DL",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-06T12:52:39Z",
+      "what": "Dar el hilo FS por terminado.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-06T22:34:40Z",
+      "what": "Los repos están en ~/code/ en omarchy; se acepta el prefijo IP para el hito y se pide ver un boceto del asistente antes de crear issues.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-06T22:46:46Z",
+      "what": "Aprueba la propuesta y el boceto del asistente de importación y da luz verde a crear issues y milestones e implementar IP-A, IP-B e IP-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T08:00:20Z",
+      "what": "Ordena fusionar la PR #255 (IP-A) y continuar con IP-B.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T08:35:27Z",
+      "what": "Indica (por el chat del proyecto, relayado por el coordinador) que IP-B es pequeña y que el comentario de aprobación de Hermes basta para fusionarla; se fusiona la #256 y se sigue con IP-C.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T09:28:42Z",
+      "what": "Sustituye el enfoque híbrido recomendado: por ahora solo el login en 3D, el resto de la app sigue en 2D.",
+      "by": "Diego, en contra de lo recomendado"
+    },
+    {
+      "at": "2026-11-07T09:29:16Z",
+      "what": "Aprueba abrir issue y hacer la PR TD-A (Skyny 3D en el login) como PR mediana por añadir dependencia.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T09:50:06Z",
+      "what": "Aprueba y ordena fusionar la #259 (TD-A); pregunta cómo adaptar los cambios futuros del estudio.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T09:52:34Z",
+      "what": "Crear el hito TD-B para meter el estudio de Skyny 3D dentro del repo, porque desarrolla allí con Codex.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T10:32:33Z",
+      "what": "Ordena «Fusiona» (por el chat del proyecto, relayado por el coordinador) la #261 (TD-B).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-07T17:59:43Z",
+      "what": "Convención: pequeños cambios de frontend como PR rápidas sin hitos, empezando por tarjetas en lugar de tabla en la lista de runners en móvil.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-08T10:41:51Z",
+      "what": "Bordes y líneas de separación de paneles a 2 px.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-08T10:46:06Z",
+      "what": "Aplicar el cambio directamente en la PR #262 y subir también los controles a 2 px.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-08T11:32:24Z",
+      "what": "En Proyectos, quitar el formulario y poner un botón «+ Nuevo proyecto» que abra un panel lateral; en móvil, proyectos como tarjetas.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-08T12:11:52Z",
+      "what": "Colocar el botón «+ Nuevo proyecto» en la fila del buscador y «Archivados», a la derecha.",
+      "by": "Diego"
+    }
+  ],
+  "summary": {
+    "prompts": 63,
+    "sessions": 21,
+    "sessions_note": "sesiones con prompts o turnos esta semana: hilos de trabajo + coordinadores del chat del proyecto",
+    "windows_5h": {
+      "total": 16,
+      "per_day": {
+        "lunes": 2,
+        "martes": 3,
+        "miércoles": 3,
+        "jueves": 2,
+        "viernes": 3,
+        "sábado": 2,
+        "domingo": 1
+      },
+      "sparkline": {
+        "es": [
+          {
+            "d": "L",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "M",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "X",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "J",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "V",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "D",
+            "v": 1,
+            "on": 1
+          }
+        ],
+        "en": [
+          {
+            "d": "M",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "W",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "F",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 1,
+            "on": 1
+          }
+        ],
+        "max": 3
+      },
+      "before_monday": {
+        "label": "domingo anterior, desde 09:40",
+        "windows": 0,
+        "prompts": 0,
+        "shared_with_previous_report": [],
+        "note": "ventanas del domingo anterior al lunes; cuentan en total pero no en per_day ni en sparkline. Las de shared_with_previous_report empezaron antes de --desde, ya están en el informe anterior y no se cuentan aquí"
+      },
+      "method": "una ventana por cada valor distinto de five_hour.resetsAt en los rate_limit_event; los prompts que no caen en ninguna se agrupan en ventanas inferidas desde su hora en punto"
+    },
+    "prompts_per_window": 3.9,
+    "first_timestamp": {
+      "utc": "2026-11-02T08:13:36Z",
+      "madrid": "2026-11-02T09:13:36+01:00"
+    },
+    "last_timestamp": {
+      "utc": "2026-11-08T12:48:51Z",
+      "madrid": "2026-11-08T13:48:51+01:00"
+    },
+    "days_without_activity": [],
+    "days_not_yet_elapsed": [],
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": true,
+      "seven_day_utilization_max": 0.93,
+      "statuses_seen": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "periods": [
+        {
+          "resets_at": {
+            "utc": "2026-11-07T20:00:00Z",
+            "madrid": "2026-11-07T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.93,
+          "statuses_seen": [
+            "allowed_warning"
+          ],
+          "warning": true,
+          "exhausted": false,
+          "events_from": "2026-11-02T08:13:45.033880Z",
+          "events_to": "2026-11-07T18:14:56.760574Z"
+        },
+        {
+          "resets_at": {
+            "utc": "2026-11-14T20:00:00Z",
+            "madrid": "2026-11-14T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.06,
+          "statuses_seen": [],
+          "warning": false,
+          "exhausted": false,
+          "events_from": "2026-11-08T10:41:54.893400Z",
+          "events_to": "2026-11-08T12:55:07.189904Z"
+        }
+      ],
+      "overage_used": false,
+      "five_hour_limit_reached": [
+        {
+          "window_start": {
+            "utc": "2026-11-03T15:40:00Z",
+            "madrid": "2026-11-03T16:40:00+01:00"
+          },
+          "window_end": {
+            "utc": "2026-11-03T20:40:00Z",
+            "madrid": "2026-11-03T21:40:00+01:00"
+          }
+        }
+      ],
+      "note": "allowed_warning = aviso de uso alto, no agotada; exhausted solo si el límite semanal llegó al 100 % o lo rechazó. Los rechazos del límite de 5 h van en five_hour_limit_reached"
+    },
+    "prs_merged": 26,
+    "prs_merged_by_repo": {
+      "guilu/skynet": 26
+    },
+    "prs_open": 1,
+    "prs_cumulative_skynet": 136,
+    "lines": {
+      "added": 43471,
+      "removed": 2198,
+      "files_changed_net": {
+        "files": 381,
+        "added": 42631,
+        "removed": 1328,
+        "note": "git diff de main del domingo 1 a las 08:40 UTC (280ca12, tras la #205) → main del domingo 8 (220519e, tras la #261) (cuenta los ficheros, no la suma por PR; incluye el commit directo de docs del plan DL)"
+      }
+    },
+    "flyway_migrations": {
+      "range": "V35 → V48",
+      "added": [
+        "V35__triggers.sql",
+        "V36__trigger_commands.sql",
+        "V37__run_queue_and_schedules.sql",
+        "V38__quota_waits.sql",
+        "V39__quota_fallback.sql",
+        "V40__protected_paths.sql",
+        "V41__stage_judge.sql",
+        "V42__stage_refutation.sql",
+        "V43__stage_guide.sql",
+        "V44__work_item_repository.sql",
+        "V45__deployment.sql",
+        "V46__deployment_health.sql",
+        "V47__deployment_triggers.sql",
+        "V48__repository_catalog.sql"
+      ],
+      "engine": "Flyway / PostgreSQL"
+    },
+    "issues_closed": 26,
+    "milestones_closed": 24,
+    "deploys_to_production": null,
+    "cost_usd_week_estimate": 237.87
+  },
+  "windows_5h": [
+    {
+      "start": {
+        "utc": "2026-11-02T08:10:00Z",
+        "madrid": "2026-11-02T09:10:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-02T13:10:00Z",
+        "madrid": "2026-11-02T14:10:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 4,
+      "utilization_5h_max": 0.56,
+      "utilization_7d_max": 0.16,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+        "session_01PyBwEWNrDX2CMA3rtFDvA2",
+        "session_01PyBwEZAZ8AFH4PrPSbFXfz"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-02T18:20:00Z",
+        "madrid": "2026-11-02T19:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-02T23:20:00Z",
+        "madrid": "2026-11-03T00:20:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 6,
+      "utilization_5h_max": 0.92,
+      "utilization_7d_max": 0.28,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEVFjZGG3fJX1PP7Tqo",
+        "session_01PyBwEWBXLUER42kW9VXmnG",
+        "session_01PyBwEYKa5EApv5xTsK4o4s"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-03T06:20:00Z",
+        "madrid": "2026-11-03T07:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-03T11:20:00Z",
+        "madrid": "2026-11-03T12:20:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 8,
+      "utilization_5h_max": 0.46,
+      "utilization_7d_max": 0.34,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXPvVL39XJyPaKapnP",
+        "session_01PyBwEY5nrQKzEieSdfU2cg",
+        "session_01PyBwEYKa5EApv5xTsK4o4s"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-03T15:40:00Z",
+        "madrid": "2026-11-03T16:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-03T20:40:00Z",
+        "madrid": "2026-11-03T21:40:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 5,
+      "utilization_5h_max": 1,
+      "utilization_7d_max": 0.47,
+      "status": [
+        "allowed",
+        "allowed_warning",
+        "rejected"
+      ],
+      "sessions": [
+        "session_01PyBwEVsY6uM7ESsgH4pmaP",
+        "session_01PyBwEW68tRFqEnD3xyHk51",
+        "session_01PyBwEYKa5EApv5xTsK4o4s"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-03T20:40:00Z",
+        "madrid": "2026-11-03T21:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-04T01:40:00Z",
+        "madrid": "2026-11-04T02:40:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 5,
+      "utilization_5h_max": 0.35,
+      "utilization_7d_max": 0.52,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEVsY6uM7ESsgH4pmaP",
+        "session_01PyBwEW68tRFqEnD3xyHk51",
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-04T06:20:00Z",
+        "madrid": "2026-11-04T07:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-04T11:20:00Z",
+        "madrid": "2026-11-04T12:20:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 2,
+      "utilization_5h_max": 0.75,
+      "utilization_7d_max": 0.62,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-04T13:40:00Z",
+        "madrid": "2026-11-04T14:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-04T18:40:00Z",
+        "madrid": "2026-11-04T19:40:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 2,
+      "utilization_5h_max": 0.16,
+      "utilization_7d_max": 0.64,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-04T20:20:00Z",
+        "madrid": "2026-11-04T21:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-05T01:20:00Z",
+        "madrid": "2026-11-05T02:20:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.08,
+      "utilization_7d_max": 0.65,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-05T13:30:00Z",
+        "madrid": "2026-11-05T14:30:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-05T18:30:00Z",
+        "madrid": "2026-11-05T19:30:00+01:00"
+      },
+      "weekday": "jueves",
+      "prompts": 5,
+      "utilization_5h_max": 0.42,
+      "utilization_7d_max": 0.7,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEV4kkuNGTtP8cC3XAN",
+        "session_01PyBwEWxDAtkf6yUzENCm9Q",
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-05T18:30:00Z",
+        "madrid": "2026-11-05T19:30:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-05T23:30:00Z",
+        "madrid": "2026-11-06T00:30:00+01:00"
+      },
+      "weekday": "jueves",
+      "prompts": 3,
+      "utilization_5h_max": 0.41,
+      "utilization_7d_max": 0.76,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEV4kkuNGTtP8cC3XAN",
+        "session_01PyBwEWxDAtkf6yUzENCm9Q"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-06T08:20:00Z",
+        "madrid": "2026-11-06T09:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-06T13:20:00Z",
+        "madrid": "2026-11-06T14:20:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 3,
+      "utilization_5h_max": 0.29,
+      "utilization_7d_max": 0.79,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEV6wyTe8QkwHpgZn7j",
+        "session_01PyBwEWxDAtkf6yUzENCm9Q",
+        "session_01PyBwEXHodbJZ2DDTDY8EqF"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-06T15:40:00Z",
+        "madrid": "2026-11-06T16:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-06T20:40:00Z",
+        "madrid": "2026-11-06T21:40:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 1,
+      "utilization_5h_max": 0.03,
+      "utilization_7d_max": 0.8,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEV6wyTe8QkwHpgZn7j",
+        "session_01PyBwEVQrEv6Qk4xAmx4XZq"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-06T22:20:00Z",
+        "madrid": "2026-11-06T23:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-07T03:20:00Z",
+        "madrid": "2026-11-07T04:20:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 4,
+      "utilization_5h_max": 0.44,
+      "utilization_7d_max": 0.86,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXMTepvHCbynkZhe5b",
+        "session_01PyBwEXr9Kce3cvNeLdcjj7"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-07T08:00:00Z",
+        "madrid": "2026-11-07T09:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-07T13:00:00Z",
+        "madrid": "2026-11-07T14:00:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 8,
+      "utilization_5h_max": 0.45,
+      "utilization_7d_max": 0.92,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXMTepvHCbynkZhe5b",
+        "session_01PyBwEXvGccvujeeVr4bKDc",
+        "session_01PyBwEY1EWrBYcp9U3hQN5T"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-07T17:50:00Z",
+        "madrid": "2026-11-07T18:50:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-07T22:50:00Z",
+        "madrid": "2026-11-07T23:50:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 1,
+      "utilization_5h_max": 0.05,
+      "utilization_7d_max": 0.93,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEWmoLv1y87CRS9a4pK",
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-08T10:40:00Z",
+        "madrid": "2026-11-08T11:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-08T15:40:00Z",
+        "madrid": "2026-11-08T16:40:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 5,
+      "utilization_5h_max": 0.42,
+      "utilization_7d_max": 0.06,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXGV1xTFmx7oUFQg14",
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "skills_used",
+      "why": "Los registros a los que llego no listan las herramientas ni las skills invocadas por turno."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay despliegues registrados en estas sesiones; Hermes despliega y prueba en omarchy fuera de ellas."
+    },
+    {
+      "item": "engram",
+      "why": "Las sesiones en la nube no usan Engram; las decisiones y callejones están en dead_ends y decisions."
+    },
+    {
+      "item": "periodo ampliado",
+      "why": "El informe empieza el domingo 1 a las 08:40 UTC, donde terminó el de la semana anterior. Esas horas del domingo 1 no están en semana-2026-10-26.json."
+    },
+    {
+      "item": "coordinadores sin localizar",
+      "why": "Algunos mensajes del coordinador (el jueves 5 entre las 21:40 y las 22:35 UTC, cuando Diego dio el «fusiona» de DL-C) los dio un coordinador que no aparece como padre de ningún hilo; su uso no está incluido y ese mensaje de Diego va sin sesión."
+    },
+    {
+      "item": "Codex",
+      "why": "Codex creó los planes de DL y de TB y sus issues desde fuera de estas sesiones; su uso no está aquí (lo cubre el recap de Codex)."
+    },
+    {
+      "item": "commit directo a main",
+      "why": "9e495ed (docs: plan del hito DL, +30 líneas) entró en main sin PR; está en direct_commits_to_main y en el diff neto, no en prs_merged."
+    },
+    {
+      "item": "uso de esta sesión",
+      "why": "La sesión que genera el fichero no se incluye en los totales."
+    },
+    {
+      "item": "lo posterior al domingo 8 a la hora de generación",
+      "why": "El informe se generó el domingo a mediodía a petición de Diego; la #262 sigue abierta y TB espera su «adelante»."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-11-02 (Europe/Madrid) · desde 2026-11-01 09:40\n\n## skynet\n\n- 2026-11-02 09:13 · Analizar cloudroom para extraer ideas · he revisado un proyecto que es tambíen un orquestador de flujos agenticos https://github.com/davidondrej/cloudroom analiza como funciona y vamos a ver que podemos extraer para Skynet\n- 2026-11-02 09:22 · Lanzar trabajo desde GitHub (DS) · ahora mismo creo que el lanzamiento está desactivado, tengo que activarlo con hermes diciéndoselo\n- 2026-11-02 09:24 · Lanzar trabajo desde GitHub (DS) · tienes mi visto bueno, adelante con el plan\n- 2026-11-02 12:36 · Lanzar trabajo desde GitHub (DS) · fusiona y continuamos\n- 2026-11-02 19:25 · Lanzar trabajo desde GitHub (DS) · dame el resumen de lo que lleva esta PR, explicado a nivel de usuario\n- 2026-11-02 19:27 · Lanzar trabajo desde GitHub (DS) · fusiona y seguimos\n- 2026-11-02 20:52 · Lanzar trabajo desde GitHub (DS) · resume a nivel de usuario esta PR, y luego fusiona\n- 2026-11-02 20:54 · Chat del proyecto · ya hemos integrado DS cual sería lo siguiente?\n- 2026-11-02 20:55 · Planificar reintento por cuota (CQ) · vale, vamos con CQ primero y luego ampliamos VA con lo de cloudroom\n- 2026-11-02 21:11 · Planificar reintento por cuota (CQ) · adelante con las recomendaciones\n- 2026-11-03 07:27 · Planificar reintento por cuota (CQ) · hazme el resmen de la PR para la gente de producto (nivel usuario que lo pueda entender alguien que no sea técnico)  y fusiona\n- 2026-11-03 07:38 · Poner a Skyny en los bullets de estado · En el interfaz grafico, quiero ver como queda cambiando los iconos de los bullets de estado por el icono de skyny que corresponda, igual hay que hacer los bullets más grandes...\n- 2026-11-03 08:02 · Poner a Skyny en los bullets de estado · dale un poco de padding para que el bullet respire alrededor de skyny\n- 2026-11-03 08:07 · Poner a Skyny en los bullets de estado · hay skyny de un color distinto al de su bullet. No sé si en esos casos cambiar el bullet de color para que sea igual que skyny o cambiar skyny para que sea igual que el bullet, vamos a ver qué es mejor\n- 2026-11-03 08:10 · Poner a Skyny en los bullets de estado · si, vamos con la A\n- 2026-11-03 08:12 · Poner a Skyny en los bullets de estado · si, dale\n- 2026-11-03 08:59 · Planificar reintento por cuota (CQ) · porque antigravity no es reserva?\n- 2026-11-03 09:02 · Planificar reintento por cuota (CQ) · si, añadelo... y porque antigravity no tiene las herramientas de memoria del proyecto? es por limitaciones del cli?\n- 2026-11-03 16:48 · Planificar reintento por cuota (CQ) · Fusiona\n- 2026-11-03 17:26 · Planificar reintento por cuota (CQ) · arranca con el plan de VA, pero en otro hilo\n- 2026-11-03 17:53 · Planificar VA ampliado con cloudroom · Aprobado VA\n- 2026-11-03 19:13 · Planificar VA ampliado con cloudroom · Dame el resumen de producto y fusiona\n- 2026-11-03 20:04 · Planificar VA ampliado con cloudroom · Dame el resumen de producto y fusiona\n- 2026-11-03 22:11 · Planificar VA ampliado con cloudroom · Continúa\n- 2026-11-03 22:21 · Planificar VA ampliado con cloudroom · Si ya puedes fusionar la VA-C fusioiona y haz el resumen de producto\n- 2026-11-03 22:56 · Planificar VA ampliado con cloudroom · Fusiona y seguimos\n- 2026-11-03 23:28 · Planificar VA ampliado con cloudroom · Fusiona\n- 2026-11-03 23:38 · Reorganizar Skynet como fábrica de software · Quiero reorganizar la interfaz de skynet ya que El problema de Skynet ya no es estético, sino de arquitectura de la información. Hemos conseguido una interfaz más limpia, pero todavía parece un panel de administración de infraestructura, cuando lo que estás construyendo es una fábrica de software dirigida por agentes de IA. Creo que debemos cambiar el centro de gravedad de la aplicación: Proyecto → Repositorio → Trabajo → Workflow → Ejecución → Resultado El usuario debería entrar en Skynet y comprender inmediatamente tres cosas: sobre qué software está trabajando, qué están haciendo los agentes y qué cambios han producido, cuánto han costado y cuáles necesitan intervención. Nueva propuesta de navegación En lugar de dar el mismo protagonismo a proyectos, workflows, runners, ejecuciones y uso, organizaría Skynet en torno a tres áreas: Espacio de trabajo: proyectos, repositorios, trabajos pendientes y actividad reciente. Es la pantalla principal. Fábrica: ejecuciones en curso, workflows, aprobaciones y resultados. Aquí se observa y controla el trabajo de los agentes. Administración: proveedores, runners, consumo, configuración y mantenimiento. El dashboard dejaría de ser una colección de métricas globales para convertirse en una vista operativa de los proyectos. Los costes globales seguirían disponibles, pero el dato realmente interesante sería saber cuánto ha costado implementar una funcionalidad concreta en un repositorio. Este boceto cambia la jerarquía: los repositorios pasan a ser protagonistas y las ejecuciones aparecen contextualizadas. El siguiente nivel sería diseñar la página de detalle de un proyecto como centro de operaciones, con sus repositorios, trabajos, workflows, historial de cambios, PRs generadas, aprobaciones pendientes y costes acumulados. Además, distinguiría claramente tres conceptos que ahora pueden confundirse: un trabajo es lo que quieres conseguir, un workflow es el procedimiento para conseguirlo y una ejecución es cada intento real de llevarlo a cabo. Así Skynet empezaría a comunicar visualmente lo que realmente es: una fábrica de software, no simplemente un lanzador de agentes..\n- 2026-11-04 07:28 · Reorganizar Skynet como fábrica de software · haz tambien el diseño de la interfaz para moviles\n- 2026-11-04 07:39 · Reorganizar Skynet como fábrica de software · Está perfecto, implementa todos los recomendados\n- 2026-11-04 14:40 · Reorganizar Skynet como fábrica de software · Fusiona\n- 2026-11-04 16:17 · Reorganizar Skynet como fábrica de software · Fusiona\n- 2026-11-04 21:26 · Reorganizar Skynet como fábrica de software · Fusiona\n- 2026-11-05 14:38 · Reorganizar Skynet como fábrica de software · Fusiona\n- 2026-11-05 15:14 · Reorganizar Skynet como fábrica de software · Fusiona\n- 2026-11-05 17:48 · Reorganizar Skynet como fábrica de software · Codex ha generado planificación plans/siguiente-hito-dl.md e issues, revisa por si hay que adaptar algo… para empezar a implementar\n- 2026-11-05 18:31 · Revisar y empezar el hito DL · Adelante\n- 2026-11-05 19:20 · Revisar y empezar el hito DL · Fusiona y hazme un resumen de producto\n- 2026-11-05 21:07 · Revisar y empezar el hito DL · Cómo puede Hermes activar Hermes la parte manual?\n- 2026-11-05 22:15 · Revisar y empezar el hito DL · Fusiona y pasamos al siguiente\n- 2026-11-05 23:21 · Chat del proyecto · Fusiona para seguir y dame resumen de producto\n- 2026-11-06 09:23 · Revisar y empezar el hito DL · Fusiona\n- 2026-11-06 10:58 · Revisar y empezar el hito DL · Fusiona\n- 2026-11-06 13:52 · Reorganizar Skynet como fábrica de software · Este hilo ya está terminado\n- 2026-11-06 16:42 · Implementar el hito Testbench (TB) · Codex ha creado las issues de un milestone que tiene el código testbench, o sea, TB, y quiero que crees el milestone y vamos a empezar a implementarlo.\n- 2026-11-06 23:28 · Diseñar wizard para importar proyecto desde repo · Ahora mismo los proyectos y sus repositorios hay que crearlos a mano, poner el nombre, descripciones, etc y también las rutas de los repositorios tanto locales como las rutas de git, etc. podemos importar un proyecto a partir de un repo que ya exista, por ejemplo ya tengo los repos de forma, akademia y tokenmeter en el disco de Omar hoy y quiero una manera de introducirlos a partir de esos ficheros, vamos a diseñar un wizard para crear un proyecto a partir de un repo clonado en el disco de omarchy\n- 2026-11-06 23:34 · Diseñar wizard para importar proyecto desde repo · Todos los repos suelen estar en ~/code/ me vale el prefijo IP y vamos a ver un boceto del wizard\n- 2026-11-06 23:45 · Diseñar wizard para importar proyecto desde repo · La URL del git la obtiene leyendo el directorio?\n- 2026-11-06 23:46 · Diseñar wizard para importar proyecto desde repo · Vale, pues adelante con la implementación\n- 2026-11-07 09:00 · Diseñar wizard para importar proyecto desde repo · Fusiona y sigue\n- 2026-11-07 09:35 · Chat del proyecto · IP-B es pequeña y hermes emitió un comentario para fusionar directamente, porque no lo has leido?\n- 2026-11-07 10:09 · Pasar Skyny a 3D con three.js · tengo una pagina html con el estudio de skyny en 3D, con el nuevo diseño de la mascota en 3d y las animaciones para los estados.... está hecho con three.js y quiero ver si puedo aplicar estas nuevas animaciones en lugar de las animaciones y mascota 2d actuales. Donde están las animaciones de skyny actuales y como se están poniendo en la aplicación. Analiza como tendría que hacer para cambiarlo comparando las animaciones y diseños de 2D vs la nueva 3D\n- 2026-11-07 10:28 · Pasar Skyny a 3D con three.js · podemos de momento solamente ponerlo en el login en 3D?\n- 2026-11-07 10:29 · Pasar Skyny a 3D con three.js · dale\n- 2026-11-07 10:50 · Pasar Skyny a 3D con three.js · está perfecto, fusiona. Estoy editando el estudio-skyny.html con codex, que tengo que hacer cuando tenga una versión nueva... a lo mejor cambia algo del modelo 3D, colores, etc. como hacemos para adaptar los cambios al código three.js introducido en el proyecto?\n- 2026-11-07 10:52 · Pasar Skyny a 3D con three.js · si vamos a ponerlo como hito porque ya digo que estoy haciendo el desarrollo allí\n- 2026-11-07 11:32 · Chat del proyecto · Fusiona\n- 2026-11-07 18:59 · Hacer pequeños cambios rápidos en el frontend · Quiero hacer pequeños cambios en el frontend, PR rápidas sin hitos. Por ejemplo en la lista de runners en versión móvil en lugar de una tabla que sean tarjetas\n- 2026-11-08 11:41 · Hacer pequeños cambios rápidos en el frontend · los bordes de los paneles son demasiado finos, vamos a ponerlos a 2px, todos los bordes y lineas de separación de paneles\n- 2026-11-08 11:46 · Hacer pequeños cambios rápidos en el frontend · aplícalo directamente a la PR\n- 2026-11-08 12:32 · Hacer pequeños cambios rápidos en el frontend · En la pagina de proyectos quita el formulario de Nuevo Proyecto y ponemos un boton de \"+ Nuevo Proyecto\" que abra un panel lateral con el formulario de Nuevo Proyecto, en la versión movil, la lista de proyectos que sean tarjetas\n- 2026-11-08 13:11 · Hacer pequeños cambios rápidos en el frontend · coloca el boton en este lado\n- 2026-11-08 13:48 · Chat del proyecto · genera el recap de la semana\n\n## Summary\n\n- prompts: 63\n- sesiones: 21\n- ventanas de 5 h: 16 (lunes 2, martes 3, miércoles 3, jueves 2, viernes 3, sábado 2, domingo 1)\n- primera marca: 2026-11-02T09:13:36+01:00 · última: 2026-11-08T13:48:51+01:00\n- días sin actividad: ninguno\n- cuota semanal agotada: no (con aviso de uso alto); periodo hasta 2026-11-07T21:00:00+01:00: uso máx. 0.93; periodo hasta 2026-11-14T21:00:00+01:00: uso máx. 0.06\n- límite de 5 h alcanzado: ventana 2026-11-03 16:40–21:40\n- PRs fusionadas: 26 · +43471 / -2198 líneas"
+}
