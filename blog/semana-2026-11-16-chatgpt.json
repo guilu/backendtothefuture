@@ -1,0 +1,230 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-22T15:12:00Z",
+    "madrid": "2026-11-22T16:12:00+01:00"
+  },
+  "week": {
+    "monday": "2026-11-16",
+    "yyyymmdd": "20261115",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-11-14T23:00:00Z",
+      "madrid": "2026-11-15T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-22T23:00:00Z",
+      "madrid": "2026-11-23T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-22T15:12:00Z",
+      "madrid": "2026-11-22T16:12:00+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-11-14T23:00:00Z",
+      "madrid": "2026-11-15T00:00:00+01:00"
+    },
+    "start_note": "Intervalo solicitado 15–22 de noviembre, ocho días (domingo a domingo); 15/11 podría solaparse con recap anterior. El 22/11 sigue en curso. La fecha monday indica el lunes ISO contenido en el intervalo, 16/11."
+  },
+  "sources": {
+    "threads": "Contexto recuperado de conversaciones previas sobre Skynet y LLM Wiki; acceso parcial, sin inventario completo del proyecto.",
+    "session_events": "no disponible",
+    "session_meta": "no disponible",
+    "github": "No se ha auditado GitHub; nombres y pruebas provienen del contexto conversacional.",
+    "reference_schema": "semana-2026-10-26-chatgpt.json y semana-2026-10-19-chatgpt.json"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "ChatGPT (conversaciones relacionadas con Skynet; pertenencia formal al proyecto no verificable para todos los hilos)",
+      "prompts": [
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261115_01",
+          "thread": "LLM Wiki: consulta por agentes",
+          "message_id": null,
+          "text": "Estudiar cómo explotar la wiki privada guilu/llm-wiki desde Codex, Claude y Gemini, y cómo consultar su grafo desde móvil.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "conversation_retrieval",
+          "date_madrid": "2026-11-17"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261115_02",
+          "thread": "LLM Wiki: visualización y acceso móvil",
+          "message_id": null,
+          "text": "Evaluar Obsidian y Quartz para visualizar el grafo de la wiki desde el móvil sin depender de la interfaz gráfica de Omarchy.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "conversation_retrieval",
+          "date_madrid": "2026-11-17"
+        },
+        {
+          "at": null,
+          "session_id": "chatgpt_reconstructed_20261115_03",
+          "thread": "Guía de estilos y diapositivas de Skynet",
+          "message_id": null,
+          "text": "Rellenar las diapositivas existentes aplicando la guía de estilos de Skynet e identificar los materiales necesarios.",
+          "text_kind": "parafraseado",
+          "timestamp_precision": "day",
+          "source_quality": "conversation_retrieval",
+          "date_madrid": "2026-11-21"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "chatgpt_reconstructed_20261115_01",
+      "kind": "hilo_reconstruido",
+      "title": "LLM Wiki: consulta por agentes",
+      "thread": "LLM Wiki: consulta por agentes",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad recuperada con precisión de día: 2026-11-17. No constituye una transcripción completa.",
+        "Se documentó el modelo de Hermes como escritor en Omarchy y repositorios clonados para lectores; comandos wiki orient/search/read y sincronización git pull. La consulta de Codex y Claude se describió como probada; Gemini no estaba confirmado."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261115_02",
+      "kind": "hilo_reconstruido",
+      "title": "LLM Wiki: visualización y acceso móvil",
+      "thread": "LLM Wiki: visualización y acceso móvil",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad recuperada con precisión de día: 2026-11-17. No constituye una transcripción completa.",
+        "Se distinguió Obsidian como aplicación de escritorio y Quartz como publicador web; no consta despliegue terminado."
+      ]
+    },
+    {
+      "session_id": "chatgpt_reconstructed_20261115_03",
+      "kind": "hilo_reconstruido",
+      "title": "Guía de estilos y diapositivas de Skynet",
+      "thread": "Guía de estilos y diapositivas de Skynet",
+      "model": null,
+      "created_at": null,
+      "last_activity": null,
+      "status": "desconocido",
+      "prompts": null,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": null,
+      "usage_session_total": null,
+      "usage_this_week": null,
+      "turns": null,
+      "rate_limit_windows_seen": [],
+      "notes": [
+        "Actividad recuperada con precisión de día: 2026-11-21. No constituye una transcripción completa.",
+        "Se solicitó completar todas las diapositivas; faltaba concretar el material de origen o referencia. No consta entrega final en la información recuperada."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [],
+    "note": "Sin verificación de PRs fusionadas durante este intervalo."
+  },
+  "issues_closed": [],
+  "milestones_closed": [],
+  "dead_ends": [
+    {
+      "at": null,
+      "session_id": "chatgpt_reconstructed_20261115_02",
+      "pr": null,
+      "what": "Visualización móvil del grafo no resuelta en el contexto recuperado",
+      "detail": "Obsidian no expone por sí mismo la experiencia web solicitada; se estudió Quartz como alternativa de publicación.",
+      "outcome": "No consta implementación o despliegue completado."
+    }
+  ],
+  "decisions": [
+    {
+      "at": null,
+      "what": "Mantener Hermes como escritor de la LLM Wiki y el resto de agentes como lectores con clones Git sincronizables.",
+      "by": "no verificable",
+      "thread": "LLM Wiki: consulta por agentes"
+    },
+    {
+      "at": null,
+      "what": "Documentar acceso a conocimiento mediante wiki orient/search/read e instrucciones persistentes para agentes; no asumir que Gemini está validado.",
+      "by": "no verificable",
+      "thread": "LLM Wiki: consulta por agentes"
+    },
+    {
+      "at": null,
+      "what": "Estudiar Quartz para publicación web del grafo y Obsidian para consulta local; despliegue pendiente.",
+      "by": "no verificable",
+      "thread": "LLM Wiki: visualización y acceso móvil"
+    }
+  ],
+  "summary": {
+    "prompts": null,
+    "sessions": null,
+    "reconstructed_topics": 3,
+    "recovered_prompt_texts": 0,
+    "note": "3 bloques temáticos reconstruidos a partir de contexto parcial, no un recuento exhaustivo de mensajes. El 22/11 está en curso a las 16:12 CET.",
+    "windows_5h": null,
+    "prs_merged": null,
+    "additions": null,
+    "deletions": null,
+    "weekly_quota": null
+  },
+  "windows_5h": [],
+  "unavailable": [
+    {
+      "item": "complete_project_chat_history",
+      "why": "No se dispone de un índice exhaustivo y verificable de conversaciones filtradas por pertenencia al proyecto Skynet."
+    },
+    {
+      "item": "original_prompt_texts",
+      "why": "Se conservan descripciones y fragmentos contextuales, no los mensajes originales completos."
+    },
+    {
+      "item": "exact_session_ids_and_timestamps",
+      "why": "No se han obtenido identificadores de sesiones ni marcas horarias de todos los mensajes."
+    },
+    {
+      "item": "model_usage_and_costs",
+      "why": "No hay telemetría histórica de tokens, costes, modelos ni ventanas de cinco horas."
+    },
+    {
+      "item": "github_pr_issue_metrics",
+      "why": "No se han auditado los PRs, issues ni cambios GitHub del intervalo."
+    },
+    {
+      "item": "full_day_2026_11_22",
+      "why": "El informe se genera antes del fin del día 22/11."
+    },
+    {
+      "item": "project_membership",
+      "why": "No es posible confirmar que todos los hilos recuperados pertenecen formalmente al proyecto ChatGPT Skynet."
+    }
+  ],
+  "digest_markdown": "# Recap ChatGPT · Skynet · 15–22 noviembre 2026\n\n**Cobertura:** parcial, hasta el 22/11/2026 a las 16:12 CET. Intervalo solicitado de ocho días, no semana ISO completa. El 15/11 puede solaparse con el informe anterior, si se elaboró para 9–15 de noviembre.\n\n## Actividad recuperada\n- **17/11 — LLM Wiki:** arquitectura de Hermes como escritor en Omarchy y GitHub privado `guilu/llm-wiki` como réplica; agentes lectores con clones locales y sincronización mediante `git pull`.\n- **17/11 — Consulta por agentes:** comandos `wiki orient`, `wiki search`, `wiki read`; Codex y Claude con pruebas mencionadas, Gemini pendiente de verificación.\n- **17/11 — Visualización:** estudio de Obsidian y Quartz para acceder al grafo desde móvil; sin despliegue final verificado.\n- **21/11 — Presentación Skynet:** petición de completar diapositivas conforme a la guía visual; sin resultado final verificable.\n\n## Decisiones y límites\nLa wiki se concibe como fuente de conocimiento consultable por agentes, con Hermes como escritor y los demás equipos como lectores. No hay un inventario exhaustivo de sesiones, mensajes, consumos ni cambios GitHub. Las fechas corresponden a contexto recuperado, no a una exportación completa del proyecto.\n"
+}

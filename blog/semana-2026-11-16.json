@@ -1,0 +1,2382 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-22T15:19:24Z",
+    "madrid": "2026-11-22T16:19:24+01:00"
+  },
+  "week": {
+    "monday": "2026-11-16",
+    "yyyymmdd": "20261116",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-11-15T23:00:00Z",
+      "madrid": "2026-11-16T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-22T23:00:00Z",
+      "madrid": "2026-11-23T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-22T15:19:24Z",
+      "madrid": "2026-11-22T16:19:24+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-11-15T14:59:57Z",
+      "madrid": "2026-11-15T15:59:57+01:00"
+    },
+    "start_note": "el periodo empieza antes del lunes para recoger lo que quedó fuera del informe anterior"
+  },
+  "sources": {
+    "threads": "hilos y chat del proyecto (mensajes de Diego con su hora)",
+    "session_events": "rate_limit_event y result de cada sesión (list_events)",
+    "session_meta": "get_session (uso acumulado, modelo, fechas)",
+    "github": "API de GitHub para PRs e issues; git log de main para líneas por PR (squash)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Claude (proyecto «Skynet», sesiones en la nube)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-11-15T16:15:08Z",
+            "madrid": "2026-11-15T17:15:08+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HN5wYFUk1Bx18ZghNZvCxo",
+          "text": "https://github.com/guilu/skynet/runs/132802023903 ahí está el detalle de las violaciones de quality gate"
+        },
+        {
+          "at": {
+            "utc": "2026-11-15T18:03:21Z",
+            "madrid": "2026-11-15T19:03:21+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QXsAXPdfY9zZP1sCxYEnR7",
+          "text": "A ver si llegan te copio las líneas: \n\nANNOTATIONS\n\n Check failure on line 193 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nDefine a constant instead of duplicating this literal \"version\" 3 times.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5p&open=AaHfCC7IMioAmihIzS5p&pullRequest=329\n Check failure on line 291 in control-plane/src/main/java/dev/skynet/controlplane/workflow/WikiWriter.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC1VMioAmihIzS5n&open=AaHfCC1VMioAmihIzS5n&pullRequest=329\n Check warning on line 12 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiController.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nComplete the task associated to this TODO comment.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7GMioAmihIzS5o&open=AaHfCC7GMioAmihIzS5o&pullRequest=329\n Check warning on line 36 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nRefactor this repetition that can lead to a stack overflow for large inputs.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5u&open=AaHfCC7IMioAmihIzS5u&pullRequest=329\n Check failure on line 477 in control-plane/src/main/java/dev/skynet/controlplane/workflow/WikiWriter.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nUse already-defined constant 'DECISIONS' instead of duplicating its value here.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC1VMioAmihIzS5m&open=AaHfCC1VMioAmihIzS5m&pullRequest=329\n Check warning on line 24 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nComplete the task associated to this TODO comment.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5t&open=AaHfCC7IMioAmihIzS5t&pullRequest=329\n Check failure on line 192 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nDefine a constant instead of duplicating this literal \"origin\" 3 times.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5r&open=AaHfCC7IMioAmihIzS5r&pullRequest=329\n Check failure on line 191 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nDefine a constant instead of duplicating this literal \"title\" 3 times.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5s&open=AaHfCC7IMioAmihIzS5s&pullRequest=329\n Check warning on line 176 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nComplete the task associated to this TODO comment.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5v&open=AaHfCC7IMioAmihIzS5v&pullRequest=329\n Check failure on line 194 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nDefine a constant instead of duplicating this literal \"sources\" 3 times.\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5q&open=AaHfCC7IMioAmihIzS5q&pullRequest=329\n Check warning on line 264 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java \n\n @sonarqubecloud\nsonarqubecloud\n/ SonarCloud Code Analysis\n\nRemove this unused method parameter \"n\".\nSee more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5w&open=AaHfCC7IMioAmihIzS5w&pullRequest=329\nView more details on SonarQubeCloud"
+        },
+        {
+          "at": {
+            "utc": "2026-11-15T22:43:26Z",
+            "madrid": "2026-11-15T23:43:26+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y661Y1VCkMjFMTh5kSkRJ7gR",
+          "text": "Fusiona y continúa"
+        },
+        {
+          "at": {
+            "utc": "2026-11-15T23:15:53Z",
+            "madrid": "2026-11-16T00:15:53+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GmVAVvSKXMz1k5oDoZ4ipy",
+          "text": "Fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-15T23:17:26Z",
+            "madrid": "2026-11-16T00:17:26+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DtjBePrbMDcYj1JNha1auB",
+          "text": "Sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-15T23:44:14Z",
+            "madrid": "2026-11-16T00:44:14+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QUCCt6fbyadX8jmTbb1jkq",
+          "text": "Fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T00:07:12Z",
+            "madrid": "2026-11-16T01:07:12+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LymZVHFThnEekhoSxTNYQb",
+          "text": "Fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T07:07:41Z",
+            "madrid": "2026-11-16T08:07:41+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SzuDqqniuAdBo9zfNkC1PU",
+          "text": "fusiona y continua"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T07:20:22Z",
+            "madrid": "2026-11-16T08:20:22+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UHvo3EyZH3o7FpT8S7t7JN",
+          "text": "fusionia y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T07:53:25Z",
+            "madrid": "2026-11-16T08:53:25+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6LDyMH4gGTq6kBWCKtPN3ud",
+          "text": "revisa porque la issue MV-A sigue abierta"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T13:56:42Z",
+            "madrid": "2026-11-16T14:56:42+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HMks9fcjWdkpJPuBDjm6kN",
+          "text": "Vamos a empezar con el Hito CH"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T14:03:17Z",
+            "madrid": "2026-11-16T15:03:17+01:00"
+          },
+          "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+          "thread": "Diseñar la memoria de proyectos de Skynet",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DSP9SiGcq2FLpFjTb2Fimd",
+          "text": "el hito MV está completado, completa el hilo"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T14:05:38Z",
+            "madrid": "2026-11-16T15:05:38+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HNid6R84sHicgQhAZn4V3J",
+          "text": "Me parece bien el cambio propuesto, vamos a empezar con CH-A"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T14:30:31Z",
+            "madrid": "2026-11-16T15:30:31+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64BBdkGiFiN38S5stVhwvp4",
+          "text": "fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T15:26:07Z",
+            "madrid": "2026-11-16T16:26:07+01:00"
+          },
+          "session_id": "session_01PyBwEY4cuegSdJEbWySjXa",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y649SqKpHv37fXbwSxw3PFgJ",
+          "text": "Fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T18:32:21Z",
+            "madrid": "2026-11-16T19:32:21+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y69Pn1S9RpVeFUBJF8ZT9Uxb",
+          "text": "fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T19:00:12Z",
+            "madrid": "2026-11-16T20:00:12+01:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63LmJia2zb15ybY8tXuT7Xx",
+          "text": "Fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T19:45:33Z",
+            "madrid": "2026-11-16T20:45:33+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GphaJtiyKfEaNfeW9vwrTX",
+          "text": "fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T20:16:08Z",
+            "madrid": "2026-11-16T21:16:08+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NQWBqEEdZMJDDDcGTvQL7p",
+          "text": "vamos a hacer que la cortina mas grande, que ocupe casi la totalidad de la superficie de la web, tanto en escritorio como en movil. \nPor otro lado, baja desde el top de la página cuando debería bajar desde el bottom de la barra de navegación superior."
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T20:38:55Z",
+            "madrid": "2026-11-16T21:38:55+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6UR2bBS15QNy6Q7jP3odB61",
+          "text": "En la versión web hay tantos menus ahora que hay scroll en el panel lateral izquierdo, tal vez se pueden juntar en una página Resultados,Jueces Lecciones y aprobaciones, ya que todas están relacionados con la Memoria, quizás poniendo tabs en una página. \nLo mismo con Runners, Proveedores y Consumo todos ellos como tabs en un Menu \"Agentes\""
+        },
+        {
+          "at": {
+            "utc": "2026-11-16T22:23:58Z",
+            "madrid": "2026-11-16T23:23:58+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6JaGDyPaaoLnp9MMc9cNdUy",
+          "text": "fusiona y sigue"
+        },
+        {
+          "at": {
+            "utc": "2026-11-17T06:50:57Z",
+            "madrid": "2026-11-17T07:50:57+01:00"
+          },
+          "session_id": null,
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y61dgabzsrxvp6P47S8Pki3F",
+          "text": "Fusiona y seguimos"
+        },
+        {
+          "at": {
+            "utc": "2026-11-17T15:05:19Z",
+            "madrid": "2026-11-17T16:05:19+01:00"
+          },
+          "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+          "thread": "Implementar el hito CH, chat con Skyny",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6GEnbPsUzQRnkUgmWUtKsUz",
+          "text": "fusiona"
+        },
+        {
+          "at": {
+            "utc": "2026-11-18T06:25:14Z",
+            "madrid": "2026-11-18T07:25:14+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BMATmQeW3KsM2jwV5beVwE",
+          "text": "Mete Evaluaciones en Memoria también y empieza por Aprobaciones"
+        },
+        {
+          "at": {
+            "utc": "2026-11-18T18:10:45Z",
+            "madrid": "2026-11-18T19:10:45+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KzRmef2VAWLXrMk9eNEW5k",
+          "text": "La cortina está bastante bien, haz que se vea el borde de la barra de navegación superior.  y en \"Pregunta a Skyny\" el rectangulo redondeado es demasiado estrecho, dale un poco de padding para que la figura de skyny y los textos respiren un poco como está el de al lado \"Buscar ejecución trabajo o runner\""
+        },
+        {
+          "at": {
+            "utc": "2026-11-18T18:18:06Z",
+            "madrid": "2026-11-18T19:18:06+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6C6YzTfsidce4z4DgLY231R",
+          "text": "Estos 2 indicadores hay que juntarlos en 1 solo cuadrado, 1 indicador verde amarillo para runners y 1 indicador para control plane. Resume la info  si ves que no caben \n() 1 runner en linea\n     0 agentes - 1 sin latido\n() CP disponible"
+        },
+        {
+          "at": {
+            "utc": "2026-11-18T21:45:22Z",
+            "madrid": "2026-11-18T22:45:22+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NwU3uZaoRmkySGFuDZeFik",
+          "text": "La animación de la cortina parece bajar a partir de la barra de navegación superior y hace un efecto raro… debe ser como una cortina que está por debajo (z-index) y que al clickar el botón sale desde detrás y baja suavemente hacia abajo.  Adjunto vídeo de cómo se ve la animación de la cortina en móvil. Y en la foto se ve que en aparece skyny demasiado, 2 veces en la barra de navegación superior y otra vez en el panel de “Hola soy skyny” podemos quitar el panel dejando sus botones de lanzar un workflow y ver las ejecuciones"
+        },
+        {
+          "at": {
+            "utc": "2026-11-19T23:18:16Z",
+            "madrid": "2026-11-20T00:18:16+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y67x3SbzFohAdL5VW7cvu42b",
+          "text": "Quiero cambiar la barra de navegación superior para que ocupe toda el ancho de la página y el menú lateral izquierdo esté debajo. Así el logotipo de skynet en lugar de estar en la parte superior del menú lateral, este en la parte izquierda de la barra de navegación superior. Quitar el botón de pregunta a skyny y que la acción de bajar la cortina se produzca cuando clicas en ese logotipo de skyny que hemos dejado arriba a la izquierda de la barra de navegación. Y que al pasar el ratón por encima aparezca el tooltip con el mensaje que hemos quitado “pregúntale a skyny” y el atajo de teclado que saca la cortina"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T07:24:36Z",
+            "madrid": "2026-11-20T08:24:36+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6V1giu3XPNvCYdjezdU8UhD",
+          "text": "vamos a rediseñar la pagina de Actividad, las filas están metidas en un panel, que tiene scroll, además el panel no toda la pagina y queda espacio abajo de la página, podemos quitar el panel y hacer una paginación, O podemos hacer scroll infinito.... primero lleenar la pagina y cuando se vaya llegando al fin mostrar otros 50 por ejemplo y así...\nEn las filas que haya unas cabeceras para saber que campo es el que se está mostrando.\nLa fecha de la primera columna no tiene el día. Poner Dia y hora en formato dd/mm/YYYY hh24:mm:ss\nEl texto de las filas es pequeño y no se ve bien, hacer más grande"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T07:28:09Z",
+            "madrid": "2026-11-20T08:28:09+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63MjSDXy95wtkUrFWfTSdMp",
+          "text": "en movil los filtros se amontonan, puedes poner en un boton que diga \"Filtrar\" con un simbolo de filtrar y que al pinchar saque los filtros en un panel auxiliar inferiror como sale el panel de crear nuevo proyecto."
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T08:19:40Z",
+            "madrid": "2026-11-20T09:19:40+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66y16JFoTkMNE88oT2XXmf9",
+          "text": "Rediseño de la lista de proyectos en la pagina web. Vamos a hacer que sean tambien tarjetas, pueden ser tarjetas anchas como la lista de trabajos, y que muestren la información más relevante de los proyectos, trabajos, ejecuciones, PRs, Aprobaciones, en pequeñas bullets"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T11:46:18Z",
+            "madrid": "2026-11-20T12:46:18+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6AYMHEr9qVYWcRmmHpycrjp",
+          "text": "hermes no despliegua automáticamente estas PR que son solo de frontend porque en el titulo no lleva codigo de fase, así que ahora hemos acordado que una PR con titulo empieze por \"UI:\" la va a desplegar automáticamente, cambia el titulo de la PR 349 y ponle el prefijo UI:"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T12:14:16Z",
+            "madrid": "2026-11-20T13:14:16+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QUHejAGvyekXpZpGW8nGRC",
+          "text": "en las páginas en las que la el tamaño del contenido no es suficientemente alto, si hago scroll aparece la barra de scroll y hace un poco de scroll que no entiendo porque...."
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T12:20:23Z",
+            "madrid": "2026-11-20T13:20:23+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Y8dLbCXmjbkf6v5Fcv74m1",
+          "text": "rediseña la pagina de runners en web, para que la lista sea una lista de tarjetas anchas como en proyectos. Y mejora la manera de mostar las versiones, con pills o chips"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T12:36:22Z",
+            "madrid": "2026-11-20T13:36:22+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y66aZUMoHeS4uHWQUz4LjwMr",
+          "text": "estas PRs de solo FrontEnd relanzan en github todos los checks E2E que tardan la vida... cuando no se ha tocado nada de eso...\nPodemos hacer que las PRs de web que empiecen por UI: no lancen los CIs de E2E tan largos?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T13:20:16Z",
+            "madrid": "2026-11-20T14:20:16+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6YWThR2mVTxRWoKfSpBC25U",
+          "text": "He fusionado la 349 para que las proximas PRs que sean solo de UI, le pongamos UI: en el titulo y luego no ejecuten los ci largos de E2E"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T13:26:12Z",
+            "madrid": "2026-11-20T14:26:12+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6A7KvgrG4hkp8vfKzhTZGV6",
+          "text": "vamos a rediseñar el login para que el formulario no esté en un cuadrado... que sea más fluido y el skyny sea más grande. Haz unos bocetos a ver cual me gusta más"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T14:21:44Z",
+            "madrid": "2026-11-20T15:21:44+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y688LBXz4hYgrpSxZityAzez",
+          "text": "Me gusta la 2 que es más limpia quita el círculo detrás de skyny"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T17:38:19Z",
+            "madrid": "2026-11-20T18:38:19+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y62jcd5gNjjTPdNbkH3AZUkf",
+          "text": "Tanto en el login como en la cortina de chat skyny primero se ve en 2d y luego cambia a 3D… porque pasa eso?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-20T17:42:49Z",
+            "madrid": "2026-11-20T18:42:49+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NFSVgSCWAfaZhdbnCNzV2R",
+          "text": "Vale, ademas en el chat el espacio que tiene skyny es pequeño, cuando una animación tiene algún complemento o salen globos etc no caben…"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T12:14:32Z",
+            "madrid": "2026-11-21T13:14:32+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DrYjGy3YxDJnjp36jxEWMP",
+          "text": "tengo un nuevo. estudio que voy actualizando con gemini y chatgpt, el fichero es /Users/diegobarrioh/Documents/ChatGPT/skynet/skyny-v4.3.html quiero incorporarlo a la web. para que apareza en la cortina del chat. Y quiero quitar todos los skyny pequeñitos que salen en los chips de completado,fallido, etc de las paginas de workflows y activad, dejar los iconos que había antes... (es demasíado repetitivo tanto skyny por todas partes). Pero si que quiero que todos los estados de Ajustes - Companion se vean como en el estudio 3d, también hay complementos de sombrero, de cara, espalda, que todo eso se vea en la pagina de ajustes, la he implementado responsive para que se pueda ver en movil correctamente"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T13:24:49Z",
+            "madrid": "2026-11-21T14:24:49+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6VLjNeWvX1YTQijiCw6U4bC",
+          "text": "porque se ve el color de skyny tan azul?  en el estudio es mucho más clarito"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T13:53:01Z",
+            "madrid": "2026-11-21T14:53:01+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y68JhYgESFFRL6ULLZyNsGr7",
+          "text": "que tengo que hacer cuando añada estados nuevos al fichero autocontenido skyny-v4.3.html o cuando cree una versión nueva 4.4?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T13:55:32Z",
+            "madrid": "2026-11-21T14:55:32+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y64551HTYK3h8RUpd77KBPAX",
+          "text": "Ahora skyny en el login se ve bien. Pero sigue sin convencerme los 3 chips y las copys \"Hola de nuevo\", \"Entra para ver en que andan tus agentes\".\nVamos a hacer un brainstorming para cambiar el login"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T14:02:12Z",
+            "madrid": "2026-11-21T15:02:12+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6Xy8cPsy9jGYopZDDsUtGkB",
+          "text": "Oh, me gusta, simplement \"Entra en Skynet\" y que Skyny salude con HOLA en su pantalla, también podríamos poner una secuencia de mensajes... en textos que deslicen en la pantalla de skyny de derecha a izquierda! mientras skyny hace sus animaciones de idle, dime a ver que textos podríamos poner\n\nAh! y en el studio 3D cuando haces click en skyny hace micro-expresiones, y puedes moverlo con el raton y haces que se maree, etc. eso se puede poner?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T14:13:33Z",
+            "madrid": "2026-11-21T15:13:33+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6KuXtcT1qgH4WKbZv67gKkN",
+          "text": "Adelante con la propuesta"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T16:09:56Z",
+            "madrid": "2026-11-21T17:09:56+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6DshtmNk1UDAuQkyVLdNit5",
+          "text": "Es texto se desplaza por el visor de skyny demasiado lento, como podríamos hacer que pase a una velocidad de lectura normal?\nY cuando tocas la pantalla o haces clico con el ratón skyny se mueve al revés si muevo a la derecha skyny se gira  a la izquierda"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T19:54:31Z",
+            "madrid": "2026-11-21T20:54:31+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6XvVuVq4pYSVC7gYups8xPC",
+          "text": "hemos añadido varios estados más al fichero /Users/diegobarrioh/Documents/ChatGPT/skyny-v4.3.html puedes añadirlos?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T22:35:39Z",
+            "madrid": "2026-11-21T23:35:39+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y63i5tWwfvuQ91oNLoaZUcB9",
+          "text": "El skyny de la cortina tambien quiero que haga como,el del Longinos y se pueda mover con le ratón y tocando…"
+        },
+        {
+          "at": {
+            "utc": "2026-11-21T23:41:10Z",
+            "madrid": "2026-11-22T00:41:10+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6NWWAb2eMRaohoukVydS2FH",
+          "text": "Ahora en la cortina del chat skyny si se mueve pero no sigue al ratón como si que lo hace en el login cuando hago clic o toco la pantalla"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T08:33:03Z",
+            "madrid": "2026-11-22T09:33:03+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6C8AyKuHbRZYGeNJcnkoGZF",
+          "text": "Vamos a quitar los skyny 2D que aparecen en la barra de navegación y en el buscador… en el título superior izquierdo en lugar del logo vamos a poner SKYNET y en los demás podemos dejar el icono que le corresponda"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T08:54:32Z",
+            "madrid": "2026-11-22T09:54:32+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6HcyByHu5tRLkCEJTta3pe9",
+          "text": "Donde está el fichero skyny-v4.4.html que quiero descargarlo y pasárselo a Gemini y ChatGPT"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T09:03:39Z",
+            "madrid": "2026-11-22T10:03:39+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6FN8EW8rCPS3tttVUo8YKPL",
+          "text": "En móvil la barra de navegación los botones tapan los breadcrums, colapsa los 4 botones a la izquierda del botón de usuario y deja un icono de […] cuando pinchemos en el icono […] aparecen los 4 botones con una animación de desplazamiento horizontal"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T11:13:25Z",
+            "madrid": "2026-11-22T12:13:25+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6BV1kihckC1A7xotNV8wEPV",
+          "text": "hemos actualizado el estudio 3D de skyny a  /Users/diegobarrioh/Downloads/ChatGPT/skyny-v4.4.html con microexpresiones y animaciones de entrar y salir del escenario. Las animaciones de entrar y salir las podemos poner en el Login... y ademas ha añadido:\nModo \"Reacción al Vivo\" (Event-Driven Pulses sin cambiar de estado):\n\n* Un método `skyny.pulseEvent(type)` que puedas llamar desde tus WebSockets / SSE de `EventStore` cada vez que llega un evento del `StreamParser`:\n   * `tool_call`: un pequeño destello en el visor y un asentimiento rápido de cabeza.\n   * `file_edited`: una chispa salta hacia arriba sin interrumpir la animación actual.\n   * `token_tick`: el brillo inferior (`glowLight`) late suavemente con cada lote de tokens consumidos.\n\ncomo podemos integrar esto en la web?"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T11:29:21Z",
+            "madrid": "2026-11-22T12:29:21+01:00"
+          },
+          "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+          "thread": "Hacer pequeños cambios rápidos en el frontend",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6SEs71C52Eao3E9SMcgczdw",
+          "text": "venga, vamos a ponerlo"
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T15:07:50Z",
+            "madrid": "2026-11-22T16:07:50+01:00"
+          },
+          "session_id": "session_01PyBwEWnX1jTZqrDTkisNMW",
+          "thread": "Chat del proyecto",
+          "message_id": "cmsg_01FF2SWhWNaR6RyBSpGvb6Y6QaTpGtQtoEsiNBLncaU3Na",
+          "text": "Genera el recap de la semana"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+      "kind": "hilo",
+      "title": "Diseñar la memoria de proyectos de Skynet",
+      "thread": "Diseñar la memoria de proyectos de Skynet",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-14T15:07:47Z",
+        "madrid": "2026-11-14T16:07:47+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-16T14:03:24Z",
+        "madrid": "2026-11-16T15:03:24+01:00"
+      },
+      "status": "completada",
+      "prompts": 11,
+      "first_prompt": {
+        "utc": "2026-11-15T16:15:08Z",
+        "madrid": "2026-11-15T17:15:08+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-16T14:03:17Z",
+        "madrid": "2026-11-16T15:03:17+01:00"
+      },
+      "prs": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334
+      ],
+      "agent_replies": 36,
+      "usage_session_total": {
+        "cost_usd": 61.5,
+        "input_tokens": 84091,
+        "output_tokens": 438760,
+        "cache_read_tokens": 151961774,
+        "cache_write_tokens": 2826096,
+        "note": "acumulado desde el viernes 14; aquí solo cuentan los eventos desde el domingo 15 a las 14:59 UTC"
+      },
+      "usage_this_week": {
+        "cost_usd": 34.6126,
+        "input": 5435,
+        "output": 217967,
+        "cache_read": 81699266,
+        "cache_write": 1737402,
+        "thinking": 37251,
+        "models": [
+          "claude-haiku-5-5",
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 33,
+        "turns_by_origin": {
+          "human": 11,
+          "task-notification": 22
+        },
+        "turns_with_error": [],
+        "active_time_ms": 3135567,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794769200,
+        1794800400,
+        1794830400,
+        1794855000
+      ],
+      "notes": [
+        "Hito MV terminado (MV-C..MV-F esta semana; MV-A y MV-B la anterior)."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "kind": "hilo",
+      "title": "Implementar el hito CH, chat con Skyny",
+      "thread": "Implementar el hito CH, chat con Skyny",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-16T13:56:55Z",
+        "madrid": "2026-11-16T14:56:55+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-17T15:06:22Z",
+        "madrid": "2026-11-17T16:06:22+01:00"
+      },
+      "status": "completada",
+      "prompts": 9,
+      "first_prompt": {
+        "utc": "2026-11-16T13:56:42Z",
+        "madrid": "2026-11-16T14:56:42+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-17T15:05:19Z",
+        "madrid": "2026-11-17T16:05:19+01:00"
+      },
+      "prs": [
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348
+      ],
+      "agent_replies": 29,
+      "usage_session_total": {
+        "cost_usd": 52.51,
+        "input_tokens": 11000,
+        "output_tokens": 427586,
+        "cache_read_tokens": 145755963,
+        "cache_write_tokens": 1792177
+      },
+      "usage_this_week": {
+        "cost_usd": 52.51,
+        "input": 11000,
+        "output": 427586,
+        "cache_read": 145755963,
+        "cache_write": 1792177,
+        "note": "acumulado de get_session; la sesión empezó en el periodo y sus eventos de turno suman menos (o no hay)"
+      },
+      "turns": {
+        "turns_total": 49,
+        "turns_by_origin": {
+          "desconocido": 5,
+          "human": 9,
+          "task-notification": 35
+        },
+        "turns_with_error": [],
+        "active_time_ms": 7702657,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794855000,
+        1794873000,
+        1794916200,
+        1794945600
+      ],
+      "notes": [
+        "Hito CH completo (CH-A..CH-F, 8 PRs) en día y medio."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "kind": "hilo",
+      "title": "Hacer pequeños cambios rápidos en el frontend",
+      "thread": "Hacer pequeños cambios rápidos en el frontend",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-07T17:59:50Z",
+        "madrid": "2026-11-07T18:59:50+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-22T11:51:48Z",
+        "madrid": "2026-11-22T12:51:48+01:00"
+      },
+      "status": "completada",
+      "prompts": 32,
+      "first_prompt": {
+        "utc": "2026-11-18T06:25:14Z",
+        "madrid": "2026-11-18T07:25:14+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-22T11:29:21Z",
+        "madrid": "2026-11-22T12:29:21+01:00"
+      },
+      "prs": [
+        349,
+        350
+      ],
+      "agent_replies": 64,
+      "usage_session_total": {
+        "cost_usd": 95.47,
+        "input_tokens": 22258,
+        "output_tokens": 453911,
+        "cache_read_tokens": 213656417,
+        "cache_write_tokens": 5453803,
+        "note": "acumulado desde el sábado 7; aquí solo cuentan los eventos desde el domingo 15 a las 14:59 UTC"
+      },
+      "usage_this_week": {
+        "cost_usd": 82.4362,
+        "input": 21936,
+        "output": 403654,
+        "cache_read": 183513246,
+        "cache_write": 4827239,
+        "thinking": 74749,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 88,
+        "turns_by_origin": {
+          "desconocido": 5,
+          "task-notification": 53,
+          "human": 30
+        },
+        "turns_with_error": [],
+        "active_time_ms": 10705680,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794873000,
+        1795000800,
+        1795043400,
+        1795147800,
+        1795174800,
+        1795192800,
+        1795213800,
+        1795281000,
+        1795308600,
+        1795354200
+      ],
+      "notes": [
+        "#349 rediseño de la barra y menú, #350 CI sin E2E para PRs «UI:»; #351 abierta (login con Skyny v4.4). Conectado al Mac de Diego para traer el fichero del estudio."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEV4XMtog2wZp2cTZ5T",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-15T08:28:48Z",
+        "madrid": "2026-11-15T09:28:48+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-15T16:16:02Z",
+        "madrid": "2026-11-15T17:16:02+01:00"
+      },
+      "status": "archivada",
+      "prompts": 0,
+      "first_prompt": null,
+      "last_prompt": null,
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 3.45,
+        "input_tokens": 80,
+        "output_tokens": 5789,
+        "cache_read_tokens": 3723625,
+        "cache_write_tokens": 323875,
+        "note": "acumulado; aquí solo cuentan los eventos desde las 14:59 UTC"
+      },
+      "usage_this_week": {
+        "cost_usd": 0.9066,
+        "input": 9,
+        "output": 613,
+        "cache_read": 513316,
+        "cache_write": 98949,
+        "thinking": 0,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 4,
+        "turns_by_origin": {
+          "desconocido": 3,
+          "human": 1
+        },
+        "turns_with_error": [],
+        "active_time_ms": 27726,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794769200
+      ],
+      "notes": []
+    },
+    {
+      "session_id": "session_01PyBwEY4cuegSdJEbWySjXa",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-16T07:07:42Z",
+        "madrid": "2026-11-16T08:07:42+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-16T14:41:11Z",
+        "madrid": "2026-11-16T15:41:11+01:00"
+      },
+      "status": "archivada",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-16T15:26:07Z",
+        "madrid": "2026-11-16T16:26:07+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-16T15:26:07Z",
+        "madrid": "2026-11-16T16:26:07+01:00"
+      },
+      "prs": [],
+      "agent_replies": 1,
+      "usage_session_total": {
+        "cost_usd": 1.59,
+        "input_tokens": 51,
+        "output_tokens": 4848,
+        "cache_read_tokens": 2159682,
+        "cache_write_tokens": 132710
+      },
+      "usage_this_week": {
+        "cost_usd": 1.5908,
+        "input": 51,
+        "output": 4848,
+        "cache_read": 2159682,
+        "cache_write": 132710,
+        "thinking": 85,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 20,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 7,
+          "desconocido": 12
+        },
+        "turns_with_error": [],
+        "active_time_ms": 116494,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1794830400,
+        1794855000
+      ],
+      "notes": [
+        "Arrancó el hilo del hito CH."
+      ]
+    },
+    {
+      "session_id": "session_01PyBwEWnX1jTZqrDTkisNMW",
+      "kind": "coordinador",
+      "title": "Project coordinator (Skynet)",
+      "thread": "Chat del proyecto",
+      "model": "claude-opus-5-5",
+      "created_at": {
+        "utc": "2026-11-22T08:33:04Z",
+        "madrid": "2026-11-22T09:33:04+01:00"
+      },
+      "last_activity": {
+        "utc": "2026-11-22T15:08:06Z",
+        "madrid": "2026-11-22T16:08:06+01:00"
+      },
+      "status": "activa",
+      "prompts": 1,
+      "first_prompt": {
+        "utc": "2026-11-22T15:07:50Z",
+        "madrid": "2026-11-22T16:07:50+01:00"
+      },
+      "last_prompt": {
+        "utc": "2026-11-22T15:07:50Z",
+        "madrid": "2026-11-22T16:07:50+01:00"
+      },
+      "prs": [],
+      "agent_replies": 0,
+      "usage_session_total": {
+        "cost_usd": 1.51,
+        "input_tokens": 36,
+        "output_tokens": 3023,
+        "cache_read_tokens": 1249083,
+        "cache_write_tokens": 149574
+      },
+      "usage_this_week": {
+        "cost_usd": 1.507,
+        "input": 36,
+        "output": 3023,
+        "cache_read": 1249083,
+        "cache_write": 149574,
+        "thinking": 101,
+        "models": [
+          "claude-opus-5-5"
+        ]
+      },
+      "turns": {
+        "turns_total": 14,
+        "turns_by_origin": {
+          "task-notification": 1,
+          "human": 6,
+          "desconocido": 7
+        },
+        "turns_with_error": [],
+        "active_time_ms": 85543,
+        "subagents_spawned": 0
+      },
+      "rate_limit_windows_seen": [
+        1795354200,
+        1795377600
+      ],
+      "notes": [
+        "Coordinador actual."
+      ]
+    }
+  ],
+  "prs": {
+    "merged": [
+      {
+        "number": 329,
+        "title": "MV-C - Páginas de la wiki",
+        "squash_sha": "05cc0e1",
+        "merged_at": "2026-11-15T22:43:46Z",
+        "files_changed": 12,
+        "additions": 1433,
+        "deletions": 2,
+        "milestone": "MV-C - Páginas de la wiki",
+        "closes_issues": [
+          308
+        ],
+        "phase": "MV-C",
+        "url": "https://github.com/guilu/skynet/pull/329",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 330,
+        "title": "MV-D - Contexto relevante",
+        "squash_sha": "ef989e5",
+        "merged_at": "2026-11-15T23:16:01Z",
+        "files_changed": 14,
+        "additions": 1006,
+        "deletions": 75,
+        "milestone": "MV-D - Contexto relevante",
+        "closes_issues": [
+          309
+        ],
+        "phase": "MV-D",
+        "url": "https://github.com/guilu/skynet/pull/330",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 331,
+        "title": "MV-E - Curador de la memoria",
+        "squash_sha": "5a27eac",
+        "merged_at": "2026-11-15T23:50:30Z",
+        "files_changed": 21,
+        "additions": 1505,
+        "deletions": 15,
+        "milestone": "MV-E - Curador de la memoria",
+        "closes_issues": [
+          310
+        ],
+        "phase": "MV-E",
+        "url": "https://github.com/guilu/skynet/pull/331",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 332,
+        "title": "MV-F - ¿Quién lo vio?",
+        "squash_sha": "1017e53",
+        "merged_at": "2026-11-16T00:07:23Z",
+        "files_changed": 7,
+        "additions": 125,
+        "deletions": 0,
+        "milestone": "MV-F - La wiki en la web",
+        "closes_issues": [
+          311
+        ],
+        "phase": "MV-F",
+        "url": "https://github.com/guilu/skynet/pull/332",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 333,
+        "title": "MV-F - Entradas con confianza",
+        "squash_sha": "ab035a7",
+        "merged_at": "2026-11-16T07:07:55Z",
+        "files_changed": 8,
+        "additions": 410,
+        "deletions": 10,
+        "milestone": "MV-F - La wiki en la web",
+        "closes_issues": [
+          311
+        ],
+        "phase": "MV-F",
+        "url": "https://github.com/guilu/skynet/pull/333",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 334,
+        "title": "MV-F - Wiki y curador en la web",
+        "squash_sha": "241548a",
+        "merged_at": "2026-11-16T07:31:57Z",
+        "files_changed": 13,
+        "additions": 1249,
+        "deletions": 28,
+        "milestone": "MV-F - La wiki en la web",
+        "closes_issues": [
+          311
+        ],
+        "phase": "MV-F",
+        "url": "https://github.com/guilu/skynet/pull/334",
+        "session_id": "session_01PyBwEXj1CMfvEabRmcoqua"
+      },
+      {
+        "number": 341,
+        "title": "CH-A - Conversaciones",
+        "squash_sha": "5e51049",
+        "merged_at": "2026-11-16T14:33:52Z",
+        "files_changed": 12,
+        "additions": 889,
+        "deletions": 1,
+        "milestone": "CH-A - Conversaciones",
+        "closes_issues": [
+          335
+        ],
+        "phase": "CH-A",
+        "url": "https://github.com/guilu/skynet/pull/341",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 342,
+        "title": "CH-B - Consultas del MCP de Skynet",
+        "squash_sha": "0d5dc28",
+        "merged_at": "2026-11-16T15:26:28Z",
+        "files_changed": 17,
+        "additions": 1454,
+        "deletions": 186,
+        "milestone": "CH-B - MCP de Skynet y confirmaciones",
+        "closes_issues": [
+          336
+        ],
+        "phase": "CH-B",
+        "url": "https://github.com/guilu/skynet/pull/342",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 343,
+        "title": "CH-B - Acciones por confirmar",
+        "squash_sha": "1166b85",
+        "merged_at": "2026-11-16T18:32:36Z",
+        "files_changed": 11,
+        "additions": 1534,
+        "deletions": 38,
+        "milestone": "CH-B - MCP de Skynet y confirmaciones",
+        "closes_issues": [
+          336
+        ],
+        "phase": "CH-B",
+        "url": "https://github.com/guilu/skynet/pull/343",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 344,
+        "title": "CH-C - El turno de Skyny en el control plane",
+        "squash_sha": "261bc2b",
+        "merged_at": "2026-11-16T19:10:16Z",
+        "files_changed": 23,
+        "additions": 1520,
+        "deletions": 53,
+        "milestone": "CH-C - El turno en el runner",
+        "closes_issues": [
+          337
+        ],
+        "phase": "CH-C",
+        "url": "https://github.com/guilu/skynet/pull/344",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 345,
+        "title": "CH-C - El turno de Skyny en el runner",
+        "squash_sha": "ad4e495",
+        "merged_at": "2026-11-16T19:45:46Z",
+        "files_changed": 17,
+        "additions": 617,
+        "deletions": 29,
+        "milestone": "CH-C - El turno en el runner",
+        "closes_issues": [
+          337
+        ],
+        "phase": "CH-C",
+        "url": "https://github.com/guilu/skynet/pull/345",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 346,
+        "title": "CH-D - La cortina del chat con Skyny",
+        "squash_sha": "717fe80",
+        "merged_at": "2026-11-16T22:24:13Z",
+        "files_changed": 10,
+        "additions": 1553,
+        "deletions": 2,
+        "milestone": "CH-D - La cortina",
+        "closes_issues": [
+          338
+        ],
+        "phase": "CH-D",
+        "url": "https://github.com/guilu/skynet/pull/346",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 347,
+        "title": "CH-E - Skyny vivo en la cortina",
+        "squash_sha": "1367d9a",
+        "merged_at": "2026-11-17T06:51:20Z",
+        "files_changed": 13,
+        "additions": 328,
+        "deletions": 31,
+        "milestone": "CH-E - Skyny vivo en la cortina",
+        "closes_issues": [
+          339
+        ],
+        "phase": "CH-E",
+        "url": "https://github.com/guilu/skynet/pull/347",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 348,
+        "title": "CH-F - Resumen a la memoria",
+        "squash_sha": "9dd3add",
+        "merged_at": "2026-11-17T15:05:35Z",
+        "files_changed": 12,
+        "additions": 670,
+        "deletions": 21,
+        "milestone": "CH-F - Resumen a la memoria",
+        "closes_issues": [
+          340
+        ],
+        "phase": "CH-F",
+        "url": "https://github.com/guilu/skynet/pull/348",
+        "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW"
+      },
+      {
+        "number": 350,
+        "title": "CI: Las PRs «UI:» de solo web no lanzan las E2E",
+        "squash_sha": "458722a",
+        "merged_at": "2026-11-20T13:19:08Z",
+        "files_changed": 5,
+        "additions": 58,
+        "deletions": 7,
+        "milestone": null,
+        "closes_issues": [],
+        "phase": null,
+        "url": "https://github.com/guilu/skynet/pull/350",
+        "session_id": "session_01PyBwEXbBADKS5hr85yketR"
+      },
+      {
+        "number": 349,
+        "title": "UI: Barra superior a todo lo ancho, menú con pestañas, cortina del chat, Actividad en tabla, proyectos y runners en tarjetas",
+        "squash_sha": "3eafcde",
+        "merged_at": "2026-11-20T13:19:42Z",
+        "files_changed": 30,
+        "additions": 1370,
+        "deletions": 690,
+        "milestone": null,
+        "closes_issues": [],
+        "phase": null,
+        "url": "https://github.com/guilu/skynet/pull/349",
+        "session_id": "session_01PyBwEXbBADKS5hr85yketR"
+      }
+    ],
+    "open": [
+      {
+        "number": 351,
+        "title": "UI: Login con Skyny que entra volando, Skyny 3D v4.4 con reacciones al vivo y SKYNET en la barra",
+        "url": "https://github.com/guilu/skynet/pull/351",
+        "created_at": "2026-11-20T14:24:58Z",
+        "milestone": null,
+        "state": "abierta",
+        "session_id": "session_01PyBwEXbBADKS5hr85yketR"
+      }
+    ]
+  },
+  "issues_closed": [
+    {
+      "number": 340,
+      "title": "CH-F - Resumen a la memoria",
+      "closed_at": "2026-11-17T15:05:37Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 339,
+      "title": "CH-E - Skyny vivo en la cortina",
+      "closed_at": "2026-11-17T06:51:22Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 338,
+      "title": "CH-D - La cortina",
+      "closed_at": "2026-11-16T22:24:15Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 337,
+      "title": "CH-C - El turno en el runner",
+      "closed_at": "2026-11-16T19:45:48Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 336,
+      "title": "CH-B - MCP de Skynet y confirmaciones",
+      "closed_at": "2026-11-16T18:32:38Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 335,
+      "title": "CH-A - Conversaciones",
+      "closed_at": "2026-11-16T14:33:53Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 311,
+      "title": "MV-F - La wiki en la web",
+      "closed_at": "2026-11-16T07:31:59Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 310,
+      "title": "MV-E - Curador de la memoria",
+      "closed_at": "2026-11-15T23:50:31Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 309,
+      "title": "MV-D - Contexto relevante",
+      "closed_at": "2026-11-15T23:16:03Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 308,
+      "title": "MV-C - Páginas de la wiki",
+      "closed_at": "2026-11-15T22:43:48Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    },
+    {
+      "number": 306,
+      "title": "MV-A - Confianza de la memoria",
+      "closed_at": "2026-11-16T07:53:36Z",
+      "closed_at_note": "updated_at de la issue (cerrada al fusionar)"
+    }
+  ],
+  "milestones_closed": [],
+  "dead_ends": [
+    {
+      "at": "2026-11-15T15:00:47Z",
+      "session_id": "session_01PyBwEV4XMtog2wZp2cTZ5T",
+      "pr": null,
+      "what": "Recap semanal incompleto",
+      "detail": "El recap de la semana del 9 de noviembre salió sin los milestones cerrados ni los coordinadores del martes al jueves, que no se pudieron leer.",
+      "outcome": "Se entregó el recap con esos huecos señalados."
+    },
+    {
+      "at": "2026-11-15T16:15:59Z",
+      "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+      "pr": 329,
+      "what": "Quality gate de Sonar en rojo en MV-C",
+      "detail": "Sonar bajó la nota de fiabilidad («C Reliability Rating on New Code») y el agente no podía leer el detalle de los avisos desde el enlace del check run; pidió a Diego que copiara reglas, ficheros y líneas. La causa principal era una expresión regular del nombre de página que podía desbordar la pila; además había literales duplicados, complejidad cognitiva alta, parámetros sin usar y falsos TODO («todo el proyecto»).",
+      "outcome": "Diego pegó las anotaciones a las 18:03; el agente lo arregló (cuantificadores posesivos, constantes, método partido en cuatro, página renombrada a decisiones-y-restricciones) y la CI quedó en verde a las 18:18; se fusionó."
+    },
+    {
+      "at": "2026-11-15T23:13:19Z",
+      "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+      "pr": 330,
+      "what": "Avisos de Sonar sin poder consultarlos en MV-D",
+      "detail": "Sonar marcó 6 avisos nuevos que no bloqueaban el quality gate; el agente no puede abrir sonarcloud y pidió las líneas si se querían corregir.",
+      "outcome": "Diego dijo «Fusiona» y la PR se fusionó sin corregir esos avisos."
+    },
+    {
+      "at": "2026-11-16T07:32:14Z",
+      "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+      "pr": null,
+      "what": "Milestones del hito MV sin cerrar",
+      "detail": "Los milestones 110 a 115 seguían abiertos en GitHub porque el agente no tenía herramienta para cerrarlos.",
+      "outcome": "Quedaron abiertos; no consta que se cerraran en el hilo."
+    },
+    {
+      "at": "2026-11-16T07:32:25Z",
+      "session_id": "session_01PyBwEY4cuegSdJEbWySjXa",
+      "pr": 334,
+      "what": "Milestones de MV sin cerrar",
+      "detail": "Tras fusionar la PR 334 y terminar el hito Memoria viva, los milestones 110 a 115 seguían abiertos en GitHub.",
+      "outcome": "Pendiente de cerrarlos a mano."
+    },
+    {
+      "at": "2026-11-16T07:53:45Z",
+      "session_id": "session_01PyBwEXj1CMfvEabRmcoqua",
+      "pr": 312,
+      "what": "Issue MV-A (#306) seguía abierta",
+      "detail": "En la descripción de la PR #312 se escribió «Cierra #306», y GitHub solo cierra automáticamente con palabras en inglés como «Closes» o «Fixes».",
+      "outcome": "El agente la cerró a mano como completada y se comprometió a usar «Closes #N» en las PRs."
+    },
+    {
+      "at": "2026-11-16T14:11:05Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 341,
+      "what": "Maven Central limita las descargas en las pruebas de CH-A",
+      "detail": "Al ejecutar las pruebas en local, Maven Central limitaba las descargas.",
+      "outcome": "Reintentado; a las 14:21 las pruebas estaban en verde y se abrió la PR #341."
+    },
+    {
+      "at": "2026-11-16T14:44:03Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 342,
+      "what": "Duplicación marcada por Sonar en CH-B consultas",
+      "detail": "Sonar marcó un 7,8 % de duplicación porque el MCP nuevo de Skynet repetía el código del MCP de memoria.",
+      "outcome": "Se extrajo lo común a una clase base que usan los dos; Sonar en verde."
+    },
+    {
+      "at": "2026-11-16T14:56:51Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 342,
+      "what": "E2E de entrega por PR falló de forma intermitente",
+      "detail": "Una E2E de entrega por PR falló esperando el texto «fusionar fusionó la PR…»; no tocaba nada de la PR.",
+      "outcome": "Pasó al relanzarla; toda la CI en verde a las 15:08. El agente quedó vigilando si se repite."
+    },
+    {
+      "at": "2026-11-16T18:35:16Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 344,
+      "what": "No se puede usar kind = chat en agent_run",
+      "detail": "El plan marcaba el turno como agent_run de tipo chat, pero la columna kind ya significa START, RESUME, RETRY o FORK.",
+      "outcome": "Se descartó y se marcó el turno con role = 'chat', como los jueces y las evaluaciones."
+    },
+    {
+      "at": "2026-11-16T20:16:08Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 346,
+      "what": "La cortina del chat era pequeña y bajaba desde el top de la página",
+      "detail": "Diego vio que la cortina de CH-D bajaba desde arriba de la página en lugar de desde el borde inferior de la barra superior, y que debía ocupar casi toda la web.",
+      "outcome": "Corregido en la misma PR a las 20:19: ocupa casi toda la superficie (16 px de margen en escritorio, 8 px en móvil) y se recorta para salir desde la barra."
+    },
+    {
+      "at": "2026-11-16T20:39:05Z",
+      "session_id": "session_01PyBwEXHeCowhX4wb1ab5xW",
+      "pr": 346,
+      "what": "CI de CH-D falló por 429 de Maven Central al construir la imagen Docker",
+      "detail": "Maven Central devolvió «429 Too Many Requests» al construir la imagen Docker; no era un fallo del código.",
+      "outcome": "Se relanzó el job y a las 21:06 todos los checks estaban en verde."
+    },
+    {
+      "at": "2026-11-18T06:31:28Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 349,
+      "what": "Migas cortadas con el nuevo botón",
+      "detail": "Con el botón «Pregúntale a Skyny» en la cabecera, las migas de tres niveles («Fábrica › Memoria › Jueces») se cortaban.",
+      "outcome": "Enfoque descartado: las migas se quedan en «Fábrica › Memoria» sin nombrar la pestaña."
+    },
+    {
+      "at": "2026-11-18T18:16:20Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 349,
+      "what": "La cortina tapaba el borde de la barra superior",
+      "detail": "Al pasar los bordes a 2 px la barra creció 1 px y la cortina seguía empezando a 73 px fijos.",
+      "outcome": "La altura se calcula a partir del grosor del borde; corregido en #349."
+    },
+    {
+      "at": "2026-11-18T21:52:08Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 349,
+      "what": "Efecto raro al bajar la cortina en móvil",
+      "detail": "La cortina bajaba desde la barra en vez de salir de detrás, y el cuadro de texto se enfocaba al abrir: el teclado salía a media bajada y movía la página.",
+      "outcome": "Barra por delante de la cortina y sin autofoco en móvil; corregido en #349."
+    },
+    {
+      "at": "2026-11-20T11:46:18Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 349,
+      "what": "Hermes no desplegaba las PRs solo de frontend",
+      "detail": "Hermes no despliega automáticamente PRs cuyo título no lleva código de fase, como las de este hilo.",
+      "outcome": "Se acordó el prefijo «UI:»; la #349 se renombró y las siguientes PRs lo llevan."
+    },
+    {
+      "at": "2026-11-20T12:16:52Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 349,
+      "what": "Scroll corto en páginas con poco contenido",
+      "detail": "Causa probable: el armazón usaba 100vh, que en iPad/móvil incluye la barra de direcciones. No se pudo reproducir en Chromium de escritorio.",
+      "outcome": "Cambiado a 100dvh en armazón, barra lateral y login, sin verificación en el dispositivo."
+    },
+    {
+      "at": "2026-11-20T12:36:22Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 350,
+      "what": "E2E largas en PRs solo de web",
+      "detail": "Las PRs de solo frontend relanzaban todos los checks E2E, que tardan mucho, sin tocar nada de eso.",
+      "outcome": "PR #350 (fusionada): las PRs «UI:» que solo tocan web/ no lanzan E2E salvo etiqueta e2e-completo o al fusionar en main."
+    },
+    {
+      "at": "2026-11-20T17:38:40Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Skyny se veía primero en 2D y luego en 3D",
+      "detail": "three.js (~140 KB) se carga aparte con lazy y, mientras llega, React mostraba el Skyny 2D de respaldo.",
+      "outcome": "Hueco vacío con fundido mientras carga y precarga de three en un rato libre; en #351."
+    },
+    {
+      "at": "2026-11-20T17:48:01Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "No se pudo capturar a Skyny en «Pensando»",
+      "detail": "Las capturas automáticas no lograron poner a Skyny en ese estado para comprobar que los globos caben en el lienzo ampliado.",
+      "outcome": "Queda para comprobarlo en el móvil tras el despliegue de Hermes."
+    },
+    {
+      "at": "2026-11-21T12:14:46Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": null,
+      "what": "El estudio v4.3 estaba en el Mac de Diego",
+      "detail": "El fichero skyny-v4.3.html no era accesible desde el entorno del agente.",
+      "outcome": "Diego aceptó conectar su Mac (solo lectura) y el agente copió el fichero."
+    },
+    {
+      "at": "2026-11-21T12:19:44Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "El v4.3 no encajaba con los módulos 3D",
+      "detail": "Gemini y ChatGPT reescribieron el motor entero (34 estados, complementos), así que ya no casaba con los módulos de three/.",
+      "outcome": "Se sustituyó el motor por el del v4.3 portado a TypeScript; subido a #351."
+    },
+    {
+      "at": "2026-11-21T13:27:35Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Skyny 3D demasiado azul en la web",
+      "detail": "Para los 12 estados de la web el 3D cogía el color del Skyny 2D, que en Reposo es el azul de acento (--primary).",
+      "outcome": "Los 34 estados usan los colores claros del estudio v4.3 en claro y oscuro; corregido en #351."
+    },
+    {
+      "at": "2026-11-21T14:26:06Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Letreros largos ilegibles en el visor",
+      "detail": "«NO MIRO, PROMETIDO» y «UPS, OTRA VEZ» enteros salían diminutos, y con las manos tapando los ojos no se leía nada.",
+      "outcome": "Enfoque cambiado: se teclean en dos trozos y Skyny se tapa los ojos después de decirlo."
+    },
+    {
+      "at": "2026-11-21T16:09:56Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Letreros lentos y giro invertido",
+      "detail": "El texto cruzaba el visor demasiado lento y al arrastrar a la derecha Skyny giraba a la izquierda.",
+      "outcome": "Más del doble de velocidad (SCROLL_SPEED) y giro corregido; en #351."
+    },
+    {
+      "at": "2026-11-21T20:10:47Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Fallos en el HTML de estados nuevos",
+      "detail": "El fichero nombrado no era el más reciente (se usó estudio_de_skyny_3d_completo_y_definitivo.html). Además «Bloqueado por seguridad» había perdido su configuración y «Conflicto de Git» dejaba a Skyny invisible por un NaN.",
+      "outcome": "Arreglados en la web; se guarda como skyny-v4.4.html y luego skyny-v4.4-corregido.html."
+    },
+    {
+      "at": "2026-11-21T23:43:34Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Skyny de la cortina no seguía al ratón",
+      "detail": "Solo miraba al ratón cuando pasaba cerca de su cara, a diferencia del login.",
+      "outcome": "Ahora sigue el ratón y el punto de clic por toda la pantalla; sin verificar con capturas."
+    },
+    {
+      "at": "2026-11-22T08:44:01Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "«SKYNET» cortaba la miga en el móvil",
+      "detail": "El texto «SKYNET» ocupa más que el logo y la miga se cortaba a «A…»; además los botones tapaban las migas.",
+      "outcome": "Los cuatro botones se pliegan tras «…» con animación lateral; en #351."
+    },
+    {
+      "at": "2026-11-22T11:23:33Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Sin acceso a la carpeta Descargas",
+      "detail": "El nuevo skyny-v4.4.html estaba en Downloads del Mac, fuera de la carpeta conectada.",
+      "outcome": "Diego pasó el fichero y se portó a #351."
+    },
+    {
+      "at": "2026-11-22T11:45:34Z",
+      "session_id": "session_01PyBwEXbBADKS5hr85yketR",
+      "pr": 351,
+      "what": "Skyny reaparecía tras la animación de salida",
+      "detail": "En el estudio original, al terminar la animación de salir Skyny volvía a aparecer.",
+      "outcome": "Corregido: se queda fuera hasta que vuelve a entrar."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-11-15T22:43:26Z",
+      "what": "Fusionar MV-C (#329) y continuar con MV-D",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-15T23:15:53Z",
+      "what": "Fusionar MV-D (#330) pese a los 6 avisos no bloqueantes de Sonar",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-15T23:17:26Z",
+      "what": "Seguir con MV-E, el curador de la memoria",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-15T23:44:14Z",
+      "what": "Fusionar MV-E (#331) y seguir con MV-F",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T00:07:12Z",
+      "what": "Fusionar MV-F API (#332) y seguir con las PRs web",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T07:07:41Z",
+      "what": "Fusionar MV-F entradas con confianza (#333) y continuar",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T07:20:22Z",
+      "what": "Fusionar MV-F wiki y curador en la web (#334), cerrando el hito MV",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T13:56:42Z",
+      "what": "Empezar el hito CH, chat con Skyny",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T14:03:17Z",
+      "what": "Dar por completado el hito MV y cerrar el hilo",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T14:05:38Z",
+      "what": "Aprobar el plan del hito CH, incluido que cada turno del chat sea un agent_run, y empezar con CH-A",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T14:30:31Z",
+      "what": "Fusionar CH-A (#341) y seguir",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T15:26:07Z",
+      "what": "Fusionar CH-B consultas (#342) y seguir con CH (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T18:32:21Z",
+      "what": "Fusionar CH-B acciones (#343) y seguir con CH-C",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T19:00:12Z",
+      "what": "Fusionar CH-C control plane (#344) con la CI en verde y seguir con la PR del runner (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T19:45:33Z",
+      "what": "Fusionar CH-C runner (#345) y seguir con CH-D",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T20:16:08Z",
+      "what": "Agrandar la cortina del chat a casi toda la web y que baje desde la barra superior",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T20:38:55Z",
+      "what": "Proponer agrupar en pestañas el menú lateral (Memoria: Resultados, Jueces, Lecciones, Aprobaciones; Agentes: Runners, Proveedores, Consumo), llevado a otro hilo",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-16T22:23:58Z",
+      "what": "Fusionar CH-D (#346) y seguir con CH-E",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-17T06:50:57Z",
+      "what": "Fusionar CH-E (#347) y seguir con CH-F (en el chat del proyecto)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-17T15:05:19Z",
+      "what": "Fusionar CH-F (#348), cerrando el hito CH",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-18T06:25:14Z",
+      "what": "Aprueba la propuesta del menú lateral con pestañas: Evaluaciones dentro de Memoria y pestañas empezando por Aprobaciones (PR #349).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-18T21:45:22Z",
+      "what": "Quitar el panel «Hola, soy Skyny» de Inicio dejando solo sus botones.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-19T23:18:16Z",
+      "what": "Barra superior a todo lo ancho con el logo a la izquierda; quitar el botón «Pregúntale a Skyny» y abrir la cortina al pulsar el logo.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-20T11:46:18Z",
+      "what": "Acuerda que las PRs solo de frontend lleven el prefijo «UI:» para que Hermes las despliegue automáticamente; renombrar la #349.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-20T12:36:22Z",
+      "what": "Pide que las PRs «UI:» de web no lancen las E2E largas (PR #350).",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-20T13:20:16Z",
+      "what": "Fusiona la PR #349.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-20T14:21:44Z",
+      "what": "Elige el boceto B del login (una columna) sin el círculo detrás de Skyny.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-20T17:42:49Z",
+      "what": "Aprueba meter en la #351 el arreglo del salto 2D→3D y la precarga de three.js, y pide más sitio para Skyny en el chat.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-21T12:14:32Z",
+      "what": "Incorporar el estudio v4.3 a la web y quitar los Skyny pequeños de las píldoras de estado, volviendo a los iconos de antes.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-21T12:20:39Z",
+      "what": "Elige en la tarjeta que el gorro, cara y espalda elegidos en Ajustes se apliquen en toda la web.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-21T14:02:12Z",
+      "what": "Login solo con «Entra en Skynet», Skyny saludando con HOLA y secuencia de letreros deslizantes; añadir boop y giro con mareo.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-21T14:13:33Z",
+      "what": "Aprueba la propuesta de letreros del login.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-22T08:33:03Z",
+      "what": "Quitar los Skyny 2D de la barra de navegación y poner «SKYNET» en texto arriba a la izquierda.",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-22T11:29:21Z",
+      "what": "Aprueba integrar la nueva v4.4 (entrar/salir en login, pulseEvent en vivo, microexpresiones) en la #351.",
+      "by": "Diego"
+    }
+  ],
+  "summary": {
+    "prompts": 56,
+    "sessions": 6,
+    "sessions_note": "sesiones con prompts o turnos esta semana: hilos de trabajo + coordinadores del chat del proyecto",
+    "windows_5h": {
+      "total": 16,
+      "per_day": {
+        "lunes": 3,
+        "martes": 2,
+        "miércoles": 2,
+        "jueves": 0,
+        "viernes": 4,
+        "sábado": 2,
+        "domingo": 2
+      },
+      "sparkline": {
+        "es": [
+          {
+            "d": "L",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "M",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "X",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "J",
+            "v": 0,
+            "on": 0
+          },
+          {
+            "d": "V",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "D",
+            "v": 2,
+            "on": 1
+          }
+        ],
+        "en": [
+          {
+            "d": "M",
+            "v": 3,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "W",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "T",
+            "v": 0,
+            "on": 0
+          },
+          {
+            "d": "F",
+            "v": 4,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          },
+          {
+            "d": "S",
+            "v": 2,
+            "on": 1
+          }
+        ],
+        "max": 4
+      },
+      "before_monday": {
+        "label": "domingo anterior, desde 15:59",
+        "windows": 1,
+        "prompts": 5,
+        "shared_with_previous_report": [
+          {
+            "start": {
+              "utc": "2026-11-15T14:00:00Z",
+              "madrid": "2026-11-15T15:00:00+01:00"
+            },
+            "end": {
+              "utc": "2026-11-15T19:00:00Z",
+              "madrid": "2026-11-15T20:00:00+01:00"
+            },
+            "prompts_in_this_report": 2
+          }
+        ],
+        "note": "ventanas del domingo anterior al lunes; cuentan en total pero no en per_day ni en sparkline. Las de shared_with_previous_report empezaron antes de --desde, ya están en el informe anterior y no se cuentan aquí"
+      },
+      "method": "una ventana por cada valor distinto de five_hour.resetsAt en los rate_limit_event; los prompts que no caen en ninguna se agrupan en ventanas inferidas desde su hora en punto"
+    },
+    "prompts_per_window": 3.5,
+    "first_timestamp": {
+      "utc": "2026-11-15T16:15:08Z",
+      "madrid": "2026-11-15T17:15:08+01:00"
+    },
+    "last_timestamp": {
+      "utc": "2026-11-22T15:07:50Z",
+      "madrid": "2026-11-22T16:07:50+01:00"
+    },
+    "days_without_activity": [
+      "jueves"
+    ],
+    "days_not_yet_elapsed": [],
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": true,
+      "seven_day_utilization_max": 0.79,
+      "statuses_seen": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "periods": [
+        {
+          "resets_at": {
+            "utc": "2026-11-21T20:00:00Z",
+            "madrid": "2026-11-21T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.79,
+          "statuses_seen": [
+            "allowed_warning"
+          ],
+          "warning": true,
+          "exhausted": false,
+          "events_from": "2026-11-15T15:00:48.264763Z",
+          "events_to": "2026-11-21T19:58:12.796055Z"
+        },
+        {
+          "resets_at": {
+            "utc": "2026-11-28T20:00:00Z",
+            "madrid": "2026-11-28T21:00:00+01:00"
+          },
+          "seven_day_utilization_max": 0.07,
+          "statuses_seen": [],
+          "warning": false,
+          "exhausted": false,
+          "events_from": "2026-11-21T20:01:45.565219Z",
+          "events_to": "2026-11-22T15:08:02.352116Z"
+        }
+      ],
+      "overage_used": false,
+      "five_hour_limit_reached": [],
+      "note": "allowed_warning = aviso de uso alto, no agotada; exhausted solo si el límite semanal llegó al 100 % o lo rechazó. Los rechazos del límite de 5 h van en five_hour_limit_reached"
+    },
+    "prs_merged": 16,
+    "prs_merged_by_repo": {
+      "guilu/skynet": 16
+    },
+    "prs_open": 1,
+    "prs_cumulative_skynet": 185,
+    "lines": {
+      "added": 15721,
+      "removed": 1188,
+      "files_changed_net": {
+        "files": 168,
+        "added": 15552,
+        "removed": 1019,
+        "note": "git diff de main del domingo 15 a las 14:59 UTC (af57074, tras la #328) → main del domingo 22 (3eafcde, tras la #349) (cuenta los ficheros, no la suma por PR)"
+      }
+    },
+    "flyway_migrations": {
+      "range": "V58 → V66",
+      "added": [
+        "V58__wiki_page.sql",
+        "V59__memory_access_wiki.sql",
+        "V60__memory_curation.sql",
+        "V61__memory_access_observation.sql",
+        "V62__conversation.sql",
+        "V63__conversation_token.sql",
+        "V64__conversation_action.sql",
+        "V65__chat_turn.sql",
+        "V66__chat_summary.sql"
+      ],
+      "engine": "Flyway / PostgreSQL"
+    },
+    "issues_closed": 11,
+    "milestones_closed": null,
+    "deploys_to_production": null,
+    "cost_usd_week_estimate": 173.56
+  },
+  "windows_5h": [
+    {
+      "start": {
+        "utc": "2026-11-15T14:00:00Z",
+        "madrid": "2026-11-15T15:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-15T19:00:00Z",
+        "madrid": "2026-11-15T20:00:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 2,
+      "utilization_5h_max": 0.75,
+      "utilization_7d_max": 0.31,
+      "status": [
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEV4XMtog2wZp2cTZ5T",
+        "session_01PyBwEXj1CMfvEabRmcoqua"
+      ],
+      "source": "rate_limit_event",
+      "shared_with_previous_report": true
+    },
+    {
+      "start": {
+        "utc": "2026-11-15T22:40:00Z",
+        "madrid": "2026-11-15T23:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-16T03:40:00Z",
+        "madrid": "2026-11-16T04:40:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 5,
+      "utilization_5h_max": 0.53,
+      "utilization_7d_max": 0.38,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXj1CMfvEabRmcoqua"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": true
+    },
+    {
+      "start": {
+        "utc": "2026-11-16T07:00:00Z",
+        "madrid": "2026-11-16T08:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-16T12:00:00Z",
+        "madrid": "2026-11-16T13:00:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 3,
+      "utilization_5h_max": 0.14,
+      "utilization_7d_max": 0.4,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXj1CMfvEabRmcoqua",
+        "session_01PyBwEY4cuegSdJEbWySjXa"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-16T13:50:00Z",
+        "madrid": "2026-11-16T14:50:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-16T18:50:00Z",
+        "madrid": "2026-11-16T19:50:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 6,
+      "utilization_5h_max": 0.71,
+      "utilization_7d_max": 0.49,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHeCowhX4wb1ab5xW",
+        "session_01PyBwEXj1CMfvEabRmcoqua",
+        "session_01PyBwEY4cuegSdJEbWySjXa"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-16T18:50:00Z",
+        "madrid": "2026-11-16T19:50:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-16T23:50:00Z",
+        "madrid": "2026-11-17T00:50:00+01:00"
+      },
+      "weekday": "lunes",
+      "prompts": 5,
+      "utilization_5h_max": 0.56,
+      "utilization_7d_max": 0.57,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXHeCowhX4wb1ab5xW",
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-17T06:50:00Z",
+        "madrid": "2026-11-17T07:50:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-17T11:50:00Z",
+        "madrid": "2026-11-17T12:50:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 1,
+      "utilization_5h_max": 0.12,
+      "utilization_7d_max": 0.58,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHeCowhX4wb1ab5xW"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-17T15:00:00Z",
+        "madrid": "2026-11-17T16:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-17T20:00:00Z",
+        "madrid": "2026-11-17T21:00:00+01:00"
+      },
+      "weekday": "martes",
+      "prompts": 1,
+      "utilization_5h_max": 0.06,
+      "utilization_7d_max": 0.59,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXHeCowhX4wb1ab5xW"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-18T06:20:00Z",
+        "madrid": "2026-11-18T07:20:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-18T11:20:00Z",
+        "madrid": "2026-11-18T12:20:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 1,
+      "utilization_5h_max": 0.12,
+      "utilization_7d_max": 0.61,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-18T18:10:00Z",
+        "madrid": "2026-11-18T19:10:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-18T23:10:00Z",
+        "madrid": "2026-11-19T00:10:00+01:00"
+      },
+      "weekday": "miércoles",
+      "prompts": 3,
+      "utilization_5h_max": 0.2,
+      "utilization_7d_max": 0.63,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-19T23:10:00Z",
+        "madrid": "2026-11-20T00:10:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-20T04:10:00Z",
+        "madrid": "2026-11-20T05:10:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 1,
+      "utilization_5h_max": 0.08,
+      "utilization_7d_max": 0.65,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-20T06:40:00Z",
+        "madrid": "2026-11-20T07:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-20T11:40:00Z",
+        "madrid": "2026-11-20T12:40:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 3,
+      "utilization_5h_max": 0.18,
+      "utilization_7d_max": 0.67,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-20T11:40:00Z",
+        "madrid": "2026-11-20T12:40:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-20T16:40:00Z",
+        "madrid": "2026-11-20T17:40:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 7,
+      "utilization_5h_max": 0.25,
+      "utilization_7d_max": 0.7,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-20T17:30:00Z",
+        "madrid": "2026-11-20T18:30:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-20T22:30:00Z",
+        "madrid": "2026-11-20T23:30:00+01:00"
+      },
+      "weekday": "viernes",
+      "prompts": 2,
+      "utilization_5h_max": 0.09,
+      "utilization_7d_max": 0.71,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-21T12:10:00Z",
+        "madrid": "2026-11-21T13:10:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-21T17:10:00Z",
+        "madrid": "2026-11-21T18:10:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 7,
+      "utilization_5h_max": 0.48,
+      "utilization_7d_max": 0.78,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-21T19:50:00Z",
+        "madrid": "2026-11-21T20:50:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-22T00:50:00Z",
+        "madrid": "2026-11-22T01:50:00+01:00"
+      },
+      "weekday": "sábado",
+      "prompts": 3,
+      "utilization_5h_max": 0.27,
+      "utilization_7d_max": 0.79,
+      "status": [
+        "allowed",
+        "allowed_warning"
+      ],
+      "sessions": [
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-22T08:30:00Z",
+        "madrid": "2026-11-22T09:30:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-22T13:30:00Z",
+        "madrid": "2026-11-22T14:30:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 5,
+      "utilization_5h_max": 0.33,
+      "utilization_7d_max": 0.06,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEWnX1jTZqrDTkisNMW",
+        "session_01PyBwEXbBADKS5hr85yketR"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    },
+    {
+      "start": {
+        "utc": "2026-11-22T15:00:00Z",
+        "madrid": "2026-11-22T16:00:00+01:00"
+      },
+      "end": {
+        "utc": "2026-11-22T20:00:00Z",
+        "madrid": "2026-11-22T21:00:00+01:00"
+      },
+      "weekday": "domingo",
+      "prompts": 1,
+      "utilization_5h_max": 0.01,
+      "utilization_7d_max": 0.07,
+      "status": [
+        "allowed"
+      ],
+      "sessions": [
+        "session_01PyBwEWnX1jTZqrDTkisNMW"
+      ],
+      "source": "rate_limit_event",
+      "before_monday": false
+    }
+  ],
+  "unavailable": [
+    {
+      "item": "skills_used",
+      "why": "Los registros a los que llego no listan las herramientas ni las skills invocadas por turno."
+    },
+    {
+      "item": "deploys_to_production",
+      "why": "No hay despliegues registrados en estas sesiones; Hermes despliega y prueba en omarchy fuera de ellas."
+    },
+    {
+      "item": "engram",
+      "why": "Las sesiones en la nube no usan Engram; las decisiones y callejones están en dead_ends y decisions."
+    },
+    {
+      "item": "periodo ampliado",
+      "why": "El informe empieza el domingo 15 a las 14:59 UTC, donde terminó el de la semana anterior."
+    },
+    {
+      "item": "coordinadores sin localizar",
+      "why": "Solo se localizan los coordinadores que aparecen como padre de un hilo y el actual. Del lunes 16 a las 14:41 UTC al domingo 22 a las 08:33 UTC el chat lo atendieron coordinadores sin localizar; su uso y coste no están. Dos «Fusiona y seguimos» del chat (lunes 16 a las 19:00 UTC y martes 17 a las 06:50 UTC) quedan sin sesión."
+    },
+    {
+      "item": "milestones_closed",
+      "why": "No hay herramienta para leer el estado de los milestones; ver milestones_note."
+    },
+    {
+      "item": "Codex",
+      "why": "Codex generó en el Mac de Diego las versiones del estudio de Skyny 3D (v4.4) que el hilo de frontend portó; su uso lo cubre el recap de Codex."
+    },
+    {
+      "item": "uso de esta sesión",
+      "why": "La sesión que genera el fichero no se incluye en los totales."
+    },
+    {
+      "item": "lo posterior a la hora de generación",
+      "why": "El informe se generó el domingo 22 por la tarde a petición de Diego; la #351 sigue abierta."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-11-16 (Europe/Madrid) · desde 2026-11-15 15:59\n\n## skynet\n\n- 2026-11-15 17:15 · Diseñar la memoria de proyectos de Skynet · https://github.com/guilu/skynet/runs/132802023903 ahí está el detalle de las violaciones de quality gate\n- 2026-11-15 19:03 · Diseñar la memoria de proyectos de Skynet · A ver si llegan te copio las líneas:   ANNOTATIONS   Check failure on line 193 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Define a constant instead of duplicating this literal \"version\" 3 times. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5p&open=AaHfCC7IMioAmihIzS5p&pullRequest=329  Check failure on line 291 in control-plane/src/main/java/dev/skynet/controlplane/workflow/WikiWriter.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Refactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC1VMioAmihIzS5n&open=AaHfCC1VMioAmihIzS5n&pullRequest=329  Check warning on line 12 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiController.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Complete the task associated to this TODO comment. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7GMioAmihIzS5o&open=AaHfCC7GMioAmihIzS5o&pullRequest=329  Check warning on line 36 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Refactor this repetition that can lead to a stack overflow for large inputs. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5u&open=AaHfCC7IMioAmihIzS5u&pullRequest=329  Check failure on line 477 in control-plane/src/main/java/dev/skynet/controlplane/workflow/WikiWriter.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Use already-defined constant 'DECISIONS' instead of duplicating its value here. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC1VMioAmihIzS5m&open=AaHfCC1VMioAmihIzS5m&pullRequest=329  Check warning on line 24 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Complete the task associated to this TODO comment. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5t&open=AaHfCC7IMioAmihIzS5t&pullRequest=329  Check failure on line 192 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Define a constant instead of duplicating this literal \"origin\" 3 times. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5r&open=AaHfCC7IMioAmihIzS5r&pullRequest=329  Check failure on line 191 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Define a constant instead of duplicating this literal \"title\" 3 times. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5s&open=AaHfCC7IMioAmihIzS5s&pullRequest=329  Check warning on line 176 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Complete the task associated to this TODO comment. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5v&open=AaHfCC7IMioAmihIzS5v&pullRequest=329  Check failure on line 194 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Define a constant instead of duplicating this literal \"sources\" 3 times. See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5q&open=AaHfCC7IMioAmihIzS5q&pullRequest=329  Check warning on line 264 in control-plane/src/main/java/dev/skynet/controlplane/memory/WikiPages.java    @sonarqubecloud sonarqubecloud / SonarCloud Code Analysis  Remove this unused method parameter \"n\". See more on https://sonarcloud.io/project/issues?id=guilu_skynet&issues=AaHfCC7IMioAmihIzS5w&open=AaHfCC7IMioAmihIzS5w&pullRequest=329 View more details on SonarQubeCloud\n- 2026-11-15 23:43 · Diseñar la memoria de proyectos de Skynet · Fusiona y continúa\n- 2026-11-16 00:15 · Diseñar la memoria de proyectos de Skynet · Fusiona\n- 2026-11-16 00:17 · Diseñar la memoria de proyectos de Skynet · Sigue\n- 2026-11-16 00:44 · Diseñar la memoria de proyectos de Skynet · Fusiona y sigue\n- 2026-11-16 01:07 · Diseñar la memoria de proyectos de Skynet · Fusiona y sigue\n- 2026-11-16 08:07 · Diseñar la memoria de proyectos de Skynet · fusiona y continua\n- 2026-11-16 08:20 · Diseñar la memoria de proyectos de Skynet · fusionia y sigue\n- 2026-11-16 08:53 · Diseñar la memoria de proyectos de Skynet · revisa porque la issue MV-A sigue abierta\n- 2026-11-16 14:56 · Implementar el hito CH, chat con Skyny · Vamos a empezar con el Hito CH\n- 2026-11-16 15:03 · Diseñar la memoria de proyectos de Skynet · el hito MV está completado, completa el hilo\n- 2026-11-16 15:05 · Implementar el hito CH, chat con Skyny · Me parece bien el cambio propuesto, vamos a empezar con CH-A\n- 2026-11-16 15:30 · Implementar el hito CH, chat con Skyny · fusiona y seguimos\n- 2026-11-16 16:26 · Chat del proyecto · Fusiona y seguimos\n- 2026-11-16 19:32 · Implementar el hito CH, chat con Skyny · fusiona y seguimos\n- 2026-11-16 20:00 · Chat del proyecto · Fusiona y seguimos\n- 2026-11-16 20:45 · Implementar el hito CH, chat con Skyny · fusiona y seguimos\n- 2026-11-16 21:16 · Implementar el hito CH, chat con Skyny · vamos a hacer que la cortina mas grande, que ocupe casi la totalidad de la superficie de la web, tanto en escritorio como en movil.  Por otro lado, baja desde el top de la página cuando debería bajar desde el bottom de la barra de navegación superior.\n- 2026-11-16 21:38 · Implementar el hito CH, chat con Skyny · En la versión web hay tantos menus ahora que hay scroll en el panel lateral izquierdo, tal vez se pueden juntar en una página Resultados,Jueces Lecciones y aprobaciones, ya que todas están relacionados con la Memoria, quizás poniendo tabs en una página.  Lo mismo con Runners, Proveedores y Consumo todos ellos como tabs en un Menu \"Agentes\"\n- 2026-11-16 23:23 · Implementar el hito CH, chat con Skyny · fusiona y sigue\n- 2026-11-17 07:50 · Chat del proyecto · Fusiona y seguimos\n- 2026-11-17 16:05 · Implementar el hito CH, chat con Skyny · fusiona\n- 2026-11-18 07:25 · Hacer pequeños cambios rápidos en el frontend · Mete Evaluaciones en Memoria también y empieza por Aprobaciones\n- 2026-11-18 19:10 · Hacer pequeños cambios rápidos en el frontend · La cortina está bastante bien, haz que se vea el borde de la barra de navegación superior.  y en \"Pregunta a Skyny\" el rectangulo redondeado es demasiado estrecho, dale un poco de padding para que la figura de skyny y los textos respiren un poco como está el de al lado \"Buscar ejecución trabajo o runner\"\n- 2026-11-18 19:18 · Hacer pequeños cambios rápidos en el frontend · Estos 2 indicadores hay que juntarlos en 1 solo cuadrado, 1 indicador verde amarillo para runners y 1 indicador para control plane. Resume la info  si ves que no caben  () 1 runner en linea      0 agentes - 1 sin latido () CP disponible\n- 2026-11-18 22:45 · Hacer pequeños cambios rápidos en el frontend · La animación de la cortina parece bajar a partir de la barra de navegación superior y hace un efecto raro… debe ser como una cortina que está por debajo (z-index) y que al clickar el botón sale desde detrás y baja suavemente hacia abajo.  Adjunto vídeo de cómo se ve la animación de la cortina en móvil. Y en la foto se ve que en aparece skyny demasiado, 2 veces en la barra de navegación superior y otra vez en el panel de “Hola soy skyny” podemos quitar el panel dejando sus botones de lanzar un workflow y ver las ejecuciones\n- 2026-11-20 00:18 · Hacer pequeños cambios rápidos en el frontend · Quiero cambiar la barra de navegación superior para que ocupe toda el ancho de la página y el menú lateral izquierdo esté debajo. Así el logotipo de skynet en lugar de estar en la parte superior del menú lateral, este en la parte izquierda de la barra de navegación superior. Quitar el botón de pregunta a skyny y que la acción de bajar la cortina se produzca cuando clicas en ese logotipo de skyny que hemos dejado arriba a la izquierda de la barra de navegación. Y que al pasar el ratón por encima aparezca el tooltip con el mensaje que hemos quitado “pregúntale a skyny” y el atajo de teclado que saca la cortina\n- 2026-11-20 08:24 · Hacer pequeños cambios rápidos en el frontend · vamos a rediseñar la pagina de Actividad, las filas están metidas en un panel, que tiene scroll, además el panel no toda la pagina y queda espacio abajo de la página, podemos quitar el panel y hacer una paginación, O podemos hacer scroll infinito.... primero lleenar la pagina y cuando se vaya llegando al fin mostrar otros 50 por ejemplo y así... En las filas que haya unas cabeceras para saber que campo es el que se está mostrando. La fecha de la primera columna no tiene el día. Poner Dia y hora en formato dd/mm/YYYY hh24:mm:ss El texto de las filas es pequeño y no se ve bien, hacer más grande\n- 2026-11-20 08:28 · Hacer pequeños cambios rápidos en el frontend · en movil los filtros se amontonan, puedes poner en un boton que diga \"Filtrar\" con un simbolo de filtrar y que al pinchar saque los filtros en un panel auxiliar inferiror como sale el panel de crear nuevo proyecto.\n- 2026-11-20 09:19 · Hacer pequeños cambios rápidos en el frontend · Rediseño de la lista de proyectos en la pagina web. Vamos a hacer que sean tambien tarjetas, pueden ser tarjetas anchas como la lista de trabajos, y que muestren la información más relevante de los proyectos, trabajos, ejecuciones, PRs, Aprobaciones, en pequeñas bullets\n- 2026-11-20 12:46 · Hacer pequeños cambios rápidos en el frontend · hermes no despliegua automáticamente estas PR que son solo de frontend porque en el titulo no lleva codigo de fase, así que ahora hemos acordado que una PR con titulo empieze por \"UI:\" la va a desplegar automáticamente, cambia el titulo de la PR 349 y ponle el prefijo UI:\n- 2026-11-20 13:14 · Hacer pequeños cambios rápidos en el frontend · en las páginas en las que la el tamaño del contenido no es suficientemente alto, si hago scroll aparece la barra de scroll y hace un poco de scroll que no entiendo porque....\n- 2026-11-20 13:20 · Hacer pequeños cambios rápidos en el frontend · rediseña la pagina de runners en web, para que la lista sea una lista de tarjetas anchas como en proyectos. Y mejora la manera de mostar las versiones, con pills o chips\n- 2026-11-20 13:36 · Hacer pequeños cambios rápidos en el frontend · estas PRs de solo FrontEnd relanzan en github todos los checks E2E que tardan la vida... cuando no se ha tocado nada de eso... Podemos hacer que las PRs de web que empiecen por UI: no lancen los CIs de E2E tan largos?\n- 2026-11-20 14:20 · Hacer pequeños cambios rápidos en el frontend · He fusionado la 349 para que las proximas PRs que sean solo de UI, le pongamos UI: en el titulo y luego no ejecuten los ci largos de E2E\n- 2026-11-20 14:26 · Hacer pequeños cambios rápidos en el frontend · vamos a rediseñar el login para que el formulario no esté en un cuadrado... que sea más fluido y el skyny sea más grande. Haz unos bocetos a ver cual me gusta más\n- 2026-11-20 15:21 · Hacer pequeños cambios rápidos en el frontend · Me gusta la 2 que es más limpia quita el círculo detrás de skyny\n- 2026-11-20 18:38 · Hacer pequeños cambios rápidos en el frontend · Tanto en el login como en la cortina de chat skyny primero se ve en 2d y luego cambia a 3D… porque pasa eso?\n- 2026-11-20 18:42 · Hacer pequeños cambios rápidos en el frontend · Vale, ademas en el chat el espacio que tiene skyny es pequeño, cuando una animación tiene algún complemento o salen globos etc no caben…\n- 2026-11-21 13:14 · Hacer pequeños cambios rápidos en el frontend · tengo un nuevo. estudio que voy actualizando con gemini y chatgpt, el fichero es /Users/diegobarrioh/Documents/ChatGPT/skynet/skyny-v4.3.html quiero incorporarlo a la web. para que apareza en la cortina del chat. Y quiero quitar todos los skyny pequeñitos que salen en los chips de completado,fallido, etc de las paginas de workflows y activad, dejar los iconos que había antes... (es demasíado repetitivo tanto skyny por todas partes). Pero si que quiero que todos los estados de Ajustes - Companion se vean como en el estudio 3d, también hay complementos de sombrero, de cara, espalda, que todo eso se vea en la pagina de ajustes, la he implementado responsive para que se pueda ver en movil correctamente\n- 2026-11-21 14:24 · Hacer pequeños cambios rápidos en el frontend · porque se ve el color de skyny tan azul?  en el estudio es mucho más clarito\n- 2026-11-21 14:53 · Hacer pequeños cambios rápidos en el frontend · que tengo que hacer cuando añada estados nuevos al fichero autocontenido skyny-v4.3.html o cuando cree una versión nueva 4.4?\n- 2026-11-21 14:55 · Hacer pequeños cambios rápidos en el frontend · Ahora skyny en el login se ve bien. Pero sigue sin convencerme los 3 chips y las copys \"Hola de nuevo\", \"Entra para ver en que andan tus agentes\". Vamos a hacer un brainstorming para cambiar el login\n- 2026-11-21 15:02 · Hacer pequeños cambios rápidos en el frontend · Oh, me gusta, simplement \"Entra en Skynet\" y que Skyny salude con HOLA en su pantalla, también podríamos poner una secuencia de mensajes... en textos que deslicen en la pantalla de skyny de derecha a izquierda! mientras skyny hace sus animaciones de idle, dime a ver que textos podríamos poner  Ah! y en el studio 3D cuando haces click en skyny hace micro-expresiones, y puedes moverlo con el raton y haces que se maree, etc. eso se puede poner?\n- 2026-11-21 15:13 · Hacer pequeños cambios rápidos en el frontend · Adelante con la propuesta\n- 2026-11-21 17:09 · Hacer pequeños cambios rápidos en el frontend · Es texto se desplaza por el visor de skyny demasiado lento, como podríamos hacer que pase a una velocidad de lectura normal? Y cuando tocas la pantalla o haces clico con el ratón skyny se mueve al revés si muevo a la derecha skyny se gira  a la izquierda\n- 2026-11-21 20:54 · Hacer pequeños cambios rápidos en el frontend · hemos añadido varios estados más al fichero /Users/diegobarrioh/Documents/ChatGPT/skyny-v4.3.html puedes añadirlos?\n- 2026-11-21 23:35 · Hacer pequeños cambios rápidos en el frontend · El skyny de la cortina tambien quiero que haga como,el del Longinos y se pueda mover con le ratón y tocando…\n- 2026-11-22 00:41 · Hacer pequeños cambios rápidos en el frontend · Ahora en la cortina del chat skyny si se mueve pero no sigue al ratón como si que lo hace en el login cuando hago clic o toco la pantalla\n- 2026-11-22 09:33 · Hacer pequeños cambios rápidos en el frontend · Vamos a quitar los skyny 2D que aparecen en la barra de navegación y en el buscador… en el título superior izquierdo en lugar del logo vamos a poner SKYNET y en los demás podemos dejar el icono que le corresponda\n- 2026-11-22 09:54 · Hacer pequeños cambios rápidos en el frontend · Donde está el fichero skyny-v4.4.html que quiero descargarlo y pasárselo a Gemini y ChatGPT\n- 2026-11-22 10:03 · Hacer pequeños cambios rápidos en el frontend · En móvil la barra de navegación los botones tapan los breadcrums, colapsa los 4 botones a la izquierda del botón de usuario y deja un icono de […] cuando pinchemos en el icono […] aparecen los 4 botones con una animación de desplazamiento horizontal\n- 2026-11-22 12:13 · Hacer pequeños cambios rápidos en el frontend · hemos actualizado el estudio 3D de skyny a  /Users/diegobarrioh/Downloads/ChatGPT/skyny-v4.4.html con microexpresiones y animaciones de entrar y salir del escenario. Las animaciones de entrar y salir las podemos poner en el Login... y ademas ha añadido: Modo \"Reacción al Vivo\" (Event-Driven Pulses sin cambiar de estado):  * Un método `skyny.pulseEvent(type)` que puedas llamar desde tus WebSockets / SSE de `EventStore` cada vez que llega un evento del `StreamParser`:    * `tool_call`: un pequeño destello en el visor y un asentimiento rápido de cabeza.    * `file_edited`: una chispa salta hacia arriba sin interrumpir la animación actual.    * `token_tick`: el brillo inferior (`glowLight`) late suavemente con cada lote de tokens consumidos.  como podemos integrar esto en la web?\n- 2026-11-22 12:29 · Hacer pequeños cambios rápidos en el frontend · venga, vamos a ponerlo\n- 2026-11-22 16:07 · Chat del proyecto · Genera el recap de la semana\n\n## Summary\n\n- prompts: 56\n- sesiones: 6\n- ventanas de 5 h: 16 (domingo anterior 1, lunes 3, martes 2, miércoles 2, jueves 0, viernes 4, sábado 2, domingo 2)\n- primera marca: 2026-11-15T17:15:08+01:00 · última: 2026-11-22T16:07:50+01:00\n- días sin actividad: jueves\n- cuota semanal agotada: no (con aviso de uso alto); periodo hasta 2026-11-21T21:00:00+01:00: uso máx. 0.79; periodo hasta 2026-11-28T21:00:00+01:00: uso máx. 0.07\n- límite de 5 h alcanzado: no\n- PRs fusionadas: 16 · +15721 / -1188 líneas"
+}
