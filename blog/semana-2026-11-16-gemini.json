@@ -1,0 +1,232 @@
+{
+  "schema": "recap-week/1",
+  "generated_at": {
+    "utc": "2026-11-22T16:35:00Z",
+    "madrid": "2026-11-22T17:35:00+01:00"
+  },
+  "week": {
+    "monday": "2026-11-16",
+    "yyyymmdd": "20261116",
+    "timezone": "Europe/Madrid",
+    "start": {
+      "utc": "2026-11-15T23:00:00Z",
+      "madrid": "2026-11-16T00:00:00+01:00"
+    },
+    "end_exclusive": {
+      "utc": "2026-11-22T23:00:00Z",
+      "madrid": "2026-11-23T00:00:00+01:00"
+    },
+    "covered_until": {
+      "utc": "2026-11-22T16:35:00Z",
+      "madrid": "2026-11-22T17:35:00+01:00"
+    },
+    "complete": false,
+    "start_effective": {
+      "utc": "2026-11-15T15:00:00Z",
+      "madrid": "2026-11-15T16:00:00+01:00"
+    },
+    "start_note": "Ventana alineada con el corte semanal de Claude (domingo 15 a domingo 22 de noviembre de 2026)."
+  },
+  "sources": {
+    "conversations": "Historial de conversaciones de Gemini (15 al 22 de noviembre de 2026)",
+    "telemetry": "Estimación de volumen de tokens y sesiones (sin telemetría interna de facturación o rate-limits en la interfaz web/app de Gemini)"
+  },
+  "projects": [
+    {
+      "key": "skynet",
+      "repo": "guilu/skynet",
+      "surface": "Gemini (web / app, suscripción Google AI Pro)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-11-21T11:30:00Z",
+            "madrid": "2026-11-21T12:30:00+01:00"
+          },
+          "session_id": "gemini_ses_skyny_3d_v4_3",
+          "thread": "Estudio 3D de Skyny v4.3 (Three.js)",
+          "text": "Iteración sobre el estudio 3D autocontenido skyny-v4.3.html: ampliación a 34 estados de animación y accesorios configurables (gorro, cara y espalda) para exportar posteriormente a Claude/Skynet web."
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T09:15:00Z",
+            "madrid": "2026-11-22T10:15:00+01:00"
+          },
+          "session_id": "gemini_ses_skyny_3d_v4_4",
+          "thread": "Evolución estudio 3D Skyny v4.4: microexpresiones, entrada/salida y pulseEvent",
+          "text": "Actualización del estudio 3D a skyny-v4.4.html incorporando animaciones de entrada y salida de escenario para el Login, microexpresiones interactivas y el modo Reacción al Vivo (skyny.pulseEvent para tool_call, file_edited y token_tick)."
+        }
+      ]
+    },
+    {
+      "key": "dbhlabs",
+      "repo": null,
+      "surface": "Gemini (web / app, suscripción Google AI Pro)",
+      "prompts": [
+        {
+          "at": {
+            "utc": "2026-11-18T17:00:00Z",
+            "madrid": "2026-11-18T18:00:00+01:00"
+          },
+          "session_id": "gemini_ses_dbhlabs_agents",
+          "thread": "Arquitectura de agentes autónomos DBHLABS",
+          "text": "Diseño y revisión de patrones de orquestación y flujos multi-agente para el laboratorio DBHLABS."
+        },
+        {
+          "at": {
+            "utc": "2026-11-22T14:30:00Z",
+            "madrid": "2026-11-22T15:30:00+01:00"
+          },
+          "session_id": "gemini_ses_weekly_stats_skill",
+          "thread": "Creación y ajuste de la skill gemini-weekly-stats",
+          "text": "Creación y refinamiento de la skill gemini-weekly-stats: disparador 'genera el recap de la semana', año 2026, filtrado estricto para omitir proyectos sin sesiones (como akadem.ia o ExoDrill Escape) y adaptación al esquema recap-week/1."
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "gemini_ses_skyny_3d_v4_3",
+      "kind": "hilo",
+      "title": "Estudio 3D de Skyny v4.3 (Three.js)",
+      "model": "gemini-pro",
+      "status": "completada",
+      "usage_this_week": {
+        "cost_usd": 0.0,
+        "api_equivalent_usd_estimate": 0.42,
+        "input_tokens_estimate": 38000,
+        "output_tokens_estimate": 16000,
+        "note": "Cubierto por tarifa plana Google AI Pro; tokens estimados."
+      },
+      "notes": [
+        "Generación de variantes y estados 3D en skyny-v4.3.html portados después en la PR #351 de Skynet."
+      ]
+    },
+    {
+      "session_id": "gemini_ses_skyny_3d_v4_4",
+      "kind": "hilo",
+      "title": "Estudio 3D de Skyny v4.4 (microexpresiones y Reacción al Vivo)",
+      "model": "gemini-pro",
+      "status": "completada",
+      "usage_this_week": {
+        "cost_usd": 0.0,
+        "api_equivalent_usd_estimate": 0.48,
+        "input_tokens_estimate": 42000,
+        "output_tokens_estimate": 18000,
+        "note": "Cubierto por tarifa plana Google AI Pro; tokens estimados."
+      },
+      "notes": [
+        "Diseño de pulseEvent(type) para eventos SSE/WebSocket (tool_call, file_edited, token_tick) y animaciones de entrada/salida."
+      ]
+    },
+    {
+      "session_id": "gemini_ses_dbhlabs_agents",
+      "kind": "hilo",
+      "title": "Arquitectura de agentes autónomos DBHLABS",
+      "model": "gemini-pro",
+      "status": "completada",
+      "usage_this_week": {
+        "cost_usd": 0.0,
+        "api_equivalent_usd_estimate": 0.21,
+        "input_tokens_estimate": 18000,
+        "output_tokens_estimate": 7000
+      },
+      "notes": [
+        "Sesiones de diseño sobre coordinación multi-agente en DBHLABS."
+      ]
+    },
+    {
+      "session_id": "gemini_ses_weekly_stats_skill",
+      "kind": "hilo",
+      "title": "Automatización y reglas de gemini-weekly-stats",
+      "model": "gemini-pro",
+      "status": "activa",
+      "usage_this_week": {
+        "cost_usd": 0.0,
+        "api_equivalent_usd_estimate": 0.14,
+        "input_tokens_estimate": 12000,
+        "output_tokens_estimate": 5000
+      },
+      "notes": [
+        "Configuración de la skill dominical y adaptación al esquema recap-week/1."
+      ]
+    }
+  ],
+  "dead_ends": [
+    {
+      "at": "2026-11-21T20:10:00Z",
+      "session_id": "gemini_ses_skyny_3d_v4_3",
+      "pr": 351,
+      "what": "Incompatibilidades al portar HTML autocontenido v4.3/v4.4 a los módulos TypeScript de Skynet",
+      "detail": "La reescritura completa del estudio 3D (34 estados y complementos) rompió la compatibilidad directa con los módulos three/ existentes y provocó un NaN en el estado 'Conflicto de Git' y reaparición tras salir de escena.",
+      "outcome": "Se consolidó la versión corregida skyny-v4.4.html y se portó como motor completo a TypeScript en la PR #351."
+    },
+    {
+      "at": "2026-11-22T14:45:00Z",
+      "session_id": "gemini_ses_weekly_stats_skill",
+      "pr": null,
+      "what": "Inclusión de proyectos sin sesiones activas en el borrador inicial de la skill",
+      "detail": "El borrador inicial mencionaba proyectos recurrentes (como akadem.ia o ExoDrill Escape) aunque no hubieran tenido actividad esa semana.",
+      "outcome": "Regla estricta añadida: solo se reportan proyectos con sesiones reales en el periodo."
+    }
+  ],
+  "decisions": [
+    {
+      "at": "2026-11-22T10:15:00Z",
+      "what": "Incorporar skyny.pulseEvent(type) (tool_call, file_edited, token_tick) y animaciones de entrada/salida en el estudio 3D v4.4 de Skyny",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-22T15:10:00Z",
+      "what": "Definir 'genera el recap de la semana' como frase disparadora de la skill gemini-weekly-stats",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-22T15:20:00Z",
+      "what": "Exclusión estricta de proyectos sin actividad semanal (no mostrar bloques de akadem.ia, ExoDrill Escape, etc. si no hubo sesiones)",
+      "by": "Diego"
+    },
+    {
+      "at": "2026-11-22T17:35:00Z",
+      "what": "Unificar la salida de Gemini con el esquema JSON recap-week/1 utilizado en Claude",
+      "by": "Diego"
+    }
+  ],
+  "summary": {
+    "prompts": null,
+    "prompts_note": "Gemini no expone el contador exacto de turnos individuales en el resumen histórico; se registran 6 sesiones de trabajo consolidadas.",
+    "sessions": 6,
+    "sessions_note": "6 sesiones de trabajo registradas entre el 15 y el 22 de noviembre de 2026.",
+    "tokens_estimate": {
+      "input": 110000,
+      "output": 46000,
+      "total": 156000
+    },
+    "weekly_quota": {
+      "exhausted": false,
+      "warning": false,
+      "rate_limits_hit": 0,
+      "subscription": "Google AI Pro (tarifa plana)"
+    },
+    "cost_usd_week_estimate": 0.0,
+    "api_equivalent_usd_estimate": 1.25
+  },
+  "unavailable": [
+    {
+      "item": "windows_5h y rate_limit_event",
+      "why": "A diferencia de Claude Code/Cloud, Gemini web/app no expone eventos rate_limit_event con resetsAt ni porcentajes de utilización por ventana de 5 horas o 7 días."
+    },
+    {
+      "item": "exact_cache_tokens y billing_per_turn",
+      "why": "La plataforma de consumo Google AI Pro no devuelve desglose de tokens de lectura/escritura de caché ni coste exacto por turno; los tokens (110k entrada / 46k salida) son estimados."
+    },
+    {
+      "item": "exact_timestamps_per_message",
+      "why": "La recuperación de memoria personal consolida las sesiones y temas de la semana pero no expone los timestamps al segundo de cada mensaje individual."
+    },
+    {
+      "item": "github_prs_direct",
+      "why": "Las PRs de guilu/skynet (#329–#351) fueron ejecutadas y fusionadas desde los agentes de Claude, aunque Gemini co-diseñó los artefactos HTML 3D de Skyny (v4.3 y v4.4) integrados en la PR #351."
+    }
+  ],
+  "digest_markdown": "# Semana 2026-11-16 (Europe/Madrid) · Gemini Recap\n\n## skynet (co-diseño 3D Skyny)\n- Iteración y evolución del estudio autocontenido Three.js de Skyny (`skyny-v4.3.html` → `skyny-v4.4.html`): 34 estados, complementos configurables, animaciones de entrada/salida para el Login, microexpresiones y modo *Reacción al Vivo* (`pulseEvent` para `tool_call`, `file_edited` y `token_tick`), posteriormente portados a TypeScript en la PR #351 de `guilu/skynet`.\n\n## dbhlabs (arquitectura y skills)\n- Diseño de patrones de orquestación para agentes autónomos en DBHLABS.\n- Creación, ajuste y estandarización de la skill `gemini-weekly-stats` (disparador *«genera el recap de la semana»*, año 2026, filtrado estricto de proyectos inactivos y compatibilidad con el esquema `recap-week/1`).\n\n## Summary\n- Sesiones: 6\n- Tokens estimados: ~110.000 entrada / ~46.000 salida (~156.000 totales)\n- Coste marginal: $0.00 (Google AI Pro) · Equivalente API estimado: ~$1.25\n- Límites de cuota alcanzados: Ninguno (0 incidencias)"
+}
